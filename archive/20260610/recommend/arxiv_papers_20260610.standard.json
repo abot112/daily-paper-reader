@@ -1,0 +1,220 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-10T22:44:01.970997+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 4,
+    "quick_skim_target": 11,
+    "quick_selected": 4
+  },
+  "deep_dive": [
+    {
+      "id": "2606.06103v1",
+      "source": "arxiv",
+      "title": "MS-DKC: A Dataset Knowledge Card Framework for Designing and Adapting Medical Image Segmentation Models",
+      "abstract": "Medical image segmentation is often framed as a search for stronger architectures, but this can obscure a more fundamental question: what does the dataset require from the model? In medical imaging, this requirement is shaped by foreground occupancy, morphology, boundary ambiguity, topology sensitivity, annotation quality, acquisition variation, and operating point.   This paper introduces the Medical Segmentation Dataset Knowledge Card (MS-DKC), a framework for making these factors explicit. MS-DKC records dataset evidence through image/acquisition, morphology, supervision, context-dependence, and deployment-risk descriptors. These descriptors are mapped to failure modes, design priors, and risk-aligned criteria, making segmentation design more traceable than architecture-first comparison.   We evaluate MS-DKC on DRIVE, ISIC2018, and ACDC, representing distinct regimes. DRIVE contains sparse, thin, branching vessels, favoring detail-preserving models, sensitivity-aware optimization, threshold analysis, and topology-aware metrics. DKC-TNet-v2 achieved Dice 0.8044 and IoU 0.6730 with 35103 parameters, while SA-UNetv2-DKC-AmbRef reached Dice 0.8141, IoU 0.6865, sensitivity 0.8265, specificity 0.9804, and AUC 0.9853. ISIC2018 involves compact but appearance-variable lesions; validation-constrained score-function selection on Att-Next-Topo/ATTNext produced MS-DKC-AttNextTopo-VCSF-NoAug with Dice 0.8872, IoU 0.8214, precision 0.9173, Boundary F1 0.4878, and ASSD 4.13, while plausible additions failed to improve the risk-aligned profile. ACDC provides a multi-class cardiac case, where MS-DKC recommends four-class softmax segmentation, class-balanced Dice/CE supervision, and class-wise surface evaluation. Overall, the results support dataset-conditioned design: different datasets require different priors, operating points, and evidence before a model can be judged appropriate.",
+      "authors": [
+        "Tariq M. Khan",
+        "Syed Saud Naqvi",
+        "Thantrira Porntaveetus",
+        "Hamid Alinejad-Rokny",
+        "Shahzaib Iqbal",
+        "Imran Razzak",
+        "Mohammad AU Khan"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-04T12:45:42+00:00",
+      "link": "https://arxiv.org/pdf/2606.06103v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Proposes a dataset knowledge card framework to analyze segmentation dataset characteristics and guide model design, directly supporting the development of segmentation models for abdomen.",
+      "llm_evidence_cn": "提出数据集知识卡片框架，分析分割数据集特征并指导模型设计，直接支持腹部等医学图像分割模型开发。",
+      "llm_evidence": "提出数据集知识卡片框架，分析分割数据集特征并指导模型设计，直接支持腹部等医学图像分割模型开发。",
+      "canonical_evidence": "提出数据集知识卡片框架，分析分割数据集特征并指导模型设计，直接支持腹部等医学图像分割模型开发。",
+      "llm_tldr_en": "Introduces MS-DKC, a systematic framework that records dataset evidence through various descriptors to map failure modes and design priors, enabling more informed design and adaptation of medical image segmentation models.",
+      "llm_tldr_cn": "针对医学图像分割中模型搜索忽视数据集需求的问题，提出医学分割数据集知识卡片（MS-DKC）框架，通过图像/采集、形态学、监督等描述符显式记录数据集证据，并将其映射到故障模式、设计先验和风险标准。该框架为定制化模型设计提供了系统证据，有望提升腹部等分割任务的模型开发效率。",
+      "llm_tldr": "针对医学图像分割中模型搜索忽视数据集需求的问题，提出医学分割数据集知识卡片（MS-DKC）框架，通过图像/采集、形态学、监督等描述符显式记录数据集证据，并将其映射到故障模式、设计先验和风险标准。该框架为定制化模型设计提供了系统证据，有望提升腹部等分割任务的模型开发效率。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.04705v1",
+      "source": "arxiv",
+      "title": "Enhancing MedSAM with a Lightweight Box Predictor for Medical Image Segmentation",
+      "abstract": "Semantic segmentation in medical imaging is a critical yet challenging task due to data scarcity and high variability across modalities. While foundation models like the Segment Anything Model (SAM) show promise, they often struggle with medical images without specific adaptation. Moreover, point prompts, despite being the most natural form of user interaction, provide insufficient spatial context for reliable segmentation, particularly when target structures are irregular or poorly contrasted. In this paper, we propose an enhanced segmentation framework that integrates a lightweight Box Predictor module into the MedSAM architecture. The Box Predictor estimates an approximate bounding box from a single user click using localized image embedding features, providing spatial guidance that reduces the ambiguity of point prompts, while introducing only 1.6M additional parameters and negligible inference overhead. We introduce a two-stage training pipeline where the Box Predictor is trained independently before being integrated into MedSAM. To validate the generalization capability of our method, we conduct extensive evaluations on four diverse datasets (FLARE22, BRISC, BUSI, LungSegDB) spanning distinct imaging modalities, including CT, MRI, and Ultrasound. Our method improves segmentation accuracy and robustness across varied anatomical structures and imaging domains, achieving Dice scores of 0.89 (BUSI), 0.93 (FLARE22), 0.88 (BRISC), and 0.98 (LungSegDB). Code is available at https://github.com/Amirhosseinmovahedi/MedSAM-BoxPredictor",
+      "authors": [
+        "Amirhossein Movahedisefat",
+        "Amirreza Fateh",
+        "Mohammad Reza Mohammadi"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-06-03T10:34:15+00:00",
+      "link": "https://arxiv.org/pdf/2606.04705v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Medical image segmentation method that enhances MedSAM with a box predictor for better user interaction, relevant to supervised segmentation models.",
+      "llm_evidence_cn": "通过轻量级边界框预测器增强MedSAM的医学图像分割方法，适用于监督分割模型。",
+      "llm_evidence": "通过轻量级边界框预测器增强MedSAM的医学图像分割方法，适用于监督分割模型。",
+      "canonical_evidence": "通过轻量级边界框预测器增强MedSAM的医学图像分割方法，适用于监督分割模型。",
+      "llm_tldr_en": "Adds a lightweight box predictor to MedSAM that estimates bounding boxes from single clicks, improving segmentation of irregular/poor-contrast structures in medical images.",
+      "llm_tldr_cn": "针对医学图像分割中数据稀缺和模态变异问题，在MedSAM架构中集成了一个轻量级边界框预测器，通过单次点击估算目标框，提供更强的空间上下文。这改善了不规则或低对比度结构的分割效果，提升了交互式分割的可靠性和效率，为全监督医学分割提供了有效增强方案。",
+      "llm_tldr": "针对医学图像分割中数据稀缺和模态变异问题，在MedSAM架构中集成了一个轻量级边界框预测器，通过单次点击估算目标框，提供更强的空间上下文。这改善了不规则或低对比度结构的分割效果，提升了交互式分割的可靠性和效率，为全监督医学分割提供了有效增强方案。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.03069v1",
+      "source": "arxiv",
+      "title": "ROBUST-WT: Robust Uncertainty-aware Segmentation Transform via Whitening and Training Enhancements",
+      "abstract": "Generalized segmentation of medical images prevents performance degradation when different imaging devices and clinical protocols are used across multiple domains. The Whitening Transform-based Probabilistic Shape Regularization Extractor (WT-PSE), published in IEEE Transactions on Medical Imaging in 2024, addresses this challenge by employing feature decorrelation and Wasserstein distance-based knowledge distillation to achieve robust cross-domain segmentation. This study systematically examines improvements to the WT-PSE learning framework. Four limitations in the original implementation are identified: limited training augmentations that fail to simulate real scanner variations, reliance on per-pixel binary cross-entropy loss that is sensitive to edge noise, the absence of a scheduled loss weighting strategy that may destabilize early training, and the lack of ablation switches for controlled scientific comparison. To address these issues, we propose four enhancements: (1) domain-adaptive augmentation including random erasing, gamma correction, and salt-and-pepper noise; (2) a hybrid BCE and Dice loss function for improved edge-aware segmentation under noisy conditions; (3) a curriculum-based Dice weight scheduling strategy; and (4) command-line control flags for systematic ablation studies. Experiments on the fundus optic disc segmentation benchmark demonstrate that the improved pipeline achieves a final epoch optic-disc Dice score of 0.956 and an ASD score of 13.31, outperforming the baseline epoch-5 Dice score of 0.939. These results indicate that training-level improvements can provide consistent performance gains without modifying the underlying WT-PSE architecture.",
+      "authors": [
+        "Aqsa Naseer",
+        "Maryam Bibi",
+        "Syeda Samiya Urooj",
+        "Muhammad Khurram Shahzad"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-06-02T02:59:35+00:00",
+      "link": "https://arxiv.org/pdf/2606.03069v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Improves WT-PSE framework for robust cross-domain medical image segmentation with training enhancements.",
+      "llm_evidence_cn": "改进WT-PSE框架，通过训练增强实现鲁棒的跨域医学图像分割",
+      "llm_evidence": "改进WT-PSE框架，通过训练增强实现鲁棒的跨域医学图像分割",
+      "canonical_evidence": "改进WT-PSE框架，通过训练增强实现鲁棒的跨域医学图像分割",
+      "llm_tldr_en": "ROBUST-WT tackles limitations of WT-PSE for generalizable medical segmentation by adding augmentations, using a combined loss, and training refinements, achieving improved robustness across domains.",
+      "llm_tldr_cn": "针对WT-PSE在跨域医学图像分割中的泛化局限，ROBUST-WT识别并改进了四个不足：增加训练增强模拟真实扫描仪差异，采用加权损失组合聚焦困难区域，并优化训练策略。实验表明这些改进增强了模型在多个医学影像领域上的鲁棒分割性能，为全监督跨域分割提供了更可靠的基线。",
+      "llm_tldr": "针对WT-PSE在跨域医学图像分割中的泛化局限，ROBUST-WT识别并改进了四个不足：增加训练增强模拟真实扫描仪差异，采用加权损失组合聚焦困难区域，并优化训练策略。实验表明这些改进增强了模型在多个医学影像领域上的鲁棒分割性能，为全监督跨域分割提供了更可靠的基线。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.10713v1",
+      "source": "arxiv",
+      "title": "++nnU-Net: Scaling nnU-Net with Prefix-Based Data Augmentation",
+      "abstract": "The nnU-Net has demonstrated continuous success in medical segmentation tasks, which heavily rely on the availability and diversity of annotated biomedical data. However, assembling medical imaging cohorts remains challenging due to numerous factors such as privacy regulations and annotation costs. As a result, data augmentation plays a crucial role in increasing data availability while maintaining anatomical feasibility. Hence, we propose the ++nnU-Net, a novel data augmentation module based on image registration that operates prior to preprocessing and training take place. Our framework was evaluated across five different 2D datasets. In this workflow, image data go through a two-stage registration process, generating new warped images. The transformations are then applied to the respective segmentation. In addition, the pipeline computes available disk space, generates supplementary binary synthetic masks and generates checkpoints. We demonstrate that the ++nnU-Net outperforms the nnU-Net baseline, yielding improvements in Dice Similarity Coefficient scores. In the most prominent cases, we observe performance gains of approximately 22\\%. These findings highlight the effectiveness of registration-based data augmentation, particularly for 2D medical imaging datasets and suggest that the ++nnU-Net provides a practical and scalable approach for enhancing segmentation performance in data-limited settings. The source code for the ++nnU-Net is available at: https://github.com/sofia-adelie/plusplusnnunet.git",
+      "authors": [
+        "Ana Sofia Santos",
+        "André Ferreira",
+        "Gijs Luijten",
+        "Naida Solak",
+        "Lisle Faray de Paiva",
+        "Behrus Hinrichs-Puladi",
+        "Jens Kleesiek",
+        "Jan Egger",
+        "Victor Alves"
+      ],
+      "primary_category": "eess.IV",
+      "categories": [
+        "eess.IV",
+        "cs.AI",
+        "cs.CV",
+        "cs.LG"
+      ],
+      "published": "2026-06-09T11:19:09+00:00",
+      "link": "https://arxiv.org/pdf/2606.10713v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Proposes data augmentation for nnU-Net, a fully supervised medical image segmentation framework.",
+      "llm_evidence_cn": "为全监督医学图像分割框架nnU-Net提出数据增强方法",
+      "llm_evidence": "为全监督医学图像分割框架nnU-Net提出数据增强方法",
+      "canonical_evidence": "为全监督医学图像分割框架nnU-Net提出数据增强方法",
+      "llm_tldr_en": "++nnU-Net introduces a prefix-based data augmentation module using image registration to expand training data diversity, improving nnU-Net performance across five 2D medical datasets.",
+      "llm_tldr_cn": "针对医学影像标注数据稀缺问题，++nnU-Net提出基于图像配准的前缀式数据增强模块，在预处理阶段通过两阶段配准生成新图像，扩充训练数据多样性。在五个二维医学数据集上评估，展示了该增强策略能提升nnU-Net的分割性能。该方法为全监督医学图像分割提供了一种有效的数据增强途径，有助于缓解标注成本高和数据量不足的挑战。",
+      "llm_tldr": "针对医学影像标注数据稀缺问题，++nnU-Net提出基于图像配准的前缀式数据增强模块，在预处理阶段通过两阶段配准生成新图像，扩充训练数据多样性。在五个二维医学数据集上评估，展示了该增强策略能提升nnU-Net的分割性能。该方法为全监督医学图像分割提供了一种有效的数据增强途径，有助于缓解标注成本高和数据量不足的挑战。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.06537v1",
+      "source": "arxiv",
+      "title": "DSU-Net: An Attention-Enhanced Dense Skip U-Net for Breast Lesion Segmentation in Mammographic Images",
+      "abstract": "Breast cancer remains one of the leading causes of cancer-related mortality among women worldwide, making early detection essential for effective treatment. Mammography is the primary screening modality; however, accurate delineation of suspicious lesions remains challenging and subject to inter-observer variability. Automated segmentation methods can assist radiologists by providing consistent and efficient lesion localization.   This study presents DSU-Net, an attention-enhanced Dense Skip U-Net architecture for automated breast lesion segmentation in mammographic images. The proposed framework integrates dense skip connections and attention mechanisms to improve feature propagation, preserve spatial information, and enhance lesion boundary delineation. Experiments were conducted using the Curated Breast Imaging Subset of the Digital Database for Screening Mammography (CBIS-DDSM). To address severe foreground-background imbalance, a composite loss function combining Dice loss, focal loss, and binary cross-entropy loss was employed during training.   The proposed model achieved a Dice Similarity Coefficient of 0.9421, an Intersection over Union of 0.8905, an accuracy of 0.9711, and an AUC-ROC of 0.9878 on the validation dataset. Qualitative evaluation demonstrated accurate delineation of lesions with varying sizes and morphologies, while quantitative results confirmed robust discrimination between lesion and background regions.   These findings demonstrate that DSU-Net provides accurate and reliable breast lesion segmentation in mammographic images and highlights the potential of attention-guided deep learning for computer-aided breast cancer screening and diagnosis.",
+      "authors": [
+        "Reza Bozorgpour",
+        "Mohammadreza Soltany Sadrabadi"
+      ],
+      "primary_category": "q-bio.QM",
+      "categories": [
+        "q-bio.QM",
+        "cs.CV",
+        "eess.IV"
+      ],
+      "published": "2026-06-03T23:09:03+00:00",
+      "link": "https://arxiv.org/pdf/2606.06537v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Proposes an attention-enhanced dense skip U-Net for breast lesion segmentation, a fully supervised medical image task.",
+      "llm_evidence_cn": "提出注意力增强密集跳跃连接U-Net用于乳腺病灶分割，属于全监督医学图像任务",
+      "llm_evidence": "提出注意力增强密集跳跃连接U-Net用于乳腺病灶分割，属于全监督医学图像任务",
+      "canonical_evidence": "提出注意力增强密集跳跃连接U-Net用于乳腺病灶分割，属于全监督医学图像任务",
+      "llm_tldr_en": "DSU-Net integrates dense skip connections and attention mechanisms into U-Net to improve feature propagation for breast lesion segmentation in mammography, achieving accurate delineation.",
+      "llm_tldr_cn": "针对乳腺X线图像中病灶分割的挑战，DSU-Net提出一种结合密集跳跃连接和注意力机制的增强型U-Net架构，以改善特征传播和空间信息保留。在乳腺数据集上验证了其能实现精确的病灶定位，为全监督医学图像分割提供了新的网络设计思路，并可潜在推广至其他器官分割任务。",
+      "llm_tldr": "针对乳腺X线图像中病灶分割的挑战，DSU-Net提出一种结合密集跳跃连接和注意力机制的增强型U-Net架构，以改善特征传播和空间信息保留。在乳腺数据集上验证了其能实现精确的病灶定位，为全监督医学图像分割提供了新的网络设计思路，并可潜在推广至其他器官分割任务。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

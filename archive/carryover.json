@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-10T04:36:35.170187+00:00",
-  "updated_date": "20260512-20260610",
+  "generated_at": "2026-06-10T22:44:01.971930+00:00",
+  "updated_date": "20260610",
   "carryover_days": 9,
   "tag_states": {
     "ABDK-SEG": {
-      "updated_date": "20260512-20260610",
+      "updated_date": "20260610",
       "carryover_days": 9,
       "items": []
     }
