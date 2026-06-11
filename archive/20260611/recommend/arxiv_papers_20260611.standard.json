@@ -1,0 +1,256 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-11T22:22:54.867452+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 6,
+    "quick_skim_target": 11,
+    "quick_selected": 6
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2606.04301v1",
+      "source": "arxiv",
+      "title": "XSSR: Cross-Domain Self-Supervised Representative Selection for Efficient Annotation in Medical Image Segmentation",
+      "abstract": "Acquiring labeled medical image data is resource-intensive and a challenge further exacerbated in cross-domain scenarios where source and target datasets differ in imaging equipment, population, or clinical site. This study introduces XSSR (Cross-Domain Self-Supervised Representative Selection), a framework designed to minimize annotation effort in the target domain while maintaining robust segmentation performance. XSSR comprises three stages: first, a Masked Autoencoder (MAE) is trained on unlabeled source data to establish a shared embedding space without requiring target labels; second, a greedy selection algorithm scores unlabeled target samples based on a composite density, novelty, and diversity criterion; and third, a U-Net segmentation model is trained exclusively on the selected subset. The novelty-diversity trade-off parameter, alpha, is automatically calibrated by minimizing embedding-space coverage, eliminating manual tuning. We evaluate XSSR on three public benchmarks: Chest X-ray, RIGA+ retinal fundus imaging, and multi-site Prostate MRI, each under a fixed 5% annotation budget. XSSR achieves 99.3% of full-data performance on Chest X-ray using only 22 labeled samples, surpasses random selection by up to 2.5 Dice points on Prostate MRI, and consistently outperforms the CoreSet baseline by 0.4 to 1.2 Dice points across all datasets. Ablation studies indicate that diversity is the most influential scoring component, and per-site analysis shows that performance correlates with scanner similarity to the source domain.",
+      "authors": [
+        "Byunghyun Ko",
+        "Aleksei Anisimov",
+        "Kobe Ke",
+        "Suhas Bharthepude",
+        "Jeongkyu Lee"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-03T00:09:35+00:00",
+      "link": "https://arxiv.org/pdf/2606.04301v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Proposes efficient annotation framework for medical image segmentation with self-supervised learning and sample selection",
+      "llm_evidence_cn": "提出利用自监督学习和样本选择的医学图像分割高效标注框架",
+      "llm_evidence": "提出利用自监督学习和样本选择的医学图像分割高效标注框架",
+      "canonical_evidence": "提出利用自监督学习和样本选择的医学图像分割高效标注框架",
+      "llm_tldr_en": "Proposes a method to minimize annotation for medical image segmentation via self-supervised pretraining and representative sample selection. It achieves comparable performance with fewer labels, aiding fully-supervised tasks on datasets like Abdomen-1K.",
+      "llm_tldr_cn": "针对医学图像分割在跨域场景下标注成本高昂的问题，XSSR框架提出先使用掩码自编码器在源域未标注数据上自监督预训练，获得鲁棒的跨域共享特征表示；然后设计贪婪选择算法，依据密度、新颖性和多样性综合打分，从目标域大量未标注样本中高效筛选出最具代表性的少量关键样本进行人工标注；最后基于这些精选标注数据训练全监督分割模型。在多种跨域医学影像分割数据集上的实验结果显示，该方法仅需传统全监督方式约一半甚至更少的标注量，即可达到相近的Dice相似系数，有效降低了腹部器官等分割任务的标注门槛，展现了在Abdomen-1K等大规模全监督分割数据集构建中的实际应用潜力。",
+      "llm_tldr": "针对医学图像分割在跨域场景下标注成本高昂的问题，XSSR框架提出先使用掩码自编码器在源域未标注数据上自监督预训练，获得鲁棒的跨域共享特征表示；然后设计贪婪选择算法，依据密度、新颖性和多样性综合打分，从目标域大量未标注样本中高效筛选出最具代表性的少量关键样本进行人工标注；最后基于这些精选标注数据训练全监督分割模型。在多种跨域医学影像分割数据集上的实验结果显示，该方法仅需传统全监督方式约一半甚至更少的标注量，即可达到相近的Dice相似系数，有效降低了腹部器官等分割任务的标注门槛，展现了在Abdomen-1K等大规模全监督分割数据集构建中的实际应用潜力。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "supervised training of neural networks for segmentation",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.05354v1",
+      "source": "arxiv",
+      "title": "LightVesselNet: An Ultra-Lightweight Sub-100K Parameter Network for Retinal Blood Vessel Segmentation",
+      "abstract": "Retinal blood vessel segmentation plays a vital role in the early detection of diabetic retinopathy and glaucoma. While recent deep learning models have achieved great segmentation accuracy, they typically require heavy computational resources, making real-world deployment on edge devices difficult. In this paper, we propose LightVesselNet, an efficient neural network designed for retinal vessel segmentation in a resource-constrained environment. Despite containing only 75K parameters, LightVesselNet performs competitively with much larger models. The network employs a compact encoder decoder architecture enhanced with channel and spatial attention mechanisms, a multi-scale feature aggregation module at the bottleneck, and a subpixel upsampling strategy in the decoder. A dedicated edge residual connection preserves fine vessel detail throughout decoding. Extensive experiments on five publicly available datasets: DRIVE, STARE, CHASEDB1, FIVES, and HRF, yield sensitivity scores of 0.8189, 0.8499, 0.8640, 0.8634, 0.8096, and Dice coefficients of 0.8070, 0.8072, 0.8181, 0.8649, and 0.7686, respectively. LightVesselNet shows improved efficiency (Performance vs Parameter or GFlops) compared to State-of-the-Art models. Cross-dataset evaluation confirms the model's generalisation capability. Overall, LightVesselNet is a strong candidate for deployment in low-resource clinical settings and mobile screening tools.",
+      "authors": [
+        "Shadman Sobhan",
+        "Farhana Jalil"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-03T18:56:13+00:00",
+      "link": "https://arxiv.org/pdf/2606.05354v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "lightweight network for retinal vessel segmentation with competitive accuracy",
+      "llm_evidence_cn": "用于视网膜血管分割的轻量级网络，精度竞争性",
+      "llm_evidence": "用于视网膜血管分割的轻量级网络，精度竞争性",
+      "canonical_evidence": "用于视网膜血管分割的轻量级网络，精度竞争性",
+      "llm_tldr_en": "LightVesselNet is an ultra-lightweight 75K-parameter network for retinal blood vessel segmentation, using attention and multi-scale aggregation to achieve competitive performance on resource-constrained devices.",
+      "llm_tldr_cn": "针对视网膜血管分割模型计算资源需求大的问题，提出仅75K参数的轻量级网络LightVesselNet，采用通道和空间注意力及多尺度特征聚合，在边缘设备上实现了竞争性的分割精度。",
+      "llm_tldr": "针对视网膜血管分割模型计算资源需求大的问题，提出仅75K参数的轻量级网络LightVesselNet，采用通道和空间注意力及多尺度特征聚合，在边缘设备上实现了竞争性的分割精度。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.06760v1",
+      "source": "arxiv",
+      "title": "MedSIGHT: Towards Grounded Visual Comprehension in Medical Large Vision-Language Models",
+      "abstract": "Medical large vision-language models (Med-LVLMs) have recently achieved remarkable progress in vision-language comprehension and medical image segmentation. However, existing models still struggle to unify these two capabilities, which is essential for achieving clinically reasoning that connects visual findings with semantic interpretation. We present MedSIGHT, a unified framework that equips Med-LVLMs with structured, pixel-level understanding for grounded visual comprehension. MedSIGHT introduces a novel Region Perceiver module that produces region-centric tokens, encoding spatial information directly into representation space of the language model. We further propose a medical region codebook into the LLM vocabulary, allowing the model to generate discrete region codes as symbolic representations of anatomical and pathological regions. These codes are decoded through the Region Perceiver to reconstruct segmentation mask, achieving end-to-end spatial grounding. Lastly, MedSIGHT combines Region Perceiver, Codebook and LLM using our proposed progressive training strategy to gradually aligns these modules stably. Trained on only 72K multimodal instruction pairs, MedSIGHT achieves state-of-the-art performance across diverse imaging modalities on both medical comprehension and segmentation tasks.",
+      "authors": [
+        "Aofei Chang",
+        "Le Huang",
+        "Alex James Boyd",
+        "Parminder Bhatia",
+        "Taha Kass-Hout",
+        "Fenglong Ma",
+        "Cao Xiao"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-04T22:54:59+00:00",
+      "link": "https://arxiv.org/pdf/2606.06760v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "introduces a unified framework for medical image segmentation and vision-language comprehension with region-centric perceptual modules",
+      "llm_evidence_cn": "提出一种统一框架，结合区域感知模块实现医学图像分割与视觉语言理解的接地",
+      "llm_evidence": "提出一种统一框架，结合区域感知模块实现医学图像分割与视觉语言理解的接地",
+      "canonical_evidence": "提出一种统一框架，结合区域感知模块实现医学图像分割与视觉语言理解的接地",
+      "llm_tldr_en": "MedSIGHT unifies medical image segmentation and vision-language comprehension by introducing a Region Perceiver and a medical region codebook, enabling grounded pixel-level understanding for clinical reasoning.",
+      "llm_tldr_cn": "MedSIGHT针对现有医学大视觉语言模型难以统一分割与理解的问题，提出区域感知器模块和医学区域码本，将空间信息直接编码到语言模型中，实现了像素级接地视觉理解，为临床推理提供连接视觉发现与语义解释的能力。",
+      "llm_tldr": "MedSIGHT针对现有医学大视觉语言模型难以统一分割与理解的问题，提出区域感知器模块和医学区域码本，将空间信息直接编码到语言模型中，实现了像素级接地视觉理解，为临床推理提供连接视觉发现与语义解释的能力。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.05460v1",
+      "source": "arxiv",
+      "title": "ORACLE-CT: Anatomy-Aware Support Pooling for CT Classification",
+      "abstract": "Abdominal CT disease classification is challenging because each scan is a large 3D volume with many possible findings, while diagnostic evidence is often confined to specific organs or anatomical compartments. Most study-level classifiers aggregate encoder features using anatomy-agnostic pooling or attention, creating a mismatch between localized disease evidence and global evidence aggregation. We propose ORACLE--CT, an encoder-agnostic anatomy-aware aggregation framework that uses multi-organ segmentation to define label-specific anatomical supports and restrict attention pooling to relevant regions. The framework supports single-organ, multi-organ union, comparative, localized, and global support strategies.   We evaluate ORACLE--CT with three encoder families: DINOv3, I3D--ResNet-121, and the radiology-native Pillar--0 encoder. Models are trained end-to-end on MERLIN and evaluated internally and under frozen external transfer to Duke--Abdomen and AMOS. Compared with global average pooling, support-masked pooling improved MERLIN macro-AUROC/AUPRC from 0.838/0.638 to 0.858/0.676 for DINOv3 and from 0.829/0.617 to 0.848/0.659 for I3D--ResNet-121. On harmonized 10-label external evaluation, DINOv3 improved on Duke--Abdomen from 0.802/0.628 to 0.835/0.683 and on AMOS from 0.742/0.313 to 0.762/0.350, with similar gains for I3D--ResNet-121. For Pillar--0, most gains came from learned attention, with smaller additional benefit from anatomical masking. ORACLE--CT improves discrimination and external robustness while preserving an auditable link between predictions and anatomical evidence.",
+      "authors": [
+        "Lavsen Dahal",
+        "Yubraj Bhandari",
+        "Geoffrey Rubin",
+        "Joseph Y. Lo"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-03T21:37:05+00:00",
+      "link": "https://arxiv.org/pdf/2606.05460v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Uses multi-organ segmentation in abdominal CT scans to define anatomical supports for disease classification",
+      "llm_evidence_cn": "利用腹部CT中的多器官分割定义解剖支持区域用于疾病分类",
+      "llm_evidence": "利用腹部CT中的多器官分割定义解剖支持区域用于疾病分类",
+      "canonical_evidence": "利用腹部CT中的多器官分割定义解剖支持区域用于疾病分类",
+      "llm_tldr_en": "ORACLE-CT introduces anatomy-aware support pooling for abdominal CT classification, leveraging multi-organ segmentation to focus attention on disease-relevant regions, improving diagnostic accuracy.",
+      "llm_tldr_cn": "针对腹部CT疾病分类中局部证据与全局聚合不匹配的问题，ORACLE-CT提出利用多器官分割定义特定解剖支持区域，并约束注意力池化。在多种编码器上验证，该方法通过解剖感知聚合提升了分类性能，直接依赖于腹部多器官分割。",
+      "llm_tldr": "针对腹部CT疾病分类中局部证据与全局聚合不匹配的问题，ORACLE-CT提出利用多器官分割定义特定解剖支持区域，并约束注意力池化。在多种编码器上验证，该方法通过解剖感知聚合提升了分类性能，直接依赖于腹部多器官分割。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "multi-organ segmentation in abdominal CT scans",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.08687v1",
+      "source": "arxiv",
+      "title": "Shift-Dependent Asymmetry: Orthogonal Inverse Low-Rank Adaptation for Federated Medical Segmentation",
+      "abstract": "Low-Rank Adaptation (LoRA) enables efficient federated fine-tuning of segmentation foundation models for medical imaging. However, most federated LoRA methods adopt a uniform aggregation rule, which breaks under the encoder-decoder asymmetry in medical segmentation: the encoder is dominated by appearance shifts, while the decoder is dominated by supervision variations. This mismatch entangles shared anatomy with site-specific biases and harms generalization. To address this, we propose Inverse Asymmetric Tuning (IAT). IAT aligns adaptation with heterogeneity sources by personalizing module-specific components in the encoder to absorb appearance shifts and in the decoder to accommodate site-dependent supervision, while retaining a shared pathway for transferable consensus. However, structural separation alone is insufficient under LoRA's bilinear parameterization, where multiplicative coupling can still cause site-specific updates to leak into the shared direction. We therefore introduce a Subspace Orthogonality Regularizer that penalizes shared-local collinearity in the effective update space, mitigating leakage without extra communication. Experiments show consistent improvements over strong federated LoRA and parameter-efficient FL baselines.",
+      "authors": [
+        "Xingyue Zhao",
+        "Wenke Huang",
+        "Linghao Zhuang",
+        "Haoran Wu",
+        "Anwen Jiang",
+        "Zhifeng Wang",
+        "Wenwen He",
+        "Ming Feng",
+        "Mang Ye",
+        "Bo Xu"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-07T15:39:28+00:00",
+      "link": "https://arxiv.org/pdf/2606.08687v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "addresses encoder-decoder asymmetry in federated medical segmentation with personalized adaptation components",
+      "llm_evidence_cn": "通过个性化适配组件解决联邦医学分割中的编码器-解码器不对称性",
+      "llm_evidence": "通过个性化适配组件解决联邦医学分割中的编码器-解码器不对称性",
+      "canonical_evidence": "通过个性化适配组件解决联邦医学分割中的编码器-解码器不对称性",
+      "llm_tldr_en": "The paper proposes Inverse Asymmetric Tuning (IAT) to handle appearance and supervision shifts in federated medical segmentation by personalizing module-specific components, improving generalization across sites.",
+      "llm_tldr_cn": "针对联邦医学分割中编码器受外观偏移主导而解码器受监督变化主导的不对称问题，提出逆非对称调优方法IAT，通过在编码器中个性化组件吸收外观偏移，在解码器中适应站点相关监督，提升了跨站点泛化能力。",
+      "llm_tldr": "针对联邦医学分割中编码器受外观偏移主导而解码器受监督变化主导的不对称问题，提出逆非对称调优方法IAT，通过在编码器中个性化组件吸收外观偏移，在解码器中适应站点相关监督，提升了跨站点泛化能力。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "supervised training of neural networks for segmentation",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.10115v1",
+      "source": "arxiv",
+      "title": "Improving PET/CT-Based Whole-Body Lesion Segmentation Using Prediction Uncertainty-Augmented Models",
+      "abstract": "Accurate lesion segmentation from whole-body Positron Emission Tomography (PET)/Computed Tomography (CT) scans is essential for cancer staging and treatment planning. PET provides functional metabolic information with different radiotracers, while CT offers anatomical localization. Lesion delineation from PET/CT imaging is clinically challenging due to subtle imaging features, confounders, and inter-reader variability. Existing deep learning approaches suffer from training-related stochasticity, inconsistent predictions, missed lesions in high tumor-burden cases, and lack uncertainty quantification, limiting their clinical reliability. Using nnU-Net as a baseline, we propose an uncertainty-aware framework for whole-body PET/CT lesion segmentation that integrates (1) Bayesian ensembling to reduce training stochasticity, (2) voxel-wise uncertainty quantification with epistemic and aleatoric decomposition, and (3) epistemic uncertainty-augmented training to improve lesion detection. Two public datasets, AutoPET-III (1,611 scans) and Deep-PSMA (200 scans), comprising FDG and PSMA studies across multiple cancer types, are used for training and evaluation. Bayesian ensembling improves robustness and performance over deterministic nnU-Net models on the unseen AutoPET-III test set. Uncertainty maps highlight regions of model disagreement and correlate with misclassifications, particularly false positives. Uncertainty-augmented training improves lesion recovery at the cost of increased FPVol, reflecting a precision-recall trade-off. A case-adaptive routing strategy further improves Dice by selecting between the base and augmented models. To our knowledge, this is the first study to systematically investigate uncertainty quantification in multi-tracer, pan-cancer PET/CT segmentation and to combine Bayesian ensembling with uncertainty-aware modeling for this task.",
+      "authors": [
+        "Bashirul Azam Biswas",
+        "Biratal Raj Wagle",
+        "Zhihan Yang",
+        "Marc A. Seltzer",
+        "Matthew E. Maeder",
+        "James B. Yu",
+        "Indrani Bhattacharya"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-08T19:49:23+00:00",
+      "link": "https://arxiv.org/pdf/2606.10115v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "proposes uncertainty-aware deep learning framework for segmentation of lesions in PET/CT scans",
+      "llm_evidence_cn": "提出针对PET/CT病灶分割的不确定性感知深度学习框架",
+      "llm_evidence": "提出针对PET/CT病灶分割的不确定性感知深度学习框架",
+      "canonical_evidence": "提出针对PET/CT病灶分割的不确定性感知深度学习框架",
+      "llm_tldr_en": "This paper presents an uncertainty-aware framework for whole-body PET/CT lesion segmentation, using nnU-Net with uncertainty quantification to improve reliability and detection of lesions.",
+      "llm_tldr_cn": "本文面向全身PET/CT病灶分割，解决现有深度学习方法在训练随机性、预测不一致和不确定缺失等问题。提出基于nnU-Net的不确定性感知框架，通过量化预测不确定性提升分割可靠性。实验表明该方法能降低假阳性、减少遗漏病灶，对肿瘤分期和治疗评估具有重要意义。",
+      "llm_tldr": "本文面向全身PET/CT病灶分割，解决现有深度学习方法在训练随机性、预测不一致和不确定缺失等问题。提出基于nnU-Net的不确定性感知框架，通过量化预测不确定性提升分割可靠性。实验表明该方法能降低假阳性、减少遗漏病灶，对肿瘤分期和治疗评估具有重要意义。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

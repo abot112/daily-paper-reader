@@ -6,37 +6,41 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-06-10
-- 运行时间：2026-06-10 22:48:44 UTC
+- 最新运行日期：2026-06-11
+- 运行时间：2026-06-11 22:26:29 UTC
 - 运行状态：成功
-- 本次总论文数：5
-- 精读区：1
-- 速读区：4
+- 本次总论文数：6
+- 精读区：0
+- 速读区：6
 
 ### 今日简报（AI）
-今日聚焦医学图像分割，精读《MS-DKC》数据集知识卡框架，并速览了MedSAM轻量优化、++nnU-Net数据增强与鲁棒不确定性分割三项改进。  
-最值得关注的是“知识卡”将数据集视为可编程组件以自动适配不同模型架构，以及用轻量框预测器让MedSAM摆脱繁琐提示的实用思路。  
-建议普通读者从数据侧入手，优先尝试类似知识卡的结构化描述来降低新任务上模型选择与调参的试错成本。
-- 详情：[/202606/10/README](/202606/10/README)
+今日速读6篇医学影像AI论文，聚焦高效标注、视觉理解和联邦学习。
+值得关注跨域自监督样本选择（XSSR）降低标注成本，以及联邦学习中的偏移不对称性问题。
+建议关注模型部署效率与数据隐私的平衡，可深入阅读XSSR在低资源场景下的应用思路。
+- 详情：[/202606/11/README](/202606/11/README)
 
 ### 精读区论文标签
-1. [MS-DKC: A Dataset Knowledge Card Framework for Designing and Adapting Medical Image Segmentation Models](/202606/10/2606.06103v1-ms-dkc-a-dataset-knowledge-card-framework-for-designing-and-adapting-medical-image-segmentation-models)  
-   标签：评分：8.0/10、query:abdk-seg
-   evidence：提出数据集知识卡片框架，分析分割数据集特征并指导模型设计，直接支持腹部等医学图像分割模型开发。
+- 本次无精读推荐。
 
 ### 速读区论文标签
-1. [Enhancing MedSAM with a Lightweight Box Predictor for Medical Image Segmentation](/202606/10/2606.04705v1-enhancing-medsam-with-a-lightweight-box-predictor-for-medical-image-segmentation)  
+1. [XSSR: Cross-Domain Self-Supervised Representative Selection for Efficient Annotation in Medical Image Segmentation](/202606/11/2606.04301v1-xssr-cross-domain-self-supervised-representative-selection-for-efficient-annotation-in-medical-image-segmentation)  
    标签：评分：7.0/10、query:abdk-seg
-   evidence：通过轻量级边界框预测器增强MedSAM的医学图像分割方法，适用于监督分割模型。
-2. [++nnU-Net: Scaling nnU-Net with Prefix-Based Data Augmentation](/202606/10/2606.10713v1-nnu-net-scaling-nnu-net-with-prefix-based-data-augmentation)  
+   evidence：提出利用自监督学习和样本选择的医学图像分割高效标注框架
+2. [MedSIGHT: Towards Grounded Visual Comprehension in Medical Large Vision-Language Models](/202606/11/2606.06760v1-medsight-towards-grounded-visual-comprehension-in-medical-large-vision-language-models)  
    标签：评分：7.0/10、query:abdk-seg
-   evidence：为全监督医学图像分割框架nnU-Net提出数据增强方法
-3. [ROBUST-WT: Robust Uncertainty-aware Segmentation Transform via Whitening and Training Enhancements](/202606/10/2606.03069v1-robust-wt-robust-uncertainty-aware-segmentation-transform-via-whitening-and-training-enhancements)  
+   evidence：提出一种统一框架，结合区域感知模块实现医学图像分割与视觉语言理解的接地
+3. [Shift-Dependent Asymmetry: Orthogonal Inverse Low-Rank Adaptation for Federated Medical Segmentation](/202606/11/2606.08687v1-shift-dependent-asymmetry-orthogonal-inverse-low-rank-adaptation-for-federated-medical-segmentation)  
+   标签：评分：7.0/10、query:abdk-seg
+   evidence：通过个性化适配组件解决联邦医学分割中的编码器-解码器不对称性
+4. [LightVesselNet: An Ultra-Lightweight Sub-100K Parameter Network for Retinal Blood Vessel Segmentation](/202606/11/2606.05354v1-lightvesselnet-an-ultra-lightweight-sub-100k-parameter-network-for-retinal-blood-vessel-segmentation)  
    标签：评分：6.0/10、query:abdk-seg
-   evidence：改进WT-PSE框架，通过训练增强实现鲁棒的跨域医学图像分割
-4. [DSU-Net: An Attention-Enhanced Dense Skip U-Net for Breast Lesion Segmentation in Mammographic Images](/202606/10/2606.06537v1-dsu-net-an-attention-enhanced-dense-skip-u-net-for-breast-lesion-segmentation-in-mammographic-images)  
+   evidence：用于视网膜血管分割的轻量级网络，精度竞争性
+5. [ORACLE-CT: Anatomy-Aware Support Pooling for CT Classification](/202606/11/2606.05460v1-oracle-ct-anatomy-aware-support-pooling-for-ct-classification)  
    标签：评分：6.0/10、query:abdk-seg
-   evidence：提出注意力增强密集跳跃连接U-Net用于乳腺病灶分割，属于全监督医学图像任务
+   evidence：利用腹部CT中的多器官分割定义解剖支持区域用于疾病分类
+6. [Improving PET/CT-Based Whole-Body Lesion Segmentation Using Prediction Uncertainty-Augmented Models](/202606/11/2606.10115v1-improving-petct-based-whole-body-lesion-segmentation-using-prediction-uncertainty-augmented-models)  
+   标签：评分：6.0/10、query:abdk-seg
+   evidence：提出针对PET/CT病灶分割的不确定性感知深度学习框架
 
 
 <div class="dpr-home-promo-card">
