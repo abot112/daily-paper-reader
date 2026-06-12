@@ -1,0 +1,39 @@
+{
+  "label": "2026-06-12",
+  "date": "2026-06-12",
+  "generated_at": "2026-06-12T21:31:22",
+  "count": 2,
+  "papers": [
+    {
+      "paper_id": "202606/12/2606.06199v1-sc-mfj-a-simple-haptic-quality-metric-for-medical-image-segmentation",
+      "section": "deep",
+      "title_en": "SC-MFJ: A Simple Haptic Quality Metric for Medical Image Segmentation",
+      "authors": "Souraj Adhikary, Negar Chabi, Andre Mastmeyer",
+      "date": "2026-06-04",
+      "pdf": "https://arxiv.org/pdf/2606.06199v1",
+      "score": "9.0",
+      "evidence": "提出触觉质量度量并在胰腺CT分割上评估，直接与腹部器官分割相关",
+      "tldr": "传统分割评估指标如Dice无法反映表面触觉渲染质量，SC-MFJ通过模拟虚拟探针接触力抖动来评价分割表面的触觉适用性。在胰腺和肝脏CT分割实验中，该指标揭示二值分割与高斯平滑后处理之间存在147至189倍的触觉质量差异，而几何指标完全不可见。SC-MFJ为手术仿真提供了一种廉价有效的触觉质量评估新维度。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "Standard segmentation metrics such as Dice and Hausdorff distance measure geometric overlap but say nothing about whether a segmented surface is suitable for haptic rendering in surgical simulation. We propose SC-MFJ (Surface-Constrained Mean Force Jerk), a simple, inexpensive metric that samples a segmented organ surface with many short virtual stylus walks and measures how jerky the resulting contact forces are. The metric is computed from existing segmentation outputs and uses roughly one minute of CPU time per case. We evaluate three pancreas CT segmentation approaches-binary nnU-Net output, Gaussian-smoothed output, and learned signed distance function (SDF) regression-across 80 cases in five-fold cross-validation. SC-MFJ reveals a 147x gap in haptic quality between the raw binary baseline and simple Gaussian post-processing, a difference entirely invisible to Dice and HD95. It also shows that learned SDF regression, despite requiring full model retraining, produces more variable haptic quality than Gaussian smoothing, with a case-level standard deviation of 168 N/s2 compared with 22 N/s2 for Gaussian. A second evaluation on the LiTS liver dataset (131 cases) confirms the generality of these findings: the binary-to-Gaussian gap widens to 189x, and Gaussian smoothing again produces consistently low force jerk across all folds. Our results suggest that for haptic simulation applications, a one-line post-processing step may be sufficient, and that a cheap metric like SC-MFJ can flag problems that geometric metrics miss.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202606/12/2606.08866v1-generalizing-geometry-guided-mamba-as-a-plug-and-play-context-module-for-cnn-based-semantic-segmentation",
+      "section": "quick",
+      "title_en": "Generalizing Geometry-Guided Mamba as a Plug-and-Play Context Module for CNN-based Semantic Segmentation",
+      "authors": "Sheng-Wei Chan, Hsin-Jui Pan, Chun-Po Shen, Chia-Min Lin, Yung-Che Wang, Jen-Shiun Chiang",
+      "date": "2026-06-07",
+      "pdf": "https://arxiv.org/pdf/2606.08866v1",
+      "score": "6.0",
+      "evidence": "即插即用的几何引导Mamba模块增强CNN语义分割，可迁移至医学图像分割",
+      "tldr": "现有CNN语义分割常依赖ASPP、PPM或注意力模块扩大感受野，但这些上下文头往往引入较高计算成本或边界泄露。本文推广方向几何Mamba作为即插即用上下文聚合模块，将几何引导（如边界与向心流）融入Mamba的选择性扫描，使长距离特征传播能够根据几何结构自适应调整，从而避免边界模糊。在六个主流CNN分割模型（如DeepLabV3+、DANet、PSPNet等）上用该模块替换原上下文头，保持ResNet-101骨干不变，Cityscapes验证获得一致的mIoU提升，计算开销仅温和增加。这项研究证明，几何增强的状态空间模型可简便嵌入CNN架构，作为上下文头的有效替代，实现精度与效率的平衡。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "CNN-based semantic segmentation networks usually rely on context heads such as ASPP, PPM, or attention modules to enlarge the receptive field. These heads are effective but may introduce heavy computation, memory cost, or boundary leakage. This paper revisits Directional Geometric Mamba (G-Mamba) from DGM-Net and studies it as a plug-and-play context aggregation module rather than a complete new segmentation architecture. The key idea is to inject geometric guidance into the selective scan process, allowing long-range feature propagation to be modulated by boundary and centripetal-flow cues. We replace the original context heads of six representative CNN segmentation models, including DeepLabV3+, DANet, CCNet, PSPNet, PSANet, and OCRNet, while keeping the ResNet-101 backbone unchanged. Results on Cityscapes show consistent mIoU gains with only moderate extra GFLOPs at $1024\\times1024$ resolution, suggesting that geometry-guided SSM modules can serve as practical alternatives or enhancements to conventional CNN context heads.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

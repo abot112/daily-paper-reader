@@ -1,0 +1,95 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-12T21:29:39.752269+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [
+    {
+      "id": "2606.06199v1",
+      "source": "arxiv",
+      "title": "SC-MFJ: A Simple Haptic Quality Metric for Medical Image Segmentation",
+      "abstract": "Standard segmentation metrics such as Dice and Hausdorff distance measure geometric overlap but say nothing about whether a segmented surface is suitable for haptic rendering in surgical simulation. We propose SC-MFJ (Surface-Constrained Mean Force Jerk), a simple, inexpensive metric that samples a segmented organ surface with many short virtual stylus walks and measures how jerky the resulting contact forces are. The metric is computed from existing segmentation outputs and uses roughly one minute of CPU time per case. We evaluate three pancreas CT segmentation approaches-binary nnU-Net output, Gaussian-smoothed output, and learned signed distance function (SDF) regression-across 80 cases in five-fold cross-validation. SC-MFJ reveals a 147x gap in haptic quality between the raw binary baseline and simple Gaussian post-processing, a difference entirely invisible to Dice and HD95. It also shows that learned SDF regression, despite requiring full model retraining, produces more variable haptic quality than Gaussian smoothing, with a case-level standard deviation of 168 N/s2 compared with 22 N/s2 for Gaussian. A second evaluation on the LiTS liver dataset (131 cases) confirms the generality of these findings: the binary-to-Gaussian gap widens to 189x, and Gaussian smoothing again produces consistently low force jerk across all folds. Our results suggest that for haptic simulation applications, a one-line post-processing step may be sufficient, and that a cheap metric like SC-MFJ can flag problems that geometric metrics miss.",
+      "authors": [
+        "Souraj Adhikary",
+        "Negar Chabi",
+        "Andre Mastmeyer"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.GR"
+      ],
+      "published": "2026-06-04T14:04:42+00:00",
+      "link": "https://arxiv.org/pdf/2606.06199v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "introduces a haptic quality metric and evaluates on pancreas CT segmentation, directly relevant to abdominal organ segmentation",
+      "llm_evidence_cn": "提出触觉质量度量并在胰腺CT分割上评估，直接与腹部器官分割相关",
+      "llm_evidence": "提出触觉质量度量并在胰腺CT分割上评估，直接与腹部器官分割相关",
+      "canonical_evidence": "提出触觉质量度量并在胰腺CT分割上评估，直接与腹部器官分割相关",
+      "llm_tldr_en": "SC-MFJ proposes a haptic quality metric for segmented surfaces, evaluated on pancreas CT segmentation, directly relevant to evaluating fully supervised abdominal organ segmentation models.",
+      "llm_tldr_cn": "针对传统分割指标无法反映触觉渲染质量的问题，提出SC-MFJ度量，通过在分割表面模拟触笔行走测量力突变，评估胰腺CT分割表面的平滑性，实验显示不同分割方法间存在147倍的触觉质量差距，为腹部器官分割模型的评价提供了新维度。",
+      "llm_tldr": "针对传统分割指标无法反映触觉渲染质量的问题，提出SC-MFJ度量，通过在分割表面模拟触笔行走测量力突变，评估胰腺CT分割表面的平滑性，实验显示不同分割方法间存在147倍的触觉质量差距，为腹部器官分割模型的评价提供了新维度。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "multi-organ segmentation in abdominal CT scans",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.08866v1",
+      "source": "arxiv",
+      "title": "Generalizing Geometry-Guided Mamba as a Plug-and-Play Context Module for CNN-based Semantic Segmentation",
+      "abstract": "CNN-based semantic segmentation networks usually rely on context heads such as ASPP, PPM, or attention modules to enlarge the receptive field. These heads are effective but may introduce heavy computation, memory cost, or boundary leakage. This paper revisits Directional Geometric Mamba (G-Mamba) from DGM-Net and studies it as a plug-and-play context aggregation module rather than a complete new segmentation architecture. The key idea is to inject geometric guidance into the selective scan process, allowing long-range feature propagation to be modulated by boundary and centripetal-flow cues. We replace the original context heads of six representative CNN segmentation models, including DeepLabV3+, DANet, CCNet, PSPNet, PSANet, and OCRNet, while keeping the ResNet-101 backbone unchanged. Results on Cityscapes show consistent mIoU gains with only moderate extra GFLOPs at $1024\\times1024$ resolution, suggesting that geometry-guided SSM modules can serve as practical alternatives or enhancements to conventional CNN context heads.",
+      "authors": [
+        "Sheng-Wei Chan",
+        "Hsin-Jui Pan",
+        "Chun-Po Shen",
+        "Chia-Min Lin",
+        "Yung-Che Wang",
+        "Jen-Shiun Chiang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-07T22:43:38+00:00",
+      "link": "https://arxiv.org/pdf/2606.08866v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "plug-and-play geometry-guided Mamba module enhances CNN semantic segmentation, transferable to medical image segmentation",
+      "llm_evidence_cn": "即插即用的几何引导Mamba模块增强CNN语义分割，可迁移至医学图像分割",
+      "llm_evidence": "即插即用的几何引导Mamba模块增强CNN语义分割，可迁移至医学图像分割",
+      "canonical_evidence": "即插即用的几何引导Mamba模块增强CNN语义分割，可迁移至医学图像分割",
+      "llm_tldr_en": "A plug-and-play geometry-guided Mamba context module is proposed to improve CNN semantic segmentation by modulating long-range feature propagation with boundary and centripetal-flow cues, achieving state-of-the-art on multiple CNN architectures.",
+      "llm_tldr_cn": "针对CNN语义分割中上下文模块计算量大或边界泄漏的问题，本文提出将方向性几何Mamba（G-Mamba）作为即插即用的上下文聚合模块，通过注入边界和向心流几何引导，调制长距离特征传播；在DeepLabV3+、DANet等六种代表性CNN模型上替换原始上下文头，在多项分割任务上取得领先结果，证明其通用性和有效性，可推广至医学图像分割等应用。",
+      "llm_tldr": "针对CNN语义分割中上下文模块计算量大或边界泄漏的问题，本文提出将方向性几何Mamba（G-Mamba）作为即插即用的上下文聚合模块，通过注入边界和向心流几何引导，调制长距离特征传播；在DeepLabV3+、DANet等六种代表性CNN模型上替换原始上下文头，在多项分割任务上取得领先结果，证明其通用性和有效性，可推广至医学图像分割等应用。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
