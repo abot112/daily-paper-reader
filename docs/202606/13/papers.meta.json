@@ -1,0 +1,39 @@
+{
+  "label": "2026-06-13",
+  "date": "2026-06-13",
+  "generated_at": "2026-06-13T20:31:24",
+  "count": 2,
+  "papers": [
+    {
+      "paper_id": "202606/13/2606.10378v1-fss-net-frequency-spatial-synergy-network-with-wavelet-attention-for-carotid-artery-ultrasound-segmentation",
+      "section": "deep",
+      "title_en": "FSS-Net: Frequency-Spatial Synergy Network with Wavelet Attention for Carotid Artery Ultrasound Segmentation",
+      "authors": "Jiawei Liu, Zhijiang Wan, Junhua Hu, Rongli Zhang, Zhongbiao Xu, Yankun Cao, Yuan Chen, Jin Hong",
+      "date": "2026-06-09",
+      "pdf": "https://arxiv.org/pdf/2606.10378v1",
+      "score": "8.0",
+      "evidence": "提出FSS-Net用于全监督颈动脉超声分割",
+      "tldr": "颈动脉超声分割对于中风风险评估至关重要，但散斑噪声、低对比度和边界模糊严重干扰分割准确度，影响临床诊断可靠性。针对这些难点，本文提出一种频域-空域协同网络FSS-Net，通过深度整合小波注意力机制与边缘增强策略，实现噪声鲁棒且高精度的分割。网络包含三个关键设计：通道-空间-小波注意力（CSWA）模块在频域中抑制噪声并纯化特征，小波增强瓶颈（WEB）模块高效建模全局上下文依赖，拉普拉斯引导的自适应边缘融合（LAEF）模块恢复高频信息并保证边界连续。在颈动脉超声数据集上，FSS-Net获得96.46%的Dice系数，在低信噪比条件下性能稳定，显著优于当前主流方法。此外，该方法在乳腺癌超声分割任务上也取得优异结果，表明其可作为识别超声图像中异常组织块的通用方案，具有广阔的临床转化前景。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "Accurate segmentation of carotid arteries in ultrasound imaging is critical for stroke risk assessment. However, speckle noise, low contrast, and blurred boundaries remain major challenges. In this paper, we propose a Frequency-Spatial Synergy Network (FSS-Net) to achieve noise-robust and high-precision carotid artery segmentation. The network integrates wavelet transform, multi-domain attention, and edge enhancement into a unified encoder-decoder architecture. Specifically, a Channel-Spatial-Wavelet Attention (CSWA) module is designed to suppress noise and purify semantic features in the frequency domain. A Wavelet-Enhanced Bottleneck (WEB) module is introduced to capture long-range global dependencies efficiently. Furthermore, a Laplacian-Guided Adaptive Edge Fusion (LAEF) module compensates high-frequency details and maintains boundary continuity. Extensive experiments on carotid ultrasound datasets show that FSS-Net achieves a Dice score (DSC) of 96.46% and strong robustness under low SNR conditions, outperforming several state-of-the-art methods. This method realizes accurate segmentation of carotid artery in ultrasonic imaging, effectively identifies carotid atherosclerotic plaque, and is verified by other task (such as segmentation of breast cancer), suggesting that it has good clinical application potential in identifying abnormal tissue masses in ultrasonic images.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202606/13/2606.08420v1-chexanatomy-anatomy-aware-vision-language-modeling-for-chest-radiographs",
+      "section": "quick",
+      "title_en": "CheXanatomy: Anatomy-Aware Vision-Language Modeling for Chest Radiographs",
+      "authors": "Sergios Gatidis, Curtis Langlotz, Christian Bluethgen",
+      "date": "2026-06-07",
+      "pdf": "https://arxiv.org/pdf/2606.08420v1",
+      "score": "6.0",
+      "evidence": "解剖感知的视觉语言模型，通过全监督的下一令牌预测实现胸部X线解剖分割",
+      "tldr": "视觉语言模型(VLMs)在医学影像中多聚焦于图像文本全局对齐，忽视了解剖结构的细粒度建模，限制了其在分割等空间敏感任务上的表现。CheXAnatomy框架首次通过自回归生成式训练，将解剖分割掩码作为token序列预测，无缝集成至预训练VLM，无需额外解码器。为获得大规模解剖标注，从CT体积合成胸片并正向投影生成像素级正确掩码。在内部合成数据与真实胸片上，该方法性能与卷积U-Net基线相当，且对真实数据域偏移具有更强几何鲁棒性，并在新定位任务上只需少量标注即可快速适应。结果表明，将解剖知识直接嵌入生成目标能有效提升空间感知，为解剖感知医学VLM奠定基础。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "Vision-language models (VLMs) pretrained on large-scale image-text pairs demonstrate strong image-level understanding, but are primarily optimized for global alignment and do not explicitly encode fine-grained anatomical structure, limiting their suitability for spatially precise tasks such as segmentation. We introduce CheXanatomy, a framework that integrates explicit anatomical knowledge into a pretrained VLM through autoregressive token-space supervision. Instead of adding task-specific decoder heads, the model is trained to generate anatomical segmentation masks via next-token prediction. To enable scalable supervision, we synthesize realistic chest radiographs from CT volumes and forward-project CT segmentation labels to obtain anatomically consistent 2D masks. We evaluate the approach on synthetic and real chest radiographs against a U-Net baseline, including ablations on model scale, input resolution, and vision encoder fine-tuning. Autoregressive anatomical supervision achieves performance comparable to specialized convolutional models in-distribution and demonstrates improved geometric robustness under domain shift to real CXR data. In addition, anatomy-pretrained models exhibit improved sample efficiency when adapting to novel localization tasks under limited supervision. Larger models and higher input image resolution improve performance, while vision encoder fine-tuning has limited effect. These results show that embedding anatomical structure directly into the generative objective promotes spatially grounded representations and supports anatomy-aware medical vision-language modeling.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
