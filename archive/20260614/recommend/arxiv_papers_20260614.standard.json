@@ -1,0 +1,99 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-14T21:07:33.795649+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [
+    {
+      "id": "2606.12319v1",
+      "source": "arxiv",
+      "title": "Anatomically Conditioned Recurrent Refinement for Topology-Aware Circle of Willis Segmentation",
+      "abstract": "Segmenting the Circle of Willis (CoW) from Magnetic Resonance Angiography (MRA) is challenging due to complex topology and thin vascular structures that are prone to fragmentation. Standard Convolutional Neural Networks (CNNs) often fail to capture these topological constraints, resulting in \"broken vessel\" artifacts. To address this, we propose the Anatomically Conditioned Recurrent Refinement U-Net (AC2RUNet). Our architecture decouples segmentation into two streams: a Static Stream that extracts invariant anatomical features and a lightweight Dynamic Stream that iteratively refines topological errors over time. We further introduce a dynamic curriculum learning strategy that transitions from high-recall geometric supervision to topology-aware constraints. Validated on the TopCoW dataset, AC2RUNet substantially reduces Hausdorff Distance (4.72 mm vs 9.17 mm) and Betti number errors (0.19 vs 0.40), improving topological connectivity over the nnU-Net baseline while maintaining comparable volumetric Dice.",
+      "authors": [
+        "Juraj Perić",
+        "Marija Habijan",
+        "Dario Mužević",
+        "Irena Galić",
+        "Danilo Babin",
+        "Aleksandra Pižurica"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-10T16:53:13+00:00",
+      "link": "https://arxiv.org/pdf/2606.12319v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Segmenting the Circle of Willis from MRA using a supervised U-Net variant.",
+      "llm_evidence_cn": "在MRA图像上使用监督U-Net变体分割Willis环。",
+      "llm_evidence": "在MRA图像上使用监督U-Net变体分割Willis环。",
+      "canonical_evidence": "在MRA图像上使用监督U-Net变体分割Willis环。",
+      "llm_tldr_en": "The paper addresses topological errors in Circle of Willis segmentation from MRA by proposing AC2RUNet, which combines static anatomical feature extraction with dynamic recurrent refinement and curriculum learning. It achieves improved vessel continuity and is relevant as a supervised medical imaging segmentation method.",
+      "llm_tldr_cn": "针对MRA中Willis环分割易出现血管断裂的问题，提出AC2RUNet，将静态解剖特征流与动态递归细化流解耦，并引入课程学习策略。实验证明该方法能有效保持血管拓扑连续性，为全监督医学图像分割提供了新的网络架构。",
+      "llm_tldr": "针对MRA中Willis环分割易出现血管断裂的问题，提出AC2RUNet，将静态解剖特征流与动态递归细化流解耦，并引入课程学习策略。实验证明该方法能有效保持血管拓扑连续性，为全监督医学图像分割提供了新的网络架构。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.12048v1",
+      "source": "arxiv",
+      "title": "Point Cloud Segmentation for Autonomous Clip Positioning in Laparoscopic Cholecystectomy on a Phantom",
+      "abstract": "High-risk applications in robotics, such as robot-assisted surgery, present unique challenges. These systems must be both highly precise and interpretable in order to be deployed in environments with very low tolerance for error or unsafe exploration. We present the first robotic system to demonstrate autonomous clip positioning on a physical phantom in laparoscopic surgery, one of the most common interventions in general surgery. After segmentation of a colorless point cloud from a single camera, target positions for the clips are extracted using spline interpolation, and can then be adjusted by the human operator. The segmentation model is trained on only 60 hand-labeled real point clouds, reflecting data scarcity in the surgical domain. We overcome this with a combination of pre-training on 128,000 synthetic point clouds and two novel data augmentation techniques. The motion of the end-effector to each target is visualized for the operator, satisfying the unique motion constraints of minimally-invasive surgery while ensuring that the robot's actions are verifiable and interpretable. In real robot experiments, our system localizes targets with the required precision of 0.75mm at a 95% success rate and executes autonomous clip positioning with a 100% success rate. We provide insights that are applicable to many other surgical and non-surgical tasks that require identifying and navigating to a precise target. Source code and project page: https://github.com/balazsgyenes/kirurc",
+      "authors": [
+        "Balázs Gyenes",
+        "Nikolai Franke",
+        "Paul Maria Scheikl",
+        "Pit Henrich",
+        "Rayan Younis",
+        "Gerhard Neumann",
+        "Martin Wagner",
+        "Franziska Mathis-Ullrich"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-06-10T13:12:45+00:00",
+      "link": "https://arxiv.org/pdf/2606.12048v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Fully supervised point cloud segmentation for autonomous surgery in laparoscopy.",
+      "llm_evidence_cn": "腹腔镜手术中基于全监督点云分割的自主操作。",
+      "llm_evidence": "腹腔镜手术中基于全监督点云分割的自主操作。",
+      "canonical_evidence": "腹腔镜手术中基于全监督点云分割的自主操作。",
+      "llm_tldr_en": "The paper presents a fully supervised point cloud segmentation method for autonomous clip positioning in laparoscopic cholecystectomy, trained on limited real data, addressing medical image segmentation with full supervision.",
+      "llm_tldr_cn": "本文针对腹腔镜胆囊切除术中自主夹子定位需求，提出一种全监督点云分割方法，仅用60个手工标注的真实点云训练。该方法可从单相机无色点云中精准分割组织，实现手术机器人自主操作，展示了全监督学习在医学图像分析中的应用价值。",
+      "llm_tldr": "本文针对腹腔镜胆囊切除术中自主夹子定位需求，提出一种全监督点云分割方法，仅用60个手工标注的真实点云训练。该方法可从单相机无色点云中精准分割组织，实现手术机器人自主操作，展示了全监督学习在医学图像分析中的应用价值。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "medical image analysis using fully supervised segmentation",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
