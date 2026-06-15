@@ -1,0 +1,105 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-15T22:04:41.693688+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 2,
+    "deep_cap": 6,
+    "deep_selected": 2,
+    "quick_candidates": 0,
+    "quick_skim_target": 11,
+    "quick_selected": 0
+  },
+  "deep_dive": [
+    {
+      "id": "2606.14072v1",
+      "source": "arxiv",
+      "title": "Diffusion-Refined Segmentation and Vision-Language Interpretation for Pediatric Brain Tumor MRI",
+      "abstract": "Accurate pediatric brain tumor segmentation remains challenging due to limited annotated data, heterogeneous imaging phenotypes, diffuse tumor boundaries, and class imbalance across tumor subregions. Here, we present a two-stage deep learning framework for improving multi-modal pediatric brain MRI segmentation and clinical interpretation. First, we evaluate 3D Res U-Net and Swin-UNETR baselines on BraTS-PEDs MRI scans, using four co-registered modalities to predict tumor core, whole tumor, and enhancing tumor regions. Second, we introduce diffusion-based refinement models conditioned on coarse Swin-UNETR predictions, including a 3D DDPM refiner and MedSegDiff. Conditioning substantially improves diffusion stability and performance, particularly for enhancing tumor boundary segmentation. Conditioned MedSegDiff achieves the strongest boundary agreement with the lowest HD95. Finally, predicted tumor volumes and representative segmentation overlays are integrated with a multimodal language model to generate structured radiology-style reports. Together, our results suggest that coarse-to-refined diffusion segmentation can improve pediatric tumor boundary delineation and support end-to-end interpretable AI-assisted neuro-oncology workflows.",
+      "authors": [
+        "Wentao Ke",
+        "Jianche Liu"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.CL"
+      ],
+      "published": "2026-06-12T03:38:40+00:00",
+      "link": "https://arxiv.org/pdf/2606.14072v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Presents a deep learning framework for medical image segmentation, specifically pediatric brain tumor segmentation using 3D Res U-Net and Swin-UNETR with diffusion refinement.",
+      "llm_evidence_cn": "提出用于医学图像分割的深度学习框架，使用3D Res U-Net和Swin-UNETR进行儿科脑肿瘤分割并辅以扩散细化",
+      "llm_evidence": "提出用于医学图像分割的深度学习框架，使用3D Res U-Net和Swin-UNETR进行儿科脑肿瘤分割并辅以扩散细化",
+      "canonical_evidence": "提出用于医学图像分割的深度学习框架，使用3D Res U-Net和Swin-UNETR进行儿科脑肿瘤分割并辅以扩散细化",
+      "llm_tldr_en": "A two-stage framework for pediatric brain tumor segmentation using multi-modal MRI, where coarse predictions from Swin-UNETR are refined by a diffusion model, achieving improved segmentation accuracy and clinical interpretation.",
+      "llm_tldr_cn": "本文针对儿科脑肿瘤MRI分割中标注数据有限、肿瘤边界模糊和类别不平衡等难题，提出了一种两阶段深度学习框架。首先使用3D Res U-Net和Swin-UNETR基线模型在多模态MRI上预测肿瘤区域，然后引入基于扩散模型的细化网络，利用粗分割结果作为条件来稳定扩散过程，从而提升分割性能。该方法在BraTS-PEDs数据集上验证，表明条件扩散细化能有效改善分割精度，并为临床解释提供了视觉-语言分析，有望辅助精准诊疗。",
+      "llm_tldr": "本文针对儿科脑肿瘤MRI分割中标注数据有限、肿瘤边界模糊和类别不平衡等难题，提出了一种两阶段深度学习框架。首先使用3D Res U-Net和Swin-UNETR基线模型在多模态MRI上预测肿瘤区域，然后引入基于扩散模型的细化网络，利用粗分割结果作为条件来稳定扩散过程，从而提升分割性能。该方法在BraTS-PEDs数据集上验证，表明条件扩散细化能有效改善分割精度，并为临床解释提供了视觉-语言分析，有望辅助精准诊疗。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "biorxiv-10-64898-2026-06-09-731210-v1",
+      "source": "biorxiv",
+      "title": "Automated Segmentation of Brainstem and Subcortical White Matter: Mapping the Deep Tegmental Core with BundleParc",
+      "abstract": "Diffusion MRI enables noninvasive mapping of human white matter pathways, but automated segmentation methods have largely focused on large association, projection, and commissural bundles. Yet compact brainstem and subcortical pathways supporting basal ganglia, cerebellar, limbic/reward, sensory, and homeostatic functions remain underrepresented in large-scale connectomic analyses. To address this gap, we adapted BundleParc, a recently introduced bundle-parcellation architecture, into an automated pipeline for direct segmentation and along-tract parcellation of 97 subcortical and brainstem white matter pathways. The model was trained on a curated reference dataset derived from Human Connectome Project diffusion MRI using anatomy-guided tractography, explicit inclusion and exclusion criteria, automated outlier filtering, and manual quality assurance. Operating directly on native-space fiber orientation distributions, the algorithm successfully recovers these intricate anatomical trajectories and ordered parcellations. We show the model generalizes to diverse external datasets spanning development, aging, and neurodegenerative disease cohorts, maintaining robust performance across variations in spatial resolution and angular sampling. The released container, trained model, population atlas, reference streamlines, and quality assurance outputs provide a resource for studying deep brainstem and subcortical pathways in development, aging, disease, and neuromodulation-relevant anatomy.",
+      "authors": [
+        "Schilling, K. G.",
+        "Rudravaram, G.",
+        "Theberge, A.",
+        "Amandola, M.",
+        "Kim, M. E.",
+        "Humphreys, K. L.",
+        "Cutting, L.",
+        "Archer, D.",
+        "Hohman, T. J.",
+        "Jefferson, A. L.",
+        "Beason Held, L. L.",
+        "Bilgel, M.",
+        "Alzheimers Disease Neuroimaging Initiative,",
+        "The BIOCARD Study Team,",
+        "Chamberland, M.",
+        "Descoteaux, M.",
+        "Petit, L.",
+        "Rheault, F.",
+        "Landman, B. A."
+      ],
+      "primary_category": "neuroscience",
+      "categories": [
+        "neuroscience"
+      ],
+      "published": "2026-06-12T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.06.09.731210v1.full.pdf",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Describes an automated deep learning pipeline for segmentation of brain white matter pathways from diffusion MRI, a medical image segmentation task.",
+      "llm_evidence_cn": "描述从扩散MRI自动分割脑白质通路的深度学习流水线，属于医学图像分割任务",
+      "llm_evidence": "描述从扩散MRI自动分割脑白质通路的深度学习流水线，属于医学图像分割任务",
+      "canonical_evidence": "描述从扩散MRI自动分割脑白质通路的深度学习流水线，属于医学图像分割任务",
+      "llm_tldr_en": "Adapts BundleParc, a bundle-parcellation architecture, into an automated pipeline to segment 97 subcortical and brainstem white matter pathways, addressing gaps in connectomic analyses.",
+      "llm_tldr_cn": "针对大规模连接组分析中脑干和皮质下白质通路分割不足的问题，本文将BundleParc架构改造成一个自动流水线，可直接分割和沿束划分97条皮质下和脑干白质通路。该模型在人类连接组计划数据上训练，实现了对深层被盖核心等微小结构的精确映射。这项工作为理解基底节、小脑和边缘系统等功能提供了重要工具，弥补了现有自动分割方法在脑干区域的空白。",
+      "llm_tldr": "针对大规模连接组分析中脑干和皮质下白质通路分割不足的问题，本文将BundleParc架构改造成一个自动流水线，可直接分割和沿束划分97条皮质下和脑干白质通路。该模型在人类连接组计划数据上训练，实现了对深层被盖核心等微小结构的精确映射。这项工作为理解基底节、小脑和边缘系统等功能提供了重要工具，弥补了现有自动分割方法在脑干区域的空白。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": []
+}
