@@ -1,0 +1,69 @@
+{
+  "label": "2026-06-16",
+  "date": "2026-06-16",
+  "generated_at": "2026-06-16T21:59:40",
+  "count": 4,
+  "papers": [
+    {
+      "paper_id": "202606/16/2606.15370v1-mnet-extended-2d3d-networks-for-anisotropic-medical-image-segmentation",
+      "section": "deep",
+      "title_en": "MNet++: Extended 2D/3D Networks for Anisotropic Medical Image Segmentation",
+      "authors": "Kirsten Odendaal, Rade Bajic",
+      "date": "2026-06-13",
+      "pdf": "https://arxiv.org/pdf/2606.15370v1",
+      "score": "9.0",
+      "evidence": "在nnU-Net框架内部署MNet，对腹部CT的肝脏及肿瘤进行全监督分割，达到94.3% Dice，并引入可学习的各向异性扩展。",
+      "tldr": "针对各向异性医学图像分割，复现了混合2D/3D卷积网络MNet，并提出了融合门控机制和VMamba状态空间模块两种轻量扩展。在PROMISE前列腺MRI和LiTS肝脏CT上，扩展模型分别提升分割精度至89.8%（+0.8%）和95.8%，且保持了对体素间距变化的鲁棒性，δ Dice仅1.5%。研究证实了MNet的可复现性，并表明自适应融合与状态空间建模能增强各向异性条件下的分割可靠性。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "This work demonstrates a full reproduction and extension of MNet, a hybrid 2D/3D convolutional network designed for anisotropic medical image segmentation. The original architecture was re-implemented within the nnU-Net framework to verify its reported performance and robustness to variable voxel spacing, known as anisotropy. Experiments were conducted on PROMISE prostate MRI and a controlled subset of LiTS liver CT under matched preprocessing and compute constraints. The reproduced MNet achieved a Dice similarity coefficient (DSC) of 89.0 +/- 0.9% on PROMISE, within 0.8% of the published result, and 94.3 +/- 1.9% / 54.6 +/- 3.1% for liver and tumor segmentation on LiTS, respectively. Two lightweight extensions were further introduced: (1) a learned Fusion Gating mechanism enabling adaptive 2D-3D feature blending, and (2) a VMamba state-space module for efficient long-range depth modelling. The Spatial Gating variant improved DSC by +0.8% with less than 3% inference overhead, while VMamba improved performance consistency, reducing PROMISE Dice variation to +/- 0.7% and achieving the strongest LiTS liver performance at 95.8% Dice. Both extensions preserved MNet robustness to anisotropy, with delta Dice = 1.5% across 1-4 mm voxel spacing. Overall, the study confirms MNet reproducibility and demonstrates that adaptive fusion and state-space modelling have the potential to further strengthen segmentation reliability under anisotropic conditions. However, further tests are required to provide definitive conclusions.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202606/16/2606.15976v1-hadbalance-a-plug-and-play-unified-global-geometric-prior-framework-for-generalizable-biomedical-segmentation",
+      "section": "deep",
+      "title_en": "HadBalance: A Plug-and-Play Unified Global Geometric Prior Framework for Generalizable Biomedical Segmentation",
+      "authors": "Zhuangzhi Gao, Feixiang Zhou, He Zhao, Wenhan Chen, Ruiyu Luo, Xin Wang, Hongyi Qin, Zhongli Wu, Yanda Meng, Yitian Zhao, Alena Shantsila, Gregory Y. H. Lip, Eduard Shantsila, Yalin Zheng",
+      "date": "2026-06-14",
+      "pdf": "https://arxiv.org/pdf/2606.15976v1",
+      "score": "8.0",
+      "evidence": "提出用于可泛化生物医学分割的几何先验，可直接用于腹部器官全监督分割。",
+      "tldr": "生物医学图像分割常因缺乏统一几何先验而导致结构不一致。本文观察到许多器官呈全局近凸形状，基于Hadwiger定理推导出可迁移的Hadwiger Shape Priors。为解决形状异质数据上的过度正则化，提出冲突感知目标平衡（CAOB）方法，以梯度感知方式自适应融合形状先验与分割任务。实验表明该方法能稳定提升分割精度并保留凹部细节，提供了即插即用的统一全局几何先验框架，促进跨器官与模态泛化。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "Precise biomedical image segmentation is crucial for clinical diagnosis. Geometric cues (e.g., boundary, shape, and topology) can improve structural consistency, yet most are task-specific and lack a unified geometric foundation that generalizes across organs and modalities. We are motivated by the observation that several medical segmentation targets can be approximated as globally near-convex shapes. A convex region is one in which any two interior points can be connected by a line segment entirely contained within the region. In practice, medical targets may exhibit small local concavities or boundary irregularities; we refer to such globally convex-like shapes as near-convex. Motivated by this, we derive Hadwiger Shape Priors from Hadwiger's theorem as an interpretable global regularizer using three 2D measures: area A, perimeter P, and Euler characteristic chi, enabling transfer across organs and modalities. However, because medical datasets are shape-heterogeneous, enforcing near-convex priors uniformly can over-regularize non-convex anatomy with significant concavities, washing out concavities and fine details and degrading segmentation accuracy. To address this challenge, we propose Conflict-Aware Objective Balancing (CAOB), which integrates shape priors with segmentation in a gradient-aware manner. For each prior, CAOB removes only the gradient component that conflicts with segmentation while preserving the remaining aligned component, and adaptively regulates objective influences to prevent prior dominance. This enables stable use of shape priors on shape-heterogeneous data without erasing genuine concavities or fine structural details. We call this plug-and-play framework HadBalance.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202606/16/2606.13188v1-transformer-guided-graph-attention-for-direct-cardiac-mesh-reconstruction-a-structural-digital-twin-framework",
+      "section": "quick",
+      "title_en": "Transformer-Guided Graph Attention for Direct Cardiac Mesh Reconstruction: A Structural Digital Twin Framework",
+      "authors": "Abhishek H S, Akash Ganamukhi, Abhimanyu Suresh, Aditya G Hiremath, Prasad B Honnavalli, Adithya Balasubramanyam",
+      "date": "2026-06-11",
+      "pdf": "https://arxiv.org/pdf/2606.13188v1",
+      "score": "7.0",
+      "evidence": "训练端到端网络从三维医学图像直接重建网格，是一种用于器官分割的全监督深度学习方法",
+      "tldr": "精准心脏病学依赖患者特异性心脏模型，但传统网格重建需分割、Marching Cubes、手工清理，耗时长且依赖专家，阻碍临床落地。提出端到端网络，融合3D Swin Transformer与图注意力，直接生成仿真网格。MM-WHS数据集上，网格平均Chamfer距离1.8mm，95%表面距离<5mm。移除后处理，实现端到端高效重建，为临床数字孪生铺路。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "Building patient-specific cardiac models sits at the heart of precision cardiology, yet getting those models into clinical use keeps running into the same wall: mesh generation is slow, messy, and frustrating. The standard workflow -- segmenting the image, running Marching Cubes, and then manually cleaning up the result -- is time-consuming, inconsistent across operators, and demands specialist knowledge most clinical teams do not have. We take a fundamentally different approach. Instead of treating segmentation and mesh generation as two separate problems, we train a single end-to-end network that goes directly from a raw 3D medical image to a smooth, simulation-ready cardiac surface mesh. The core is a 3D Swin Transformer encoder-decoder that extracts volumetric features from CT or MRI volumes, paired with a Graph Attention Network (GAT) head that iteratively deforms a template mesh to fit the patient's cardiac boundary. We tested on the MM-WHS 2017 benchmark using both CT and MRI. Segmentation scores were competitive (Dice of 0.84 on CT, 0.83 on MRI), but the primary focus is mesh quality: mean Chamfer distance of 1.8 mm, with 95th-percentile surface distance below 5 mm. Every mesh is produced in a single forward pass -- no Marching Cubes, no smoothing filters, no manual cleanup. We argue that for cardiac digital twin pipelines, geometric fidelity and topological correctness matter more than pixel-level Dice scores. By removing the post-processing bottleneck, this approach makes patient-specific cardiac simulation substantially more accessible for clinical use.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202606/16/2606.16325v1-attention-based-prototype-calibration-for-multi-rater-few-shot-medical-image-segmentation",
+      "section": "quick",
+      "title_en": "Attention-Based Prototype Calibration for Multi-Rater Few-Shot Medical Image Segmentation",
+      "authors": "Truong Vu, Minh Khoi Ho, Yutong Xie",
+      "date": "2026-06-15",
+      "pdf": "https://arxiv.org/pdf/2606.16325v1",
+      "score": "6.0",
+      "evidence": "提出基于注意力原型校准的少样本医学图像分割方法，扩展了深度学习分割模型",
+      "tldr": "在医学图像少样本分割中，模型训练通常依赖单一专家标注作为真实值，但现实临床数据常由多名医生标注，导致评估者间存在主观差异和系统偏差，严重限制模型鲁棒性。本文提出基于注意力的原型校准框架JAPC，在原型空间中为每个评估者构建特异性偏差表示，通过轻量注意力算子直接精炼评估者原型，无需修改骨干网络，保持语义一致性并实现低开销的个性化分割输出，且与现有基于原型的方法完全兼容。在多评估者医学影像分割基准上，JAPC一致优于基线方法，充分验证了结构化原型校准对标注变异建模的有效性，为应对临床多评估者场景提供了新的技术路径。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "Few-shot medical image segmentation methods typically assume a single ground-truth annotation, overlooking systematic variability across expert raters commonly observed in clinical datasets. We propose an attention-based prototype calibration framework for few-shot multi-rater segmentation that models rater-specific deviations from a consensus representation in prototype space. A lightweight yet principled attention operator directly refines rater prototypes without modifying the backbone feature extractor, making the approach fully compatible with existing prototype-based few-shot segmentation methods. This design preserves semantic consistency while enabling personalized segmentation outputs with minimal computational overhead. Experiments on multi-rater medical imaging datasets demonstrate consistent improvements over baseline prototype approaches, highlighting the effectiveness of structured prototype calibration for modeling annotation variability. Our code is available at https://github.com/truong2710-cyber/JAPC.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
