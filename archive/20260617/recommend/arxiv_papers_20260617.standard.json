@@ -1,0 +1,92 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-17T21:01:07.419268+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2606.14803v1",
+      "source": "arxiv",
+      "title": "HSQ-VLM: A Novel Spatially-Constrained Quadrant Segmentation VLM Model for Explainability in Diabetic Retinopathy",
+      "abstract": "Diabetic Retinopathy (DR) is an aggressive retinal disease and a leading cause of global blindness, yet its clinical management is currently hindered by the black-box nature of diagnostic AI. While deep learning models achieve high classification accuracy, there is a critical lack of explainability methods capable of detailing the exact anatomical landmarks and lesion distributions that lead to a clinical decision for DR. Therefore, we propose HSQ-VLM, a novel quadrant segmentation pipeline on fundus images that utilizes a Landmark-Anchored Cartesian Cross-Attention mechanism to unify visual feature extraction with structured clinical reasoning. Unlike traditional methods that rely on arbitrary image partitioning, our pipeline implements 4-quadrant Topological Latent Partitioning (TLP) to dynamically align retinal features with a fovea-centered coordinate system. This allows the Vision-Language Model to generate natural language reports that quantify pathology with anatomical precision. On a dataset of 3,500 high-resolution fundus images, this innovative methodology achieved a lesion detection sensitivity of 99.6% for hemorrhages and 96.4% for microaneurysms, while demonstrating a significant reduction in boundary-ambiguity errors compared to standard segmentation baselines.",
+      "authors": [
+        "Shivum Telang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-11T19:02:02+00:00",
+      "link": "https://arxiv.org/pdf/2606.14803v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "segmentation pipeline on retinal fundus images for diabetic retinopathy, a medical imaging task",
+      "llm_evidence_cn": "糖尿病视网膜病变眼底图像分割管线，属于医学成像任务",
+      "llm_evidence": "糖尿病视网膜病变眼底图像分割管线，属于医学成像任务",
+      "canonical_evidence": "糖尿病视网膜病变眼底图像分割管线，属于医学成像任务",
+      "llm_tldr_en": "HSQ-VLM segments retinal quadrants for explainable DR diagnosis, using a VLM with cross-attention, but not abdominal.",
+      "llm_tldr_cn": "针对糖尿病视网膜病变AI黑盒问题，提出HSQ-VLM对眼底图像象限分割，通过地标锚定交叉注意力融合视觉特征与临床推理，实现可解释分割，但场景非腹部。",
+      "llm_tldr": "针对糖尿病视网膜病变AI黑盒问题，提出HSQ-VLM对眼底图像象限分割，通过地标锚定交叉注意力融合视觉特征与临床推理，实现可解释分割，但场景非腹部。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.16153v1",
+      "source": "arxiv",
+      "title": "A Comprehensive Survey of Medical Image Segmentation: Challenges, Benchmarks, and Beyond",
+      "abstract": "Medical image segmentation plays a critical role in clinical diagnostics, treatment planning, disease monitoring, and neurological disorder identification. This article presents a comprehensive review of its systematic development, covering widely used public datasets, representative methods built on the U-Net, Transformer, and SAM architectures, and key evaluation metrics with their differences, followed by an analysis of major challenges from multiple perspectives. Unlike surveys that focus on a single model family or a specific clinical application, this review organizes U-Net-, Transformer-, and SAM-based methods within a unified analytical framework, with a particular focus on their effectiveness in improving segmentation accuracy and efficiency. This work aims to guide future research and support clinical translation of medical image segmentation, with all related resources publicly available in our GitHub repository: https://github.com/andrew-pengyu/Awsome_MedSeg/tree/main.",
+      "authors": [
+        "Pengyu Zhu",
+        "Xiaojing Zhang",
+        "Kunbo Zhang",
+        "Chunyan Zhang",
+        "Zhenyu Wang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-06-15T03:15:19+00:00",
+      "link": "https://arxiv.org/pdf/2606.16153v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Comprehensive review covering U-Net, Transformer, SAM methods, public datasets, and metrics for medical image segmentation, potentially including abdominal organ segmentation and fully supervised approaches.",
+      "llm_evidence_cn": "全面综述涵盖U-Net、Transformer、SAM方法、公开数据集和评估指标，可能包括腹部器官分割和全监督方法",
+      "llm_evidence": "全面综述涵盖U-Net、Transformer、SAM方法、公开数据集和评估指标，可能包括腹部器官分割和全监督方法",
+      "canonical_evidence": "全面综述涵盖U-Net、Transformer、SAM方法、公开数据集和评估指标，可能包括腹部器官分割和全监督方法",
+      "llm_tldr_en": "This survey provides a systematic overview of medical image segmentation, comparing U-Net, Transformer, and SAM-based methods, discussing datasets and evaluation metrics. It serves as a resource for understanding fully supervised segmentation techniques and benchmarks relevant to abdominal organ tasks, though it does not focus exclusively on Abdomen-1K.",
+      "llm_tldr_cn": "本文对医学图像分割进行了全面综述，系统地比较了U-Net、Transformer和SAM架构的方法，梳理了常用公开数据集和评估指标，并分析了当前挑战。该综述涵盖了全监督分割策略和腹部器官分割相关进展，为理解Abdomen-1K相关方法提供了背景知识，但并非专门针对该数据集。",
+      "llm_tldr": "本文对医学图像分割进行了全面综述，系统地比较了U-Net、Transformer和SAM架构的方法，梳理了常用公开数据集和评估指标，并分析了当前挑战。该综述涵盖了全监督分割策略和腹部器官分割相关进展，为理解Abdomen-1K相关方法提供了背景知识，但并非专门针对该数据集。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "label": "2026-06-17",
+  "date": "2026-06-17",
+  "generated_at": "2026-06-17T21:02:44",
+  "count": 2,
+  "papers": [
+    {
+      "paper_id": "202606/17/2606.14803v1-hsq-vlm-a-novel-spatially-constrained-quadrant-segmentation-vlm-model-for-explainability-in-diabetic-retinopathy",
+      "section": "quick",
+      "title_en": "HSQ-VLM: A Novel Spatially-Constrained Quadrant Segmentation VLM Model for Explainability in Diabetic Retinopathy",
+      "authors": "Shivum Telang",
+      "date": "2026-06-11",
+      "pdf": "https://arxiv.org/pdf/2606.14803v1",
+      "score": "7.0",
+      "evidence": "糖尿病视网膜病变眼底图像分割管线，属于医学成像任务",
+      "tldr": "糖尿病视网膜病变（DR）是全球首要致盲原因之一，现有深度学习模型虽精度高却缺乏可解释性，难以定位病变细节。为此，提出HSQ-VLM视觉语言模型，采用地标锚定笛卡尔交叉注意力与四象限拓扑潜在分割，将视觉特征与结构化临床推理统一。实验在3500张高分辨率眼底图像上进行，出血检测灵敏度达99.6%，微动脉瘤达96.4%，边界模糊误差显著降低。HSQ-VLM可生成解剖学精确的量化病理报告，显著提升DR诊断的透明性与临床可行性。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "Diabetic Retinopathy (DR) is an aggressive retinal disease and a leading cause of global blindness, yet its clinical management is currently hindered by the black-box nature of diagnostic AI. While deep learning models achieve high classification accuracy, there is a critical lack of explainability methods capable of detailing the exact anatomical landmarks and lesion distributions that lead to a clinical decision for DR. Therefore, we propose HSQ-VLM, a novel quadrant segmentation pipeline on fundus images that utilizes a Landmark-Anchored Cartesian Cross-Attention mechanism to unify visual feature extraction with structured clinical reasoning. Unlike traditional methods that rely on arbitrary image partitioning, our pipeline implements 4-quadrant Topological Latent Partitioning (TLP) to dynamically align retinal features with a fovea-centered coordinate system. This allows the Vision-Language Model to generate natural language reports that quantify pathology with anatomical precision. On a dataset of 3,500 high-resolution fundus images, this innovative methodology achieved a lesion detection sensitivity of 99.6% for hemorrhages and 96.4% for microaneurysms, while demonstrating a significant reduction in boundary-ambiguity errors compared to standard segmentation baselines.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202606/17/2606.16153v1-a-comprehensive-survey-of-medical-image-segmentation-challenges-benchmarks-and-beyond",
+      "section": "quick",
+      "title_en": "A Comprehensive Survey of Medical Image Segmentation: Challenges, Benchmarks, and Beyond",
+      "authors": "Pengyu Zhu, Xiaojing Zhang, Kunbo Zhang, Chunyan Zhang, Zhenyu Wang",
+      "date": "2026-06-15",
+      "pdf": "https://arxiv.org/pdf/2606.16153v1",
+      "score": "6.0",
+      "evidence": "全面综述涵盖U-Net、Transformer、SAM方法、公开数据集和评估指标，可能包括腹部器官分割和全监督方法",
+      "tldr": "医学图像分割在临床诊断、治疗规划、疾病监测和神经系统疾病识别中不可或缺。本文全面回顾了该领域发展，重点梳理基于U-Net、Transformer和SAM的代表性方法，以及常用公开数据集与评价指标，并统一分析它们在分割精度和效率上的提升。综述进一步深入探讨了数据、模型及评估方面的主要挑战，旨在为后续研究提供方向并推动临床转化，相关资源已在GitHub开源。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "Medical image segmentation plays a critical role in clinical diagnostics, treatment planning, disease monitoring, and neurological disorder identification. This article presents a comprehensive review of its systematic development, covering widely used public datasets, representative methods built on the U-Net, Transformer, and SAM architectures, and key evaluation metrics with their differences, followed by an analysis of major challenges from multiple perspectives. Unlike surveys that focus on a single model family or a specific clinical application, this review organizes U-Net-, Transformer-, and SAM-based methods within a unified analytical framework, with a particular focus on their effectiveness in improving segmentation accuracy and efficiency. This work aims to guide future research and support clinical translation of medical image segmentation, with all related resources publicly available in our GitHub repository: https://github.com/andrew-pengyu/Awsome_MedSeg/tree/main.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
