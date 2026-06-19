@@ -1,0 +1,39 @@
+{
+  "label": "2026-06-19",
+  "date": "2026-06-19",
+  "generated_at": "2026-06-19T21:01:37",
+  "count": 2,
+  "papers": [
+    {
+      "paper_id": "202606/19/2606.20035v1-pu-unet-stable-multiplicative-interactions-for-medical-image-segmentation",
+      "section": "quick",
+      "title_en": "PU-UNet: Stable Multiplicative Interactions for Medical Image Segmentation",
+      "authors": "Ziyuan Li, Osamah Sufyan, Uwe Jaekel, Babette Dellen",
+      "date": "2026-06-18",
+      "pdf": "https://arxiv.org/pdf/2606.20035v1",
+      "score": "7.0",
+      "evidence": "提出带有稳定积单元残差块的U-Net架构用于医学图像分割，展示了在医学数据集上的全监督分割。",
+      "tldr": "当前密集预测网络多通过加法变换隐式建模特征交互，乘法交互显式建模因数值不稳定而受限。本文提出PU-UNet，将稳定乘积单元残差块集成至U-Net低分辨率阶段，实现安全高效的乘法特征学习。在三个医学图像分割数据集上，Dice最高达0.959，较基准一贯提升且参数量与延迟近乎不变，正常样本假阳性率降至零。该方法为增强分割网络提供了一种稳定的显式乘法交互新途径。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "Many dense prediction networks rely on additive feature transformations and model higher-order feature interactions only implicitly. Product units provide an explicit mechanism for multiplicative feature modeling, but their logarithmic--exponential formulation can cause numerical instability, which has limited their use in deep dense prediction networks. In this work, we propose Product-Unit U-Net (PU-UNet), a residual U-Net that integrates stable product-unit residual blocks into rich low-resolution stages for medical image segmentation. The proposed formulation combines smooth positivity mapping with log-domain clipping, enabling stable multiplicative feature learning with negligible computational overhead. On ISIC 2018, Kvasir-SEG, and BUSI, PU-UNet achieves Dice scores of 0.942, 0.959, and up to 0.925, respectively. Compared with a matched Residual U-Net baseline, PU-UNet consistently improves Dice and IoU while keeping parameters, FLOPs, and inference latency nearly unchanged, and reduces the image-level false-positive rate on normal BUSI cases from 0.077 to zero. Ablation studies suggest that the gains are associated with product-unit interactions, are strongest under low-resolution placement, and benefit from the proposed stabilization design. These results suggest that stable product-unit residual learning can be an effective way to enhance U-Net-style segmentation networks with explicit multiplicative interactions.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202606/19/2606.19824v1-cswinunetr-segmentation-of-thin-anatomical-structures-in-medical-images",
+      "section": "quick",
+      "title_en": "CSWinUNETR: Segmentation of Thin Anatomical Structures in Medical Images",
+      "authors": "Junho Moon, Haejun Chung, Ikbeom Jang",
+      "date": "2026-06-18",
+      "pdf": "https://arxiv.org/pdf/2606.19824v1",
+      "score": "6.0",
+      "evidence": "提出用于医学图像中细长结构分割的通用主干网络",
+      "tldr": "薄形解剖结构分割常受困于低对比度、不连续和严重类别不平衡，现有方法易产生碎片化预测。CSWinUNETR作为通用骨干，通过交叉条纹自注意力和循环移位捕捉长距离主轴上下文，并引入细节增强多尺度自注意力与稀疏控制动态蛇形卷积，精准恢复细粒度特征和弯曲几何。在眼科、神经血管和皮肤科四个基准上，该方法全面超越现有最佳模型，且无需任务专用后处理或拓扑损失。代码开源，为薄结构分割提供了强大且通用的解决方案。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "Accurate segmentation of thin, tortuous anatomical structures, such as retinal vessels, cerebral vasculature, and facial wrinkles, remains challenging due to low contrast, frequent discontinuities, and severe class imbalance. Although recent convolutional and Transformer-based models have improved performance, they often yield fragmented predictions and fail to recover fine branches. We propose CSWinUNETR, a general-purpose backbone for 2D and 3D thin-structure segmentation. It employs cross-shaped stripe self-attention to model long-range principal-axis context and incorporates cyclic shifts to enhance information exchange across stripes. To better preserve fine-grained details, we further introduce a detail-enhanced multi-scale self-attention module that aggregates contextual features from multi-resolution representations. In addition, we propose sparse-control dynamic snake convolution, which reconstructs reliable dense curvilinear kernels from sparsely predicted control points to better follow tortuous geometry. Extensive experiments on four benchmarks across ophthalmology, neurovascular imaging, and dermatology demonstrate that CSWinUNETR consistently outperforms state-of-the-art methods without task-specific post-processing or topology-aware losses. The code is available at https://github.com/labhai/CSWinUNETR.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
