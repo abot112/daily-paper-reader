@@ -6,29 +6,32 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-06-19
-- 运行时间：2026-06-19 21:01:31 UTC
+- 最新运行日期：2026-06-20
+- 运行时间：2026-06-20 21:36:00 UTC
 - 运行状态：成功
-- 本次总论文数：2
+- 本次总论文数：3
 - 精读区：0
-- 速读区：2
+- 速读区：3
 
 ### 今日简报（AI）
-今日速读两篇医学图像分割新作，聚焦提升网络稳定性与细薄结构识别能力。  
-值得关注的是，PU-UNet通过稳定乘法交互优化特征融合，而CSWinUNETR专攻解剖细薄结构的分割难题。  
-若对医学影像AI感兴趣，可从这两篇对比入手，看看乘法交互与Transformer变体各自的适用场景。
-- 详情：[/202606/19/README](/202606/19/README)
+今日速读3篇医学图像分割前沿论文，聚焦实用性与可靠性提升。  
+重点关注轻量化微调医疗大模型实现可解释分割，以及真实噪声标签下联邦学习方法的评估基准。  
+建议关注如何用更低成本适配预训练模型，以及在实际脏数据环境中稳妥选型。
+- 详情：[/202606/20/README](/202606/20/README)
 
 ### 精读区论文标签
 - 本次无精读推荐。
 
 ### 速读区论文标签
-1. [PU-UNet: Stable Multiplicative Interactions for Medical Image Segmentation](/202606/19/2606.20035v1-pu-unet-stable-multiplicative-interactions-for-medical-image-segmentation)  
+1. [PEFT-MedSAM: Efficient Fine-Tuning of Medical Foundation Models for Explainable Skin Lesion Segmentation](/202606/20/2606.18707v1-peft-medsam-efficient-fine-tuning-of-medical-foundation-models-for-explainable-skin-lesion-segmentation)  
    标签：评分：7.0/10、query:abdk-seg
-   evidence：提出带有稳定积单元残差块的U-Net架构用于医学图像分割，展示了在医学数据集上的全监督分割。
-2. [CSWinUNETR: Segmentation of Thin Anatomical Structures in Medical Images](/202606/19/2606.19824v1-cswinunetr-segmentation-of-thin-anatomical-structures-in-medical-images)  
+   evidence：对MedSAM进行参数高效微调用于医学图像分割
+2. [Federated Medical Image Segmentation under Real-World Label Noise: A Benchmark Suite for Noisy Label Learning Method Selection](/202606/20/2606.16868v1-federated-medical-image-segmentation-under-real-world-label-noise-a-benchmark-suite-for-noisy-label-learning-method-selection)  
    标签：评分：6.0/10、query:abdk-seg
-   evidence：提出用于医学图像中细长结构分割的通用主干网络
+   evidence：联邦医学图像分割基准，含标签噪声，全监督但抗噪声；非腹部特定
+3. [Quantification of Uncertainty with Adversarial Models in Medical Image Segmentation](/202606/20/2606.18860v1-quantification-of-uncertainty-with-adversarial-models-in-medical-image-segmentation)  
+   标签：评分：6.0/10、query:abdk-seg
+   evidence：医学图像分割的事后不确定性量化，适用于全监督模型
 
 
 <div class="dpr-home-promo-card">

@@ -1,0 +1,140 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-20T21:33:24.010087+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 3,
+    "quick_skim_target": 11,
+    "quick_selected": 3
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2606.18707v1",
+      "source": "arxiv",
+      "title": "PEFT-MedSAM: Efficient Fine-Tuning of Medical Foundation Models for Explainable Skin Lesion Segmentation",
+      "abstract": "Automated segmentation of skin lesions using deep learning models for dermoscopic images can be very helpful in finding melanomas earlier than they would normally be detected. However, most deep learning methods available do not perform well. The aim of this paper is to present a parameter-efficient fine-tuning method called PEFT-MedSAM for adapting the Medical Segment Anything Model (MedSAM) to automatically segment dermoscopic skin lesions. The PEFT-MedSAM method uses only the lightweight mask decoder for training the model while keeping the pre-trained image encoder and prompt encoder frozen. The experiments performed on the ISIC 2018 benchmark dataset shows that PEFT-MedSAM obtains a dice coefficient of .9411 and an intersection over union value of .8918 when compared to both a fully trained U-Net baseline (.8715 dice coefficient) and zero-shot MedSAM inference (.8997 dice coefficient). The external validation of the model using PH2 dataset shows .9467 dice coefficient with +/- .0310 standard deviation. Supportive evidence for these claims include a p-value less than .0001 for Wilcoxon signed rank tests comparing the two datasets and bootstrap-estimated 95% confidence intervals of [.9364,.9447] that represent the estimated range of possible values for the average dice coefficient obtained by repeating the test. To increase clinical trustworthiness, we used Grad-CAM explainability along with a pointing game based evaluation methodology to evaluate the CNN baseline model on the validation set. The results showed that we had an accuracy rate of 98.27% on the validation set of 519 images and confirmed that the model classified regions containing skin lesions.",
+      "authors": [
+        "Asad Channa",
+        "Abdullah Khan",
+        "Asghar Ali Chandio",
+        "Aamir Akbar",
+        "Shahzad Memon",
+        "Aqib Hussain",
+        "Ameer Hamza"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-17T05:42:24+00:00",
+      "link": "https://arxiv.org/pdf/2606.18707v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "parameter-efficient fine-tuning of MedSAM for medical image segmentation",
+      "llm_evidence_cn": "对MedSAM进行参数高效微调用于医学图像分割",
+      "llm_evidence": "对MedSAM进行参数高效微调用于医学图像分割",
+      "canonical_evidence": "对MedSAM进行参数高效微调用于医学图像分割",
+      "llm_tldr_en": "Proposes PEFT-MedSAM, a parameter-efficient fine-tuning method for MedSAM that trains only the mask decoder, achieving 0.9411 Dice on ISIC 2018 skin lesion segmentation. Enables efficient adaptation of medical foundation models.",
+      "llm_tldr_cn": "为解决医学基础模型全参数微调效率低下的问题，本文提出PEFT-MedSAM参数高效微调框架，仅训练轻量级掩码解码器而冻结图像和提示编码器。在ISIC 2018皮肤病变分割上达到0.9411 Dice系数，表明该方法能以极少参数实现高性能，加快医学分割模型的迁移与应用。",
+      "llm_tldr": "为解决医学基础模型全参数微调效率低下的问题，本文提出PEFT-MedSAM参数高效微调框架，仅训练轻量级掩码解码器而冻结图像和提示编码器。在ISIC 2018皮肤病变分割上达到0.9411 Dice系数，表明该方法能以极少参数实现高性能，加快医学分割模型的迁移与应用。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.16868v1",
+      "source": "arxiv",
+      "title": "Federated Medical Image Segmentation under Real-World Label Noise: A Benchmark Suite for Noisy Label Learning Method Selection",
+      "abstract": "While federated learning (FL) enables collaborative medical image segmentation without centralizing sensitive data, real-world deployment is frequently complicated by cross-site label imperfections such as contour disagreement, missing or additional structures, and confused labels. Federated noisy label learning (FNLL) aims to mitigate these effects, yet remains underused in practice as existing evidence is largely based on synthetic noise, simplified settings, and limited real-world noisy evaluation. We address this gap by introducing a benchmark suite that combines diverse real-world noisy datasets, deployment-relevant client-noise scenarios, and label-noise-targeted evaluation to support systematic FNLL assessment and informed method selection. The suite combines curated real-world noisy medical image segmentation datasets from diverse sources with a comprehensive federated segmentation framework including various client-noise scenarios and noise-targeted evaluation. The presented suite provides a realistic and discriminative basis for FNLL evaluation in medical image segmentation and establishes a reusable foundation for fair benchmarking, dataset-specific label-noise characterization, and future method development under realistic federated settings. Code is available at https://github.com/MIC-DKFZ/FedSegNoiseBench.",
+      "authors": [
+        "Markus Bujotzek",
+        "Dimitrios Bounias",
+        "Stefan Denner",
+        "Ralf Floca",
+        "Maximilian Fischer",
+        "Peter Neher",
+        "Klaus Maier-Hein"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.DC"
+      ],
+      "published": "2026-06-15T15:44:58+00:00",
+      "link": "https://arxiv.org/pdf/2606.16868v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Federated medical image segmentation benchmark with label noise, fully supervised but noise-robust; not abdominal specific.",
+      "llm_evidence_cn": "联邦医学图像分割基准，含标签噪声，全监督但抗噪声；非腹部特定",
+      "llm_evidence": "联邦医学图像分割基准，含标签噪声，全监督但抗噪声；非腹部特定",
+      "canonical_evidence": "联邦医学图像分割基准，含标签噪声，全监督但抗噪声；非腹部特定",
+      "llm_tldr_en": "Introduces a benchmark for federated medical image segmentation under real-world label noise, helping practitioners choose robust methods; relevant as a resource for supervised segmentation in noisy medical settings.",
+      "llm_tldr_cn": "针对联邦学习中跨站点标签不完美（如轮廓分歧、缺失结构、混淆标签）问题，提出了结合真实世界噪声数据集、部署相关客户端噪声场景和标签噪声针对性评估的基准套件，为医学图像分割在真实噪声环境下的方法选择提供支持，有助于提升全监督分割模型的鲁棒性。",
+      "llm_tldr": "针对联邦学习中跨站点标签不完美（如轮廓分歧、缺失结构、混淆标签）问题，提出了结合真实世界噪声数据集、部署相关客户端噪声场景和标签噪声针对性评估的基准套件，为医学图像分割在真实噪声环境下的方法选择提供支持，有助于提升全监督分割模型的鲁棒性。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "medical image analysis using fully supervised segmentation",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.18860v1",
+      "source": "arxiv",
+      "title": "Quantification of Uncertainty with Adversarial Models in Medical Image Segmentation",
+      "abstract": "Reliable pixel-level uncertainty quantification holds the potential to transform clinical workflows by enabling high-fidelity longitudinal monitoring and distinguishing true pathological changes from artifacts. Ideally, these models provide the stability required for critical treatment planning and surgical intervention. However, standard deep learning models often suffer from miscalibration, yielding overconfident predictions that mask underlying vulnerabilities at subtle pathological boundaries. To address this, we propose QUAM-SM, a post-hoc framework using targeted adversarial search to identify \"adversarially fragile\" pixels. By actively seeking perturbations that expose predictive instability, our method highlights regions where decisions are most vulnerable to being flipped. Importantly, the framework disentangles epistemic uncertainty from aleatoric uncertainty. Experiments on two public datasets with multiple expert annotations demonstrate that QUAM-SM outperforms both standard and recent uncertainty estimation approaches in terms of reliability and boundary sensitivity. Code is available at https://github.com/HanaJebril/quam_sm",
+      "authors": [
+        "Hana Jebril",
+        "Thomas Pinetz",
+        "Günter Klambauer",
+        "Hrvoje Bogunović"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "published": "2026-06-17T09:42:24+00:00",
+      "link": "https://arxiv.org/pdf/2606.18860v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Post-hoc uncertainty quantification for medical image segmentation, applicable to fully supervised models.",
+      "llm_evidence_cn": "医学图像分割的事后不确定性量化，适用于全监督模型",
+      "llm_evidence": "医学图像分割的事后不确定性量化，适用于全监督模型",
+      "canonical_evidence": "医学图像分割的事后不确定性量化，适用于全监督模型",
+      "llm_tldr_en": "QUAM-SM uses targeted adversarial search to identify fragile pixels in segmentation models, enabling reliable uncertainty quantification that can improve clinical decision-making for fully supervised segmentation tasks.",
+      "llm_tldr_cn": "针对标准深度学习模型在医学分割中校准不良、过度自信的问题，提出QUAM-SM框架：通过目标对抗搜索暴露预测不稳定区域，识别对抗脆弱像素，从而提供可靠的不确定性量化，有利于全监督分割在临床中的纵向监测和治疗规划。",
+      "llm_tldr": "针对标准深度学习模型在医学分割中校准不良、过度自信的问题，提出QUAM-SM框架：通过目标对抗搜索暴露预测不稳定区域，识别对抗脆弱像素，从而提供可靠的不确定性量化，有利于全监督分割在临床中的纵向监测和治疗规划。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "medical image analysis using fully supervised segmentation",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
