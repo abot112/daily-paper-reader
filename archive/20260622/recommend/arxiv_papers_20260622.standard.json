@@ -1,0 +1,53 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-22T22:06:53.090963+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 0,
+    "quick_skim_target": 11,
+    "quick_selected": 0
+  },
+  "deep_dive": [
+    {
+      "id": "2606.17966v1",
+      "source": "arxiv",
+      "title": "Reload-Mamba: Hierarchical Anti-Dilution State-Space Modeling for Multi-Class Semantic Segmentation",
+      "abstract": "Mamba-based state space models offer linear-time long-range modeling for high-resolution dense prediction, but sequential state-space propagation can attenuate boundary-sensitive and detail-sensitive responses that are critical in multi-class semantic segmentation. We propose Reload-Mamba, a semantic segmentation framework that addresses this propagation-induced response dilution through three segmentation-specific designs: (i) a boundary-supervised local detail prior that is explicitly trained with ground-truth boundary masks to identify regions requiring response restoration; (ii) a class-uncertainty-aware Reload Gate that incorporates per-pixel class entropy from a pre-reload auxiliary head as an additional gating signal, a formulation that is informative only under multi-class dense prediction; and (iii) a hierarchical multi-level Reload mechanism that applies anti-dilution refinement at three decoder levels and fuses the restored representations top-down. Built upon a ConvNeXt-Tiny encoder with a multi-scale decoder and four-directional Mamba scanning with pixel-wise directional attention, Reload-Mamba achieves 47.9% single-scale (48.9% multi-scale) mIoU on ADE20K and 83.2% single-scale mIoU on Cityscapes. With ResNet-101 + COCO pre-training under the standard DeepLab-style protocol, Reload-Mamba reaches 87.8% mIoU on PASCAL VOC 2012 val. Controlled ablations show that each of the three segmentation-specific designs contributes beyond a direct port of the prior anti-dilution architecture proposed for binarization, cumulatively improving over the direct-port baseline by +2.2 mIoU on ADE20K.",
+      "authors": [
+        "Sheng-Wei Chan",
+        "Hsin-Jui Pan",
+        "Jen-Shiun Chiang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-16T14:17:24+00:00",
+      "link": "https://arxiv.org/pdf/2606.17966v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Introduces a supervised semantic segmentation method with boundary and class-uncertainty supervision using Mamba state-space models.",
+      "llm_evidence_cn": "提出了一种利用Mamba状态空间模型、结合边界和类别不确定性监督的监督式语义分割方法。",
+      "llm_evidence": "提出了一种利用Mamba状态空间模型、结合边界和类别不确定性监督的监督式语义分割方法。",
+      "canonical_evidence": "提出了一种利用Mamba状态空间模型、结合边界和类别不确定性监督的监督式语义分割方法。",
+      "llm_tldr_en": "Reload-Mamba addresses response dilution in Mamba-based segmentation by incorporating boundary-supervised local detail prior, class-uncertainty-aware gating, and hierarchical anti-dilution state-space modeling, achieving improved multi-class semantic segmentation.",
+      "llm_tldr_cn": "针对Mamba状态空间模型在语义分割中因序列传播导致边界和细节响应衰减的问题，Reload-Mamba引入了边界监督局部细节先验、类别不确定性感知门控以及层次化抗稀释状态空间建模。该方法通过显式边界监督和熵感知门控恢复关键区域的响应，在多类别语义分割任务上有效提升了分割精度，为状态空间模型在密集预测中的应用提供了改进方案。",
+      "llm_tldr": "针对Mamba状态空间模型在语义分割中因序列传播导致边界和细节响应衰减的问题，Reload-Mamba引入了边界监督局部细节先验、类别不确定性感知门控以及层次化抗稀释状态空间建模。该方法通过显式边界监督和熵感知门控恢复关键区域的响应，在多类别语义分割任务上有效提升了分割精度，为状态空间模型在密集预测中的应用提供了改进方案。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "supervised training of neural networks for segmentation",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": []
+}

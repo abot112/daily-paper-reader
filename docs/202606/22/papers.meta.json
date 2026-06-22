@@ -1,0 +1,24 @@
+{
+  "label": "2026-06-22",
+  "date": "2026-06-22",
+  "generated_at": "2026-06-22T22:08:30",
+  "count": 1,
+  "papers": [
+    {
+      "paper_id": "202606/22/2606.17966v1-reload-mamba-hierarchical-anti-dilution-state-space-modeling-for-multi-class-semantic-segmentation",
+      "section": "deep",
+      "title_en": "Reload-Mamba: Hierarchical Anti-Dilution State-Space Modeling for Multi-Class Semantic Segmentation",
+      "authors": "Sheng-Wei Chan, Hsin-Jui Pan, Jen-Shiun Chiang",
+      "date": "2026-06-16",
+      "pdf": "https://arxiv.org/pdf/2606.17966v1",
+      "score": "9.0",
+      "evidence": "提出了一种利用Mamba状态空间模型、结合边界和类别不确定性监督的监督式语义分割方法。",
+      "tldr": "Mamba模型在多类语义分割中因序列状态传播导致边界和细节响应稀释。Reload-Mamba提出边界监督的局部细节先验、类别不确定性感知重载门及分级多级重载机制，在解码器三层进行抗稀释优化。在ADE20K上单尺度mIoU达47.9%，Cityscapes达83.2%，PASCAL VOC 2012达87.8%，消融验证每个模块的独立贡献。为密集预测的细粒度响应保持提供了有效方案。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "Mamba-based state space models offer linear-time long-range modeling for high-resolution dense prediction, but sequential state-space propagation can attenuate boundary-sensitive and detail-sensitive responses that are critical in multi-class semantic segmentation. We propose Reload-Mamba, a semantic segmentation framework that addresses this propagation-induced response dilution through three segmentation-specific designs: (i) a boundary-supervised local detail prior that is explicitly trained with ground-truth boundary masks to identify regions requiring response restoration; (ii) a class-uncertainty-aware Reload Gate that incorporates per-pixel class entropy from a pre-reload auxiliary head as an additional gating signal, a formulation that is informative only under multi-class dense prediction; and (iii) a hierarchical multi-level Reload mechanism that applies anti-dilution refinement at three decoder levels and fuses the restored representations top-down. Built upon a ConvNeXt-Tiny encoder with a multi-scale decoder and four-directional Mamba scanning with pixel-wise directional attention, Reload-Mamba achieves 47.9% single-scale (48.9% multi-scale) mIoU on ADE20K and 83.2% single-scale mIoU on Cityscapes. With ResNet-101 + COCO pre-training under the standard DeepLab-style protocol, Reload-Mamba reaches 87.8% mIoU on PASCAL VOC 2012 val. Controlled ablations show that each of the three segmentation-specific designs contributes beyond a direct port of the prior anti-dilution architecture proposed for binarization, cumulatively improving over the direct-port baseline by +2.2 mIoU on ADE20K.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
