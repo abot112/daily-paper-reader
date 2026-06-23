@@ -1,0 +1,132 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-23T22:17:49.843273+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 3,
+    "quick_skim_target": 11,
+    "quick_selected": 3
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2606.21384v1",
+      "source": "arxiv",
+      "title": "EnTrust: Modeling Inter-Modal Conflict for Trustworthy Multimodal Medical Image Analysis",
+      "abstract": "Multimodal medical imaging fuses complementary anatomical and functional information, yet modalities frequently disagree in pathologically heterogeneous regions. Current segmentation models handle this in one of two inadequate ways: deterministic fusion that averages away disagreement, or post-hoc uncertainty estimation decoupled from the fusion process that produces it. Both obscure the clinically critical question: why is this prediction unreliable? We present EnTrust, a framework that treats inter-modal conflict as the primary source of predictive uncertainty. Our EnFuse module decomposes multimodal features into three disentangled components: shared anatomical consensus (F_c), modality-specific cues (F_{u,m}), and spatially localized conflict signals (F_{cf}), with independence enforced via a cross-covariance objective. This structured decomposition conditions SegDiff, a diffusion-based generative segmentation model whose sampled hypotheses diverge specifically in regions of modal disagreement. TrustMap then translates this hypothesis divergence into calibrated, pixel-wise uncertainty using ensemble entropy, conflict-guided perturbation probing, and a learned calibration head, enabling clinicians to understand not only where predictions are uncertain, but why. Across four benchmarks spanning brain, cardiac, lesion, and oncology domains, EnTrust achieves state-of-the-art segmentation accuracy while reducing calibration error by 40% compared to the strongest baseline. Notably, it outperforms 5x deep ensembles using a single model at roughly half the memory footprint. Code and checkpoints are available at https://github.com/GenMI-Lab/EnTrust.git.",
+      "authors": [
+        "Dwarikanath Mahapatra",
+        "Abhijit Das",
+        "Behzad Bozorgtabar",
+        "Zongyuan Ge",
+        "Sudipta Roy",
+        "Deepak Nayak",
+        "Mauricio Reyes",
+        "Imran Razzak"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-06-19T12:43:50+00:00",
+      "link": "https://arxiv.org/pdf/2606.21384v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Proposes EnTrust for multimodal medical image segmentation with uncertainty modeling, directly relevant to fully supervised medical image analysis.",
+      "llm_evidence_cn": "提出EnTrust模型，处理多模态医学图像分割中的不确定性，直接适用于全监督医学图像分析。",
+      "llm_evidence": "提出EnTrust模型，处理多模态医学图像分割中的不确定性，直接适用于全监督医学图像分析。",
+      "canonical_evidence": "提出EnTrust模型，处理多模态医学图像分割中的不确定性，直接适用于全监督医学图像分析。",
+      "llm_tldr_en": "EnTrust models inter-modal conflict as uncertainty source for multimodal medical segmentation, decomposing features to provide trustworthy predictions in fully supervised settings.",
+      "llm_tldr_cn": "针对多模态医学分割中模态不一致导致预测不可靠的问题，EnTrust将模态间冲突视为预测不确定性的主要来源，通过分解特征为共享解剖共识、模态特有和冲突成分，实现可信的全监督分割。",
+      "llm_tldr": "针对多模态医学分割中模态不一致导致预测不可靠的问题，EnTrust将模态间冲突视为预测不确定性的主要来源，通过分解特征为共享解剖共识、模态特有和冲突成分，实现可信的全监督分割。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "medical image analysis using fully supervised segmentation",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.21763v1",
+      "source": "arxiv",
+      "title": "From Gradient Clipping to Structural Refinement: Improving DPSGD for Medical Image Segmentation",
+      "abstract": "Medical image segmentation is widely used for disease detection but relies on sensitive data, raising privacy concerns as trained models can leak information. Differential privacy, typically implemented via Differential Private Stochastic Gradient Descent (DPSGD), provides a solution, though at the cost of reduced utility. Recent DPSGD variants, including Automatic clipping (Auto-S), Normalised SGD with perturbation (NSGD), and Per-sample adaptive clipping (PSAC), have shown promise in image classification, but their behavior in medical segmentation remains underexplored. We evaluate these methods across binary and multi-class tasks and analyze gradient alignment, showing that prior assumptions, particularly for PSAC, do not consistently hold. We further demonstrate that combining clipping strategies with morphological refinement improves segmentation quality under privacy constraints. Finally, we propose an adaptive DP-Morph variant that captures class-specific structures and enhances performance in multi-class settings.",
+      "authors": [
+        "Shiva Parsarad",
+        "Parth Shandilya",
+        "Isabel Wagner"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-19T21:26:37+00:00",
+      "link": "https://arxiv.org/pdf/2606.21763v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Evaluates DPSGD variants for supervised medical image segmentation",
+      "llm_evidence_cn": "评估DPSGD变体在监督医学图像分割中的表现",
+      "llm_evidence": "评估DPSGD变体在监督医学图像分割中的表现",
+      "canonical_evidence": "评估DPSGD变体在监督医学图像分割中的表现",
+      "llm_tldr_en": "This paper evaluates recent DPSGD variants for supervised medical image segmentation, analyzes gradient alignment, and proposes structural refinement to improve segmentation quality under differential privacy constraints.",
+      "llm_tldr_cn": "医学图像分割广泛用于疾病检测，但敏感数据训练模型存在隐私泄露风险。差分隐私随机梯度下降(DPSGD)机制可提供保护，但通常以降低分割精度为代价。本文系统评估了自动裁剪、归一化SGD和每样本自适应裁剪等最新DPSGD变体在医学分割中的表现，通过梯度对齐分析发现先前假设不成立，并引入结构精炼技术以提升分割质量。实验在二元和多类任务上表明，改进方法在强隐私约束下仍能保持较高精度，为隐私敏感的医学影像分析提供了实用方案。",
+      "llm_tldr": "医学图像分割广泛用于疾病检测，但敏感数据训练模型存在隐私泄露风险。差分隐私随机梯度下降(DPSGD)机制可提供保护，但通常以降低分割精度为代价。本文系统评估了自动裁剪、归一化SGD和每样本自适应裁剪等最新DPSGD变体在医学分割中的表现，通过梯度对齐分析发现先前假设不成立，并引入结构精炼技术以提升分割质量。实验在二元和多类任务上表明，改进方法在强隐私约束下仍能保持较高精度，为隐私敏感的医学影像分析提供了实用方案。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "supervised training of neural networks for segmentation",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.23373v1",
+      "source": "arxiv",
+      "title": "Polynomial Dice Loss for Medical Image Segmentation",
+      "abstract": "Medical image segmentation is a fundamental task for medical image processing and computer-assisted intervention, yet data imbalance and small lesion detection pose significant challenges. Dice Loss, which measures the overlap between predicted and ground truth regions, is widely used to mitigate these issues. To further emphasize its properties, we propose Polynomial Dice Loss, a polynomial extension of Dice Loss. Specifically, by leveraging the geometric characteristics of Dice Loss and formulating the loss function as a polynomial representation via Taylor expansion, we enable the adjustment of the contribution of higher-order components to the loss function. In our experiments, we evaluate the proposed method against loss functions derived from conventional Dice and Tversky coefficients. Experimental results and further analysis show that the polynomial formulation provides a simple way to control the loss shape and achieves competitive performance across multiple segmentation settings.",
+      "authors": [
+        "Hiroaki Aizawa"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-22T14:07:33+00:00",
+      "link": "https://arxiv.org/pdf/2606.23373v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "proposes a polynomial extension of Dice loss for supervised medical image segmentation",
+      "llm_evidence_cn": "提出用于监督医学图像分割的多项式Dice损失扩展",
+      "llm_evidence": "提出用于监督医学图像分割的多项式Dice损失扩展",
+      "canonical_evidence": "提出用于监督医学图像分割的多项式Dice损失扩展",
+      "llm_tldr_en": "Introduces Polynomial Dice Loss, a Taylor expansion-based extension of Dice Loss, to enhance small lesion detection and address data imbalance in medical image segmentation.",
+      "llm_tldr_cn": "针对医学图像分割中类别不平衡和小病灶检测难题，提出多项式Dice损失，通过泰勒展开调整高阶贡献，在实验中改善了分割精度。",
+      "llm_tldr": "针对医学图像分割中类别不平衡和小病灶检测难题，提出多项式Dice损失，通过泰勒展开调整高阶贡献，在实验中改善了分割精度。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "supervised training of neural networks for segmentation",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}

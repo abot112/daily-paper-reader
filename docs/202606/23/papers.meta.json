@@ -1,0 +1,54 @@
+{
+  "label": "2026-06-23",
+  "date": "2026-06-23",
+  "generated_at": "2026-06-23T22:20:05",
+  "count": 3,
+  "papers": [
+    {
+      "paper_id": "202606/23/2606.21384v1-entrust-modeling-inter-modal-conflict-for-trustworthy-multimodal-medical-image-analysis",
+      "section": "quick",
+      "title_en": "EnTrust: Modeling Inter-Modal Conflict for Trustworthy Multimodal Medical Image Analysis",
+      "authors": "Dwarikanath Mahapatra, Abhijit Das, Behzad Bozorgtabar, Zongyuan Ge, Sudipta Roy, Deepak Nayak, Mauricio Reyes, Imran Razzak",
+      "date": "2026-06-19",
+      "pdf": "https://arxiv.org/pdf/2606.21384v1",
+      "score": "7.0",
+      "evidence": "提出EnTrust模型，处理多模态医学图像分割中的不确定性，直接适用于全监督医学图像分析。",
+      "tldr": "多模态医学影像融合常面临模态间冲突，现有方法掩盖了预测不可靠的原因。EnTrust将模态冲突作为主要不确定性来源，通过特征分解与扩散模型在冲突区域生成多样假设，实现可信赖分割。在脑、心脏等四个基准上，分割精度领先，校准误差降低40%，且单模型性能超越五倍集成。该框架不仅定位不可靠区域，还解释原因，为临床提供可解释的不确定性评估。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "Multimodal medical imaging fuses complementary anatomical and functional information, yet modalities frequently disagree in pathologically heterogeneous regions. Current segmentation models handle this in one of two inadequate ways: deterministic fusion that averages away disagreement, or post-hoc uncertainty estimation decoupled from the fusion process that produces it. Both obscure the clinically critical question: why is this prediction unreliable? We present EnTrust, a framework that treats inter-modal conflict as the primary source of predictive uncertainty. Our EnFuse module decomposes multimodal features into three disentangled components: shared anatomical consensus (F_c), modality-specific cues (F_{u,m}), and spatially localized conflict signals (F_{cf}), with independence enforced via a cross-covariance objective. This structured decomposition conditions SegDiff, a diffusion-based generative segmentation model whose sampled hypotheses diverge specifically in regions of modal disagreement. TrustMap then translates this hypothesis divergence into calibrated, pixel-wise uncertainty using ensemble entropy, conflict-guided perturbation probing, and a learned calibration head, enabling clinicians to understand not only where predictions are uncertain, but why. Across four benchmarks spanning brain, cardiac, lesion, and oncology domains, EnTrust achieves state-of-the-art segmentation accuracy while reducing calibration error by 40% compared to the strongest baseline. Notably, it outperforms 5x deep ensembles using a single model at roughly half the memory footprint. Code and checkpoints are available at https://github.com/GenMI-Lab/EnTrust.git.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202606/23/2606.21763v1-from-gradient-clipping-to-structural-refinement-improving-dpsgd-for-medical-image-segmentation",
+      "section": "quick",
+      "title_en": "From Gradient Clipping to Structural Refinement: Improving DPSGD for Medical Image Segmentation",
+      "authors": "Shiva Parsarad, Parth Shandilya, Isabel Wagner",
+      "date": "2026-06-19",
+      "pdf": "https://arxiv.org/pdf/2606.21763v1",
+      "score": "7.0",
+      "evidence": "评估DPSGD变体在监督医学图像分割中的表现",
+      "tldr": "医学图像分割依赖敏感数据，差分隐私训练虽能保护隐私但降低模型效用。现有DPSGD变体如Auto-S、NSGD、PSAC在分类中有效，但在分割中表现未知；本研究评估其二值及多类分割，发现梯度对齐假设不总成立。将裁剪策略与形态学细化结合提升隐私下分割质量，并提出自适应DP-Morph捕获类特定结构。该方法增强多类性能，为隐私医学分割提供新方案。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "Medical image segmentation is widely used for disease detection but relies on sensitive data, raising privacy concerns as trained models can leak information. Differential privacy, typically implemented via Differential Private Stochastic Gradient Descent (DPSGD), provides a solution, though at the cost of reduced utility. Recent DPSGD variants, including Automatic clipping (Auto-S), Normalised SGD with perturbation (NSGD), and Per-sample adaptive clipping (PSAC), have shown promise in image classification, but their behavior in medical segmentation remains underexplored. We evaluate these methods across binary and multi-class tasks and analyze gradient alignment, showing that prior assumptions, particularly for PSAC, do not consistently hold. We further demonstrate that combining clipping strategies with morphological refinement improves segmentation quality under privacy constraints. Finally, we propose an adaptive DP-Morph variant that captures class-specific structures and enhances performance in multi-class settings.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202606/23/2606.23373v1-polynomial-dice-loss-for-medical-image-segmentation",
+      "section": "quick",
+      "title_en": "Polynomial Dice Loss for Medical Image Segmentation",
+      "authors": "Hiroaki Aizawa",
+      "date": "2026-06-22",
+      "pdf": "https://arxiv.org/pdf/2606.23373v1",
+      "score": "7.0",
+      "evidence": "提出用于监督医学图像分割的多项式Dice损失扩展",
+      "tldr": "医学图像分割中类别不平衡和小病灶检测是主要挑战。常规Dice Loss损失形状固定，难以充分优化。本文提出多项式Dice Loss，利用泰勒展开将Dice Loss多项式化，可通过调整高阶项系数灵活控制损失曲面。在多个分割任务中取得竞争性精度，并简化了损失函数的设计与调优。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "Medical image segmentation is a fundamental task for medical image processing and computer-assisted intervention, yet data imbalance and small lesion detection pose significant challenges. Dice Loss, which measures the overlap between predicted and ground truth regions, is widely used to mitigate these issues. To further emphasize its properties, we propose Polynomial Dice Loss, a polynomial extension of Dice Loss. Specifically, by leveraging the geometric characteristics of Dice Loss and formulating the loss function as a polynomial representation via Taylor expansion, we enable the adjustment of the contribution of higher-order components to the loss function. In our experiments, we evaluate the proposed method against loss functions derived from conventional Dice and Tversky coefficients. Experimental results and further analysis show that the polynomial formulation provides a simple way to control the loss shape and achieves competitive performance across multiple segmentation settings.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
