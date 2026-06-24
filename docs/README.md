@@ -6,32 +6,26 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-06-23
-- 运行时间：2026-06-23 22:20:00 UTC
+- 最新运行日期：2026-06-24
+- 运行时间：2026-06-24 21:54:45 UTC
 - 运行状态：成功
-- 本次总论文数：3
-- 精读区：0
-- 速读区：3
+- 本次总论文数：1
+- 精读区：1
+- 速读区：0
 
 ### 今日简报（AI）
-今天速读了3篇医学图像分析前沿论文，聚焦可信多模态学习与分割优化。  
-最值得关注：多模态冲突建模提升AI诊断可信度，以及从梯度裁剪到结构微调的差分隐私训练新思路。  
-建议读者重点浏览《EnTrust》的可信融合机制和多项式Dice损失函数的设计，它们可能为隐私保护下的分割效果带来突破。
-- 详情：[/202606/23/README](/202606/23/README)
+今日精读一篇8分论文，用深度学习和迭代优化从MRI高保真重建盆腔器官三维几何。  
+值得关注：混合方法结合数据驱动与物理约束，提升重建精度，为手术规划提供可靠解剖模型。  
+下步可思考此类技术如何降低数据需求并拓展至其他软组织器官。
+- 详情：[/202606/24/README](/202606/24/README)
 
 ### 精读区论文标签
-- 本次无精读推荐。
+1. [High-Fidelity 3D Geometric Reconstruction of Pelvic Organs from MRI: A Hybrid Deep Learning and Iterative Optimization Approach](/202606/24/2606.17836v1-high-fidelity-3d-geometric-reconstruction-of-pelvic-organs-from-mri-a-hybrid-deep-learning-and-iterative-optimization-approach)  
+   标签：评分：8.0/10、query:abdk-seg
+   evidence：采用混合深度学习方法对MRI中的盆腔器官进行全监督分割
 
 ### 速读区论文标签
-1. [EnTrust: Modeling Inter-Modal Conflict for Trustworthy Multimodal Medical Image Analysis](/202606/23/2606.21384v1-entrust-modeling-inter-modal-conflict-for-trustworthy-multimodal-medical-image-analysis)  
-   标签：评分：7.0/10、query:abdk-seg
-   evidence：提出EnTrust模型，处理多模态医学图像分割中的不确定性，直接适用于全监督医学图像分析。
-2. [From Gradient Clipping to Structural Refinement: Improving DPSGD for Medical Image Segmentation](/202606/23/2606.21763v1-from-gradient-clipping-to-structural-refinement-improving-dpsgd-for-medical-image-segmentation)  
-   标签：评分：7.0/10、query:abdk-seg
-   evidence：评估DPSGD变体在监督医学图像分割中的表现
-3. [Polynomial Dice Loss for Medical Image Segmentation](/202606/23/2606.23373v1-polynomial-dice-loss-for-medical-image-segmentation)  
-   标签：评分：7.0/10、query:abdk-seg
-   evidence：提出用于监督医学图像分割的多项式Dice损失扩展
+- 本次无速读推荐。
 
 
 <div class="dpr-home-promo-card">

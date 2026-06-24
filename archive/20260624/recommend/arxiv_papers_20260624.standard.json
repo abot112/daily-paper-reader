@@ -1,0 +1,63 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-24T21:52:52.544343+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 0,
+    "quick_skim_target": 11,
+    "quick_selected": 0
+  },
+  "deep_dive": [
+    {
+      "id": "2606.17836v1",
+      "source": "arxiv",
+      "title": "High-Fidelity 3D Geometric Reconstruction of Pelvic Organs from MRI: A Hybrid Deep Learning and Iterative Optimization Approach",
+      "abstract": "Patient-specific 3D reconstruction of pelvic organ geometry from MRI is important for pelvic floor modeling and downstream patient-specific analysis. However, while previous studies have focused primarily on either image segmentation or downstream use of 3D models, the reconstruction of high-fidelity, high-quality geometries remains labor-intensive and poorly standardized. The study introduced a hybrid deformable shape modeling framework that integrates deep learning prediction with iterative optimization for the reconstruction of the bladder, uterus, and rectum. The framework consists of three core components: a geometry-aware multi-level deep learning architecture that preserves topological consistency of pelvic organs; a two-stage amortized optimization training strategy that balances global shape capture and local surface refinement; and a holistic synergy mechanism--where iterative optimization provides supervision for deep learning during the training phase, and during inference, deep learning rapidly predicts the global organ morphology, followed by iterative optimization to refine local surfaces and mesh quality. This framework demonstrated marked superiority in geometric fidelity than current mainstream deep learning-based organ reconstruction models. For individual anatomical structures, the reconstructed 3D geometries for the bladder, rectum, and uterus achieved significantly lower Chamfer Distance values and higher Dice Similarity Coefficient scores. In addition, while maintaining high computational efficiency, the proposed architecture yielded superior overall volumetric mesh quality. At the patient level, the framework achieved higher mean values for the 10 worst elements for both minSICN and minSIGE compared to traditional geometric post-processing algorithms.",
+      "authors": [
+        "Hui Wang",
+        "Xiaowei Li",
+        "Chenxin Zhang",
+        "Yifan Feng",
+        "Jianwei Zuo",
+        "Yumeng Tang",
+        "Xiuli Sun",
+        "Jianliu Wang",
+        "Bing Xie",
+        "Jiajia Luo"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.CG",
+        "cs.GR"
+      ],
+      "published": "2026-06-16T12:05:13+00:00",
+      "link": "https://arxiv.org/pdf/2606.17836v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Segments pelvic organs (bladder, uterus, rectum) from MRI using a hybrid deep learning approach with full supervision",
+      "llm_evidence_cn": "采用混合深度学习方法对MRI中的盆腔器官进行全监督分割",
+      "llm_evidence": "采用混合深度学习方法对MRI中的盆腔器官进行全监督分割",
+      "canonical_evidence": "采用混合深度学习方法对MRI中的盆腔器官进行全监督分割",
+      "llm_tldr_en": "Proposes a hybrid deformable shape modeling framework combining deep learning and iterative optimization for fully supervised segmentation of pelvic organs from MRI, achieving high-fidelity 3D reconstruction.",
+      "llm_tldr_cn": "针对MRI盆腔器官高保真三维重建劳动密集且标准化不足的问题，提出混合框架，融合深度学习分割与迭代优化，实现膀胱、子宫和直肠的精准分割，为患者特异性分析提供高质量几何模型，推动了腹部器官全监督分割的应用。",
+      "llm_tldr": "针对MRI盆腔器官高保真三维重建劳动密集且标准化不足的问题，提出混合框架，融合深度学习分割与迭代优化，实现膀胱、子宫和直肠的精准分割，为患者特异性分析提供高质量几何模型，推动了腹部器官全监督分割的应用。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "segmenting abdominal organs with fully supervised methods",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": []
+}
