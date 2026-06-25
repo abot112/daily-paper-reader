@@ -1,0 +1,269 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-25T22:09:58.633269+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 6,
+    "quick_skim_target": 11,
+    "quick_selected": 6
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2606.23177v1",
+      "source": "arxiv",
+      "title": "Interpretable Probabilistic Medical Image Segmentation via Gaussian Process with Explicit Modelling of Annotation Bias and Variability",
+      "abstract": "Deep learning-based medical image segmentation models are trained using annotations that exhibit systematic bias and variability across raters. While probabilistic multi-rater approaches can emulate annotator-specific delineations, annotator characteristics are typically encoded implicitly in deep latent feature space, making direct analysis of their influence on predictive distributions less straightforward. We propose a logit-space probabilistic segmentation framework based on stochastic variational Gaussian Process that explicitly decomposes predictions into an image-dependent reference logit distribution and annotator specific perturbations parameterised by bias and variance. This formulation enables more explicit analysis on how intra- and inter-rater variability propagate to predictive distributions. We evaluate the method on a multi-annotator medical image dataset, which shows that explicitly modelling annotator specific perturbations improves uncertainty calibration while maintaining comparable segmentation accuracy, compared with state-of-the-art multi-rater probabilistic segmentation method. The learned bias and variance parameters quantitatively reflect annotator-specific behaviour. Furthermore, controlled perturbation experiments over bias and variance demonstrate how changes in annotator parameters systematically influence predictive performance. The code used in this paper is made publicly available at https://github.com/QiLi111/GPS-Var.",
+      "authors": [
+        "Qi Li",
+        "Yuliang Huang",
+        "Shaheer U. Saeed",
+        "Qianye Yang",
+        "Vasilis Stavrinides",
+        "Zachary M. C. Baum",
+        "Dean C. Barratt",
+        "J. Alison Noble",
+        "Tom Vercauteren",
+        "Yipeng Hu"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-06-22T11:14:26+00:00",
+      "link": "https://arxiv.org/pdf/2606.23177v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "proposes a probabilistic segmentation framework using Gaussian Process to explicitly model annotation bias in supervised training",
+      "llm_evidence_cn": "提出一种基于高斯过程的概率分割框架，显式建模全监督训练中的标注偏差",
+      "llm_evidence": "提出一种基于高斯过程的概率分割框架，显式建模全监督训练中的标注偏差",
+      "canonical_evidence": "提出一种基于高斯过程的概率分割框架，显式建模全监督训练中的标注偏差",
+      "llm_tldr_en": "The paper develops a logit-space Gaussian Process framework that decomposes segmentation predictions into image reference and annotator-specific bias/variance, improving interpretability and uncertainty estimation in multi-rater settings.",
+      "llm_tldr_cn": "本文针对医学图像分割中标注者偏差和多变性，提出一种基于随机变分高斯过程的对数空间概率分割框架，将预测显式分解为图像相关参考分布和标注者特异性扰动，在多标注者数据集上提供了比隐式方法更可解释的不确定性估计，有助于校准分割模型。",
+      "llm_tldr": "本文针对医学图像分割中标注者偏差和多变性，提出一种基于随机变分高斯过程的对数空间概率分割框架，将预测显式分解为图像相关参考分布和标注者特异性扰动，在多标注者数据集上提供了比隐式方法更可解释的不确定性估计，有助于校准分割模型。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "supervised training of neural networks for segmentation",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.23473v1",
+      "source": "arxiv",
+      "title": "C^2GR: Coupled Comprehensive Generative Replay for a Continually Learnable Universal Segmentation Model",
+      "abstract": "Universal segmentation models exhibit significant potential for diverse tasks involving different imaging modalities and segmentation objectives. Task-Incremental Learning provides a privacy-preserving approach to continually evolve a universal model on tasks from sequentially-arriving medical departments. However, training the model solely on the incoming task induces forgetting on past tasks, since consecutive tasks exhibit concurrent shifts in image appearance and segmentation objective. To address this problem, we propose a novel Coupled Comprehensive Generative Replay (C^2GR) framework that simultaneously synthesizes image-mask pairs of previous tasks to mitigate forgetting under concurrent appearance and objective shifts. This requires preserving image-mask correspondence for structure-realistic generation and bridging asynchronous optimization of the generator and segmentor for segmentation-oriented generation. Specifically, we propose a Bayesian Joint Diffusion (BJD) method that formulates the correspondence as conditional distributions optimized via conditional denoising. Furthermore, we develop a Relation-aware Unified Prompt Synchronization (RUPS) scheme to simultaneously modulate the generator and segmentor via a shared task-relation-aware prompt for synchronizing their optimization. Experiments on 20 tasks spanning diverse modalities and objectives demonstrate that C^2GR exhibits only a 2.44% drop in overall performance compared to joint training with all task data, effectively alleviating forgetting from the concurrent shifts. Our code will be made publicly available at https://github.com/mar-cry/C2GR.",
+      "authors": [
+        "Wei Li",
+        "Jingyang Zhang",
+        "Guoan Wang",
+        "Junzhi Ning",
+        "Yang Chen",
+        "Guang Yang",
+        "Lixu Gu"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-22T15:19:03+00:00",
+      "link": "https://arxiv.org/pdf/2606.23473v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Proposes continual learning method for universal segmentation across medical modalities, transferable to abdominal organ segmentation.",
+      "llm_evidence_cn": "面向跨医学模态通用分割的持续学习方法，可迁移应用于腹部器官分割。",
+      "llm_evidence": "面向跨医学模态通用分割的持续学习方法，可迁移应用于腹部器官分割。",
+      "canonical_evidence": "面向跨医学模态通用分割的持续学习方法，可迁移应用于腹部器官分割。",
+      "llm_tldr_en": "This paper addresses forgetting in task-incremental learning for universal medical segmentation by proposing C^2GR, which synthesizes image-mask pairs of previous tasks. It enables privacy-preserving continual evolution of segmentation models across diverse modalities and objectives, potentially including abdominal CT organ segmentation.",
+      "llm_tldr_cn": "针对通用分割模型在序列医学任务中灾难性遗忘问题，本文提出耦合综合生成回放框架C^2GR。该框架同时合成先前任务的图像和掩码对，通过回放缓解不同模态和目标下的遗忘。在多个医学分割任务上实验表明，C^2GR能有效维持旧任务性能，支持隐私保护的持续学习。这一方法可直接应用于腹部多器官CT分割，使模型不断适应新器官或数据集。",
+      "llm_tldr": "针对通用分割模型在序列医学任务中灾难性遗忘问题，本文提出耦合综合生成回放框架C^2GR。该框架同时合成先前任务的图像和掩码对，通过回放缓解不同模态和目标下的遗忘。在多个医学分割任务上实验表明，C^2GR能有效维持旧任务性能，支持隐私保护的持续学习。这一方法可直接应用于腹部多器官CT分割，使模型不断适应新器官或数据集。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "biorxiv-10-64898-2026-06-17-733000-v1",
+      "source": "biorxiv",
+      "title": "MAE-UNETR++: Masked Autoencoder Pretraining for 3-D Lung Nodule Segmentation",
+      "abstract": "Voxel-level annotation for volumetric medical imaging is expensive and difficult to scale, which makes training highcapacity 3-D segmentation models challenging in practice. Transfer learning (TL) from large public datasets is a common remedy, but it can under-perform when the source domain differs from the target anatomy and acquisition characteristics, as is often the case for pulmonary nodules. In this work, we propose a masked autoencoder (MAE) pretraining-based approach to break the data efficiency wall of domain difference and present a focused empirical study of domain-specific self-supervised learning (SSL) for 3-D lung nodule segmentation. We evaluate two experimental settings: first, Masked Autoencoder (MAE) pretraining versus random initialization across representative baselines; second, MAE versus Decathlon TL for UNETR++ while testing whether MAE-based pretraining also benefits a CNN baseline (V-Net). MAE pretraining on target-domain CT volumes achieves a Dice Similarity Coefficient (DSC) of 0.307, outperforming random initialization (0.136) and Decathlon weights (0.257). In addition, MAE improves the stability of V-Net in a \"low-data\" regime (i.e., with \"insufficiently labeled\" data), increasing DSC from 0.010 to0.071. Overall, these results suggest that MAE-based pretraining can provide a practical and robust initialization strategy for volumetric segmentation when labeled data are limited.",
+      "authors": [
+        "Savant, V.",
+        "Wang, Y.",
+        "Xuan, J."
+      ],
+      "primary_category": "bioengineering",
+      "categories": [
+        "bioengineering"
+      ],
+      "published": "2026-06-19T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.06.17.733000v1.full.pdf",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "uses MAE pretraining for fully supervised 3D lung nodule segmentation to improve data efficiency",
+      "llm_evidence_cn": "采用MAE预训练提升全监督3D肺结节分割的数据效率",
+      "llm_evidence": "采用MAE预训练提升全监督3D肺结节分割的数据效率",
+      "canonical_evidence": "采用MAE预训练提升全监督3D肺结节分割的数据效率",
+      "llm_tldr_en": "The paper proposes MAE-UNETR++ for 3D lung nodule segmentation, leveraging masked autoencoder pretraining to reduce annotation needs, showing superior performance over random initialization and transfer learning on lung CT.",
+      "llm_tldr_cn": "本文提出MAE-UNETR++，通过掩码自编码器预训练解决3D肺结节分割中标注不足的问题。在域内CT数据上进行自监督预训练，然后微调用于分割，实验证明其性能优于随机初始化和从其他域迁移学习，大幅降低了对标注数据的依赖。",
+      "llm_tldr": "本文提出MAE-UNETR++，通过掩码自编码器预训练解决3D肺结节分割中标注不足的问题。在域内CT数据上进行自监督预训练，然后微调用于分割，实验证明其性能优于随机初始化和从其他域迁移学习，大幅降低了对标注数据的依赖。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.23879v1",
+      "source": "arxiv",
+      "title": "Promise and challenges of heart chamber segmentation from non-contrast CT scans using contrastive unpaired image translation: a feasibility study",
+      "abstract": "Purpose: To evaluate the feasibility and challenges of heart chamber segmentation from non-contrast CT scans using contrastive unpaired image translation and deep learning-based segmentation. Approach: We developed ChameleonNet, a framework utilizing the Contrastive Unpaired Translation (CUT) network with decoupled contrastive learning (DCL) loss to synthesize non-contrast CT from contrast CT scans. Using annotations of four heart chambers (left atrium (LA), left ventricle (LV), right atrium (RA), and right ventricle (RV)) from contrast scans, we trained a Hausdorff distance loss-enhanced nnU-Net on synthesized non-contrast images. The translation model was trained with 35,538 contrast-enhanced and 37,197 non-contrast CT slices. The segmentation model was trained with 292 synthesized non-contrast scans. Performance was evaluated using Dice similarity coefficient (DSC) and 95th Hausdorff distance (HD95) on 36 synthesized non-contrast scans, and volume agreement on 36 real non-contrast CT scans was assessed using Pearson correlation, mean absolute percentage error (MAPE), and mean percentage error (MPE). Results: The segmentation model achieved DSC of 0.94 (0.01), 0.91 (0.04), 0.92 (0.03), 0.93 (0.02), and HD95 of 3.63 (1.49), 5.74 (4.08), 5.18 (1.77), 5.51 (3.21) mm on synthesized non-contrast images for LA, LV, RA, and RV, respectively. On real non-contrast CT scans, Pearson correlations were 0.93, 0.82, 0.87, and 0.89 (all p<0.001), with MAPE ranging from 9.22% to 20.79%, and MPE ranging from -12.52% to 4.67%. Conclusions: ChameleonNet demonstrated feasibility for heart chamber segmentation from non-contrast CT without manual non-contrast annotations. However, volume errors, particularly for LV and RV, indicate that further refinement and validation are needed before clinical use.",
+      "authors": [
+        "Jing Wang",
+        "Tong Yu",
+        "Hao-En Lu",
+        "Zixue Zeng",
+        "Joseph K. Leader",
+        "Xin Meng",
+        "Jianbing Zhu",
+        "Jiantao Pu"
+      ],
+      "primary_category": "eess.IV",
+      "categories": [
+        "eess.IV",
+        "cs.AI"
+      ],
+      "published": "2026-06-22T19:26:23+00:00",
+      "link": "https://arxiv.org/pdf/2606.23879v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "develops a deep learning framework for fully supervised heart chamber segmentation from CT using unpaired translation",
+      "llm_evidence_cn": "开发了一种基于对比未配对图像翻译的深度学习方法，用于全监督心脏腔室CT分割",
+      "llm_evidence": "开发了一种基于对比未配对图像翻译的深度学习方法，用于全监督心脏腔室CT分割",
+      "canonical_evidence": "开发了一种基于对比未配对图像翻译的深度学习方法，用于全监督心脏腔室CT分割",
+      "llm_tldr_en": "The paper proposes ChameleonNet, a framework using contrastive unpaired translation to synthesize non-contrast CT from contrast CT, then trains an nnU-Net with Hausdorff loss for heart chamber segmentation, showing feasibility but challenges remain.",
+      "llm_tldr_cn": "本文提出ChameleonNet框架，利用对比未配对翻译将增强CT转换为非增强CT，然后使用Hausdorff损失增强的nnU-Net进行全监督心脏腔室分割，并在多中心数据上评估了可行性，揭示了非增强CT心脏分割的潜力和挑战。",
+      "llm_tldr": "本文提出ChameleonNet框架，利用对比未配对翻译将增强CT转换为非增强CT，然后使用Hausdorff损失增强的nnU-Net进行全监督心脏腔室分割，并在多中心数据上评估了可行性，揭示了非增强CT心脏分割的潜力和挑战。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.24570v1",
+      "source": "arxiv",
+      "title": "Jolia: Concept-Level Vision-Language Alignment for 3D CT Contrastive Learning",
+      "abstract": "Vision-language contrastive pretraining has become the dominant recipe for 3D medical foundation models, leveraging the large volumes of paired scans and reports produced in clinical practice. However, medical images usually span dozens of organs, and radiological reports are much longer than typical natural image captions and are composed of multiple structured sections. CLIP-style pretraining compresses this structure by encoding each modality into a single global token, at the risk of losing important details. We introduce ConQuer (Concept Queries), an image-text pretraining method that augments CLIP's global alignment with a set of localized alignments, one per concept. ConQuer splits the report into concept-specific sections and learns cross-attention queries that pool the matching image features without using any segmentation mask or spatial supervision. Contrastive learning is then applied independently for each concept. Concepts can be any unit of semantic localization; here, they are anatomical regions, one query per organ or gross body region. As a byproduct, each query learns attention maps focused on its concept, providing built-in spatial interpretability. We use ConQuer to train Jolia, a 3D CT foundation model on chest and abdominal CT. Jolia consistently outperforms a CLIP baseline on findings classification, report generation, and cross-center transfer, and sets a new state of the art across multiple public benchmarks. Jolia's weights will be released upon acceptance.",
+      "authors": [
+        "Julien Khlaut",
+        "Charles Corbière",
+        "Baptiste Callard",
+        "Amaury Prat",
+        "Leo Butsanets",
+        "Antoine Saporta",
+        "Théo Danielou",
+        "Leo Machado",
+        "Korentin Le Floch",
+        "Tom Boeken",
+        "Pierre Manceron",
+        "Corentin Dancette"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-23T13:35:47+00:00",
+      "link": "https://arxiv.org/pdf/2606.24570v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Proposes ConQuer, an image-text pretraining method for 3D CT that aligns localized concepts between images and reports",
+      "llm_evidence_cn": "提出ConQuer图像-文本预训练方法，对齐三维CT图像与报告中局部概念",
+      "llm_evidence": "提出ConQuer图像-文本预训练方法，对齐三维CT图像与报告中局部概念",
+      "canonical_evidence": "提出ConQuer图像-文本预训练方法，对齐三维CT图像与报告中局部概念",
+      "llm_tldr_en": "ConQuer extends CLIP-style pretraining for 3D CT by adding concept-level local alignments, splitting reports into sections per organ, to capture fine-grained details in medical foundation models.",
+      "llm_tldr_cn": "针对CLIP风格预训练在三维医学影像中丢失细节的问题，该文提出ConQuer方法，将放射学报告按概念分割并进行图像与文本的局部概念对齐，在三维CT数据上增强了视觉-语言基础模型的精细表达能力，可潜力提升下游腹部器官分割等任务。",
+      "llm_tldr": "针对CLIP风格预训练在三维医学影像中丢失细节的问题，该文提出ConQuer方法，将放射学报告按概念分割并进行图像与文本的局部概念对齐，在三维CT数据上增强了视觉-语言基础模型的精细表达能力，可潜力提升下游腹部器官分割等任务。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.25463v1",
+      "source": "arxiv",
+      "title": "Blasto-Net: An Explainable Multi-Task Learning for Blastocyst Segmentation, Grading, and Implantation Prediction",
+      "abstract": "This study introduces Blasto-Net, a multi-task deep learning model for comprehensive blastocyst analysis. The proposed model performs three tasks simultaneously in a single forward pass: segmentation of the ZP, TE, and ICM compartments, morphological grading, and implantation outcome prediction. Accurate blastocyst analysis in in vitro fertilization (IVF) is challenging. The compartments often have similar textures but very different structures. To address these challenges, Blasto-Net employs an EfficientNet-B3 encoder with a UNet-style decoder enhanced by the Convolutional Block Attention Module (CBAM) and a novel Edge-Aware Attention Module (EAAM) to effectively capture both semantic and boundary information. To handle distinct compartment topologies, the network employs specialized segmentation heads and a composite region- and boundary-based loss. Additionally, Grad-CAM++ visualizations are used to verify the anatomical consistency of the model's predictions. Evaluated on a public HMC blastocyst dataset, Blasto-Net achieves Dice scores of 94.93%, 91.60%, and 88.82% for ICM, ZP, and TE, respectively, alongside an implantation F1-score of 80.0%. These results demonstrate that Blasto-Net offers an accurate, interpretable, and efficient solution for automated blastocyst assessment, with strong potential to support clinical decision-making in IVF.",
+      "authors": [
+        "Zahra Asghari Varzaneh",
+        "Reza Khoshkangini",
+        "Magnus Johnsson",
+        "Thomas Ebner",
+        "Lars Johansson"
+      ],
+      "primary_category": "eess.IV",
+      "categories": [
+        "eess.IV",
+        "cs.LG"
+      ],
+      "published": "2026-06-24T06:45:06+00:00",
+      "link": "https://arxiv.org/pdf/2606.25463v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "presents a multi-task deep learning model for blastocyst segmentation and classification in IVF",
+      "llm_evidence_cn": "提出一种多任务深度学习模型，用于人类囊胚的分割和分级",
+      "llm_evidence": "提出一种多任务深度学习模型，用于人类囊胚的分割和分级",
+      "canonical_evidence": "提出一种多任务深度学习模型，用于人类囊胚的分割和分级",
+      "llm_tldr_en": "Blasto-Net introduces an attention-enhanced UNet for simultaneously segmenting blastocyst compartments, grading, and predicting implantation, achieving superior performance in IVF analysis.",
+      "llm_tldr_cn": "本文提出Blasto-Net，一种基于EfficientNet-B3编码器和注意力增强UNet解码器的多任务学习模型，同时实现囊胚分割、形态分级和着床预测，在辅助生殖领域展示了端到端的自动化分析能力。",
+      "llm_tldr": "本文提出Blasto-Net，一种基于EfficientNet-B3编码器和注意力增强UNet解码器的多任务学习模型，同时实现囊胚分割、形态分级和着床预测，在辅助生殖领域展示了端到端的自动化分析能力。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
