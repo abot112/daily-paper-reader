@@ -6,41 +6,29 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-06-25
-- 运行时间：2026-06-25 22:13:44 UTC
+- 最新运行日期：2026-06-26
+- 运行时间：2026-06-26 20:58:57 UTC
 - 运行状态：成功
-- 本次总论文数：6
+- 本次总论文数：2
 - 精读区：0
-- 速读区：6
+- 速读区：2
 
 ### 今日简报（AI）
-今日速读6篇医学图像分割新作，聚焦标注不确定性、自监督预训练与持续学习。  
-最值得关注：高斯过程显式建模标注偏差与变异性，以及掩码自编码器预训练提升肺结节分割性能。  
-建议关注将概率建模或预训练策略融入现有流程，以提升标注鲁棒性和小样本表现。
-- 详情：[/202606/25/README](/202606/25/README)
+今日速览两篇医学影像AI工作，分别探索冷启动主动学习与文本条件驱动的3D器官定位。
+“数据集感知”的冷启动主动学习让首次标注即高效，伪文本条件则增强了3D Grounding DINO在腹部CT上的定位泛化。
+建议关注主动学习如何节省标注成本，以及多模态条件在三维医学视觉中的落地可能。
+- 详情：[/202606/26/README](/202606/26/README)
 
 ### 精读区论文标签
 - 本次无精读推荐。
 
 ### 速读区论文标签
-1. [Interpretable Probabilistic Medical Image Segmentation via Gaussian Process with Explicit Modelling of Annotation Bias and Variability](/202606/25/2606.23177v1-interpretable-probabilistic-medical-image-segmentation-via-gaussian-process-with-explicit-modelling-of-annotation-bias-and-variability)  
+1. [Dataset-Aware Cold-Start Active Learning for Annotation-Efficient 3D Medical Image Segmentation](/202606/26/2606.20765v1-dataset-aware-cold-start-active-learning-for-annotation-efficient-3d-medical-image-segmentation)  
    标签：评分：7.0/10、query:abdk-seg
-   evidence：提出一种基于高斯过程的概率分割框架，显式建模全监督训练中的标注偏差
-2. [MAE-UNETR++: Masked Autoencoder Pretraining for 3-D Lung Nodule Segmentation](/202606/25/biorxiv-10-64898-2026-06-17-733000-v1-mae-unetr-masked-autoencoder-pretraining-for-3-d-lung-nodule-segmentation)  
-   标签：评分：7.0/10、query:abdk-seg
-   evidence：采用MAE预训练提升全监督3D肺结节分割的数据效率
-3. [C^2GR: Coupled Comprehensive Generative Replay for a Continually Learnable Universal Segmentation Model](/202606/25/2606.23473v1-c2gr-coupled-comprehensive-generative-replay-for-a-continually-learnable-universal-segmentation-model)  
+   evidence：提出用于监督训练3D医学图像分割模型的主动学习方法
+2. [Pseudo-Text-Conditioned 3D Grounding DINO for Organ Localization in Abdominal CT](/202606/26/2606.27084v1-pseudo-text-conditioned-3d-grounding-dino-for-organ-localization-in-abdominal-ct)  
    标签：评分：6.0/10、query:abdk-seg
-   evidence：面向跨医学模态通用分割的持续学习方法，可迁移应用于腹部器官分割。
-4. [Promise and challenges of heart chamber segmentation from non-contrast CT scans using contrastive unpaired image translation: a feasibility study](/202606/25/2606.23879v1-promise-and-challenges-of-heart-chamber-segmentation-from-non-contrast-ct-scans-using-contrastive-unpaired-image-translation-a-feasibility-study)  
-   标签：评分：6.0/10、query:abdk-seg
-   evidence：开发了一种基于对比未配对图像翻译的深度学习方法，用于全监督心脏腔室CT分割
-5. [Jolia: Concept-Level Vision-Language Alignment for 3D CT Contrastive Learning](/202606/25/2606.24570v1-jolia-concept-level-vision-language-alignment-for-3d-ct-contrastive-learning)  
-   标签：评分：6.0/10、query:abdk-seg
-   evidence：提出ConQuer图像-文本预训练方法，对齐三维CT图像与报告中局部概念
-6. [Blasto-Net: An Explainable Multi-Task Learning for Blastocyst Segmentation, Grading, and Implantation Prediction](/202606/25/2606.25463v1-blasto-net-an-explainable-multi-task-learning-for-blastocyst-segmentation-grading-and-implantation-prediction)  
-   标签：评分：6.0/10、query:abdk-seg
-   evidence：提出一种多任务深度学习模型，用于人类囊胚的分割和分级
+   evidence：腹部CT中全监督器官定位
 
 
 <div class="dpr-home-promo-card">

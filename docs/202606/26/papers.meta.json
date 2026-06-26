@@ -1,0 +1,39 @@
+{
+  "label": "2026-06-26",
+  "date": "2026-06-26",
+  "generated_at": "2026-06-26T20:59:06",
+  "count": 2,
+  "papers": [
+    {
+      "paper_id": "202606/26/2606.20765v1-dataset-aware-cold-start-active-learning-for-annotation-efficient-3d-medical-image-segmentation",
+      "section": "quick",
+      "title_en": "Dataset-Aware Cold-Start Active Learning for Annotation-Efficient 3D Medical Image Segmentation",
+      "authors": "Rémi Hattat, Marine Beaumont, Charline Bertholdt, Gabriela Hossu, Olivier Morel, Bailiang Chen",
+      "date": "2026-06-18",
+      "pdf": "https://arxiv.org/pdf/2606.20765v1",
+      "score": "7.0",
+      "evidence": "提出用于监督训练3D医学图像分割模型的主动学习方法",
+      "tldr": "针对3D医学图像分割中冷启动主动学习缺乏初始标注的问题，提出数据集感知的课程分层冷启动框架CSCS。它结合无标签的自监督典型性与重建不确定性，通过封闭式加权规则自适应选择首批样本。在四个基准上，CSCS在低中标注预算下显著提升分割鲁棒性，验证了数据集几何结构感知初始化的重要性。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "Deep learning for 3D medical image segmentation requires extensive manual annotations, a major bottleneck in volumetric medical imaging. Active learning aims to reduce this burden by selecting informative samples for annotation, but most methods assume that an initial labeled set is already available. This leaves the cold-start problem largely unresolved: how to select the first volumes from a fully unlabeled pool before any task-specific model is trained. We propose CSCS, a Curriculum-Stratified Cold-Start framework that adapts initial sample selection to the structure of the unlabeled dataset. CSCS combines two self-supervised, label-free signals: local typicality, measuring representativeness in the embedding space, and reconstruction-based uncertainty, used as a proxy for sample difficulty. These signals are combined through a weighted geometric score, where the weighting is determined by a closed-form pacing rule based on the effective annotation budget and the Difficulty-Coverage Ratio, a pool-level statistic measuring the alignment between difficulty and representativeness. We evaluate CSCS on four 3D medical image segmentation benchmarks: BraTS, FeTA, Spleen, and an in-house fetal MRI dataset. Using nnU-Net as downstream segmentation model, CSCS shows consistently competitive performance across datasets and annotation budgets, with the strongest gains in low-to-mid annotation regimes. These results suggest that dataset-aware cold-start initialization can improve the robustness of active learning for 3D medical image segmentation by adapting sample selection to the geometry of the unlabeled pool.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202606/26/2606.27084v1-pseudo-text-conditioned-3d-grounding-dino-for-organ-localization-in-abdominal-ct",
+      "section": "quick",
+      "title_en": "Pseudo-Text-Conditioned 3D Grounding DINO for Organ Localization in Abdominal CT",
+      "authors": "Siqi Chen, Han Gong, Keyi Hou, Jingxuan Yang, Sheethal Bhat, Andreas Maier",
+      "date": "2026-06-25",
+      "pdf": "https://arxiv.org/pdf/2606.27084v1",
+      "score": "6.0",
+      "evidence": "腹部CT中全监督器官定位",
+      "tldr": "腹部CT器官定位可为创伤分析提供空间先验，但现有方法依赖文本编码器增加复杂度。CT-3GDINO使用冻结伪文本类令牌替代真实文本，结合Swin3D骨干、双向特征增强和跨模态解码器，实现轻量级查询式3D检测。在193例CT上，多尺度模型取得0.5830 mAP，粗糙定位AP达0.9649，但严格对齐仅0.1552。该工作建立了伪文本条件3D器官定位的开源基线，并推动多模态条件研究。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "Reliable organ localization in abdominal CT can provide spatial priors for downstream trauma analysis. We propose CT-3GDINO, a lightweight 3D detector that adapts a Grounding-DINO-style query-based architecture to fixed organ localization using frozen pseudo-text class tokens instead of a real text encoder. The model combines a Swin3D visual backbone, bidirectional feature enhancement, pseudo-text-guided query selection, and a cross-modality decoder to predict normalized 3D boxes for liver, spleen, left kidney, right kidney, and bowel. We train and evaluate on 193 matched RSNA/RATIC CT volumes with segmentation-derived boxes. The best multi-scale model, trained from scratch, achieves 0.5830 overall top-1 class-wise mAP over 3D IoU thresholds from 0.1 to 0.7, outperforming fixed- and trainable-backbone classification-pretrained variants with 0.5570 and 0.4657 mAP. Performance is strong for coarse localization, with 0.9649 AP at IoU 0.1, but remains limited for strict box alignment, with 0.1552 AP at IoU 0.7. These results establish CT-3GDINO as an open-source baseline for pseudo-text-conditioned 3D organ localization and motivate future work on localization-aware pretraining, richer multimodal conditioning, and injury-focused detection.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

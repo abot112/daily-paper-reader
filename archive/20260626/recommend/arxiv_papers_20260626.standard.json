@@ -1,0 +1,100 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-26T20:57:17.603183+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2606.20765v1",
+      "source": "arxiv",
+      "title": "Dataset-Aware Cold-Start Active Learning for Annotation-Efficient 3D Medical Image Segmentation",
+      "abstract": "Deep learning for 3D medical image segmentation requires extensive manual annotations, a major bottleneck in volumetric medical imaging. Active learning aims to reduce this burden by selecting informative samples for annotation, but most methods assume that an initial labeled set is already available. This leaves the cold-start problem largely unresolved: how to select the first volumes from a fully unlabeled pool before any task-specific model is trained. We propose CSCS, a Curriculum-Stratified Cold-Start framework that adapts initial sample selection to the structure of the unlabeled dataset. CSCS combines two self-supervised, label-free signals: local typicality, measuring representativeness in the embedding space, and reconstruction-based uncertainty, used as a proxy for sample difficulty. These signals are combined through a weighted geometric score, where the weighting is determined by a closed-form pacing rule based on the effective annotation budget and the Difficulty-Coverage Ratio, a pool-level statistic measuring the alignment between difficulty and representativeness. We evaluate CSCS on four 3D medical image segmentation benchmarks: BraTS, FeTA, Spleen, and an in-house fetal MRI dataset. Using nnU-Net as downstream segmentation model, CSCS shows consistently competitive performance across datasets and annotation budgets, with the strongest gains in low-to-mid annotation regimes. These results suggest that dataset-aware cold-start initialization can improve the robustness of active learning for 3D medical image segmentation by adapting sample selection to the geometry of the unlabeled pool.",
+      "authors": [
+        "Rémi Hattat",
+        "Marine Beaumont",
+        "Charline Bertholdt",
+        "Gabriela Hossu",
+        "Olivier Morel",
+        "Bailiang Chen"
+      ],
+      "primary_category": "eess.IV",
+      "categories": [
+        "eess.IV",
+        "cs.LG",
+        "q-bio.QM"
+      ],
+      "published": "2026-06-18T12:10:04+00:00",
+      "link": "https://arxiv.org/pdf/2606.20765v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Proposes active learning for supervised training of 3D medical image segmentation models",
+      "llm_evidence_cn": "提出用于监督训练3D医学图像分割模型的主动学习方法",
+      "llm_evidence": "提出用于监督训练3D医学图像分割模型的主动学习方法",
+      "canonical_evidence": "提出用于监督训练3D医学图像分割模型的主动学习方法",
+      "llm_tldr_en": "A cold-start active learning framework for 3D medical image segmentation that selects initial volumes using dataset-aware self-supervised signals, reducing annotation burden.",
+      "llm_tldr_cn": "为解决3D医学图像分割中的冷启动问题，提出一种数据集感知的课程分层冷启动主动学习框架。该框架利用局部典型性和重建难度等自监督信号选择初始标注样本，无需预训练模型。实验表明其能高效选出代表性样本，减少标注成本，有助于在监督训练中提升分割模型性能，可应用于腹部CT器官分割。",
+      "llm_tldr": "为解决3D医学图像分割中的冷启动问题，提出一种数据集感知的课程分层冷启动主动学习框架。该框架利用局部典型性和重建难度等自监督信号选择初始标注样本，无需预训练模型。实验表明其能高效选出代表性样本，减少标注成本，有助于在监督训练中提升分割模型性能，可应用于腹部CT器官分割。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "supervised training of neural networks for segmentation",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.27084v1",
+      "source": "arxiv",
+      "title": "Pseudo-Text-Conditioned 3D Grounding DINO for Organ Localization in Abdominal CT",
+      "abstract": "Reliable organ localization in abdominal CT can provide spatial priors for downstream trauma analysis. We propose CT-3GDINO, a lightweight 3D detector that adapts a Grounding-DINO-style query-based architecture to fixed organ localization using frozen pseudo-text class tokens instead of a real text encoder. The model combines a Swin3D visual backbone, bidirectional feature enhancement, pseudo-text-guided query selection, and a cross-modality decoder to predict normalized 3D boxes for liver, spleen, left kidney, right kidney, and bowel. We train and evaluate on 193 matched RSNA/RATIC CT volumes with segmentation-derived boxes. The best multi-scale model, trained from scratch, achieves 0.5830 overall top-1 class-wise mAP over 3D IoU thresholds from 0.1 to 0.7, outperforming fixed- and trainable-backbone classification-pretrained variants with 0.5570 and 0.4657 mAP. Performance is strong for coarse localization, with 0.9649 AP at IoU 0.1, but remains limited for strict box alignment, with 0.1552 AP at IoU 0.7. These results establish CT-3GDINO as an open-source baseline for pseudo-text-conditioned 3D organ localization and motivate future work on localization-aware pretraining, richer multimodal conditioning, and injury-focused detection.",
+      "authors": [
+        "Siqi Chen",
+        "Han Gong",
+        "Keyi Hou",
+        "Jingxuan Yang",
+        "Sheethal Bhat",
+        "Andreas Maier"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "eess.IV"
+      ],
+      "published": "2026-06-25T14:22:07+00:00",
+      "link": "https://arxiv.org/pdf/2606.27084v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "fully supervised organ localization in abdominal CT",
+      "llm_evidence_cn": "腹部CT中全监督器官定位",
+      "llm_evidence": "腹部CT中全监督器官定位",
+      "canonical_evidence": "腹部CT中全监督器官定位",
+      "llm_tldr_en": "Proposes CT-3GDINO, a lightweight 3D detector for organ localization in abdominal CT using pseudo-text-conditioned Grounding DINO, achieving 0.5830 mAP on multi-organ detection.",
+      "llm_tldr_cn": "针对腹部CT中器官定位需求，提出轻量级3D检测器CT-3GDINO。该方法使用冻结的伪文本类别token代替真实文本编码器，结合Swin3D骨干和跨模态解码器预测肝脏、脾脏、左肾、右肾和肠道的3D边界框。在193个RSNA/RATIC CT体积上的训练与评估显示，最佳多尺度模型类别级mAP达到0.5830，验证了其有效性。",
+      "llm_tldr": "针对腹部CT中器官定位需求，提出轻量级3D检测器CT-3GDINO。该方法使用冻结的伪文本类别token代替真实文本编码器，结合Swin3D骨干和跨模态解码器预测肝脏、脾脏、左肾、右肾和肠道的3D边界框。在193个RSNA/RATIC CT体积上的训练与评估显示，最佳多尺度模型类别级mAP达到0.5830，验证了其有效性。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "multi-organ segmentation in abdominal CT scans",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
