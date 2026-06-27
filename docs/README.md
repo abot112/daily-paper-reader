@@ -6,29 +6,37 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-06-26
-- 运行时间：2026-06-26 20:58:57 UTC
+- 最新运行日期：2026-06-27
+- 运行时间：2026-06-27 20:27:29 UTC
 - 运行状态：成功
-- 本次总论文数：2
-- 精读区：0
+- 本次总论文数：5
+- 精读区：3
 - 速读区：2
 
 ### 今日简报（AI）
-今日速览两篇医学影像AI工作，分别探索冷启动主动学习与文本条件驱动的3D器官定位。
-“数据集感知”的冷启动主动学习让首次标注即高效，伪文本条件则增强了3D Grounding DINO在腹部CT上的定位泛化。
-建议关注主动学习如何节省标注成本，以及多模态条件在三维医学视觉中的落地可能。
-- 详情：[/202606/26/README](/202606/26/README)
+今日精读两项高分医学影像分割新范式，速览两项3D CT视觉语言预训练工作，整体聚焦边界校准与随机建模。  
+最值得关注：神经架构分布赋予分割随机性与多样性，熵引导边界监督则大幅提升乳腺超声分割的特异性和校准。  
+建议读者优先吸收边界不确定性建模思路，并尝试将其融入自己的医学图像分析流程。
+- 详情：[/202606/27/README](/202606/27/README)
 
 ### 精读区论文标签
-- 本次无精读推荐。
+1. [Neural Architecture Distributions: A New Paradigm for Stochastic Segmentation](/202606/27/2606.21061v1-neural-architecture-distributions-a-new-paradigm-for-stochastic-segmentation)  
+   标签：评分：9.0/10、query:abdk-seg
+   evidence：新型分割范式，使用架构分布进行随机分割，适用于医学图像
+2. [Specificity- and Calibration-Aware Breast Ultrasound Segmentation via Entropy-Guided Boundary Supervision](/202606/27/2606.22308v1-specificity--and-calibration-aware-breast-ultrasound-segmentation-via-entropy-guided-boundary-supervision)  
+   标签：评分：9.0/10、query:abdk-seg
+   evidence：全监督医学图像分割方法，针对乳腺超声设计新颖损失函数
+3. [Automated Segmentation of Prostatic Gold Fiducial Markers for MR-Only Radiotherapy Planning Using Multi-Modal Consensus Deep Learning](/202606/27/biorxiv-10-64898-2026-06-18-733061-v1-automated-segmentation-of-prostatic-gold-fiducial-markers-for-mr-only-radiotherapy-planning-using-multi-modal-consensus-deep-learning)  
+   标签：评分：9.0/10、query:abdk-seg
+   evidence：全监督的3D U-Net集成深度学习模型用于医学图像分割
 
 ### 速读区论文标签
-1. [Dataset-Aware Cold-Start Active Learning for Annotation-Efficient 3D Medical Image Segmentation](/202606/26/2606.20765v1-dataset-aware-cold-start-active-learning-for-annotation-efficient-3d-medical-image-segmentation)  
+1. [Disease-Centric Vision-Language Pretraining with Hybrid Visual Encoding for 3D Computed Tomography](/202606/27/2606.25546v1-disease-centric-vision-language-pretraining-with-hybrid-visual-encoding-for-3d-computed-tomography)  
    标签：评分：7.0/10、query:abdk-seg
-   evidence：提出用于监督训练3D医学图像分割模型的主动学习方法
-2. [Pseudo-Text-Conditioned 3D Grounding DINO for Organ Localization in Abdominal CT](/202606/26/2606.27084v1-pseudo-text-conditioned-3d-grounding-dino-for-organ-localization-in-abdominal-ct)  
+   evidence：面向3D CT的视觉语言预训练，可迁移至腹部器官分割
+2. [Jolia: Concept-Level Vision-Language Alignment for 3D CT Contrastive Learning](/202606/27/2606.24570v2-jolia-concept-level-vision-language-alignment-for-3d-ct-contrastive-learning)  
    标签：评分：6.0/10、query:abdk-seg
-   evidence：腹部CT中全监督器官定位
+   evidence：概念级视觉-语言对齐用于3D CT，有利于器官分割
 
 
 <div class="dpr-home-promo-card">
