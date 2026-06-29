@@ -1,0 +1,136 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-29T21:48:00.073440+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [
+    {
+      "id": "2606.27794v1",
+      "source": "arxiv",
+      "title": "Text as Illumination: Spatial Contrastive Retinex Learning for Language-guided Medical Image Segmentation",
+      "abstract": "Language-guided Medical Image Segmentation (LMIS) has shown great potential to improve the delineation of anatomical structures and lesions by integrating clinical textual information. Existing methods generally rely on either implicit interaction between textual and visual features or auxiliary coarse-grained supervision for cross-modal alignment. However, these methods lack explicit and fine-grained constraints to ensure semantic consistency, causing a mismatch between language and the segmentation outputs. To address this issue, we propose Text-as-Illumination Retinex Network (TIRNet), a novel Retinex-inspired framework that treats text embeddings as semantic illumination for feature modulation, thereby improving semantic consistency in LMIS. TIRNet introduces two key blocks integrated at each decoder stage: (1) the Retinex-inspired Text Modulation Block (RTMB), which employs positive and negative illumination maps to enhance text-relevant foreground features and suppress background interference; and (2) the Consistent Detail Compensation Block (CDCB), which selectively recovers high-frequency details via a consistency-gated mechanism conditioned on illumination reliability. Furthermore, we propose a Multi-Scale Illumination Supervision Loss (MSIS-Loss), comprising a Region-Grounded Contrastive Loss (RGC-Loss) that enforces cross-modal similarity to be concentrated in text-relevant foreground regions and suppressed in background regions, and a Background Suppression Loss (BS-Loss) that provides pixel-level supervision for negative illumination maps, jointly ensuring a precise cross-modal alignment at each decoder stage. Extensive experiments on the MosMedData+ and QaTa-COV19 datasets demonstrate that TIRNet achieves state-of-the-art performance in LMIS. The code is available at: https://github.com/anaanaa/TIRNet.",
+      "authors": [
+        "Jian Shi",
+        "Cheng Zhen",
+        "Pingping Zhang",
+        "Rui Xu",
+        "Yanan Lv",
+        "Yili Ma",
+        "Huan Bi",
+        "Haojie Li",
+        "Huchuan Lu"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-26T07:27:48+00:00",
+      "link": "https://arxiv.org/pdf/2606.27794v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "language-guided medical image segmentation network",
+      "llm_evidence_cn": "语言引导的医学图像分割网络",
+      "llm_evidence": "语言引导的医学图像分割网络",
+      "canonical_evidence": "语言引导的医学图像分割网络",
+      "llm_tldr_en": "Proposes TIRNet, a Retinex-inspired network that treats text embeddings as illumination to modulate features for improved language-guided medical image segmentation.",
+      "llm_tldr_cn": "针对语言引导医学分割中文本与视觉特征语义不一致的问题，本文提出 TIRNet，受 Retinex 理论启发，将文本嵌入视为语义光照对特征进行调制，并引入空间对比学习以增强局部语义对齐。实验表明该方法在多个医学分割任务上提升了分割精度和语义一致性，为语言辅助的医学图像分析提供了细粒度跨模态对齐新思路。",
+      "llm_tldr": "针对语言引导医学分割中文本与视觉特征语义不一致的问题，本文提出 TIRNet，受 Retinex 理论启发，将文本嵌入视为语义光照对特征进行调制，并引入空间对比学习以增强局部语义对齐。实验表明该方法在多个医学分割任务上提升了分割精度和语义一致性，为语言辅助的医学图像分析提供了细粒度跨模态对齐新思路。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.22702v1",
+      "source": "arxiv",
+      "title": "Modular Diffusion Models for Structured Visual Recognition",
+      "abstract": "Traditional supervised methods for structured visual recognition tasks -- such as object detection, segmentation, and scene graph generation -- often produce deterministic, fixed outputs, limiting their ability to capture the inherent uncertainty in complex visual scenes. As a consequence, such point estimates are unable to capture the prediction uncertainty (or multi modality) intrinsic to these problems, often arising from natural ambiguities (e.g., ambiguity in size of partially occluded objects, local ambiguity of exact segmentation boundary, etc.) as well as noise and sparsity of training data. To address this limitation, we present Modular Diffusion Models (MDMs), a simple and novel framework that learns a distribution over structured outputs for a given input image. MDMs decompose the diffusion process into distinct, task-specific modules, each focused on capturing a different aspect of the structured information space, such as object categories, spatial locations, and inter-object relationships. This modular design allows each component to be learned independently, with seamless integration at inference without additional training. Furthermore, the modularity of MDMs enables the diffusion process to easily operate over the heterogeneous output space common in many structured learning tasks (e.g., a continuous bounding boxes and discrete class labels). Experimental results over three distinct structured tasks -- object detection, instance segmentation, and scene graph generation -- highlight the benefits of our proposed framework.",
+      "authors": [
+        "Siddhesh Khandelwal",
+        "Björn Ommer",
+        "Leonid Sigal"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-21T22:38:35+00:00",
+      "link": "https://arxiv.org/pdf/2606.22702v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "proposes a diffusion model for supervised segmentation tasks",
+      "llm_evidence_cn": "提出用于监督分割任务的扩散模型",
+      "llm_evidence": "提出用于监督分割任务的扩散模型",
+      "canonical_evidence": "提出用于监督分割任务的扩散模型",
+      "llm_tldr_en": "Proposes Modular Diffusion Models, a diffusion-based framework for supervised segmentation that captures output uncertainty, improving structured visual recognition tasks.",
+      "llm_tldr_cn": "针对传统监督分割方法无法捕获输出不确定性的问题，本文提出模块化扩散模型（MDMs），通过学习给定输入的结构化输出分布，提升分割等任务中对预测不确定性和多模态性的建模能力。实验表明该方法在多种结构化视觉识别任务上有效，为监督分割提供了不确定性感知的新范式。",
+      "llm_tldr": "针对传统监督分割方法无法捕获输出不确定性的问题，本文提出模块化扩散模型（MDMs），通过学习给定输入的结构化输出分布，提升分割等任务中对预测不确定性和多模态性的建模能力。实验表明该方法在多种结构化视觉识别任务上有效，为监督分割提供了不确定性感知的新范式。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "supervised training of neural networks for segmentation",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.25254v1",
+      "source": "arxiv",
+      "title": "Dual Agreement Consistency Learning for Semi-Supervised Fetal Ultrasound Segmentation",
+      "abstract": "Maternal-fetal US is the primary imaging modality for monitoring fetal development, yet accurate automated segmentation remains challenging due to the scarcity of pixel-level annotations. To address this issue, we propose DACL, a semi-supervised framework for robust fetal US image segmentation. DACL jointly trains a deployment-oriented lightweight convolutional network (1.47\\thinsp\\mathrm{M} parameters) and a Transformer-based network, leveraging labeled data for supervised learning and unlabeled data via CPS. To enhance prediction stability, we introduce a dual-agreement consistency loss that couples pixel-wise probabilistic divergence with entropy-guided confidence alignment. Unlike conventional CPS methods that enforce agreement only at the prediction level, DACL explicitly regularizes both distributional alignment and uncertainty, thereby suppressing unreliable pseudo-labels and enabling stable cross-architecture pseudo-label learning under extreme annotation scarcity. Furthermore, an interpolation-based consistency strategy using mixup is applied to unlabeled samples to enhance robustness. Under 5% labeled data, DACL improves Dice by up to 2.77% and reduces HD95 by up to 14.69 mm compared with the strongest recent semi-supervised methods, demonstrating significant improvements in boundary accuracy on both fetal head and abdomen datasets. These results demonstrate the effectiveness of agreement-based consistency learning for annotation-efficient fetal US segmentation. Our code is on GitHub.",
+      "authors": [
+        "Fangyijie Wang",
+        "Guénolé Silvestre",
+        "Ziyang Wang",
+        "Kathleen M. Curran"
+      ],
+      "primary_category": "eess.IV",
+      "categories": [
+        "eess.IV",
+        "cs.CV"
+      ],
+      "published": "2026-06-24T00:26:00+00:00",
+      "link": "https://arxiv.org/pdf/2606.25254v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "semi-supervised framework for fetal ultrasound segmentation",
+      "llm_evidence_cn": "用于胎儿超声分割的半监督框架",
+      "llm_evidence": "用于胎儿超声分割的半监督框架",
+      "canonical_evidence": "用于胎儿超声分割的半监督框架",
+      "llm_tldr_en": "Proposes DACL, a semi-supervised framework with dual-agreement consistency for fetal ultrasound segmentation, using both convolutional and transformer networks.",
+      "llm_tldr_cn": "针对胎儿超声图像标注稀缺导致的自动分割困难，本文提出 DACL 半监督框架，通过联合训练轻量卷积网络和 Transformer 网络，并引入双重一致一致性损失来提升预测稳定性。实验表明该方法在有限标注下实现了高精度胎儿超声分割，为临床胎儿发育监测提供了经济高效的工具。",
+      "llm_tldr": "针对胎儿超声图像标注稀缺导致的自动分割困难，本文提出 DACL 半监督框架，通过联合训练轻量卷积网络和 Transformer 网络，并引入双重一致一致性损失来提升预测稳定性。实验表明该方法在有限标注下实现了高精度胎儿超声分割，为临床胎儿发育监测提供了经济高效的工具。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
