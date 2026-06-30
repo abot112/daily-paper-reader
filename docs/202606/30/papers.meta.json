@@ -1,0 +1,69 @@
+{
+  "label": "2026-06-30",
+  "date": "2026-06-30",
+  "generated_at": "2026-06-30T21:06:17",
+  "count": 4,
+  "papers": [
+    {
+      "paper_id": "202606/30/2606.29744v1-htc-sga-former-a-hybrid-transformer-cnn-network-with-self-guided-attention-and-a-new-boundary-weighted-adaptive-loss-for-coronary-dsa-vessel-segmentation",
+      "section": "deep",
+      "title_en": "HTC-SGA Former: A Hybrid Transformer-CNN Network with Self-Guided Attention and a New Boundary-Weighted Adaptive Loss for Coronary DSA Vessel Segmentation",
+      "authors": "Rayan Merghani Ahmed, Marwa Omer Mohammed Omer, Mohamed Elmanna, Shijie Li, Bin Li, Shoujun Zhoua",
+      "date": "2026-06-29",
+      "pdf": "https://arxiv.org/pdf/2606.29744v1",
+      "score": "9.0",
+      "evidence": "提出一种全监督混合Transformer-CNN，用于冠状动脉DSA医学图像的血管分割。",
+      "tldr": "冠状动脉DSA血管分割中，薄的低对比度血管和严重类不平衡导致弱分支及边界分割困难。为此，提出轻量级混合Transformer-CNN框架HTC-SGA Former，结合自引导注意力和边界加权自适应损失。在私有左右冠状动脉数据集上，以0.81M参数超越14种现有方法，显著提升薄血管恢复和边界定位。该工作为高效可靠的计算辅助心血管介入提供支持。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "Accurate coronary Digital Subtraction Angiography (DSA) vessel segmentation is essential for computer-aided diagnosis and treatment planning of coronary artery disease (CAD). However, thin low-contrast vessels, background interference, and severe vessel-background class imbalance make reliable segmentation of weak distal branches and vessel boundaries challenging. Existing methods struggle to balance global contextual reasoning with preservation of weak vessels, vessel continuity, and fine boundaries. To address these limitations, we propose HTC-SGA Former, a lightweight hybrid Transformer-CNN framework for coronary DSA vessel segmentation. It employs a CNN encoder for local vessel morphology extraction and a Transformer decoder for contextual feature modeling. A Multi-Scale Global-Local Window Attention (MS-GLWA) block performs efficient global-local contextual modeling, while a Self-Guided Feature Attention (SGFA) module enhances weak-vessel responses. In addition, a Boundary-Weighted Adaptive Compound Loss (BWACL) emphasizes thin-vessel boundaries and adaptively balances vessel recovery and boundary refinement. Experiments on private right and left coronary artery DSA subsets show that HTC-SGA Former outperforms 14 state-of-the-art segmentation methods while maintaining a compact architecture with only 0.81M parameters. BWACL also improves performance over binary cross-entropy and Dice losses across four encoder-decoder architectures, demonstrating strong cross-backbone applicability. HTC-SGA Former improves thin-vessel recovery, vessel continuity, and boundary localization through complementary global-local contextual modeling, vessel-focused refinement, and adaptive optimization, supporting reliable and computationally efficient coronary vessel analysis for future computer-assisted cardiovascular interventions.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202606/30/2606.25278v1-heterogeneous-and-adept-snapshot-distillation-for-3d-semantic-segmentation",
+      "section": "quick",
+      "title_en": "Heterogeneous and Adept Snapshot Distillation for 3D Semantic Segmentation",
+      "authors": "Xiaopei Wu, Yuenan Hou, Junkai Xu, Wenxiao Wang, Binbin Lin, Yu Li, Ping Li, Haifeng Liu, Deng Cai, Wanli Ouyang",
+      "date": "2026-06-24",
+      "pdf": "https://arxiv.org/pdf/2606.25278v1",
+      "score": "7.0",
+      "evidence": "通过从多模态和集成教师模型的知识蒸馏实现有监督三维语义分割，可迁移至医学CT扫描。",
+      "tldr": "3D语义分割中，融合图像与点云的多模态方法及集成多模型专家虽有效，但引入额外传感器或计算负担。本文提出异构且熟练的快照知识蒸馏（HAS-KD），借助信息导向过滤（IOF）选取关键图像帧提升多模态教师质量，并将训练中自然产生的快照视为多专家，每个专家仅在其擅长类别上指导学生。在ScanNetV2和S3DIS数据集上，HAS-KD以单模态输入达到领先性能，无推理开销增加。该方法可即插即用，为点云分割提供高效的性能增强方案。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "Multi-modal fusion and multi-model ensembling are prevalent in enhancing the performance of 3D semantic segmentation. Despite the impressive performance, these methods either rely on auxiliary input signals or suffer from costly computational expense. To efficaciously enhance the segmentation performance without introducing intolerable costs, we propose to transfer the rich knowledge from the multi-modal model (i.e., point clouds and images) and multiple model experts to the point-cloudbased network through knowledge distillation. Specifically, we present Information-oriented Heterogeneous Distillation (IHD) to help the uni-modal model absorb the complementary knowledge from the multi-modal teacher. We design the Information-Oriented Filtering (IOF) strategy to select informative images from the continuous image sequence for multi-modal fusion. This practice can boost the performance of the multi-modal teacher, thus benefiting the learning of the student. Besides, as opposed to vanilla model ensembling that requires the separate training of each expert, we propose Adept Snapshot Distillation (ASD). ASD treats the freely available model snapshots generated during the training phase as multiple experts, which significantly reduces the training cost for model ensembling. For each expert teacher, it only provides supervision to the student in the class where it is adept. The resulting Heterogeneous and Adept Snapshot Knowledge Distillation, dubbed HAS-KD, attains state-of-the-art results on ScanNetV2 and S3DIS datasets. HAS-KD can be seamlessly integrated into contemporary 3D segmentation algorithms and bring considerable gains without introducing extra inference burdens. The code will be made publicly available upon publication.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202606/30/biorxiv-10-64898-2026-05-11-724316-v2-anatomy-guided-3d-graph-networks-for-couinaud-segmentation-in-tumor-affected-livers",
+      "section": "quick",
+      "title_en": "Anatomy-Guided 3D Graph Networks for Couinaud Segmentation in Tumor Affected Livers",
+      "authors": "You, L., Dang, H., Wang, H., Matta, E., zhou, X.",
+      "date": "2026-06-29",
+      "pdf": "https://www.biorxiv.org/content/10.64898/2026.05.11.724316v2.full.pdf",
+      "score": "7.0",
+      "evidence": "使用3D UNet和GCN进行腹部CT/MR中肝脏的全监督深度学习分割",
+      "tldr": "传统Couinaud分割在肿瘤肝脏中因结构扭曲而失效。本文提出两阶段框架，整合3D UNet与3D解剖结构引导图卷积网络，并标准化预处理肝脏体积。在未见临床数据上平均Dice达0.828，实现稳健分割。首次公开代码与权重，为提供可复现资源。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "Abstract: Image-based liver Couinaud segmentation is designed to automatically provide the locations of suspicious objects in liver CT/MR images. Once achieved, the physicians will be guided to the target slice and area where the suspicious node is located. However, conventional algorithms trained primarily on healthy liver images often fail to generalize to Hepatocellular Carcinoma (HCC) cases due to pathological structural distortions. In this work, we propose a robust two-stage framework that integrates a 3D Unet with a 3D Anatomical Structure-Guided Graph Convolutional Network (3D GCN). This two-stage strategy effectively isolates the liver volume to eliminate structural noise from neighboring organs, such as the spleen, allowing the framework to focus exclusively on the complex 3D anatomical relationships among the eight segments. To ensure the topological consistency required for global spatial reasoning, we implement a standardized preprocessing pipeline that normalizes liver-only volumes to exactly 50 frames along the z-axis. By combining a lightweight 3D UNet backbone with the 3D GCN for refined boundary reasoning, our model demonstrates superior generalization performance on unseen clinical datasets, achieving a mean Dice score of 0.828 in blind testing. By releasing our code and pretrained weights, we aim to provide the first publicly available deep learning resource for robust Couinaud segmentation.",
+      "source": "biorxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202606/30/2606.29102v1-bti-net-bidirectional-decoder-level-task-interaction-via-uncertainty-aware-gating-for-multi-task-medical-image-analysis",
+      "section": "quick",
+      "title_en": "BTI-Net: Bidirectional Decoder-Level Task Interaction via Uncertainty-Aware Gating for Multi-Task Medical Image Analysis",
+      "authors": "Abdullah Al Shafi, Md Kawsar Mahmud Khan Zunayed, Safin Ahmmed, Sk Imran Hossain, Engelbert Mephu Nguifo",
+      "date": "2026-06-27",
+      "pdf": "https://arxiv.org/pdf/2606.29102v1",
+      "score": "6.0",
+      "evidence": "提出用于医学图像分割和分类的多任务解码器交互网络，可应用于腹部器官任务。",
+      "tldr": "现有编码器共享的多任务医学图像分析丢弃了分割与分类间的互补信息。BTI-Net引入任务交互模块在解码器各层建立双向通信，并利用不确定性代理注意力自适应门控交互输出。在超声、皮肤镜与脑MRI三个医学基准上，该方法一致提升了分割IoU和分类准确率，自适应门控贡献+2.36 IoU。为多任务学习提供了高效、无需额外标注的单次交互新思路。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "Jointly learning to segment and classify medical images demands cross-task synergy, yet encoder-sharing architectures limit decoder reconstruction to task-private representations, permanently discarding the boundary cues and semantic priors each branch could supply to the other. This work introduces BTI-Net, which establishes bidirectional communication at every decoder level through two parallel pathways via Task Interaction Modules (TIM). Spatial boundary context is gated into the classification branch, while global semantic priors multiplicatively modulate the decoder, with refined features propagating progressively from coarse semantics to fine boundary detail across all four decoder resolutions. Since cross-task interaction is not equally reliable for every input, Uncertainty Proxy Attention (UPA) gates each TIM output per instance and per level using three signals that capture cross-task alignment, scene complexity, and prediction confidence, without external annotations or additional inference passes. Experiments on three medical benchmarks spanning ultrasound, dermoscopy, and brain MRI demonstrate consistent improvements in segmentation IoU and classification accuracy over both encoder-sharing and decoder-interaction baselines. Ablation confirms adaptive gating contributes +2.36 IoU over fixed bidirectional interaction, and classification accuracy improves by up to +2.26 points over the strongest multi-task baseline. UPA's uncertainty proxies serve as reliable single-pass task-failure signals without the overhead of stochastic sampling. Code: https://github.com/C-loud-Nine/BTI-Net_MTL",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
