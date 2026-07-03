@@ -1,0 +1,24 @@
+{
+  "label": "2026-07-03",
+  "date": "2026-07-03",
+  "generated_at": "2026-07-03T21:27:59",
+  "count": 1,
+  "papers": [
+    {
+      "paper_id": "202607/03/2607.02185v1-radiomicnet-a-hybrid-radiomics-guided-lightweight-architecture-for-interpretable-medical-image-segmentation",
+      "section": "quick",
+      "title_en": "RadiomicNet: A Hybrid Radiomics-Guided Lightweight Architecture for Interpretable Medical Image Segmentation",
+      "authors": "Mohammad Amanour Rahman",
+      "date": "2026-07-02",
+      "pdf": "https://arxiv.org/pdf/2607.02185v1",
+      "score": "6.0",
+      "evidence": "将手工放射组学特征集成到可解释医学图像分割学习中的新颖双流混合架构",
+      "tldr": "医学图像分割中深度学习面临不可解释性和高参数量挑战。本文提出RadiomicNet，通过Radiomics Attention Gate将手工放射组学特征融入轻量编码器-解码器，结合一致性损失实现事前可解释分割。在BUSI和Kvasir-SEG上平均Dice达0.763和0.854，超越U-KAN，参数量仅3.27M，校准误差降至0.118。该工作表明融合领域知识的紧凑模型可实现高性能与临床可解释性。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "Deep learning has achieved remarkable performance in medical image segmentation, yet it suffers from critical limitations: mathematical intractability, substantial parameter requirements, and lack of clinical interpretability. We propose RadiomicNet, a novel two-stream hybrid architecture that enhances standard deep learning by integrating handcrafted radiomics features directly into the segmentation learning process. The key contribution is the Radiomics Attention Gate (RAG), which leverages Gray-Level Co-occurrence Matrix (GLCM) and Local Binary Pattern (LBP) features to modulate skip-connection attention in a lightweight MobileNetV2-based encoder-decoder, providing ante-hoc interpretability without post-hoc approximations. A novel Radiomics Consistency Loss further enforces alignment between texture complexity and prediction uncertainty, reducing Expected Calibration Error (ECE) from 0.142 to 0.118. RadiomicNet achieves a Dice Similarity Coefficient (DSC) of 0.763 +/- 0.231 on the Breast Ultrasound Images (BUSI) dataset and 0.854 +/- 0.112 on Kvasir-SEG, outperforming U-KAN by 1.2% and 1.8%, respectively (p < 0.05, Wilcoxon signed-rank test), with only 3.27M parameters, 9.5x fewer than standard U-Net and 4.3x fewer than U-KAN. Gradient-based feature importance analysis reveals that GLCM dissimilarity (15.24%), GLCM energy (14.56%), and LBP entropy (11.49%) are the dominant radiomics cues, providing clinically meaningful explanations for segmentation decisions. The proposed approach demonstrates that compact, interpretable models grounded in domain knowledge can deliver state-of-the-art segmentation performance with substantially reduced computational overhead.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

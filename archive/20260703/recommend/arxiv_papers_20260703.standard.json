@@ -1,0 +1,53 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-03T21:27:14.316244+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2607.02185v1",
+      "source": "arxiv",
+      "title": "RadiomicNet: A Hybrid Radiomics-Guided Lightweight Architecture for Interpretable Medical Image Segmentation",
+      "abstract": "Deep learning has achieved remarkable performance in medical image segmentation, yet it suffers from critical limitations: mathematical intractability, substantial parameter requirements, and lack of clinical interpretability. We propose RadiomicNet, a novel two-stream hybrid architecture that enhances standard deep learning by integrating handcrafted radiomics features directly into the segmentation learning process. The key contribution is the Radiomics Attention Gate (RAG), which leverages Gray-Level Co-occurrence Matrix (GLCM) and Local Binary Pattern (LBP) features to modulate skip-connection attention in a lightweight MobileNetV2-based encoder-decoder, providing ante-hoc interpretability without post-hoc approximations. A novel Radiomics Consistency Loss further enforces alignment between texture complexity and prediction uncertainty, reducing Expected Calibration Error (ECE) from 0.142 to 0.118. RadiomicNet achieves a Dice Similarity Coefficient (DSC) of 0.763 +/- 0.231 on the Breast Ultrasound Images (BUSI) dataset and 0.854 +/- 0.112 on Kvasir-SEG, outperforming U-KAN by 1.2% and 1.8%, respectively (p < 0.05, Wilcoxon signed-rank test), with only 3.27M parameters, 9.5x fewer than standard U-Net and 4.3x fewer than U-KAN. Gradient-based feature importance analysis reveals that GLCM dissimilarity (15.24%), GLCM energy (14.56%), and LBP entropy (11.49%) are the dominant radiomics cues, providing clinically meaningful explanations for segmentation decisions. The proposed approach demonstrates that compact, interpretable models grounded in domain knowledge can deliver state-of-the-art segmentation performance with substantially reduced computational overhead.",
+      "authors": [
+        "Mohammad Amanour Rahman"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-07-02T13:54:33+00:00",
+      "link": "https://arxiv.org/pdf/2607.02185v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "novel two-stream hybrid architecture that integrates handcrafted radiomics features for interpretable medical image segmentation",
+      "llm_evidence_cn": "将手工放射组学特征集成到可解释医学图像分割学习中的新颖双流混合架构",
+      "llm_evidence": "将手工放射组学特征集成到可解释医学图像分割学习中的新颖双流混合架构",
+      "canonical_evidence": "将手工放射组学特征集成到可解释医学图像分割学习中的新颖双流混合架构",
+      "llm_tldr_en": "Proposes RadiomicNet, a lightweight hybrid CNN-transformer architecture integrating radiomics features via attention gating for fully supervised medical image segmentation, achieving ante-hoc interpretability and improved performance.",
+      "llm_tldr_cn": "针对深度医学图像分割中数学不可解释、参数量大和缺乏临床可解释性的问题，提出RadiomicNet，一种双流混合架构。该架构通过放射组学注意力门将GLCM和LBP等手工特征集成到MobileNetV2编码器-解码器中，在保持轻量化的同时提供前馈可解释性。在多个医学数据集上的实验表明，该方法在分割性能上优于基准模型，且无需事后解释，对临床部署具有意义。",
+      "llm_tldr": "针对深度医学图像分割中数学不可解释、参数量大和缺乏临床可解释性的问题，提出RadiomicNet，一种双流混合架构。该架构通过放射组学注意力门将GLCM和LBP等手工特征集成到MobileNetV2编码器-解码器中，在保持轻量化的同时提供前馈可解释性。在多个医学数据集上的实验表明，该方法在分割性能上优于基准模型，且无需事后解释，对临床部署具有意义。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
