@@ -1,0 +1,24 @@
+{
+  "label": "2026-07-04",
+  "date": "2026-07-04",
+  "generated_at": "2026-07-04T21:00:57",
+  "count": 1,
+  "papers": [
+    {
+      "paper_id": "202607/04/2606.30577v2-april-medseg-a-modular-medical-image-segmentation-toolbox-embracing-modern-paradigms",
+      "section": "quick",
+      "title_en": "APRIL-MedSeg: A Modular Medical Image Segmentation Toolbox Embracing Modern Paradigms",
+      "authors": "Juntao Jiang, Jinsheng Bai, Linxuan Fan, Yali Bi, Jiangning Zhang, Yong Liu",
+      "date": "2026-06-29",
+      "pdf": "https://arxiv.org/pdf/2606.30577v2",
+      "score": "6.0",
+      "evidence": "支持全监督医学图像分割的模块化工具箱",
+      "tldr": "医学图像分割领域算法快速发展，但缺乏统一的模块化框架整合现代学习范式与部署需求。APRIL-MedSeg 提出 YAML 驱动的模块化架构，将网络分解为可注册组件，集成半监督、域适应、知识蒸馏、弱监督、文本引导分割及基础模型等先进范式。其注册继承机制支持模型、数据集与训练策略的灵活切换和可复现实验管理，并提供统一的数据、增强、部署及集成接口。该工具箱成为连接算法创新与临床实施的通用平台，为医学图像分割研究的系统化推进与进展复现提供结构化生态。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "We present APRIL-MedSeg, a YAML-driven modular framework for 2D medical image segmentation. It provides a unified and extensible ecosystem that decomposes segmentation networks into reusable components. Also, the framework integrates a broad spectrum of advanced paradigms, including semi-supervised learning, domain adaptation, knowledge distillation, weakly supervised learning, and text-guided segmentation as well as foundation model support. A registry-based configuration system with inheritance enables flexible and reproducible experiment management, supporting seamless switching across models, datasets, and training strategies. In addition, the framework provides a unified interface for medical datasets, augmentation pipelines, deployment utilities and model ensembling. Overall, APRIL-MedSeg is designed as a general-purpose research and development platform that bridges algorithmic innovation and practical deployment, while also serving as a structured ecosystem for systematically organizing and reproducing advances in medical image segmentation. The code is available at https://github.com/juntaoJianggavin/APRIL-MedSeg under an Apache 2.0 license.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

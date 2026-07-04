@@ -6,26 +6,26 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-07-03
-- 运行时间：2026-07-03 21:27:48 UTC
+- 最新运行日期：2026-07-04
+- 运行时间：2026-07-04 21:00:50 UTC
 - 运行状态：成功
 - 本次总论文数：1
 - 精读区：0
 - 速读区：1
 
 ### 今日简报（AI）
-今日速读：混合影像组学引导的轻量级可解释分割架构 RadiomicNet，兼顾效率与透明度。
-最值得关注：将传统影像组学特征嵌入轻量网络，提升分割结果的可解释性，适合临床实时辅助决策。
-普通读者可留意此类“手工特征+深度学习”的混合路线，尤其在数据量有限的医疗场景中更具落地潜力。
-- 详情：[/202607/03/README](/202607/03/README)
+1) 今日速览了一个拥抱现代范式的模块化医学影像分割工具箱 APRIL-MedSeg。
+2) 该工具最值得关注的方向是整合了基础模型、提示机制等前沿方法，让非专业用户也能灵活搭建高性能分割管线。
+3) 建议开发者直接查阅其开源代码，普通读者可关注这类工具对医疗AI应用门槛的降低作用。
+- 详情：[/202607/04/README](/202607/04/README)
 
 ### 精读区论文标签
 - 本次无精读推荐。
 
 ### 速读区论文标签
-1. [RadiomicNet: A Hybrid Radiomics-Guided Lightweight Architecture for Interpretable Medical Image Segmentation](/202607/03/2607.02185v1-radiomicnet-a-hybrid-radiomics-guided-lightweight-architecture-for-interpretable-medical-image-segmentation)  
+1. [APRIL-MedSeg: A Modular Medical Image Segmentation Toolbox Embracing Modern Paradigms](/202607/04/2606.30577v2-april-medseg-a-modular-medical-image-segmentation-toolbox-embracing-modern-paradigms)  
    标签：评分：6.0/10、query:abdk-seg
-   evidence：将手工放射组学特征集成到可解释医学图像分割学习中的新颖双流混合架构
+   evidence：支持全监督医学图像分割的模块化工具箱
 
 
 <div class="dpr-home-promo-card">

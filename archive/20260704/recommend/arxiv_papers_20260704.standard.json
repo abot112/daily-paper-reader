@@ -1,0 +1,57 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-04T20:59:00.262060+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2606.30577v2",
+      "source": "arxiv",
+      "title": "APRIL-MedSeg: A Modular Medical Image Segmentation Toolbox Embracing Modern Paradigms",
+      "abstract": "We present APRIL-MedSeg, a YAML-driven modular framework for 2D medical image segmentation. It provides a unified and extensible ecosystem that decomposes segmentation networks into reusable components. Also, the framework integrates a broad spectrum of advanced paradigms, including semi-supervised learning, domain adaptation, knowledge distillation, weakly supervised learning, and text-guided segmentation as well as foundation model support. A registry-based configuration system with inheritance enables flexible and reproducible experiment management, supporting seamless switching across models, datasets, and training strategies. In addition, the framework provides a unified interface for medical datasets, augmentation pipelines, deployment utilities and model ensembling. Overall, APRIL-MedSeg is designed as a general-purpose research and development platform that bridges algorithmic innovation and practical deployment, while also serving as a structured ecosystem for systematically organizing and reproducing advances in medical image segmentation. The code is available at https://github.com/juntaoJianggavin/APRIL-MedSeg under an Apache 2.0 license.",
+      "authors": [
+        "Juntao Jiang",
+        "Jinsheng Bai",
+        "Linxuan Fan",
+        "Yali Bi",
+        "Jiangning Zhang",
+        "Yong Liu"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-29T17:20:26+00:00",
+      "link": "https://arxiv.org/pdf/2606.30577v2",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "modular toolbox supporting fully supervised segmentation for medical images",
+      "llm_evidence_cn": "支持全监督医学图像分割的模块化工具箱",
+      "llm_evidence": "支持全监督医学图像分割的模块化工具箱",
+      "canonical_evidence": "支持全监督医学图像分割的模块化工具箱",
+      "llm_tldr_en": "Presents a modular framework for 2D medical image segmentation that supports fully supervised learning and can be applied to abdominal organ segmentation.",
+      "llm_tldr_cn": "现有医学图像分割工具缺乏统一框架以支持多样学习范式。本文提出APRIL-MedSeg，一个YAML驱动的模块化2D医学图像分割工具箱。它将分割网络分解为可复用组件，并集成全监督、半监督、域适应等多种范式，提供数据集、增强、部署的统一接口。通过注册表配置系统，可灵活切换模型与训练策略，为腹部器官分割等任务提供便捷的实验平台，加速全监督分割方法的开发与评估。",
+      "llm_tldr": "现有医学图像分割工具缺乏统一框架以支持多样学习范式。本文提出APRIL-MedSeg，一个YAML驱动的模块化2D医学图像分割工具箱。它将分割网络分解为可复用组件，并集成全监督、半监督、域适应等多种范式，提供数据集、增强、部署的统一接口。通过注册表配置系统，可灵活切换模型与训练策略，为腹部器官分割等任务提供便捷的实验平台，加速全监督分割方法的开发与评估。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
