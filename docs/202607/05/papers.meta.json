@@ -1,0 +1,24 @@
+{
+  "label": "2026-07-05",
+  "date": "2026-07-05",
+  "generated_at": "2026-07-05T21:22:42",
+  "count": 1,
+  "papers": [
+    {
+      "paper_id": "202607/05/2607.01675v1-histoseg-delving-deeper-with-attention-and-multiscale-feature-fusion-for-biomarker-segmentation",
+      "section": "quick",
+      "title_en": "HistoSeg++: Delving deeper with attention and multiscale feature fusion for biomarker segmentation",
+      "authors": "Saad Wazir, Rao Faizan, Daeyoung Kim",
+      "date": "2026-07-02",
+      "pdf": "https://arxiv.org/pdf/2607.01675v1",
+      "score": "6.0",
+      "evidence": "提出HistoSeg++，一种用于医学图像生物标记物分割的嵌套UNet架构，可用于腹部器官",
+      "tldr": "医学图像中生物标志物分割存在多尺度信息捕获不足和泛化能力弱的问题。本文提出HistoSeg++，通过融合内外注意力单元、通道特征重校准与边缘感知损失，增强Nested-UNet架构的多尺度特征融合和边界精度。在三个公开数据集上，该方法性能均超越现有Nested-UNet方法。该工作为高泛化生物标志物分割提供了有效技术路径。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "Segmentation of biomarkers in medical images is frequently viewed as a first step towards medical image analysis in any bioinformatics or biomedical application. Despite progress, existing methods still struggle to capture information at multiple scales and to perform upsampling effectively across different datasets. These shortcomings often result in suboptimal generalization capabilities. Recently, architectures belonging to the Nested-UNet family excel in capturing multiscale contextual information and upsample them effectively. In this work, We propose a novel Nested-UNet architecture that effectively captures multi-scale contextual information. It includes inner and outer attention units to enhance focus during upsampling, along with channel-wise feature recalibration using squeeze-and-excitation modules, leading to improved segmentation performance. Additionally, the architecture integrates an edge-aware loss to emphasize boundary accuracy by assigning greater importance to edge regions. Tested extensively on three publicly available benchmark datasets. Our method demonstrates a generalization performance superior to existing Nested-UNet methods. Code: https://github.com/saadwazir/histosegplusplus",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

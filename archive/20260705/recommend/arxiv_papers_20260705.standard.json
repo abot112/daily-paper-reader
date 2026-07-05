@@ -1,0 +1,54 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-05T21:21:43.717746+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2607.01675v1",
+      "source": "arxiv",
+      "title": "HistoSeg++: Delving deeper with attention and multiscale feature fusion for biomarker segmentation",
+      "abstract": "Segmentation of biomarkers in medical images is frequently viewed as a first step towards medical image analysis in any bioinformatics or biomedical application. Despite progress, existing methods still struggle to capture information at multiple scales and to perform upsampling effectively across different datasets. These shortcomings often result in suboptimal generalization capabilities. Recently, architectures belonging to the Nested-UNet family excel in capturing multiscale contextual information and upsample them effectively. In this work, We propose a novel Nested-UNet architecture that effectively captures multi-scale contextual information. It includes inner and outer attention units to enhance focus during upsampling, along with channel-wise feature recalibration using squeeze-and-excitation modules, leading to improved segmentation performance. Additionally, the architecture integrates an edge-aware loss to emphasize boundary accuracy by assigning greater importance to edge regions. Tested extensively on three publicly available benchmark datasets. Our method demonstrates a generalization performance superior to existing Nested-UNet methods. Code: https://github.com/saadwazir/histosegplusplus",
+      "authors": [
+        "Saad Wazir",
+        "Rao Faizan",
+        "Daeyoung Kim"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-02T04:03:10+00:00",
+      "link": "https://arxiv.org/pdf/2607.01675v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Proposes a nested UNet with attention for biomarker segmentation, applicable to medical images",
+      "llm_evidence_cn": "提出HistoSeg++，一种用于医学图像生物标记物分割的嵌套UNet架构，可用于腹部器官",
+      "llm_evidence": "提出HistoSeg++，一种用于医学图像生物标记物分割的嵌套UNet架构，可用于腹部器官",
+      "canonical_evidence": "提出HistoSeg++，一种用于医学图像生物标记物分割的嵌套UNet架构，可用于腹部器官",
+      "llm_tldr_en": "HistoSeg++ is a nested UNet architecture with attention mechanisms for medical image segmentation, aiming to improve multi-scale feature fusion; it could be adapted for fully supervised abdominal organ segmentation.",
+      "llm_tldr_cn": "针对医学图像分割中多尺度信息捕获不足的问题，本文提出HistoSeg++，一种增强型嵌套UNet架构，整合内外注意力单元以提升上采样过程中的特征聚焦。实验表明其在多种数据集上分割性能优异，可迁移至腹部器官的全监督分割，为通用医学分割提供了高效的骨干网络。",
+      "llm_tldr": "针对医学图像分割中多尺度信息捕获不足的问题，本文提出HistoSeg++，一种增强型嵌套UNet架构，整合内外注意力单元以提升上采样过程中的特征聚焦。实验表明其在多种数据集上分割性能优异，可迁移至腹部器官的全监督分割，为通用医学分割提供了高效的骨干网络。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
