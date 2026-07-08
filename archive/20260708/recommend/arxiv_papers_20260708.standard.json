@@ -1,0 +1,55 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-08T21:00:08.758343+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 0,
+    "quick_skim_target": 11,
+    "quick_selected": 0
+  },
+  "deep_dive": [
+    {
+      "id": "2607.02571v1",
+      "source": "arxiv",
+      "title": "Dual-Adaptive SAM3: Hierarchical Routing over Low-Rank Expert Layers for Parameter-Efficient Medical Image Segmentation",
+      "abstract": "The Segment Anything Model with Concepts (SAM3) heralds a new paradigm for open-vocabulary segmentation through natural language interaction, offering significant potential for medical image analysis. However, effectively adapting such a powerful vision-language model to the diverse and nuanced domain of medical imaging remains a key challenge. Naive fine-tuning is parameter-inefficient, while standard Mixture-of-Experts (MoE) methods introduce prohibitive computational overhead, limiting their clinical applicability. To address this, we propose Dual-Adaptive SAM3 (DA-SAM3), a novel framework that achieves both high segmentation accuracy and extreme parameter efficiency via a dual-adaptive specialization mechanism. Our first adaptation is task-aware: a Dynamic Expert Router (DER) that sparsely activates the most relevant experts by jointly reasoning about the visual input and the textual concept prompt, mimicking a clinical consultation process. Our second adaptation is parameter-aware: a Decomposed Parameterized Experts (DPE) design that represents each expert as a shared frozen base (inherited from the pretrained SAM3) and a lightweight trainable low-rank delta, reducing MoE parameter overhead by over 80\\%. Extensive experiments on multiple public medical segmentation benchmarks demonstrate that Dual-Adaptive SAM3 not only matches or exceeds the accuracy of fully fine-tuned SAM3 and standard MoE baselines, but also achieves a notable 5\\% gain over current state-of-the-art methods, with interpretable results validating its effectiveness. The code is available at: https://github.com/Reconsider80/DA-SAM3.",
+      "authors": [
+        "Ying Chen",
+        "Jinyue Li",
+        "Kun Wang",
+        "Qiankun Li",
+        "Yang Liu"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-30T08:14:18+00:00",
+      "link": "https://arxiv.org/pdf/2607.02571v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "parameter-efficient adaptation of SAM3 for medical image segmentation",
+      "llm_evidence_cn": "SAM3的参数高效适配用于医学图像分割",
+      "llm_evidence": "SAM3的参数高效适配用于医学图像分割",
+      "canonical_evidence": "SAM3的参数高效适配用于医学图像分割",
+      "llm_tldr_en": "Proposes Dual-Adaptive SAM3, a hierarchical routing over low-rank expert layers, for parameter-efficient fine-tuning of SAM3 on medical image segmentation tasks.",
+      "llm_tldr_cn": "针对SAM3等视觉语言模型在医学图像分割中微调参数效率低、标准混合专家计算开销大的问题，提出双适应SAM3（DA-SAM3）框架。该框架通过层次化路由低秩专家层实现双适应特化，在保持高分割精度的同时极大减少可训练参数量，为临床可用的医学图像分割提供了高效适配方案。",
+      "llm_tldr": "针对SAM3等视觉语言模型在医学图像分割中微调参数效率低、标准混合专家计算开销大的问题，提出双适应SAM3（DA-SAM3）框架。该框架通过层次化路由低秩专家层实现双适应特化，在保持高分割精度的同时极大减少可训练参数量，为临床可用的医学图像分割提供了高效适配方案。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": []
+}

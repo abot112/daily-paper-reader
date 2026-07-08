@@ -1,0 +1,24 @@
+{
+  "label": "2026-07-08",
+  "date": "2026-07-08",
+  "generated_at": "2026-07-08T21:01:46",
+  "count": 1,
+  "papers": [
+    {
+      "paper_id": "202607/08/2607.02571v1-dual-adaptive-sam3-hierarchical-routing-over-low-rank-expert-layers-for-parameter-efficient-medical-image-segmentation",
+      "section": "deep",
+      "title_en": "Dual-Adaptive SAM3: Hierarchical Routing over Low-Rank Expert Layers for Parameter-Efficient Medical Image Segmentation",
+      "authors": "Ying Chen, Jinyue Li, Kun Wang, Qiankun Li, Yang Liu",
+      "date": "2026-06-30",
+      "pdf": "https://arxiv.org/pdf/2607.02571v1",
+      "score": "8.0",
+      "evidence": "SAM3的参数高效适配用于医学图像分割",
+      "tldr": "医学图像分割领域SAM3虽潜力大，但高效适配医学图像仍面临计算和参数效率难题。提出DA-SAM3，结合动态专家路由和分解低秩专家，实现任务与参数双适应。实验表明，在多个医学分割基准上，DA-SAM3不仅超越全微调和MoE基线，还比SOTA提升5%精度，同时减少80%专家参数。为临床部署提供高效可解释方案。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "The Segment Anything Model with Concepts (SAM3) heralds a new paradigm for open-vocabulary segmentation through natural language interaction, offering significant potential for medical image analysis. However, effectively adapting such a powerful vision-language model to the diverse and nuanced domain of medical imaging remains a key challenge. Naive fine-tuning is parameter-inefficient, while standard Mixture-of-Experts (MoE) methods introduce prohibitive computational overhead, limiting their clinical applicability. To address this, we propose Dual-Adaptive SAM3 (DA-SAM3), a novel framework that achieves both high segmentation accuracy and extreme parameter efficiency via a dual-adaptive specialization mechanism. Our first adaptation is task-aware: a Dynamic Expert Router (DER) that sparsely activates the most relevant experts by jointly reasoning about the visual input and the textual concept prompt, mimicking a clinical consultation process. Our second adaptation is parameter-aware: a Decomposed Parameterized Experts (DPE) design that represents each expert as a shared frozen base (inherited from the pretrained SAM3) and a lightweight trainable low-rank delta, reducing MoE parameter overhead by over 80\\%. Extensive experiments on multiple public medical segmentation benchmarks demonstrate that Dual-Adaptive SAM3 not only matches or exceeds the accuracy of fully fine-tuned SAM3 and standard MoE baselines, but also achieves a notable 5\\% gain over current state-of-the-art methods, with interpretable results validating its effectiveness. The code is available at: https://github.com/Reconsider80/DA-SAM3.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
