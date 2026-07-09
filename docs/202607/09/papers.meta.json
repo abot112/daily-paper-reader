@@ -1,0 +1,39 @@
+{
+  "label": "2026-07-09",
+  "date": "2026-07-09",
+  "generated_at": "2026-07-09T21:38:42",
+  "count": 2,
+  "papers": [
+    {
+      "paper_id": "202607/09/2607.06972v1-hpr-sam-hierarchical-probabilistic-representation-learning-for-prompt-free-sam-based-medical-image-segmentation",
+      "section": "quick",
+      "title_en": "HPR-SAM: Hierarchical Probabilistic Representation Learning for Prompt-free SAM-based Medical Image Segmentation",
+      "authors": "Yingzhen Hu, Yiheng Zhong, Keying Zhu, Zimu Zhang, Zihan Ye, Sifan Song, Jionglong Su, Xiaofeng Liu",
+      "date": "2026-07-08",
+      "pdf": "https://arxiv.org/pdf/2607.06972v1",
+      "score": "7.0",
+      "evidence": "提出基于分层概率表示的无提示SAM医学图像分割方法",
+      "tldr": "现有基于确定性原型或语义标记的方法不足以同时捕捉全局解剖先验、结构内多样性和局部结构可靠性，限制了提示质量。我们提出层次化概率表示学习框架HPR-SAM，包含分布解剖表示(DAR)、多组分解剖表示(MAR)和局部可靠性表示(LRR)，并通过层次预测融合(HPF)整合预测，保持与原始SAM解码器的兼容性。在Synapse、LA和PROMISE12数据集上的实验表明，HPR-SAM在Synapse上达到最先进性能，且在LA和PROMISE12的小样本设置下表现最佳。该工作表明了层次化概率表示学习对于无提示医学图像分割的重要性和有效性。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "Prompt-free adaptation of the Segment Anything Model (SAM) has emerged as a promising paradigm for automatic medical image segmentation. Existing methods mainly focus on prompt generation, while overlooking that prompt quality is fundamentally constrained by the expressiveness of anatomical representations. However, deterministic prototypes or semantic tokens are insufficient to jointly capture global anatomical priors, intra-structure diversity, and local structural reliability. To address this limitation, we propose the Hierarchical Probabilistic Representation (HPR) framework, which learns complementary anatomical representations through Distributional Anatomical Representation (DAR), Multi-component Anatomical Representation (MAR), and Local Reliability Representation (LRR), and integrates their predictions via Hierarchical Prediction Fusion (HPF) while remaining compatible with the original SAM decoder. Experiments on the Synapse, LA, and PROMISE12 datasets demonstrate that HPR-SAM achieves state-of-the-art performance on Synapse and the best performance under few-shot settings on LA and PROMISE12, validating the effectiveness of the proposed hierarchical probabilistic representation learning framework for prompt-free medical image segmentation. Code is available at https://anonymous.4open.science/r/HPR-SAM-E4AF.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/09/2607.07177v1-towards-accurate-and-fast-clinical-body-composition-a-resource-efficient-hierarchical-segmentation-framework-for-multi-source-ct",
+      "section": "quick",
+      "title_en": "Towards Accurate and Fast Clinical Body Composition: A Resource-Efficient Hierarchical Segmentation Framework for Multi-Source CT",
+      "authors": "Xiaodi Shen, Qingzhu Zheng, Yaoyang Qiu, Cien Fan, Ruonan Zhang, Yangdi Wang, Luyao Wu, Weikai Zheng, Longfei Zhao, Bing Li, Rulin Xu, Qiqi Xu, Ren Mao, Shiting Feng, Xuehua Li",
+      "date": "2026-07-08",
+      "pdf": "https://arxiv.org/pdf/2607.07177v1",
+      "score": "6.0",
+      "evidence": "提出了一种用于CT中多组织分割的全监督分层框架，包含腹部区域",
+      "tldr": "多源CT数据异质性和高内存需求阻碍了身体成分分析的临床落地。本研究提出一种资源高效的分层分割框架，由粗到细自动分割肌肉和脂肪共十种组织，并采用动态间距、各向异性分块、组推理和拓扑感知非对称重采样在CPU上实现低内存快速推理。在1558例多源CT上训练，独立测试集显示Dice系数达0.924-0.982，八个主要结构满足±10%相对误差临床接受标准；在12核CPU工作站上无GPU处理单卷平均44.5秒，峰值内存仅4.73GB。该框架在标准CPU工作站上平衡了准确性与效率，为大规模身体成分分析提供了可行方案。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "Background: Automated 3D segmentation of muscles and adipose tissue from CT is vital for body composition analysis, but multi-source data heterogeneity and high CPU memory demands hinder clinical deployment.   Methods: We propose a coarse-to-fine hierarchical framework to segment ten tissue structures. Efficiency is optimized using Dynamic Spacing and Anisotropic Patching, a Group Inference mechanism for low-memory sliding-window processing, and Topology-Aware Asymmetric Resampling for fast post-processing.   Results: The framework was trained on 1,558 CT volumes from seven public and two private datasets, and evaluated on an independent test cohort (N=105), per-structure Dice coefficients ranged from 0.924 to 0.982. Eight major structures met the +-10% relative error clinical acceptance limit. On a 12-core CPU workstation, the GPU-free pipeline averaged 44.5 seconds per volume with 4.73 GB peak memory.   Conclusion: This framework balances accuracy and efficiency, enabling robust, large-scale body composition analysis on standard CPU workstations.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

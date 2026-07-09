@@ -1,0 +1,109 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-09T21:37:04.783657+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2607.06972v1",
+      "source": "arxiv",
+      "title": "HPR-SAM: Hierarchical Probabilistic Representation Learning for Prompt-free SAM-based Medical Image Segmentation",
+      "abstract": "Prompt-free adaptation of the Segment Anything Model (SAM) has emerged as a promising paradigm for automatic medical image segmentation. Existing methods mainly focus on prompt generation, while overlooking that prompt quality is fundamentally constrained by the expressiveness of anatomical representations. However, deterministic prototypes or semantic tokens are insufficient to jointly capture global anatomical priors, intra-structure diversity, and local structural reliability. To address this limitation, we propose the Hierarchical Probabilistic Representation (HPR) framework, which learns complementary anatomical representations through Distributional Anatomical Representation (DAR), Multi-component Anatomical Representation (MAR), and Local Reliability Representation (LRR), and integrates their predictions via Hierarchical Prediction Fusion (HPF) while remaining compatible with the original SAM decoder. Experiments on the Synapse, LA, and PROMISE12 datasets demonstrate that HPR-SAM achieves state-of-the-art performance on Synapse and the best performance under few-shot settings on LA and PROMISE12, validating the effectiveness of the proposed hierarchical probabilistic representation learning framework for prompt-free medical image segmentation. Code is available at https://anonymous.4open.science/r/HPR-SAM-E4AF.",
+      "authors": [
+        "Yingzhen Hu",
+        "Yiheng Zhong",
+        "Keying Zhu",
+        "Zimu Zhang",
+        "Zihan Ye",
+        "Sifan Song",
+        "Jionglong Su",
+        "Xiaofeng Liu"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-08T03:49:08+00:00",
+      "link": "https://arxiv.org/pdf/2607.06972v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Proposes prompt-free SAM adaptation for medical image segmentation using hierarchical probabilistic representations",
+      "llm_evidence_cn": "提出基于分层概率表示的无提示SAM医学图像分割方法",
+      "llm_evidence": "提出基于分层概率表示的无提示SAM医学图像分割方法",
+      "canonical_evidence": "提出基于分层概率表示的无提示SAM医学图像分割方法",
+      "llm_tldr_en": "This paper introduces HPR-SAM, a hierarchical probabilistic representation framework for prompt-free SAM-based medical image segmentation, capturing global anatomical priors, intra-structure diversity, and local reliability to improve automatic segmentation.",
+      "llm_tldr_cn": "针对无提示SAM在医学图像分割中表示能力不足的问题，提出分层概率表示框架HPR-SAM。通过分布解剖表示和多组件解剖表示联合捕获全局先验与局部可靠性，实验表明其提升了分割精度，为全自动医学图像分割提供了更强的表示学习能力。",
+      "llm_tldr": "针对无提示SAM在医学图像分割中表示能力不足的问题，提出分层概率表示框架HPR-SAM。通过分布解剖表示和多组件解剖表示联合捕获全局先验与局部可靠性，实验表明其提升了分割精度，为全自动医学图像分割提供了更强的表示学习能力。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.07177v1",
+      "source": "arxiv",
+      "title": "Towards Accurate and Fast Clinical Body Composition: A Resource-Efficient Hierarchical Segmentation Framework for Multi-Source CT",
+      "abstract": "Background: Automated 3D segmentation of muscles and adipose tissue from CT is vital for body composition analysis, but multi-source data heterogeneity and high CPU memory demands hinder clinical deployment.   Methods: We propose a coarse-to-fine hierarchical framework to segment ten tissue structures. Efficiency is optimized using Dynamic Spacing and Anisotropic Patching, a Group Inference mechanism for low-memory sliding-window processing, and Topology-Aware Asymmetric Resampling for fast post-processing.   Results: The framework was trained on 1,558 CT volumes from seven public and two private datasets, and evaluated on an independent test cohort (N=105), per-structure Dice coefficients ranged from 0.924 to 0.982. Eight major structures met the +-10% relative error clinical acceptance limit. On a 12-core CPU workstation, the GPU-free pipeline averaged 44.5 seconds per volume with 4.73 GB peak memory.   Conclusion: This framework balances accuracy and efficiency, enabling robust, large-scale body composition analysis on standard CPU workstations.",
+      "authors": [
+        "Xiaodi Shen",
+        "Qingzhu Zheng",
+        "Yaoyang Qiu",
+        "Cien Fan",
+        "Ruonan Zhang",
+        "Yangdi Wang",
+        "Luyao Wu",
+        "Weikai Zheng",
+        "Longfei Zhao",
+        "Bing Li",
+        "Rulin Xu",
+        "Qiqi Xu",
+        "Ren Mao",
+        "Shiting Feng",
+        "Xuehua Li"
+      ],
+      "primary_category": "eess.IV",
+      "categories": [
+        "eess.IV",
+        "cs.CV"
+      ],
+      "published": "2026-07-08T09:11:41+00:00",
+      "link": "https://arxiv.org/pdf/2607.07177v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "proposes a fully supervised hierarchical framework for multi-tissue segmentation in CT, including abdominal regions",
+      "llm_evidence_cn": "提出了一种用于CT中多组织分割的全监督分层框架，包含腹部区域",
+      "llm_evidence": "提出了一种用于CT中多组织分割的全监督分层框架，包含腹部区域",
+      "canonical_evidence": "提出了一种用于CT中多组织分割的全监督分层框架，包含腹部区域",
+      "llm_tldr_en": "This work presents a coarse-to-fine fully supervised framework for segmenting 10 tissues in body CT, trained on 1558 volumes, demonstrating efficient multi-structure segmentation in abdominal CT scans.",
+      "llm_tldr_cn": "本文旨在解决多源CT数据中身体组分分割的准确性和效率问题，提出了一种从粗到细的全监督分层框架，可分割十种组织。通过动态间距、各向异性切片等效率优化，该框架在1558例CT上训练，在独立测试集上取得了较好的Dice系数。该方法为腹部CT中的多结构分割提供了资源高效的方案，与腹部器官分割需求有较强的方法学关联。",
+      "llm_tldr": "本文旨在解决多源CT数据中身体组分分割的准确性和效率问题，提出了一种从粗到细的全监督分层框架，可分割十种组织。通过动态间距、各向异性切片等效率优化，该框架在1558例CT上训练，在独立测试集上取得了较好的Dice系数。该方法为腹部CT中的多结构分割提供了资源高效的方案，与腹部器官分割需求有较强的方法学关联。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "multi-organ segmentation in abdominal CT scans",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

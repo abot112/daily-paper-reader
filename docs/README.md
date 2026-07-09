@@ -6,26 +6,29 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-07-08
-- 运行时间：2026-07-08 21:01:35 UTC
+- 最新运行日期：2026-07-09
+- 运行时间：2026-07-09 21:38:29 UTC
 - 运行状态：成功
-- 本次总论文数：1
-- 精读区：1
-- 速读区：0
+- 本次总论文数：2
+- 精读区：0
+- 速读区：2
 
 ### 今日简报（AI）
-今日深挖一篇 SAM3 医学分割新作，评分 8.0，看它如何用分层路由巧搭低秩专家层，实现参数高效适配。  
-最值得留意的是“双自适应”设计：SAM3 既能根据图像内容动态选择专家模块，又在高低分辨率层间分配算力，大幅降低微调成本的同时不牺牲精度。  
-想看前沿的你，不妨先复现它的层级路由机制，再对比一下在 CT/MRI 上的零样本迁移效果。
-- 详情：[/202607/08/README](/202607/08/README)
+今日速读两篇医学图像分割论文，探讨从智能零交互到资源高效的分层框架。  
+分层概率表示让SAM模型无需提示也能精准分割，而多源CT框架则用轻量级设计提速身体成分分析。  
+如果你做医疗影像应用，不妨试试把层级先验与基础模型结合，用更少的标注达到临床可用的精度。
+- 详情：[/202607/09/README](/202607/09/README)
 
 ### 精读区论文标签
-1. [Dual-Adaptive SAM3: Hierarchical Routing over Low-Rank Expert Layers for Parameter-Efficient Medical Image Segmentation](/202607/08/2607.02571v1-dual-adaptive-sam3-hierarchical-routing-over-low-rank-expert-layers-for-parameter-efficient-medical-image-segmentation)  
-   标签：评分：8.0/10、query:abdk-seg
-   evidence：SAM3的参数高效适配用于医学图像分割
+- 本次无精读推荐。
 
 ### 速读区论文标签
-- 本次无速读推荐。
+1. [HPR-SAM: Hierarchical Probabilistic Representation Learning for Prompt-free SAM-based Medical Image Segmentation](/202607/09/2607.06972v1-hpr-sam-hierarchical-probabilistic-representation-learning-for-prompt-free-sam-based-medical-image-segmentation)  
+   标签：评分：7.0/10、query:abdk-seg
+   evidence：提出基于分层概率表示的无提示SAM医学图像分割方法
+2. [Towards Accurate and Fast Clinical Body Composition: A Resource-Efficient Hierarchical Segmentation Framework for Multi-Source CT](/202607/09/2607.07177v1-towards-accurate-and-fast-clinical-body-composition-a-resource-efficient-hierarchical-segmentation-framework-for-multi-source-ct)  
+   标签：评分：6.0/10、query:abdk-seg
+   evidence：提出了一种用于CT中多组织分割的全监督分层框架，包含腹部区域
 
 
 <div class="dpr-home-promo-card">
