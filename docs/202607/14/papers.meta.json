@@ -1,0 +1,24 @@
+{
+  "label": "2026-07-14",
+  "date": "2026-07-14",
+  "generated_at": "2026-07-14T20:31:52",
+  "count": 1,
+  "papers": [
+    {
+      "paper_id": "202607/14/2607.11287v1-a-unified-framework-for-comprehensive-cardiac-ct-segmentation-and-phenotyping-human-in-the-loop-data-annotation-vision-foundation-model-development-multicenter-evaluation-and-clinical-validation",
+      "section": "quick",
+      "title_en": "A Unified Framework for Comprehensive Cardiac CT Segmentation and Phenotyping: Human-in-the-Loop Data Annotation, Vision Foundation Model Development, Multicenter Evaluation and Clinical Validation",
+      "authors": "Pooya Mohammadi Kazaj, Leo Fridolin Weber, Wen Xie, Seyed Amir Ahmad Safavi-Naini, Anselm Stark, Giovanni Baj, Ali Mokhtari, Toshiya Yoshida, Christoph Ryffel, Taishi Okuno, Yoshihiro Akashi, Ronny R. Buechel, Thomas Pilgrim, Waldo Valenzuela, George C. M. Siontis, Xiaowei Xu, Moritz Hundertmark, Stephan Windecker, Christoph Grani, Isaac Shiri",
+      "date": "2026-07-13",
+      "pdf": "https://arxiv.org/pdf/2607.11287v1",
+      "score": "6.0",
+      "evidence": "构建全监督心脏CT分割框架，使用大规模专家标注数据",
+      "tldr": "心脏CT的全面量化受限于测量可扩展性，难以常规应用。本研究提出统一框架，融合人机协同注释、CT增强技术和预训练于6万例未标记CT的自监督基础模型，构建了包含1598例14个心脏结构的大规模专家标注数据集。在5个外部数据集上，框架分割结构均优于现有开源工具，自监督预训练在低数据场景下显著提升标注效率，且不同架构性能相当，证明数据质量与预训练是关键。公开此数据集、代码和模型权重等，为从常规CT进行机会性心脏表型分析提供了可重复基础。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "Comprehensive quantification of cardiac structures from computed tomography (CT) remains limited not by data availability but by the scalability of measurements, which makes routine use impractical. Here we present a unified framework for comprehensive cardiac CT segmentation and phenotyping that combines a human-in-the-loop annotation pipeline, a cardiac CT augmentation technique, and a self-supervised foundation model pre-trained on 60,000 unlabeled cardiac CT scans. Using this approach, we assembled the largest and most comprehensive expert-annotated cardiac CT segmentation dataset to date, comprising 1598 cases and 14 distinct cardiac structures (1000 for training, 598 for the external test set). Across five external datasets, the framework segmented all structures more accurately and comprehensively than existing open-source tools. Self-supervised pre-training improved labeling efficiency, with the most significant gains observed during external evaluation in the low-data regime. Benchmarking across convolutional, transformer, and state-space architectures showed comparable performance, indicating that data quality and pre-training, rather than architecture, drove accuracy. The framework was scaled to population-level phenotyping, with segmented anatomy that carries functionally relevant information about ventricular function and disease severity beyond demographic variables. By openly releasing the largest dataset with human labels, code, model weights, a CT augmentation library, and software, this work provides a reproducible foundation for opportunistic cardiac phenotyping from routinely acquired CT scans.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
