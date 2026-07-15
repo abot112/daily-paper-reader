@@ -6,26 +6,29 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-07-14
-- 运行时间：2026-07-14 20:31:44 UTC
+- 最新运行日期：2026-07-15
+- 运行时间：2026-07-15 20:45:12 UTC
 - 运行状态：成功
-- 本次总论文数：1
+- 本次总论文数：2
 - 精读区：0
-- 速读区：1
+- 速读区：2
 
 ### 今日简报（AI）
-1) 今日速读了一项为心脏CT打造的统一分割与表型框架，从标注到临床验证全链条覆盖。
-2) 最值得关注的是“人在回路”混合标注与视觉基础模型协同的思路，以及它在多中心、真实场景下表现出的稳健泛化能力。
-3) 如果你关心医学影像AI的落地，可以重点查阅他们的数据策略和模型设计，再对比自己项目看看能否借鉴。
-- 详情：[/202607/14/README](/202607/14/README)
+今日速读两篇医学影像分割论文，聚焦3D脑瘤鲁棒性和主动轮廓新损失函数。  
+反事实审核提升跨机构3D分割稳健性，深度主动轮廓结合平均曲率损失改进边界捕捉。  
+建议关注模型在临床环境迁移时的可靠性，或尝试主动轮廓与深度网络融合的边界优化思路。
+- 详情：[/202607/15/README](/202607/15/README)
 
 ### 精读区论文标签
 - 本次无精读推荐。
 
 ### 速读区论文标签
-1. [A Unified Framework for Comprehensive Cardiac CT Segmentation and Phenotyping: Human-in-the-Loop Data Annotation, Vision Foundation Model Development, Multicenter Evaluation and Clinical Validation](/202607/14/2607.11287v1-a-unified-framework-for-comprehensive-cardiac-ct-segmentation-and-phenotyping-human-in-the-loop-data-annotation-vision-foundation-model-development-multicenter-evaluation-and-clinical-validation)  
+1. [TRACE-Seg3D: Counterfactual Context Auditing For Robust 3D Glioma Segmentation Under Institutional Shift](/202607/15/2607.07038v1-trace-seg3d-counterfactual-context-auditing-for-robust-3d-glioma-segmentation-under-institutional-shift)  
    标签：评分：6.0/10、query:abdk-seg
-   evidence：构建全监督心脏CT分割框架，使用大规模专家标注数据
+   evidence：全监督的3D医学图像分割审计框架
+2. [Medical Image Segmentation based on Deep Active Contour and Mean Curvature Loss Function](/202607/15/2607.12586v1-medical-image-segmentation-based-on-deep-active-contour-and-mean-curvature-loss-function)  
+   标签：评分：6.0/10、query:abdk-seg
+   evidence：提出一种具有几何约束的损失函数用于监督式医学图像分割。
 
 
 <div class="dpr-home-promo-card">

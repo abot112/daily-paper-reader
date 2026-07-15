@@ -1,0 +1,94 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-15T20:43:12.868196+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2607.07038v1",
+      "source": "arxiv",
+      "title": "TRACE-Seg3D: Counterfactual Context Auditing For Robust 3D Glioma Segmentation Under Institutional Shift",
+      "abstract": "Medical image segmentation models can achieve strong benchmark performance while remaining sensitive to scanner, protocol, and institutional variation. These context shifts alter image appearance without changing the underlying lesion, allowing models to exploit nuisance cues that Dice and HD95 fail to expose. We present TRACE-Seg3D, a counterfactual context auditing framework for robust 3D medical image segmentation. TRACE-Seg3D preserves lesion-relevant evidence and systematically varies imaging context to quantify prediction stability under controlled context shifts. The framework pairs each segmentation with audit evidence for context sensitivity and anatomical plausibility, enabling case-level reliability assessment beyond overlap-based evaluation. Experiments on BraTS and UTSW glioma segmentation benchmarks demonstrate competitive in-distribution and cross-domain performance. TRACE-Seg3D also exposes context-sensitive failure modes missed by conventional metrics. These results establish counterfactual context auditing as a practical route toward transparent and reliable 3D medical image segmentation under distribution shift. Our code is available at https://github.com/danleneurocom/Counterfactual-Representation-Network.",
+      "authors": [
+        "Nguyen Linh Dan Le",
+        "Nguyen Pham Hoang Le",
+        "Tran Dang Khoi"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-08T06:15:14+00:00",
+      "link": "https://arxiv.org/pdf/2607.07038v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Fully supervised 3D medical image segmentation auditing framework",
+      "llm_evidence_cn": "全监督的3D医学图像分割审计框架",
+      "llm_evidence": "全监督的3D医学图像分割审计框架",
+      "canonical_evidence": "全监督的3D医学图像分割审计框架",
+      "llm_tldr_en": "Counterfactual context auditing for robust 3D medical segmentation, evaluated on glioma.",
+      "llm_tldr_cn": "提出反事实上下文审计框架，用于评估3D医学图像分割模型在机构变化下的鲁棒性，在胶质瘤上验证。",
+      "llm_tldr": "提出反事实上下文审计框架，用于评估3D医学图像分割模型在机构变化下的鲁棒性，在胶质瘤上验证。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "medical image analysis using fully supervised segmentation",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.12586v1",
+      "source": "arxiv",
+      "title": "Medical Image Segmentation based on Deep Active Contour and Mean Curvature Loss Function",
+      "abstract": "Medical image segmentation is a crucial task in the field of clinical analysis and applications. Though deep learning techniques recently play a crucial role in several scenarios, the training at the individual pixel level leads to a lack of geometric prior information. Scholars proposed to integrate the Chan-Vese model into the loss function for training which can take into account the region and length of the region inside and outside the segmentation process and then improve the performance in medical image segmentation. However, these methods still lack an effective characterization of the segmented region. To overcome this problem, we introduce the mean curvature as a geometric natural constraint and propose a Deep Active Contour and Mean Curvature (DACMC) loss function where the convolution kernel is used to approximate the mean curvature to save computational cost. We have validated the performance of our method on the liver and spleen dataset. Our proposed method demonstrates new state-of-the-art performance on several segmentation datasets.",
+      "authors": [
+        "Xiao-qiang Zhai",
+        "Zhi-feng Pang",
+        "Peng Zheng",
+        "Ze-wen Li",
+        "Yan-zhe Hou"
+      ],
+      "primary_category": "eess.IV",
+      "categories": [
+        "eess.IV",
+        "cs.CV"
+      ],
+      "published": "2026-07-14T09:56:03+00:00",
+      "link": "https://arxiv.org/pdf/2607.12586v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Proposes a loss function with geometric constraints for supervised medical image segmentation.",
+      "llm_evidence_cn": "提出一种具有几何约束的损失函数用于监督式医学图像分割。",
+      "llm_evidence": "提出一种具有几何约束的损失函数用于监督式医学图像分割。",
+      "canonical_evidence": "提出一种具有几何约束的损失函数用于监督式医学图像分割。",
+      "llm_tldr_en": "Addresses the lack of geometric priors in pixel-level supervision for medical segmentation by introducing a deep active contour model with mean curvature loss. The method integrates region, length, and curvature constraints into training, demonstrating improved accuracy. The approach is generalizable to various medical segmentation tasks, including abdominal organ segmentation.",
+      "llm_tldr_cn": "针对医学图像分割中像素级监督缺乏几何先验的问题，提出了一种结合深度主动轮廓模型和平均曲率损失的方法。该方法将区域、长度和曲率约束融入训练目标，实验验证了分割精度的提升。该损失函数可推广至腹部分割等多种医学图像分割任务，为监督训练提供了一种更具几何意识的优化策略。",
+      "llm_tldr": "针对医学图像分割中像素级监督缺乏几何先验的问题，提出了一种结合深度主动轮廓模型和平均曲率损失的方法。该方法将区域、长度和曲率约束融入训练目标，实验验证了分割精度的提升。该损失函数可推广至腹部分割等多种医学图像分割任务，为监督训练提供了一种更具几何意识的优化策略。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "supervised training of neural networks for segmentation",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

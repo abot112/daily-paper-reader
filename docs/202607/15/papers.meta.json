@@ -1,0 +1,39 @@
+{
+  "label": "2026-07-15",
+  "date": "2026-07-15",
+  "generated_at": "2026-07-15T20:45:21",
+  "count": 2,
+  "papers": [
+    {
+      "paper_id": "202607/15/2607.07038v1-trace-seg3d-counterfactual-context-auditing-for-robust-3d-glioma-segmentation-under-institutional-shift",
+      "section": "quick",
+      "title_en": "TRACE-Seg3D: Counterfactual Context Auditing For Robust 3D Glioma Segmentation Under Institutional Shift",
+      "authors": "Nguyen Linh Dan Le, Nguyen Pham Hoang Le, Tran Dang Khoi",
+      "date": "2026-07-08",
+      "pdf": "https://arxiv.org/pdf/2607.07038v1",
+      "score": "6.0",
+      "evidence": "全监督的3D医学图像分割审计框架",
+      "tldr": "医学图像分割模型因机构间扫描仪、协议等差异产生分布偏移，常利用与病灶无关的干扰线索，导致泛化失败且常规分割指标无法察觉。TRACE-Seg3D通过反事实上下文审计框架，保留病变证据并系统改变成像上下文，量化预测稳定性，为每个分割输出上下文敏感度与解剖合理性审计证据。在BraTS和UTSW胶质瘤数据集上，该方法取得竞争性能并揭示上下文敏感失败模式，为分布偏移下的透明可靠分割提供了实用审计途径。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "Medical image segmentation models can achieve strong benchmark performance while remaining sensitive to scanner, protocol, and institutional variation. These context shifts alter image appearance without changing the underlying lesion, allowing models to exploit nuisance cues that Dice and HD95 fail to expose. We present TRACE-Seg3D, a counterfactual context auditing framework for robust 3D medical image segmentation. TRACE-Seg3D preserves lesion-relevant evidence and systematically varies imaging context to quantify prediction stability under controlled context shifts. The framework pairs each segmentation with audit evidence for context sensitivity and anatomical plausibility, enabling case-level reliability assessment beyond overlap-based evaluation. Experiments on BraTS and UTSW glioma segmentation benchmarks demonstrate competitive in-distribution and cross-domain performance. TRACE-Seg3D also exposes context-sensitive failure modes missed by conventional metrics. These results establish counterfactual context auditing as a practical route toward transparent and reliable 3D medical image segmentation under distribution shift. Our code is available at https://github.com/danleneurocom/Counterfactual-Representation-Network.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/15/2607.12586v1-medical-image-segmentation-based-on-deep-active-contour-and-mean-curvature-loss-function",
+      "section": "quick",
+      "title_en": "Medical Image Segmentation based on Deep Active Contour and Mean Curvature Loss Function",
+      "authors": "Xiao-qiang Zhai, Zhi-feng Pang, Peng Zheng, Ze-wen Li, Yan-zhe Hou",
+      "date": "2026-07-14",
+      "pdf": "https://arxiv.org/pdf/2607.12586v1",
+      "score": "6.0",
+      "evidence": "提出一种具有几何约束的损失函数用于监督式医学图像分割。",
+      "tldr": "医学图像分割中，深度学习像素级训练往往缺乏几何先验信息，现有方法如Chan-Vese损失仍无法有效刻画分割区域。为此，本文引入平均曲率作为自然几何约束，提出深度主动轮廓与平均曲率（DACMC）损失函数，并通过卷积核近似曲率以节省计算成本。在肝脏和脾脏分割数据集上，该方法取得了新的最先进性能。实验证明，该损失函数能更好地建模区域几何特征，提升分割精度。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "Medical image segmentation is a crucial task in the field of clinical analysis and applications. Though deep learning techniques recently play a crucial role in several scenarios, the training at the individual pixel level leads to a lack of geometric prior information. Scholars proposed to integrate the Chan-Vese model into the loss function for training which can take into account the region and length of the region inside and outside the segmentation process and then improve the performance in medical image segmentation. However, these methods still lack an effective characterization of the segmented region. To overcome this problem, we introduce the mean curvature as a geometric natural constraint and propose a Deep Active Contour and Mean Curvature (DACMC) loss function where the convolution kernel is used to approximate the mean curvature to save computational cost. We have validated the performance of our method on the liver and spleen dataset. Our proposed method demonstrates new state-of-the-art performance on several segmentation datasets.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
