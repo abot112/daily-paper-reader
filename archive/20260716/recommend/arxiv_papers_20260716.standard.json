@@ -1,0 +1,147 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-16T21:28:44.704232+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [
+    {
+      "id": "2607.13826v1",
+      "source": "arxiv",
+      "title": "Multimodal Assessment of Pancreatic Cancer Resectability Using Deep Learning",
+      "abstract": "Accurate determination of pancreatic ductal adenocarcinoma (PDAC) resectability relies on evaluating how the tumor interacts with major peripancreatic vessels on CT imaging, yet expert assessment often shows substantial variability. We introduce a fully automated multimodal deep learning framework that jointly analyzes 3D contrast enhanced CT and structured clinical information to classify patients into the three National Comprehensive Cancer Network (NCCN) resectability categories (upfront resectable, borderline resectable, locally advanced). The approach uses a Swin-UNETR backbone to obtain anatomy aware image representations through auxiliary segmentation of pancreas, tumor, and vascular structures. These features are fused with a compact clinical embedding derived from 17 routinely collected variables and processed by a lightweight classification head. Model training is guided by a dynamic multitask objective that adapts the balance between segmentation and classification based on current tumor Dice performance, promoting feature representations that remain both anatomically informed and discriminative.",
+      "authors": [
+        "Vincent Ochs",
+        "Christoph Kuemmerli",
+        "Florentin Bieder",
+        "Julia Wolleb",
+        "Joel L. Lavanchy",
+        "Julia Ruppel",
+        "Jan Liechti",
+        "Stephanie Taha-Mehlitz",
+        "Christian Andreas Nebiker",
+        "Beat Mueller",
+        "Giuseppe Kito Fusai",
+        "Joerg-Matthias Pollok",
+        "Anas Taha",
+        "Philippe C. Cattin",
+        "Sebastian Staubli"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.IR",
+        "cs.LG"
+      ],
+      "published": "2026-07-15T13:32:44+00:00",
+      "link": "https://arxiv.org/pdf/2607.13826v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "segments pancreas, tumor, and vascular structures on CT for resectability assessment",
+      "llm_evidence_cn": "在CT上分割胰腺、肿瘤和血管结构用于可切除性评估",
+      "llm_evidence": "在CT上分割胰腺、肿瘤和血管结构用于可切除性评估",
+      "canonical_evidence": "在CT上分割胰腺、肿瘤和血管结构用于可切除性评估",
+      "llm_tldr_en": "Proposes a multimodal deep learning framework using Swin-UNETR for auxiliary segmentation of pancreas and peripancreatic structures to classify pancreatic cancer resectability from CT and clinical data.",
+      "llm_tldr_cn": "该论文提出了一种结合3D增强CT和结构化临床信息的多模态深度学习框架，通过Swin-UNETR分割胰腺、肿瘤和血管结构获取解剖感知特征，进而对胰腺癌可切除性进行分类，并在内部数据集上验证了其优于单模态方法的性能。这一工作展示了腹部器官全监督分割在临床决策支持中的直接应用价值。",
+      "llm_tldr": "该论文提出了一种结合3D增强CT和结构化临床信息的多模态深度学习框架，通过Swin-UNETR分割胰腺、肿瘤和血管结构获取解剖感知特征，进而对胰腺癌可切除性进行分类，并在内部数据集上验证了其优于单模态方法的性能。这一工作展示了腹部器官全监督分割在临床决策支持中的直接应用价值。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "multi-organ segmentation in abdominal CT scans",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.12896v1",
+      "source": "arxiv",
+      "title": "UniMedSeg: Unified In-Context Learning for Multi-Paradigm 2D/3D Medical Image Segmentation",
+      "abstract": "Medical image segmentation foundation models are expected to generalize across diverse clinical scenarios, yet existing universal methods remain fragmented by prompt paradigms and spatial dimensions. Visual in-context learning, interactive segmentation, and language-guided segmentation are typically handled by paradigm-specific models, while 2D and 3D images are also modeled separately. Such isolation prevents heterogeneous annotations and data from being jointly absorbed by a single scalable model and limits cross-paradigm knowledge transfer. To address this bottleneck, we propose UniMedSeg, a Transformer-centric universal segmentation framework that maps visual examples, geometric interactions, language instructions, and 2D/3D images into a shared sequence space, enabling heterogeneous medical supervision to be jointly learned through a unified in-context interface without prompt- or dimension-specific branches. To overcome the long-sequence memory bottleneck caused by visual contexts, we introduce Decoupled Split Attention, which reduces attention complexity to linear while preserving hardware-friendly computation and focused context-target interaction. Extensively trained and evaluated on a large corpus curated from 27 public datasets, UniMedSeg achieves state-of-the-art performance across visual in-context, interactive, and language-guided segmentation without task-specific fine-tuning, demonstrating strong generalization on diverse held-out tasks. The code and model weights are publicly available at https://github.com/Lii1228/UniMedSeg",
+      "authors": [
+        "Yunzhou Li",
+        "Jiesi Hu",
+        "Yanwu Yang",
+        "Hanyang Peng",
+        "Chenfei Ye",
+        "Jianfeng Cao",
+        "Yixuan Yuan",
+        "Ting Ma"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-14T15:34:46+00:00",
+      "link": "https://arxiv.org/pdf/2607.12896v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Proposes a unified medical image segmentation foundation model supporting 2D/3D and multiple prompts, applicable to fully supervised abdominal organ segmentation.",
+      "llm_evidence_cn": "提出统一医学图像分割基础模型，支持2D/3D和多提示，可应用于全监督腹部器官分割。",
+      "llm_evidence": "提出统一医学图像分割基础模型，支持2D/3D和多提示，可应用于全监督腹部器官分割。",
+      "canonical_evidence": "提出统一医学图像分割基础模型，支持2D/3D和多提示，可应用于全监督腹部器官分割。",
+      "llm_tldr_en": "UniMedSeg unifies visual in-context, interactive, and language-guided segmentation for 2D/3D medical images, providing a scalable architecture that can be trained with full supervision and applied to abdominal organ segmentation.",
+      "llm_tldr_cn": "针对现有医学图像分割方法受限于单一范式和空间维度的问题，提出UniMedSeg框架，将视觉示例、几何交互、语言指令和2D/3D图像统一到变换器模型中。实验证明该统一模型能够吸收异构标注，跨范式迁移知识，为全监督腹部器官分割任务提供了可扩展的通用架构。",
+      "llm_tldr": "针对现有医学图像分割方法受限于单一范式和空间维度的问题，提出UniMedSeg框架，将视觉示例、几何交互、语言指令和2D/3D图像统一到变换器模型中。实验证明该统一模型能够吸收异构标注，跨范式迁移知识，为全监督腹部器官分割任务提供了可扩展的通用架构。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.13892v1",
+      "source": "arxiv",
+      "title": "Fine-Grained Vision-Language Pretraining with Organ-Conditioned Pattern Tokens for CT Understanding",
+      "abstract": "Computed tomography (CT) vision-language pretraining from paired volumes and radiology reports is a scalable yet challenging task. Existing methods commonly adopt global scan-report contrast, which is scalable but obscures heterogeneous organ evidence. Meanwhile, direct organ-level alignment remains coarse, since the same anatomy can exhibit multiple distinct radiological appearances. Therefore, pretraining requires a finer alignment unit: the organ-conditioned radiological pattern. In this work, we propose OCP-CT, an organ-conditioned pattern-token alignment framework for CT vision-language pretraining. Specifically, OCP-CT preserves a stable global CT-report contrastive branch and introduces an organ pattern interface: sparse Mixture-of-Experts (MoE) routes image and text tokens according to latent radiological patterns, learnable slots query the routed tokens into continuous pattern tokens, and paired token contrast aligns image-text pattern tokens with structured soft targets built from report-derived clinical similarity. On the publicly available CT-RATE and RAD-ChestCT benchmarks, OCP-CT achieves average AUROCs of 84.5% and 69.9% for zero-shot abnormality diagnosis, respectively. Compared with the strongest prior reported results, these results yield absolute AUROC gains of 6.7 and 0.8 percentage points.",
+      "authors": [
+        "Guoliang You",
+        "Xiaomeng Chu"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-15T14:36:43+00:00",
+      "link": "https://arxiv.org/pdf/2607.13892v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Organ-conditioned pattern token alignment for CT pretraining, facilitating multi-organ understanding in abdominal CT.",
+      "llm_evidence_cn": "器官条件模式token对齐用于CT预训练，促进腹部CT的多器官理解。",
+      "llm_evidence": "器官条件模式token对齐用于CT预训练，促进腹部CT的多器官理解。",
+      "canonical_evidence": "器官条件模式token对齐用于CT预训练，促进腹部CT的多器官理解。",
+      "llm_tldr_en": "OCP-CT proposes fine-grained vision-language pretraining with organ-conditioned pattern tokens to better capture radiological appearances in CT, benefiting downstream tasks like organ segmentation.",
+      "llm_tldr_cn": "现有CT视觉语言预训练多采用全局扫描报告对比，无法捕捉异质性器官证据。本文提出OCP-CT框架，在全局对比基础上引入器官模式token对齐，细粒度捕获不同器官的影像学表现模式。这种器官条件表示有望为腹部器官分割等下游任务提供更强的特征基础，提升多器官理解能力。",
+      "llm_tldr": "现有CT视觉语言预训练多采用全局扫描报告对比，无法捕捉异质性器官证据。本文提出OCP-CT框架，在全局对比基础上引入器官模式token对齐，细粒度捕获不同器官的影像学表现模式。这种器官条件表示有望为腹部器官分割等下游任务提供更强的特征基础，提升多器官理解能力。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "multi-organ segmentation in abdominal CT scans",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

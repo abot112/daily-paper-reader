@@ -6,29 +6,31 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-07-15
-- 运行时间：2026-07-15 20:45:12 UTC
+- 最新运行日期：2026-07-16
+- 运行时间：2026-07-16 21:32:38 UTC
 - 运行状态：成功
-- 本次总论文数：2
-- 精读区：0
+- 本次总论文数：3
+- 精读区：1
 - 速读区：2
 
 ### 今日简报（AI）
-今日速读两篇医学影像分割论文，聚焦3D脑瘤鲁棒性和主动轮廓新损失函数。  
-反事实审核提升跨机构3D分割稳健性，深度主动轮廓结合平均曲率损失改进边界捕捉。  
-建议关注模型在临床环境迁移时的可靠性，或尝试主动轮廓与深度网络融合的边界优化思路。
-- 详情：[/202607/15/README](/202607/15/README)
+今日精读胰腺癌可切除性深度学习评估，速览统一医学影像分割框架与器官感知的CT细粒度理解。  
+最值得关注：多模态深度模型用影像+临床数据预测手术可行性，以及一种统一上下文学习让分割模型灵活泛化。  
+建议临床或技术读者可跟踪多模态融合在决策中的落地，并尝试将上下文学习应用到自己的影像任务上。
+- 详情：[/202607/16/README](/202607/16/README)
 
 ### 精读区论文标签
-- 本次无精读推荐。
+1. [Multimodal Assessment of Pancreatic Cancer Resectability Using Deep Learning](/202607/16/2607.13826v1-multimodal-assessment-of-pancreatic-cancer-resectability-using-deep-learning)  
+   标签：评分：8.0/10、query:abdk-seg
+   evidence：在CT上分割胰腺、肿瘤和血管结构用于可切除性评估
 
 ### 速读区论文标签
-1. [TRACE-Seg3D: Counterfactual Context Auditing For Robust 3D Glioma Segmentation Under Institutional Shift](/202607/15/2607.07038v1-trace-seg3d-counterfactual-context-auditing-for-robust-3d-glioma-segmentation-under-institutional-shift)  
+1. [UniMedSeg: Unified In-Context Learning for Multi-Paradigm 2D/3D Medical Image Segmentation](/202607/16/2607.12896v1-unimedseg-unified-in-context-learning-for-multi-paradigm-2d3d-medical-image-segmentation)  
+   标签：评分：7.0/10、query:abdk-seg
+   evidence：提出统一医学图像分割基础模型，支持2D/3D和多提示，可应用于全监督腹部器官分割。
+2. [Fine-Grained Vision-Language Pretraining with Organ-Conditioned Pattern Tokens for CT Understanding](/202607/16/2607.13892v1-fine-grained-vision-language-pretraining-with-organ-conditioned-pattern-tokens-for-ct-understanding)  
    标签：评分：6.0/10、query:abdk-seg
-   evidence：全监督的3D医学图像分割审计框架
-2. [Medical Image Segmentation based on Deep Active Contour and Mean Curvature Loss Function](/202607/15/2607.12586v1-medical-image-segmentation-based-on-deep-active-contour-and-mean-curvature-loss-function)  
-   标签：评分：6.0/10、query:abdk-seg
-   evidence：提出一种具有几何约束的损失函数用于监督式医学图像分割。
+   evidence：器官条件模式token对齐用于CT预训练，促进腹部CT的多器官理解。
 
 
 <div class="dpr-home-promo-card">

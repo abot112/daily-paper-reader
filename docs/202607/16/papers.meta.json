@@ -1,0 +1,54 @@
+{
+  "label": "2026-07-16",
+  "date": "2026-07-16",
+  "generated_at": "2026-07-16T21:32:49",
+  "count": 3,
+  "papers": [
+    {
+      "paper_id": "202607/16/2607.13826v1-multimodal-assessment-of-pancreatic-cancer-resectability-using-deep-learning",
+      "section": "deep",
+      "title_en": "Multimodal Assessment of Pancreatic Cancer Resectability Using Deep Learning",
+      "authors": "Vincent Ochs, Christoph Kuemmerli, Florentin Bieder, Julia Wolleb, Joel L. Lavanchy, Julia Ruppel, Jan Liechti, Stephanie Taha-Mehlitz, Christian Andreas Nebiker, Beat Mueller, Giuseppe Kito Fusai, Joerg-Matthias Pollok, Anas Taha, Philippe C. Cattin, Sebastian Staubli",
+      "date": "2026-07-15",
+      "pdf": "https://arxiv.org/pdf/2607.13826v1",
+      "score": "8.0",
+      "evidence": "在CT上分割胰腺、肿瘤和血管结构用于可切除性评估",
+      "tldr": "胰腺癌可切除性精准评估依赖CT影像中胰周血管侵犯程度，但专家评估存在较大差异。本研究提出全自动多模态深度学习框架，联合3D增强CT和结构化临床信息，采用Swin-UNETR进行胰腺、肿瘤和血管的辅助分割，提取解剖感知特征，并融合17项临床变量的嵌入表示，通过动态多任务目标自适应平衡分割与分类损失，实现NCCN三类（可切除、交界可切除、局部晚期）的自动化判别。该方法有望减少评估变异性，提升一致性，辅助临床决策。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "Accurate determination of pancreatic ductal adenocarcinoma (PDAC) resectability relies on evaluating how the tumor interacts with major peripancreatic vessels on CT imaging, yet expert assessment often shows substantial variability. We introduce a fully automated multimodal deep learning framework that jointly analyzes 3D contrast enhanced CT and structured clinical information to classify patients into the three National Comprehensive Cancer Network (NCCN) resectability categories (upfront resectable, borderline resectable, locally advanced). The approach uses a Swin-UNETR backbone to obtain anatomy aware image representations through auxiliary segmentation of pancreas, tumor, and vascular structures. These features are fused with a compact clinical embedding derived from 17 routinely collected variables and processed by a lightweight classification head. Model training is guided by a dynamic multitask objective that adapts the balance between segmentation and classification based on current tumor Dice performance, promoting feature representations that remain both anatomically informed and discriminative.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/16/2607.12896v1-unimedseg-unified-in-context-learning-for-multi-paradigm-2d3d-medical-image-segmentation",
+      "section": "quick",
+      "title_en": "UniMedSeg: Unified In-Context Learning for Multi-Paradigm 2D/3D Medical Image Segmentation",
+      "authors": "Yunzhou Li, Jiesi Hu, Yanwu Yang, Hanyang Peng, Chenfei Ye, Jianfeng Cao, Yixuan Yuan, Ting Ma",
+      "date": "2026-07-14",
+      "pdf": "https://arxiv.org/pdf/2607.12896v1",
+      "score": "7.0",
+      "evidence": "提出统一医学图像分割基础模型，支持2D/3D和多提示，可应用于全监督腹部器官分割。",
+      "tldr": "医学图像分割基础模型需跨范式与维度泛化，但现有方法因提示范式（视觉示例、交互、语言）和空间维度（2D/3D）隔离，难以联合吸收异质数据。UniMedSeg提出统一上下文学习框架，将视觉示例、几何交互、语言指令与2D/3D图像映射到共享序列空间，并引入解耦分割注意力降低注意力复杂性至线性。在27个公开数据集上训练评估，模型在视觉上下文、交互和语言引导分割任务上均取得最优性能，无需任务特定微调。该工作为统一多范式医学分割提供了高效可扩展方案，推动通用基础模型发展。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "Medical image segmentation foundation models are expected to generalize across diverse clinical scenarios, yet existing universal methods remain fragmented by prompt paradigms and spatial dimensions. Visual in-context learning, interactive segmentation, and language-guided segmentation are typically handled by paradigm-specific models, while 2D and 3D images are also modeled separately. Such isolation prevents heterogeneous annotations and data from being jointly absorbed by a single scalable model and limits cross-paradigm knowledge transfer. To address this bottleneck, we propose UniMedSeg, a Transformer-centric universal segmentation framework that maps visual examples, geometric interactions, language instructions, and 2D/3D images into a shared sequence space, enabling heterogeneous medical supervision to be jointly learned through a unified in-context interface without prompt- or dimension-specific branches. To overcome the long-sequence memory bottleneck caused by visual contexts, we introduce Decoupled Split Attention, which reduces attention complexity to linear while preserving hardware-friendly computation and focused context-target interaction. Extensively trained and evaluated on a large corpus curated from 27 public datasets, UniMedSeg achieves state-of-the-art performance across visual in-context, interactive, and language-guided segmentation without task-specific fine-tuning, demonstrating strong generalization on diverse held-out tasks. The code and model weights are publicly available at https://github.com/Lii1228/UniMedSeg",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/16/2607.13892v1-fine-grained-vision-language-pretraining-with-organ-conditioned-pattern-tokens-for-ct-understanding",
+      "section": "quick",
+      "title_en": "Fine-Grained Vision-Language Pretraining with Organ-Conditioned Pattern Tokens for CT Understanding",
+      "authors": "Guoliang You, Xiaomeng Chu",
+      "date": "2026-07-15",
+      "pdf": "https://arxiv.org/pdf/2607.13892v1",
+      "score": "6.0",
+      "evidence": "器官条件模式token对齐用于CT预训练，促进腹部CT的多器官理解。",
+      "tldr": "现有CT视觉语言预训练常采用全局扫描-报告对比，但模糊了器官间异质的放射学证据，直接器官级对齐仍显粗糙。为此，本文提出OCP-CT，引入器官条件模式令牌对齐：通过稀疏MoE路由图像和文本令牌，可学习槽聚合成模式令牌，并利用报告临床相似性构建软目标进行配对对比。在CT-RATE和RAD-ChestCT上，零样本异常诊断AUROC分别达84.5%和69.9%，超越先前最优结果6.7和0.8个百分点。该框架为细粒度医学影像理解提供了更精确的预训练范式。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "Computed tomography (CT) vision-language pretraining from paired volumes and radiology reports is a scalable yet challenging task. Existing methods commonly adopt global scan-report contrast, which is scalable but obscures heterogeneous organ evidence. Meanwhile, direct organ-level alignment remains coarse, since the same anatomy can exhibit multiple distinct radiological appearances. Therefore, pretraining requires a finer alignment unit: the organ-conditioned radiological pattern. In this work, we propose OCP-CT, an organ-conditioned pattern-token alignment framework for CT vision-language pretraining. Specifically, OCP-CT preserves a stable global CT-report contrastive branch and introduces an organ pattern interface: sparse Mixture-of-Experts (MoE) routes image and text tokens according to latent radiological patterns, learnable slots query the routed tokens into continuous pattern tokens, and paired token contrast aligns image-text pattern tokens with structured soft targets built from report-derived clinical similarity. On the publicly available CT-RATE and RAD-ChestCT benchmarks, OCP-CT achieves average AUROCs of 84.5% and 69.9% for zero-shot abnormality diagnosis, respectively. Compared with the strongest prior reported results, these results yield absolute AUROC gains of 6.7 and 0.8 percentage points.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
