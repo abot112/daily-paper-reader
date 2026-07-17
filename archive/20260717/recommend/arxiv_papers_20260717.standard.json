@@ -1,0 +1,249 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-17T20:48:22.669941+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 3,
+    "deep_cap": 6,
+    "deep_selected": 3,
+    "quick_candidates": 3,
+    "quick_skim_target": 11,
+    "quick_selected": 3
+  },
+  "deep_dive": [
+    {
+      "id": "2607.13323v1",
+      "source": "arxiv",
+      "title": "SARFA: Segment Anything with Radiomic Feature Alignment",
+      "abstract": "The Segment Anything Model (SAM) has demonstrated strong generalizability across a variety of segmentation tasks. However, SAM often struggles in situations where the target to be segmented is ambiguous. This poses a problem in medical imaging, where accurate delineation of targets such as tumors is vital, but even expert radiologists can disagree on the appropriate boundary for a target. Addressing this, we propose SARFA (Segment Anything with Radiomic Feature Alignment), a novel framework for improved medical image segmentation. Via probabilistic prompting, SARFA generates a diverse set of plausible masks for each input image and optimizes them with a radiomics-driven training objective based on Fréchet Radiomic Distance (FRD) and Direct Preference Optimization (DPO). By minimizing the FRD between masked predicted and ground truth regions within each image, SARFA encourages segmentation outputs whose anatomical and textural characteristics align with clinically meaningful ground truth representations, without relying solely on pixel-level overlap. Evaluated on computed tomography (CT) and magnetic resonance imaging (MRI) benchmarks, SARFA outperforms existing ambiguous segmentation methods, demonstrating the effectiveness of radiomic feature alignment and DPO-style candidate mask ranking as a training objective. Our code is available at https://github.com/tbwa233/SARFA.",
+      "authors": [
+        "Tyler Ward",
+        "Abdullah Imran"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-14T23:09:10+00:00",
+      "link": "https://arxiv.org/pdf/2607.13323v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Proposes a novel framework for improved medical image segmentation using radiomic feature alignment.",
+      "llm_evidence_cn": "提出一种基于放射组学特征对齐的医学图像分割新框架。",
+      "llm_evidence": "提出一种基于放射组学特征对齐的医学图像分割新框架。",
+      "canonical_evidence": "提出一种基于放射组学特征对齐的医学图像分割新框架。",
+      "llm_tldr_en": "SARFA enhances medical image segmentation by generating diverse masks via probabilistic prompting and optimizing them with a radiomics-based objective, achieving better delineation in ambiguous targets.",
+      "llm_tldr_cn": "针对医学影像中目标分割模糊的挑战，提出SARFA框架，通过概率提示生成多样化掩膜，并以放射组学距离和直接偏好优化的组合目标进行训练，在多种医学分割任务上验证了其有效性，提升了分割精度。",
+      "llm_tldr": "针对医学影像中目标分割模糊的挑战，提出SARFA框架，通过概率提示生成多样化掩膜，并以放射组学距离和直接偏好优化的组合目标进行训练，在多种医学分割任务上验证了其有效性，提升了分割精度。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.08679v1",
+      "source": "arxiv",
+      "title": "Multi-Resolution Feature Stem for Diabetic Retinopathy lesion segmentation",
+      "abstract": "Diabetic Retinopathy (DR) is a leading cause of preventable blindness worldwide, requiring automated lesion segmentation using deep learning models for early detection and monitoring. However, DR lesions vary dramatically in size from tiny microaneurysms to large hemorrhages and exudates. This variability creates conflicting demands on the model architecture and input resolution, posing a challenge for effective design. This work investigates the impact of input resolution on different lesion types. Through systematic experimentation with multiple architectures (U-Net, UNet++, Vision Transformers, DeepLabV3+) at $512 \\times 512$ and $1024 \\times 1024$ resolutions, we identify a critical, counter-intuitive phenomenon where increasing input resolution has opposing effects on different lesion types. We demonstrate that while higher resolution is essential for resolving fine-grained microaneurysms, it can unexpectedly degrade performance on larger hemorrhages. This finding challenges the common assumption that higher resolution is uniformly beneficial. To address this, we propose a novel Multi-Resolution Feature Stem, an input-level pyramid integrated with a UNet++ backbone. This architecture processes multiple scales in parallel, capturing fine-grained details without sacrificing contextual information. This work contributes crucial empirical evidence of this complex, resolution-dependent behavior and a practical, parameter-efficient architecture that successfully resolves this trade-off.",
+      "authors": [
+        "Indranil Dutta",
+        "Taehee Jeong"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-09T16:42:23+00:00",
+      "link": "https://arxiv.org/pdf/2607.08679v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Investigates deep learning segmentation for diabetic retinopathy lesions.",
+      "llm_evidence_cn": "研究糖尿病视网膜病变病灶的深度学习分割方法。",
+      "llm_evidence": "研究糖尿病视网膜病变病灶的深度学习分割方法。",
+      "canonical_evidence": "研究糖尿病视网膜病变病灶的深度学习分割方法。",
+      "llm_tldr_en": "Addresses lesion size variability in DR segmentation by studying input resolution effects and proposing a multi-resolution feature stem, improving small lesion detection.",
+      "llm_tldr_cn": "针对糖尿病视网膜病变病灶尺寸差异大的问题，研究输入分辨率对不同病灶的影响，提出多分辨率特征茎模块，在视网膜图像分割中提高了微小病灶的检测性能。",
+      "llm_tldr": "针对糖尿病视网膜病变病灶尺寸差异大的问题，研究输入分辨率对不同病灶的影响，提出多分辨率特征茎模块，在视网膜图像分割中提高了微小病灶的检测性能。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "biorxiv-10-64898-2026-07-09-737265-v1",
+      "source": "biorxiv",
+      "title": "A Deep Learning Framework for Biomarker Segmentation and Classification in Traumatic Brain Injury",
+      "abstract": "Traumatic brain injury (TBI) triggers widespread biomarker activation, including astrocytic markers such as glial fibrillary acidic protein (GFAP) and microglia markers such as ionized calcium-binding adapter molecule 1 (IBA1). Quantifying and analyzing these biomarkers are critical for understanding injury impact; however, current methods are labor-intensive and time-consuming. In this study, we propose an automated deep learning framework for dual-biomarker segmentation and TBI classification using GFAP and IBA1 immunofluorescent images. Four U-Net variants: Baseline U-Net, Nested U-Net (U-Net++), Attention U-Net (MANet), and Residual U-Net (LinkNet) were trained for segmentation. Three classification models, ResNet50, Swin-T, and MaxViT, were trained to distinguish TBI from control images under single- and dual-biomarker conditions. The baseline U-Net achieved the highest segmentation Dice score for GFAP (0.9259), while the U-Net++ achieved the highest Dice score for IBA1 (0.9676). Trained segmentation models demonstrated significantly better performance compared to QuPath alternatives. While GFAP alone supported high classification accuracy, IBA1 alone was less effective. Multimodal fusion of GFAP and IBA1 significantly improved classification performance across all models, with Swin_T achieving the highest overall accuracy (0.9489), and ResNet50 achieving the highest F1-score (0.9499). These findings demonstrate that integrating complementary biomarkers enhances automated TBI classification, and deep learning offers a robust alternative to manual analysis for immunofluorescent brain injury imaging. This framework is scalable to additional biomarkers and injury models, offering a reproducible approach to accelerate biomarker research.",
+      "authors": [
+        "Dash, R.",
+        "Mayilsamy, K.",
+        "Green, R.",
+        "Sun, Y.",
+        "Mohapatra, S."
+      ],
+      "primary_category": "neuroscience",
+      "categories": [
+        "neuroscience"
+      ],
+      "published": "2026-07-15T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.07.09.737265v1.full.pdf",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Proposes a deep learning framework for dual-biomarker segmentation in traumatic brain injury.",
+      "llm_evidence_cn": "提出脑外伤中双生物标志物分割的深度学习框架。",
+      "llm_evidence": "提出脑外伤中双生物标志物分割的深度学习框架。",
+      "canonical_evidence": "提出脑外伤中双生物标志物分割的深度学习框架。",
+      "llm_tldr_en": "Develops an automated deep learning pipeline using U-Net variants for GFAP and IBA1 biomarker segmentation in immunofluorescent images, aiding TBI analysis.",
+      "llm_tldr_cn": "提出基于多种U-Net变体的深度学习框架，用于脑外伤免疫荧光图像中GFAP和IBA1双生物标志物的自动分割，为TBI研究提供高效分析工具。",
+      "llm_tldr": "提出基于多种U-Net变体的深度学习框架，用于脑外伤免疫荧光图像中GFAP和IBA1双生物标志物的自动分割，为TBI研究提供高效分析工具。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.10188v1",
+      "source": "arxiv",
+      "title": "BiLoG-Net: A Bi-Context Location-Guided Network for Breast Mass Segmentation and Malignancy Classification in Mammography",
+      "abstract": "Breast cancer remains the most commonly diagnosed malignancy among women worldwide, yet accurate detection and characterization of breast masses in mammography remain challenging due to subtle intensity variations, heterogeneous tissue densities, and indistinct lesion boundaries that complicate radiological interpretation. To address these limitations, we propose BiLoG-Net, a deep learning framework that jointly performs breast mass segmentation and malignancy classification through bi-context location-aware feature modeling and segmentation-guided attention mechanisms. Our architecture integrates a novel encoder-decoder paradigm with Fire-based feature extraction, lightweight global and local feature enhancement modules, and adaptive location-aware gating to simultaneously capture long-range contextual dependencies and fine-grained boundary-sensitive details. Unlike conventional multi-stage pipelines, our tightly coupled multi-task design enables mutual reinforcement between pixel-level localization and image-level diagnosis, reducing error propagation while producing spatially grounded malignancy predictions. Evaluated on CBIS-DDSM and INBreast benchmarks, BiLoG-Net achieves state-of-the-art performance with Dice scores of 94.20% and 93.10%, classification accuracies of 95.20% and 93.60%, and AUC values of 97.10% and 96.00%, respectively, substantially outperforming existing CNN and transformer-based baselines. By combining precise boundary delineation with reliable malignancy assessment in a single end-to-end model, this work holds strong potential for clinical computer-aided detection systems, helping radiologists prioritize suspicious cases and improve screening efficiency in busy clinical settings.",
+      "authors": [
+        "Abu Fatema Mohammad Abdun Noor",
+        "Md Imam Ahasan",
+        "Md Samiul Ahasan",
+        "Kah Ong Michael Goh",
+        "S M Hasan Mahmud",
+        "Raihana Zannat"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "published": "2026-07-11T08:04:35+00:00",
+      "link": "https://arxiv.org/pdf/2607.10188v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "fully supervised deep learning framework for breast mass segmentation and malignancy classification in mammography",
+      "llm_evidence_cn": "用于乳腺X线摄影肿块分割与恶性分类的全监督深度学习框架",
+      "llm_evidence": "用于乳腺X线摄影肿块分割与恶性分类的全监督深度学习框架",
+      "canonical_evidence": "用于乳腺X线摄影肿块分割与恶性分类的全监督深度学习框架",
+      "llm_tldr_en": "BiLoG-Net jointly performs breast mass segmentation and malignancy classification in mammography using bi-context location-aware features and segmentation-guided attention, achieving accurate detection and characterization.",
+      "llm_tldr_cn": "针对乳腺X线摄影中肿块因强度变化细微、组织密度异质及边界模糊而难以精准检测的难题，提出BiLoG-Net深度学习框架，通过双上下文位置感知建模和分割引导注意力机制联合执行肿块分割与恶性分类。架构集成Fire特征提取与轻量全局-局部特征融合，实现了精确的分割与诊断，为乳腺影像分析提供了有效解决方案。",
+      "llm_tldr": "针对乳腺X线摄影中肿块因强度变化细微、组织密度异质及边界模糊而难以精准检测的难题，提出BiLoG-Net深度学习框架，通过双上下文位置感知建模和分割引导注意力机制联合执行肿块分割与恶性分类。架构集成Fire特征提取与轻量全局-局部特征融合，实现了精确的分割与诊断，为乳腺影像分析提供了有效解决方案。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "medical image analysis using fully supervised segmentation",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.10188v2",
+      "source": "arxiv",
+      "title": "BiLoG-Net: A Bi-Context Location-Guided Network for Breast Mass Segmentation and Malignancy Classification in Mammography",
+      "abstract": "Breast cancer remains the most commonly diagnosed malignancy among women worldwide, yet accurate detection and characterization of breast masses in mammography remain challenging due to subtle intensity variations, heterogeneous tissue densities, and indistinct lesion boundaries that complicate radiological interpretation. To address these limitations, we propose BiLoG-Net, a deep learning framework that jointly performs breast mass segmentation and malignancy classification through bi-context location-aware feature modeling and segmentation-guided attention mechanisms. Our architecture integrates a novel encoder-decoder paradigm with Fire-based feature extraction, lightweight global and local feature enhancement modules, and adaptive location-aware gating to simultaneously capture long-range contextual dependencies and fine-grained boundary-sensitive details. Unlike conventional multi-stage pipelines, our tightly coupled multi-task design enables mutual reinforcement between pixel-level localization and image-level diagnosis, reducing error propagation while producing spatially grounded malignancy predictions. Evaluated on CBIS-DDSM and INBreast benchmarks, BiLoG-Net achieves state-of-the-art performance with Dice scores of 94.20% and 93.10%, classification accuracies of 95.20% and 93.60%, and AUC values of 97.10% and 96.00%, respectively, substantially outperforming existing CNN and transformer-based baselines. By combining precise boundary delineation with reliable malignancy assessment in a single end-to-end model, this work holds strong potential for clinical computer-aided detection systems, helping radiologists prioritize suspicious cases and improve screening efficiency in busy clinical settings.",
+      "authors": [
+        "Abu Fatema Mohammad Abdun Noor",
+        "Md Imam Ahasan",
+        "Md Samiul Ahasan",
+        "Kah Ong Michael Goh",
+        "S M Hasan Mahmud",
+        "Raihana Zannat"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "published": "2026-07-11T08:04:35+00:00",
+      "link": "https://arxiv.org/pdf/2607.10188v2",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "proposes a deep learning network for breast mass segmentation and classification in mammography",
+      "llm_evidence_cn": "提出用于乳腺X线影像肿块分割与分类的深度学习网络",
+      "llm_evidence": "提出用于乳腺X线影像肿块分割与分类的深度学习网络",
+      "canonical_evidence": "提出用于乳腺X线影像肿块分割与分类的深度学习网络",
+      "llm_tldr_en": "Presents BiLoG-Net, a joint segmentation and classification framework for breast masses in mammography using bi-context location-aware features and segmentation-guided attention.",
+      "llm_tldr_cn": "为解决乳腺X线影像中肿块分割与分类的挑战，提出BiLoG-Net，一种联合分割与分类的深度学习框架。该网络利用双上下文位置感知特征和分割引导注意力，实现精确的肿块分割和恶性分类。实验表明该方法能提高乳腺肿块检测与诊断的准确性，为临床辅助诊断提供有效工具。",
+      "llm_tldr": "为解决乳腺X线影像中肿块分割与分类的挑战，提出BiLoG-Net，一种联合分割与分类的深度学习框架。该网络利用双上下文位置感知特征和分割引导注意力，实现精确的肿块分割和恶性分类。实验表明该方法能提高乳腺肿块检测与诊断的准确性，为临床辅助诊断提供有效工具。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.14338v1",
+      "source": "arxiv",
+      "title": "Beyond scalar losses: calibrating segmentation models via gradient vector field surgery",
+      "abstract": "Region-based loss functions, such as the Dice loss, have established themselves as the de facto standard for highly class- and region-imbalanced segmentation tasks. However, models trained using region-based loss functions are notoriously miscalibrated and typically yield over-confident predictions. In medical imaging applications, such as defining tumor resection margins, this miscalibration is hindering clinical adoption. In this work, we outline a novel gradient perspective on this overconfidence and show how it affects region-based loss functions. We propose a \"surgery\" on the gradient vector field as a simple, yet effective intervention to mitigate calibration issues. This surgery adds a factor to the loss's partial derivative, scaling the gradient's magnitude linearly with the prediction error. In empirical evaluations across 2D and 3D medical segmentation tasks, we demonstrate the effectiveness of this intervention while maintaining high prediction accuracy when used in conjunction with any region-based loss function.",
+      "authors": [
+        "Laurin Lux",
+        "Alexander H. Berger",
+        "Moritz Knolle",
+        "Daniel Rückert",
+        "Johannes C. Paetzold"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-07-15T20:03:10+00:00",
+      "link": "https://arxiv.org/pdf/2607.14338v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Proposes a method to calibrate segmentation models by modifying gradients of region-based losses, tackling overconfidence in medical image segmentation",
+      "llm_evidence_cn": "提出通过修改区域损失函数的梯度来校准分割模型，解决医学图像分割中的过度自信问题",
+      "llm_evidence": "提出通过修改区域损失函数的梯度来校准分割模型，解决医学图像分割中的过度自信问题",
+      "canonical_evidence": "提出通过修改区域损失函数的梯度来校准分割模型，解决医学图像分割中的过度自信问题",
+      "llm_tldr_en": "This paper addresses miscalibration in segmentation models trained with region-based losses by proposing a gradient vector field surgery that improves calibration without sacrificing accuracy, enhancing reliability in medical applications.",
+      "llm_tldr_cn": "针对使用区域损失函数（如Dice损失）训练的分割模型普遍存在校准不良、预测过度自信的问题，本文从梯度角度分析原因，提出了一种梯度向量场手术方法，通过给损失函数偏导数添加简单因子来抑制过度自信。实验表明，该方法能有效提升模型校准度，同时保持分割精度，对肿瘤切缘界定等医学应用具有重要价值。",
+      "llm_tldr": "针对使用区域损失函数（如Dice损失）训练的分割模型普遍存在校准不良、预测过度自信的问题，本文从梯度角度分析原因，提出了一种梯度向量场手术方法，通过给损失函数偏导数添加简单因子来抑制过度自信。实验表明，该方法能有效提升模型校准度，同时保持分割精度，对肿瘤切缘界定等医学应用具有重要价值。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "supervised training of neural networks for segmentation",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
