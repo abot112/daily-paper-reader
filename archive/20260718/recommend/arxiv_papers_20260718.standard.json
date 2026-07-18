@@ -1,0 +1,98 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-18T21:20:56.453598+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2607.14328v1",
+      "source": "arxiv",
+      "title": "ViPSAM: Visual Prompting Medical Image Segmentation Using Segment Anything Model",
+      "abstract": "In proton therapy planning, respiratory-gated non-contrast CT (NCCT) is commonly used for lesion segmentation; however, accurate delineation remains challenging due to low lesion-to-background contrast. Although learning-based methods have shown strong performance, they often struggle with non-contrast image segmentation. Inspired by clinical practice, where contrast-enhanced MRI is referenced to delineate lesions on NCCT, we propose ViPSAM, a visual prompting framework that leverages complementary cross-modality information. Built upon the Segment Anything Model (SAM), ViPSAM introduces a visual prompt encoder to extract guidance features from contrast-enhanced images and a visual-guided cross-attention module to integrate non-contrast and contrast-enhanced features, thereby enhancing lesion-relevant representations in low-contrast regions. The mask decoder is further adapted in a parameter-efficient manner to utilize visual prompts effectively. We evaluate the proposed method on liver lesion segmentation using NCCT acquired for proton therapy. Experimental results demonstrate that ViPSAM outperforms representative U-Net- and SAM-based methods, indicating that cross-modality visual prompting enables more robust and accurate segmentation in non-contrast images.",
+      "authors": [
+        "San Lee",
+        "Nalee Kim",
+        "Jeong Il Yu",
+        "Hee Chul Park",
+        "Boah Kim"
+      ],
+      "primary_category": "eess.IV",
+      "categories": [
+        "eess.IV",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "published": "2026-07-15T19:46:32+00:00",
+      "link": "https://arxiv.org/pdf/2607.14328v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "proposes ViPSAM, a deep learning visual prompting framework for medical image segmentation using SAM",
+      "llm_evidence_cn": "提出ViPSAM，一种基于SAM的视觉提示深度学习框架用于医学图像分割",
+      "llm_evidence": "提出ViPSAM，一种基于SAM的视觉提示深度学习框架用于医学图像分割",
+      "canonical_evidence": "提出ViPSAM，一种基于SAM的视觉提示深度学习框架用于医学图像分割",
+      "llm_tldr_en": "ViPSAM leverages a visual prompt encoder and cross-attention to guide non-contrast CT lesion segmentation using contrast-enhanced MRI, showing effectiveness in a supervised medical image segmentation task.",
+      "llm_tldr_cn": "在质子治疗中，非增强CT病灶分割因对比度低而困难，本文受临床实践启发，提出ViPSAM框架，利用增强MRI作为视觉提示引导CT分割。该框架基于SAM，通过视觉提示编码器和跨注意力模块融合多模态信息，实验证明其能有效提高非增强CT的病灶分割精度，为医学图像监督分割提供了跨模态增强方案。",
+      "llm_tldr": "在质子治疗中，非增强CT病灶分割因对比度低而困难，本文受临床实践启发，提出ViPSAM框架，利用增强MRI作为视觉提示引导CT分割。该框架基于SAM，通过视觉提示编码器和跨注意力模块融合多模态信息，实验证明其能有效提高非增强CT的病灶分割精度，为医学图像监督分割提供了跨模态增强方案。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.09481v1",
+      "source": "arxiv",
+      "title": "Decoupling Language Guidance from Backbones for Text-Guided Medical Segmentation",
+      "abstract": "Text-guided medical image segmentation leverages clinical semantics to improve lesion delineation, yet many existing models bind cross-modal fusion, supervision, and decoder design into a task-specific architecture. Such tight coupling makes it difficult to reuse language guidance modules across heterogeneous vision and text backbones, and often requires redesigning the network when the encoder pair changes. This paper presents BTHA, a backbone-transferable hierarchical adapter framework for text-guided medical image segmentation. BTHA is built around a stable feature-level interface: given multi-scale visual features and a text representation, it injects semantic guidance through shape-preserving adapters while maintaining the decoder-side tensor contract. To make this interface effective, we introduce a Hierarchical Coarse-to-Fine Supervision Strategy that decomposes learning into global image-text alignment, multi-scale auxiliary localization, and boundary-aware final mask refinement. We further design a Scale-Adaptive Gated Semantic Guidance (SAGSG) adapter, where resolution-specific gates adaptively control textual injection and channel recalibration suppresses redundant cross-modal responses. Evaluations across diverse vision and text backbones show that the same adapter and supervision design remains effective across convolutional and transformer-based visual encoders as well as different language encoders. Experiments on four public datasets further demonstrate that BTHA improves strong text-guided baselines with modest computational overhead.",
+      "authors": [
+        "Yungeng Liu",
+        "Xuanzi Fang",
+        "Haijin Zeng",
+        "Qi Dai",
+        "Yongyong Chen"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-07-10T14:57:36+00:00",
+      "link": "https://arxiv.org/pdf/2607.09481v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "text-guided medical image segmentation with backbone-transferable adapters",
+      "llm_evidence_cn": "解耦主干网络的文本引导医学分割",
+      "llm_evidence": "解耦主干网络的文本引导医学分割",
+      "canonical_evidence": "解耦主干网络的文本引导医学分割",
+      "llm_tldr_en": "BTHA is a backbone-transferable hierarchical adapter that decouples language guidance from segmentation backbones, enabling flexible reuse across different vision and text encoders.",
+      "llm_tldr_cn": "现有文本引导医学分割模型将跨模态融合、监督和解码器紧密耦合，更换编码器须重新设计网络。该文提出BTHA，一种可迁移的分层适配器框架，通过稳定特征接口在保持解码器不变的前提下注入语义指导，实现语言引导模块与异构主干的解耦。实验表明BTHA能灵活适配多种编码器组合，促进了文本引导分割模型的模块化发展。",
+      "llm_tldr": "现有文本引导医学分割模型将跨模态融合、监督和解码器紧密耦合，更换编码器须重新设计网络。该文提出BTHA，一种可迁移的分层适配器框架，通过稳定特征接口在保持解码器不变的前提下注入语义指导，实现语言引导模块与异构主干的解耦。实验表明BTHA能灵活适配多种编码器组合，促进了文本引导分割模型的模块化发展。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

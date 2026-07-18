@@ -1,0 +1,39 @@
+{
+  "label": "2026-07-18",
+  "date": "2026-07-18",
+  "generated_at": "2026-07-18T21:22:45",
+  "count": 2,
+  "papers": [
+    {
+      "paper_id": "202607/18/2607.14328v1-vipsam-visual-prompting-medical-image-segmentation-using-segment-anything-model",
+      "section": "quick",
+      "title_en": "ViPSAM: Visual Prompting Medical Image Segmentation Using Segment Anything Model",
+      "authors": "San Lee, Nalee Kim, Jeong Il Yu, Hee Chul Park, Boah Kim",
+      "date": "2026-07-15",
+      "pdf": "https://arxiv.org/pdf/2607.14328v1",
+      "score": "7.0",
+      "evidence": "提出ViPSAM，一种基于SAM的视觉提示深度学习框架用于医学图像分割",
+      "tldr": "非对比CT肝脏病变分割因对比度低而困难重重，临床常参考增强MRI来勾画病灶。本文提出ViPSAM框架，基于SAM引入视觉提示编码器与交叉注意力模块，融合跨模态信息以增强低对比度区域特征。实验表明ViPSAM在质子治疗NCCT上性能超越U-Net与SAM方法，展示了跨模态视觉提示的重要价值，为低对比度医学图像分割提供新思路。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "In proton therapy planning, respiratory-gated non-contrast CT (NCCT) is commonly used for lesion segmentation; however, accurate delineation remains challenging due to low lesion-to-background contrast. Although learning-based methods have shown strong performance, they often struggle with non-contrast image segmentation. Inspired by clinical practice, where contrast-enhanced MRI is referenced to delineate lesions on NCCT, we propose ViPSAM, a visual prompting framework that leverages complementary cross-modality information. Built upon the Segment Anything Model (SAM), ViPSAM introduces a visual prompt encoder to extract guidance features from contrast-enhanced images and a visual-guided cross-attention module to integrate non-contrast and contrast-enhanced features, thereby enhancing lesion-relevant representations in low-contrast regions. The mask decoder is further adapted in a parameter-efficient manner to utilize visual prompts effectively. We evaluate the proposed method on liver lesion segmentation using NCCT acquired for proton therapy. Experimental results demonstrate that ViPSAM outperforms representative U-Net- and SAM-based methods, indicating that cross-modality visual prompting enables more robust and accurate segmentation in non-contrast images.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/18/2607.09481v1-decoupling-language-guidance-from-backbones-for-text-guided-medical-segmentation",
+      "section": "quick",
+      "title_en": "Decoupling Language Guidance from Backbones for Text-Guided Medical Segmentation",
+      "authors": "Yungeng Liu, Xuanzi Fang, Haijin Zeng, Qi Dai, Yongyong Chen",
+      "date": "2026-07-10",
+      "pdf": "https://arxiv.org/pdf/2607.09481v1",
+      "score": "6.0",
+      "evidence": "解耦主干网络的文本引导医学分割",
+      "tldr": "现有文本指导医学分割模型将跨模态融合、监督与解码器紧耦合，难以在不同视觉和文本主干间复用语言指导模块。本文提出主干可迁移的分层适配器框架BTHA，通过稳定的特征接口与尺度自适应门控注入语义指导，并联合分层粗到细监督。在多种主干和四个公开数据集上一致提升强基线性能，且计算开销小，实现了语言指导与主干的解耦。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "Text-guided medical image segmentation leverages clinical semantics to improve lesion delineation, yet many existing models bind cross-modal fusion, supervision, and decoder design into a task-specific architecture. Such tight coupling makes it difficult to reuse language guidance modules across heterogeneous vision and text backbones, and often requires redesigning the network when the encoder pair changes. This paper presents BTHA, a backbone-transferable hierarchical adapter framework for text-guided medical image segmentation. BTHA is built around a stable feature-level interface: given multi-scale visual features and a text representation, it injects semantic guidance through shape-preserving adapters while maintaining the decoder-side tensor contract. To make this interface effective, we introduce a Hierarchical Coarse-to-Fine Supervision Strategy that decomposes learning into global image-text alignment, multi-scale auxiliary localization, and boundary-aware final mask refinement. We further design a Scale-Adaptive Gated Semantic Guidance (SAGSG) adapter, where resolution-specific gates adaptively control textual injection and channel recalibration suppresses redundant cross-modal responses. Evaluations across diverse vision and text backbones show that the same adapter and supervision design remains effective across convolutional and transformer-based visual encoders as well as different language encoders. Experiments on four public datasets further demonstrate that BTHA improves strong text-guided baselines with modest computational overhead.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
