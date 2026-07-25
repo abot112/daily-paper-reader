@@ -1,0 +1,98 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-25T20:17:30.743420+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2607.17329v1",
+      "source": "arxiv",
+      "title": "MIS-HCC: Hierarchical Channel Clustering for Efficient Medical Image Segmentation",
+      "abstract": "Medical image segmentation models require both high accuracy and lightweight design to accommodate real-world medical applications. The deployment of these models on resource-limited medical platforms remains a significant challenge due to their high computational and parameter requirements. Existing pruning methods for model compression mostly overlook the intrinsic connections and similarity between the internal structures of complex deep neural networks. As a result, compressed models may not effectively retain the basic features of the pretrained network. To solve this problem, we propose a hierarchical clustering compression method for medical image segmentation models (MIS-HCC). This approach employs hierarchical clustering to partition channels and fuse their parameters efficiently. Specifically, it leverages the Wasserstein distance to represent similarity of channels within layers of pre-trained network, forming a similarity matrix that guides the clustering process. Channels within each cluster are then fused to produce a compressed network. Experimental results on three medical image datasets application demonstrate that MIS-HCC outperforms the state-of-the-art methods in both accuracy and compression efficiency, offering an effective solution for deploying medical image segmentation models on resource-limited medical platforms.",
+      "authors": [
+        "Bo Zhao",
+        "Haoran Yu",
+        "Lifei Liu",
+        "Zongcheng Chu",
+        "Yining Liu",
+        "Chang Liu",
+        "Szu-Yu Chen",
+        "Zequn Xie"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-19T16:39:48+00:00",
+      "link": "https://arxiv.org/pdf/2607.17329v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "proposes a hierarchical clustering compression method for medical image segmentation models",
+      "llm_evidence_cn": "提出了一种用于医学图像分割模型的层次聚类压缩方法",
+      "llm_evidence": "提出了一种用于医学图像分割模型的层次聚类压缩方法",
+      "canonical_evidence": "提出了一种用于医学图像分割模型的层次聚类压缩方法",
+      "llm_tldr_en": "MIS-HCC compresses medical segmentation models via hierarchical channel clustering, retaining pretrained features while reducing computational cost.",
+      "llm_tldr_cn": "现有医学图像分割模型压缩方法常忽视网络内部结构的固有连接和相似性，导致压缩后模型丢失预训练特征。本文提出MIS-HCC，一种基于层次聚类的压缩方法，通过对模型通道进行层次聚类分组，在降低计算和参数量的同时，更好地保留基础特征，从而实现高效轻量的医学图像分割模型。",
+      "llm_tldr": "现有医学图像分割模型压缩方法常忽视网络内部结构的固有连接和相似性，导致压缩后模型丢失预训练特征。本文提出MIS-HCC，一种基于层次聚类的压缩方法，通过对模型通道进行层次聚类分组，在降低计算和参数量的同时，更好地保留基础特征，从而实现高效轻量的医学图像分割模型。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.17208v1",
+      "source": "arxiv",
+      "title": "Induce to Empower: Improving Lightweight Baselines via Foundation Model Induction for Generalized Polyp Segmentation",
+      "abstract": "Automated polyp segmentation in colonoscopy continues to pose challenges due to substantial appearance variations and indistinct polyp boundaries. Although emerging foundation models (FMs) such as DINOv2, SAM, and OneFormer, demonstrate remarkable generalization capabilities, their direct transfer to the polyp segmentation task and deployment in real-time clinical settings are difficult due to lack of large-scale labeled data and high computational demands. In addition, adopting multiple FMs together raises concerns, even though they encode complementary semantic and structural information. While lightweight models, including U-Net, PraNet and U-Net++, are computationally efficient, they often struggle to generalize across datasets due to limited representational capacity. To address this gap, we propose Lite-Polyp Inductor (Lite-Pi), a novel foundation model induction framework that significantly enhances lightweight polyp segmentation baselines. Our proposed framework generates FM-specific prototype representations and aligns them semantically with the corresponding foundation model priors through reconstruction-based supervision. Subsequently, transformer-based fusion is introduced to highlight the polyp relevant representations, including salient boundary information, while preserving complementary semantic cues. Extensive experiments across five polyp segmentation benchmark datasets demonstrate that Lite-π significantly improves lightweight baselines, achieving superior generalization performance with minimal computational overhead and thereby, offering a practical solution for generalized polyp segmentation. Our code is available at GitHub. https://github.com/lostinrepo/Lite-Pi",
+      "authors": [
+        "Shivanshu Agnihotri",
+        "Snehashis Majhi",
+        "Deepak Ranjan Nayak",
+        "Dwarikanath Mahapatra",
+        "Debesh Jha"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-19T11:57:19+00:00",
+      "link": "https://arxiv.org/pdf/2607.17208v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "proposes foundation model induction to improve lightweight baselines for polyp segmentation, a deep learning method for medical image segmentation",
+      "llm_evidence_cn": "提出利用基础模型诱导改进轻量级基线的息肉分割方法，属于医学图像分割的深度学习技术",
+      "llm_evidence": "提出利用基础模型诱导改进轻量级基线的息肉分割方法，属于医学图像分割的深度学习技术",
+      "canonical_evidence": "提出利用基础模型诱导改进轻量级基线的息肉分割方法，属于医学图像分割的深度学习技术",
+      "llm_tldr_en": "This paper inducts knowledge from multiple foundation models into lightweight baselines for polyp segmentation, achieving strong generalization that could benefit other medical segmentation tasks.",
+      "llm_tldr_cn": "该文针对息肉分割中轻量模型泛化能力不足的问题，提出利用多个基础模型诱导知识注入U-Net等轻量基线的方法。通过引入互补的语义和结构信息，显著提升了息肉分割的泛化性能，为在其他医学分割任务中高效利用基础模型提供了思路。",
+      "llm_tldr": "该文针对息肉分割中轻量模型泛化能力不足的问题，提出利用多个基础模型诱导知识注入U-Net等轻量基线的方法。通过引入互补的语义和结构信息，显著提升了息肉分割的泛化性能，为在其他医学分割任务中高效利用基础模型提供了思路。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
