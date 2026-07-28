@@ -1,0 +1,132 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-28T21:45:50.015677+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 3,
+    "quick_skim_target": 11,
+    "quick_selected": 3
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2607.18014v1",
+      "source": "arxiv",
+      "title": "SAMRI-3D: Adapting SAM2 for 3D MRI Segmentation with Global Volume Tokens",
+      "abstract": "Foundation models such as Segment Anything Model 2 (SAM2) have transformed natural-image and video segmentation, and recent work has begun adapting them to medical imaging. These adaptations, however, are largely general-purpose models that treat MRI as one modality among many; large-scale, MRI-specific modelling and benchmarking remain limited, even though MRI's low soft-tissue contrast leaves many boundaries effectively invisible on individual slices. We present SAMRI-3D, a benchmark and method for 3D MRI segmentation with SAM2. The SAMRI-3D benchmark is the largest MRI-only evaluation to date - 10,392 volumes from 34 datasets (27 public, 7 in-house) spanning 12 anatomical domains and 10+ sequences, with explicit seen/unseen splits. Freezing the image encoder and fine-tuning only the lightweight decoder and memory modules raises mean Dice from 0.58 (zero-shot SAM2) to 0.76, surpassing recent SAM-based medical models (SAMed-2 0.69, Medical-SAM2 0.49, SAM-Med3D 0.37) with strong statistical significance. To target invisible boundaries, we introduce Global Volume Tokens (GVT): persistent memory tokens trained with a Truncated Signed Distance Field (TSDF) reconstruction objective that is discarded at inference (zero added cost). This full model, SAMRI-3D, attains the best accuracy (0.78) and lowest variance across all 34 datasets and, uniquely, shows no drop on 8 held-out datasets (0.79 unseen vs. 0.78 seen); per-sequence analysis confirms the TSDF objective helps most where per-slice contrast is weakest. We will release the benchmark, code, and models in this paper.",
+      "authors": [
+        "Zhao Wang",
+        "Wei Dai",
+        "Hongfu Sun",
+        "Craig Engstrom",
+        "Shekhar S. Chandra"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-20T14:48:11+00:00",
+      "link": "https://arxiv.org/pdf/2607.18014v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Proposes a deep learning model for 3D medical image segmentation using SAM2 with global volume tokens.",
+      "llm_evidence_cn": "提出了一种基于SAM2和全局体积令牌的深度学习三维医学图像分割模型。",
+      "llm_evidence": "提出了一种基于SAM2和全局体积令牌的深度学习三维医学图像分割模型。",
+      "canonical_evidence": "提出了一种基于SAM2和全局体积令牌的深度学习三维医学图像分割模型。",
+      "llm_tldr_en": "Addressing the lack of MRI-specific 3D segmentation models, this paper presents SAMRI-3D, adapting SAM2 with global volume tokens for 3D context, and a large-scale benchmark of 10,392 MRI volumes across 12 domains. The method achieves strong performance on diverse MRI sequences, demonstrating SAM2's potential for medical image segmentation.",
+      "llm_tldr_cn": "针对三维MRI分割中软组织结构对比度低、边界模糊导致单切片方法失效的问题，本文提出了SAMRI-3D，一个基于SAM2的医学图像分割方法及大规模基准评测。该方法通过引入全局体积令牌，有效利用三维上下文信息，在包含34个数据集、12个解剖区域的MRI数据上取得优异表现，证明了SAM2在医学图像分割中的潜力，为三维医学图像分析提供了新的解决方案。",
+      "llm_tldr": "针对三维MRI分割中软组织结构对比度低、边界模糊导致单切片方法失效的问题，本文提出了SAMRI-3D，一个基于SAM2的医学图像分割方法及大规模基准评测。该方法通过引入全局体积令牌，有效利用三维上下文信息，在包含34个数据集、12个解剖区域的MRI数据上取得优异表现，证明了SAM2在医学图像分割中的潜力，为三维医学图像分析提供了新的解决方案。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.22891v1",
+      "source": "arxiv",
+      "title": "AdaKAN: A dual-branch adaptive Kolmogorov-Arnold network for medical image segmentation",
+      "abstract": "Medical image segmentation is a fundamental task in computer-aided diagnosis, yet it remains challenging due to the complexity of anatomical structures and the variability across imaging modalities. In this paper, we propose AdaKAN, an Adaptive Kolmogorov-Arnold Network (KAN) that synergistically integrates convolutional operations with a novel efficient KAN (EffiKAN) block, comprised of an efficient attention mechanism and an adaptive KAN (AdaptKAN) module. This module features a dual-branch design: one branch employs a KAN layer with Bernstein polynomial activations for globally smooth and stable function approximation, while the other branch performs channel-wise refinement through projection operations and adaptive scaling. AdaKAN adopts a U-shaped architecture that effectively captures both long-range dependencies and fine-grained local features, overcoming the limitations of conventional convolutional and Transformer-based segmentation models. Skip connections are employed to preserve spatial details during encoding and facilitate accurate reconstruction during decoding. Extensive experiments conducted on diverse medical imaging datasets demonstrate that AdaKAN achieves state-of-the-art performance in segmentation accuracy.",
+      "authors": [
+        "Dalia Alzu'bi",
+        "Deep Bhattacharyya",
+        "Ali Ayub",
+        "A. Ben Hamza"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-24T20:02:50+00:00",
+      "link": "https://arxiv.org/pdf/2607.22891v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Novel deep learning architecture for medical image segmentation",
+      "llm_evidence_cn": "提出用于医学图像分割的新型深度学习架构",
+      "llm_evidence": "提出用于医学图像分割的新型深度学习架构",
+      "canonical_evidence": "提出用于医学图像分割的新型深度学习架构",
+      "llm_tldr_en": "AdaKAN combines convolutions with efficient KAN blocks via a dual-branch design for stable and accurate medical image segmentation across modalities, offering a transferable architecture for fully supervised organ segmentation.",
+      "llm_tldr_cn": "针对医学图像分割中解剖结构复杂性和成像模态多样性带来的挑战，该文提出自适应KAN网络AdaKAN，创新性地将卷积操作与高效KAN模块相结合，通过双分支设计实现Bernstein多项式全局平滑逼近和通道级自适应细化。在多模态医学图像数据集上的实验表明，AdaKAN能稳定提升分割精度，为全监督的腹部器官分割等任务提供了可迁移的深度学习架构。",
+      "llm_tldr": "针对医学图像分割中解剖结构复杂性和成像模态多样性带来的挑战，该文提出自适应KAN网络AdaKAN，创新性地将卷积操作与高效KAN模块相结合，通过双分支设计实现Bernstein多项式全局平滑逼近和通道级自适应细化。在多模态医学图像数据集上的实验表明，AdaKAN能稳定提升分割精度，为全监督的腹部器官分割等任务提供了可迁移的深度学习架构。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.22718v1",
+      "source": "arxiv",
+      "title": "DAMamba-UNet3D: A Parameter-Efficient Mamba State Space U-Net with Dynamic Adaptive Scan for 3D Medical Image Segmentation",
+      "abstract": "We propose parameter-efficient SSM-based U-Net architectures for 3D medical image segmentation. Convolutional U-Nets afford O(n) local mixing per layer but lack explicit global context; transformers provide global reasoning at O(n^2) cost in sequence length $n$. State-space models (SSMs), such as Mamba, offer $O(n)$ global propagation per block. Yet, existing medical SSM segmenters rely on fixed scan patterns and large parameter budgets. Dynamic Adaptive Scan (DAS), which learns data-dependent reordering before selective scan, has not been applied to medical imaging or extended to 3D volumes. We propose DAMamba-UNet3D, a hybrid encoder-decoder that integrates tri-plane 3D-DAS blocks at encoder stages E2-E4 while retaining convolutions elsewhere (~5.3M parameters). On BraTS 2020 five-fold cross-validation, DAMamba-UNet3D achieves mean Dice 0.815+/-0.013 (full-volume per-case evaluation) at ~13x lower parameter cost than SegMamba (0.824+\\-0.014, ~70M). At comparable scale, DAMamba-L (~70M), a wide DAS-native variant with encoder-only DAMamba and a convolutional bottleneck, reaches 0.829+\\-0.012, surpassing retrained SegMamba by 0.5pt. Component ablations show that encoder-only DAS placement is critical as bottleneck and decoder SSM blocks lower Dice. Together, the results suggest that learned tri-plane DAS in a hybrid U-Net is competitive with, and under our large-scale design may improve upon, SegMamba's fixed Tri-orientated Mamba (ToM) scanning on BraTS 2020. Code: https://github.com/marafathussain/DAMamba-UNet3D.",
+      "authors": [
+        "Mohammad Arafat Hussain",
+        "Ellen Grant",
+        "Yangming Ou"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-07-21T16:42:48+00:00",
+      "link": "https://arxiv.org/pdf/2607.22718v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Parameter-efficient SSM-based 3D medical segmentation architecture",
+      "llm_evidence_cn": "基于状态空间模型的高效三维医学分割架构",
+      "llm_evidence": "基于状态空间模型的高效三维医学分割架构",
+      "canonical_evidence": "基于状态空间模型的高效三维医学分割架构",
+      "llm_tldr_en": "Introduces DAMamba-UNet3D, a parameter-efficient 3D medical segmentation model using state space models with dynamic adaptive scan; achieves O(n) global context with fewer parameters, potentially applicable to abdominal organ segmentation.",
+      "llm_tldr_cn": "为解决现有医学分割模型计算开销大、全局上下文缺失的问题，提出DAMamba-UNet3D，结合状态空间模型与动态自适应扫描，在3D医学图像分割上实现全局建模和参数效率；未直接指定腹部，但方法通用，可迁移至Abdomen-1K全监督任务。",
+      "llm_tldr": "为解决现有医学分割模型计算开销大、全局上下文缺失的问题，提出DAMamba-UNet3D，结合状态空间模型与动态自适应扫描，在3D医学图像分割上实现全局建模和参数效率；未直接指定腹部，但方法通用，可迁移至Abdomen-1K全监督任务。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}

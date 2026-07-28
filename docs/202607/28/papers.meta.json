@@ -1,0 +1,54 @@
+{
+  "label": "2026-07-28",
+  "date": "2026-07-28",
+  "generated_at": "2026-07-28T21:47:22",
+  "count": 3,
+  "papers": [
+    {
+      "paper_id": "202607/28/2607.18014v1-samri-3d-adapting-sam2-for-3d-mri-segmentation-with-global-volume-tokens",
+      "section": "quick",
+      "title_en": "SAMRI-3D: Adapting SAM2 for 3D MRI Segmentation with Global Volume Tokens",
+      "authors": "Zhao Wang, Wei Dai, Hongfu Sun, Craig Engstrom, Shekhar S. Chandra",
+      "date": "2026-07-20",
+      "pdf": "https://arxiv.org/pdf/2607.18014v1",
+      "score": "7.0",
+      "evidence": "提出了一种基于SAM2和全局体积令牌的深度学习三维医学图像分割模型。",
+      "tldr": "针对MRI软组织对比度低、单切片边界不可见，现有SAM适配模型缺乏MRI专用大规模基准，提出SAMRI-3D基准（34数据集、10392卷）及基于SAM2的方法。通过冻结图像编码器、微调解码器与记忆模块，并引入全局体积令牌及TSDF目标训练，平均Dice从0.58提升至0.78，未见数据集无下降。该工作为MRI三维分割提供了首个大规模基准和高效适配方案，具有高精度和强泛化性。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "Foundation models such as Segment Anything Model 2 (SAM2) have transformed natural-image and video segmentation, and recent work has begun adapting them to medical imaging. These adaptations, however, are largely general-purpose models that treat MRI as one modality among many; large-scale, MRI-specific modelling and benchmarking remain limited, even though MRI's low soft-tissue contrast leaves many boundaries effectively invisible on individual slices. We present SAMRI-3D, a benchmark and method for 3D MRI segmentation with SAM2. The SAMRI-3D benchmark is the largest MRI-only evaluation to date - 10,392 volumes from 34 datasets (27 public, 7 in-house) spanning 12 anatomical domains and 10+ sequences, with explicit seen/unseen splits. Freezing the image encoder and fine-tuning only the lightweight decoder and memory modules raises mean Dice from 0.58 (zero-shot SAM2) to 0.76, surpassing recent SAM-based medical models (SAMed-2 0.69, Medical-SAM2 0.49, SAM-Med3D 0.37) with strong statistical significance. To target invisible boundaries, we introduce Global Volume Tokens (GVT): persistent memory tokens trained with a Truncated Signed Distance Field (TSDF) reconstruction objective that is discarded at inference (zero added cost). This full model, SAMRI-3D, attains the best accuracy (0.78) and lowest variance across all 34 datasets and, uniquely, shows no drop on 8 held-out datasets (0.79 unseen vs. 0.78 seen); per-sequence analysis confirms the TSDF objective helps most where per-slice contrast is weakest. We will release the benchmark, code, and models in this paper.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/28/2607.22718v1-damamba-unet3d-a-parameter-efficient-mamba-state-space-u-net-with-dynamic-adaptive-scan-for-3d-medical-image-segmentation",
+      "section": "quick",
+      "title_en": "DAMamba-UNet3D: A Parameter-Efficient Mamba State Space U-Net with Dynamic Adaptive Scan for 3D Medical Image Segmentation",
+      "authors": "Mohammad Arafat Hussain, Ellen Grant, Yangming Ou",
+      "date": "2026-07-21",
+      "pdf": "https://arxiv.org/pdf/2607.22718v1",
+      "score": "7.0",
+      "evidence": "基于状态空间模型的高效三维医学分割架构",
+      "tldr": "针对3D医学图像分割中卷积缺乏全局上下文且Transformer计算开销大的问题，提出DAMamba-UNet3D，在编码器引入三平面动态自适应扫描(DAS)实现高效全局建模。在BraTS 2020上，轻量模型(5.3M)Dice达0.815，参数仅为SegMamba的1/13；大模型(70M)Dice达0.829。结果表明学习的数据依赖扫描有效提升精度，为轻量化3D医学分割提供新思路。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "We propose parameter-efficient SSM-based U-Net architectures for 3D medical image segmentation. Convolutional U-Nets afford O(n) local mixing per layer but lack explicit global context; transformers provide global reasoning at O(n^2) cost in sequence length $n$. State-space models (SSMs), such as Mamba, offer $O(n)$ global propagation per block. Yet, existing medical SSM segmenters rely on fixed scan patterns and large parameter budgets. Dynamic Adaptive Scan (DAS), which learns data-dependent reordering before selective scan, has not been applied to medical imaging or extended to 3D volumes. We propose DAMamba-UNet3D, a hybrid encoder-decoder that integrates tri-plane 3D-DAS blocks at encoder stages E2-E4 while retaining convolutions elsewhere (~5.3M parameters). On BraTS 2020 five-fold cross-validation, DAMamba-UNet3D achieves mean Dice 0.815+/-0.013 (full-volume per-case evaluation) at ~13x lower parameter cost than SegMamba (0.824+\\-0.014, ~70M). At comparable scale, DAMamba-L (~70M), a wide DAS-native variant with encoder-only DAMamba and a convolutional bottleneck, reaches 0.829+\\-0.012, surpassing retrained SegMamba by 0.5pt. Component ablations show that encoder-only DAS placement is critical as bottleneck and decoder SSM blocks lower Dice. Together, the results suggest that learned tri-plane DAS in a hybrid U-Net is competitive with, and under our large-scale design may improve upon, SegMamba's fixed Tri-orientated Mamba (ToM) scanning on BraTS 2020. Code: https://github.com/marafathussain/DAMamba-UNet3D.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/28/2607.22891v1-adakan-a-dual-branch-adaptive-kolmogorov-arnold-network-for-medical-image-segmentation",
+      "section": "quick",
+      "title_en": "AdaKAN: A dual-branch adaptive Kolmogorov-Arnold network for medical image segmentation",
+      "authors": "Dalia Alzu'bi, Deep Bhattacharyya, Ali Ayub, A. Ben Hamza",
+      "date": "2026-07-24",
+      "pdf": "https://arxiv.org/pdf/2607.22891v1",
+      "score": "6.0",
+      "evidence": "提出用于医学图像分割的新型深度学习架构",
+      "tldr": "医学图像分割是计算机辅助诊断的基础任务，但因解剖结构复杂性和成像模态多样性仍极具挑战。本文提出自适应KAN网络AdaKAN，创新性地设计双分支AdaptKAN模块，融合Bernstein多项式KAN层的全局平滑近似与通道自适应缩放的精炼能力，并引入高效注意力机制，在U形编码器-解码器架构中捕获多尺度特征。在多类型医学影像数据集（包括CT和MRI）上的广泛实验证实，AdaKAN取得了当前最优分割精度，显著克服了传统卷积和Transformer模型的局限性。该工作为医学图像分割提供了新范式，展现了KAN在视觉任务中的应用前景。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "Medical image segmentation is a fundamental task in computer-aided diagnosis, yet it remains challenging due to the complexity of anatomical structures and the variability across imaging modalities. In this paper, we propose AdaKAN, an Adaptive Kolmogorov-Arnold Network (KAN) that synergistically integrates convolutional operations with a novel efficient KAN (EffiKAN) block, comprised of an efficient attention mechanism and an adaptive KAN (AdaptKAN) module. This module features a dual-branch design: one branch employs a KAN layer with Bernstein polynomial activations for globally smooth and stable function approximation, while the other branch performs channel-wise refinement through projection operations and adaptive scaling. AdaKAN adopts a U-shaped architecture that effectively captures both long-range dependencies and fine-grained local features, overcoming the limitations of conventional convolutional and Transformer-based segmentation models. Skip connections are employed to preserve spatial details during encoding and facilitate accurate reconstruction during decoding. Extensive experiments conducted on diverse medical imaging datasets demonstrate that AdaKAN achieves state-of-the-art performance in segmentation accuracy.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
