@@ -1,0 +1,55 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-30T20:24:25.525757+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2607.26829v1",
+      "source": "arxiv",
+      "title": "BATS: Resource-Efficient Volumetric Segmentation with Boundary-Aware Mixed-Resolution Tokens",
+      "abstract": "Many high-performing volumetric segmentation models maintain dense multi-scale feature maps, leading to high activation memory and inference cost. We present BATS (Boundary-Aware Token Selection), a 3D medical image segmentation architecture that concentrates fine-resolution processing near predicted class boundaries. A dense boundary predictor identifies where additional resolution is needed, while a fine-first context cascade constructs an input-dependent mixed-resolution hierarchy. Homogeneous regions are represented coarsely, with finer tokens retained around boundaries, thin structures, and small targets. The sparse hierarchy is refined and rasterised into a dense segmentation.   BATS predicts boundary relevance independently at every resolution level, preventing an erroneous coarse-scale decision from suppressing fine-scale evidence. Parent cluster attention further injects hierarchical ancestor tokens into local attention neighbourhoods, providing cross-scale context without dense multi-scale feature maps or cross-scale neighbour search.   We evaluate BATS on five public CT and MRI datasets using the standardised nnU-Net Revisited protocol. BATS achieves the highest LiTS Dice among the compared methods and averages within 0.37 Dice points of the strongest dense baseline, MedNeXt-L, across the five datasets. Relative to MedNeXt-L, it reduces peak allocated GPU memory by more than 53% on KiTS, LiTS, and BraTS. Inference is up to 30% faster on KiTS and LiTS, which retain fewer tokens, but slower on the more token-dense BraTS. Mixed-resolution processing therefore provides consistent memory savings, while runtime and accuracy gains depend on dataset boundary density.",
+      "authors": [
+        "David Hagerman",
+        "Roman Naeem",
+        "Fredrik Kahl"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "published": "2026-07-29T12:21:40+00:00",
+      "link": "https://arxiv.org/pdf/2607.26829v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "3D medical image segmentation architecture with boundary-aware token selection, applicable to abdominal organs",
+      "llm_evidence_cn": "边界感知令牌选择的3D医学图像分割架构，可应用于腹部器官",
+      "llm_evidence": "边界感知令牌选择的3D医学图像分割架构，可应用于腹部器官",
+      "canonical_evidence": "边界感知令牌选择的3D医学图像分割架构，可应用于腹部器官",
+      "llm_tldr_en": "Presents BATS, a resource-efficient 3D medical image segmentation architecture that concentrates computation near boundaries, reducing memory and cost while maintaining accuracy.",
+      "llm_tldr_cn": "针对高分辨率3D医学图像分割的高计算开销问题，提出边界感知令牌选择架构BATS，仅在预测边界附近进行细粒度处理，大幅降低激活内存和推理成本，在多种分割任务中保持竞争力，为资源有限环境下的体积分割提供高效方案。",
+      "llm_tldr": "针对高分辨率3D医学图像分割的高计算开销问题，提出边界感知令牌选择架构BATS，仅在预测边界附近进行细粒度处理，大幅降低激活内存和推理成本，在多种分割任务中保持竞争力，为资源有限环境下的体积分割提供高效方案。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning architectures for abdominal organ segmentation with full supervision",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
