@@ -1,0 +1,62 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-31T21:58:25.548449+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2607.21787v1",
+      "source": "arxiv",
+      "title": "Risk-Routed Implicit Boundary Refinement for Robust Ultrasound Image Segmentation",
+      "abstract": "Medical ultrasound (US) image segmentation faces significant challenges due to speckle noise, low-contrast boundaries, acoustic shadowing, and acquisition variation across operators and clinical centers. Although encoder-decoder and transformer-based networks have achieved strong performance, many methods recover boundary details through dense decoders or larger backbones, which may still produce over-smoothed contours or unstable predictions under external distribution shifts. In this article, we propose Risk-routed Implicit Boundary Refinement (RIBR), a compact segmentation framework that uses implicit neural representation as a risk-routed residual correction rather than an unconstrained full-mask predictor. RIBR combines boundary-refinement implicit residuals, risk-routed residual control, and geometry- and speckle-aware boundary regularization to refine uncertain contours while suppressing non-boundary oscillations. Evaluation on nine US datasets covering lymph nodes, breast lesions, thyroid nodules, and prostate shows that RIBR achieves the best overall macro-average and consistently reduces boundary error across grouped and organ-specific comparisons under a compact parameter budget. These findings suggest that controlled implicit residual learning is a practical strategy for resource-constrained and boundary-sensitive US segmentation. Source code is available at https://github.com/jinggqu/ribr.",
+      "authors": [
+        "Jingguo Qu",
+        "Xinyang Han",
+        "Xiang Wang",
+        "Yuqi Yang",
+        "Tonghuan Xiao",
+        "Sheng Ning",
+        "Jing Qin",
+        "Ann Dorothy King",
+        "Winnie Chiu-Wing Chu",
+        "Jing Cai",
+        "Michael Ying"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-23T20:07:50+00:00",
+      "link": "https://arxiv.org/pdf/2607.21787v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "proposes a compact ultrasound image segmentation framework using implicit neural representation for boundary refinement",
+      "llm_evidence_cn": "提出一种基于隐式神经表示的紧凑超声图像分割框架，用于边界精炼",
+      "llm_evidence": "提出一种基于隐式神经表示的紧凑超声图像分割框架，用于边界精炼",
+      "canonical_evidence": "提出一种基于隐式神经表示的紧凑超声图像分割框架，用于边界精炼",
+      "llm_tldr_en": "Risk-routed Implicit Boundary Refinement (RIBR) addresses ultrasound segmentation challenges by using implicit representation as residual correction, improving robustness and boundary accuracy.",
+      "llm_tldr_cn": "RIBR针对超声图像分割中噪声、低对比度和采集差异等挑战，提出一种风险路由的隐式边界精炼框架。它利用隐式神经表示作为残差校正，而非直接预测全掩膜，并与边界增强模块结合，在多个超声数据集上显著提升了分割鲁棒性和边界精度。该方法为超声图像的高质量分割提供了新的解决思路。",
+      "llm_tldr": "RIBR针对超声图像分割中噪声、低对比度和采集差异等挑战，提出一种风险路由的隐式边界精炼框架。它利用隐式神经表示作为残差校正，而非直接预测全掩膜，并与边界增强模块结合，在多个超声数据集上显著提升了分割鲁棒性和边界精度。该方法为超声图像的高质量分割提供了新的解决思路。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}

@@ -6,24 +6,26 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-07-30
-- 运行时间：2026-07-30 20:26:33 UTC
+- 最新运行日期：2026-07-31
+- 运行时间：2026-07-31 21:59:32 UTC
 - 运行状态：成功
 - 本次总论文数：1
 - 精读区：0
 - 速读区：1
 
 ### 今日简报（AI）
-今日速读了一篇关于降低3D医学图像分割计算成本的新架构论文，评分6分。其核心结论是：通过混合分辨率的视觉Token与边界感知采样策略，可在保持分割精度的同时大幅提升效率。若您关注医疗AI落地，不妨留意这类兼顾精度与资源消耗的轻量化设计思路。
-- 详情：[/202607/30/README](/202607/30/README)
+今天速读了一篇7分论文，用风险路由的隐式边界精修思路提升超声图像分割的鲁棒性。  
+其关键是让模型在不确定区域专注细节，减少常见假阳性，对噪声和形变更稳定。  
+下一步可多关注它如何将不确定性嵌入分割流程，以及是否适合你手中的2D或3D超声数据。
+- 详情：[/202607/31/README](/202607/31/README)
 
 ### 精读区论文标签
 - 本次无精读推荐。
 
 ### 速读区论文标签
-1. [BATS: Resource-Efficient Volumetric Segmentation with Boundary-Aware Mixed-Resolution Tokens](/202607/30/2607.26829v1-bats-resource-efficient-volumetric-segmentation-with-boundary-aware-mixed-resolution-tokens)  
-   标签：评分：6.0/10、query:abdk-seg
-   evidence：边界感知令牌选择的3D医学图像分割架构，可应用于腹部器官
+1. [Risk-Routed Implicit Boundary Refinement for Robust Ultrasound Image Segmentation](/202607/31/2607.21787v1-risk-routed-implicit-boundary-refinement-for-robust-ultrasound-image-segmentation)  
+   标签：评分：7.0/10、query:abdk-seg
+   evidence：提出一种基于隐式神经表示的紧凑超声图像分割框架，用于边界精炼
 
 
 <div class="dpr-home-promo-card">

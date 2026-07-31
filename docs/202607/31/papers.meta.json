@@ -1,0 +1,24 @@
+{
+  "label": "2026-07-31",
+  "date": "2026-07-31",
+  "generated_at": "2026-07-31T21:59:40",
+  "count": 1,
+  "papers": [
+    {
+      "paper_id": "202607/31/2607.21787v1-risk-routed-implicit-boundary-refinement-for-robust-ultrasound-image-segmentation",
+      "section": "quick",
+      "title_en": "Risk-Routed Implicit Boundary Refinement for Robust Ultrasound Image Segmentation",
+      "authors": "Jingguo Qu, Xinyang Han, Xiang Wang, Yuqi Yang, Tonghuan Xiao, Sheng Ning, Jing Qin, Ann Dorothy King, Winnie Chiu-Wing Chu, Jing Cai, Michael Ying",
+      "date": "2026-07-23",
+      "pdf": "https://arxiv.org/pdf/2607.21787v1",
+      "score": "7.0",
+      "evidence": "提出一种基于隐式神经表示的紧凑超声图像分割框架，用于边界精炼",
+      "tldr": "医学超声图像分割面临斑点噪声、低对比度边界、声影及跨操作者与临床中心的采集变异等挑战，导致现有方法尽管使用密集解码器或大骨干，仍易产生过度平滑轮廓或分布偏移下预测不稳定。本文提出风险路由隐式边界细化框架（RIBR），采用隐式神经表示作为风险路由的残差校正，而非无约束全掩码预测，结合边界细化隐式残差、风险路由残差控制以及几何与斑点感知正则化，精确细化不确定边界并抑制非边界振荡。在淋巴结、乳腺病变、甲状腺结节、前列腺等九个超声数据集上的评估显示，RIBR取得了最佳宏平均成绩，并在分组及器官特异性比较中持续降低边界误差，参数量紧凑。结果表明，受控隐式残差学习为资源受限且边界敏感的超声分割提供了实用方案。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "Medical ultrasound (US) image segmentation faces significant challenges due to speckle noise, low-contrast boundaries, acoustic shadowing, and acquisition variation across operators and clinical centers. Although encoder-decoder and transformer-based networks have achieved strong performance, many methods recover boundary details through dense decoders or larger backbones, which may still produce over-smoothed contours or unstable predictions under external distribution shifts. In this article, we propose Risk-routed Implicit Boundary Refinement (RIBR), a compact segmentation framework that uses implicit neural representation as a risk-routed residual correction rather than an unconstrained full-mask predictor. RIBR combines boundary-refinement implicit residuals, risk-routed residual control, and geometry- and speckle-aware boundary regularization to refine uncertain contours while suppressing non-boundary oscillations. Evaluation on nine US datasets covering lymph nodes, breast lesions, thyroid nodules, and prostate shows that RIBR achieves the best overall macro-average and consistently reduces boundary error across grouped and organ-specific comparisons under a compact parameter budget. These findings suggest that controlled implicit residual learning is a practical strategy for resource-constrained and boundary-sensitive US segmentation. Source code is available at https://github.com/jinggqu/ribr.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
