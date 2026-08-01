@@ -1,0 +1,39 @@
+{
+  "label": "2026-08-01",
+  "date": "2026-08-01",
+  "generated_at": "2026-08-01T20:33:54",
+  "count": 2,
+  "papers": [
+    {
+      "paper_id": "202608/01/2607.23694v1-parameter-efficient-adaptation-of-sam3-for-prompt-driven-surgical-concept-segmentation",
+      "section": "deep",
+      "title_en": "Parameter-Efficient Adaptation of SAM3 for Prompt-Driven Surgical Concept Segmentation",
+      "authors": "Changjing Liu, Yiming Huang, Beilei Cui, Liangjing Shao, Long Bai, Yanheng Li, Haoxuan Che, Hongliang Ren",
+      "date": "2026-07-26",
+      "pdf": "https://arxiv.org/pdf/2607.23694v1",
+      "score": "8.0",
+      "evidence": "提出对SAM3进行参数高效LoRA适配用于外科概念分割，属于医学图像分割深度学习模型。",
+      "tldr": "手术概念分割在临床诊断、术中监测和机器人手术重建仿真中发挥关键作用，但提示驱动的基础模型SAM3因手术数据与自然图像间的域差距导致分割性能下降，且现有医疗SAM适应方法需全参数微调，计算开销大。为此，我们提出一种参数高效的LoRA适配策略，通过冻结视觉骨干网络，仅向SAM3的提示编码器、检测器和跟踪器中注入低秩适配器，仅需优化0.98%的模型参数，可在单个消费级GPU上训练。综合实验证明，该方法在手术概念分割任务上持续超越零样本SAM3和当前主流基线方法。生成的分割结果可直接部署到机器人手术场景重建和物理仿真管线中，具有实用价值。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "Efficient surgical segmentation empowers clinical diagnosis, intraoperative monitoring, and downstream robotic pipelines for reconstruction and simulation. Although prompt-driven foundation models like Segment Anything Model 3 (SAM3) achieve strong segmentation performance on natural images, surgical data exhibits domain gaps against its pre-training data, resulting in degraded segmentation accuracy. Furthermore, existing medical SAM methods require full-parameter fine-tuning, incurring heavy computational consumption and low efficiency. To address these limitations, this work proposes a parameter-efficient Low-Rank Adaptation (LoRA) adaptation of SAM3 for surgical concept segmentation. We inject low-rank adapters into the prompt encoder, detector and tracker while fully freezing the vision backbone, which only optimizes 0.98% of the total model parameters and supports training on a single consumer GPU. Comprehensive experiments demonstrate that our method consistently outperforms zero-shot SAM3 and other mainstream baselines, and the generated segmentation results can be directly deployed to support downstream robotic surgical scene reconstruction and physical simulation pipelines.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202608/01/2607.28487v1-auricularworld-hierarchical-action-guided-world-modeling-for-fine-grained-auricular-structure-segmentation-from-ct-scans",
+      "section": "deep",
+      "title_en": "AuricularWorld: Hierarchical Action-Guided World Modeling for Fine-Grained Auricular Structure Segmentation from CT Scans",
+      "authors": "Jingwen Yang, Senmao Wang, Luoyao Kang, Runmeng Cui, Keying Zhang, Yunjia Bao, Haifan Gong, Lin Lin, Haiyue Jiang",
+      "date": "2026-07-30",
+      "pdf": "https://arxiv.org/pdf/2607.28487v1",
+      "score": "8.0",
+      "evidence": "提出基于世界模型的框架用于CT中精细耳部结构分割，是一种医学图像分割深度学习模型。",
+      "tldr": "CT图像中耳廓结构细小、边界不规则且与软组织界限模糊，存在重叠嵌套的标签标注难题。本文提出AuricularWorld框架，引入世界模型在潜在空间进行迭代解剖推理，通过层次动作逐步优化分割。实验表明该方法显著提升了分割精度，HD95指标降低超过43%。研究成果验证了潜在世界模型推理在复杂医学图像分割中的有效性。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "Fine-grained segmentation of auricular structures in CT is challenging because the ear occupies a small image region, cartilage boundaries are highly irregular, and interfaces between cartilage and surrounding soft tissues are often ambiguous. Clinical annotations may also include both composite structures containing cartilage and adjacent skin and their corresponding cartilage-only regions, producing nested and overlapping labels. We propose a world-model-based segmentation framework that enables iterative anatomical reasoning beyond conventional feed-forward prediction. Built on an encoder-decoder architecture, the framework introduces a deterministic recurrent state-space model into the intermediate latent space. Multi-scale encoder features and partially decoded representations are fused to form a structural observation that initializes the latent dynamics. During inference, the model performs a three-step latent rollout without ground-truth guidance. Hierarchical anatomical actions update the recurrent state and progressively refine the latent representation. The resulting latent trajectory is projected back into the decoder and combined with high-resolution features to produce the final segmentation. To learn reliable latent transitions, we introduce a balanced hierarchical action objective that addresses foreground sparsity, missing anatomical groups, and imbalance between add and remove operations. Extensive experiments show that the proposed framework consistently improves segmentation accuracy and reduces HD95 by more than 43% for small, irregular, and overlapping auricular structures in CT. These results demonstrate the effectiveness of latent world-model reasoning for challenging medical image segmentation.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

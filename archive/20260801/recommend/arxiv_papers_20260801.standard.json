@@ -1,0 +1,100 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-01T20:31:04.076098+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 2,
+    "deep_cap": 6,
+    "deep_selected": 2,
+    "quick_candidates": 0,
+    "quick_skim_target": 11,
+    "quick_selected": 0
+  },
+  "deep_dive": [
+    {
+      "id": "2607.23694v1",
+      "source": "arxiv",
+      "title": "Parameter-Efficient Adaptation of SAM3 for Prompt-Driven Surgical Concept Segmentation",
+      "abstract": "Efficient surgical segmentation empowers clinical diagnosis, intraoperative monitoring, and downstream robotic pipelines for reconstruction and simulation. Although prompt-driven foundation models like Segment Anything Model 3 (SAM3) achieve strong segmentation performance on natural images, surgical data exhibits domain gaps against its pre-training data, resulting in degraded segmentation accuracy. Furthermore, existing medical SAM methods require full-parameter fine-tuning, incurring heavy computational consumption and low efficiency. To address these limitations, this work proposes a parameter-efficient Low-Rank Adaptation (LoRA) adaptation of SAM3 for surgical concept segmentation. We inject low-rank adapters into the prompt encoder, detector and tracker while fully freezing the vision backbone, which only optimizes 0.98% of the total model parameters and supports training on a single consumer GPU. Comprehensive experiments demonstrate that our method consistently outperforms zero-shot SAM3 and other mainstream baselines, and the generated segmentation results can be directly deployed to support downstream robotic surgical scene reconstruction and physical simulation pipelines.",
+      "authors": [
+        "Changjing Liu",
+        "Yiming Huang",
+        "Beilei Cui",
+        "Liangjing Shao",
+        "Long Bai",
+        "Yanheng Li",
+        "Haoxuan Che",
+        "Hongliang Ren"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-26T14:40:04+00:00",
+      "link": "https://arxiv.org/pdf/2607.23694v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Proposes parameter-efficient LoRA adaptation of SAM3 for surgical concept segmentation, a deep learning model for medical image segmentation.",
+      "llm_evidence_cn": "提出对SAM3进行参数高效LoRA适配用于外科概念分割，属于医学图像分割深度学习模型。",
+      "llm_evidence": "提出对SAM3进行参数高效LoRA适配用于外科概念分割，属于医学图像分割深度学习模型。",
+      "canonical_evidence": "提出对SAM3进行参数高效LoRA适配用于外科概念分割，属于医学图像分割深度学习模型。",
+      "llm_tldr_en": "This work adapts SAM3 with low-rank adaptation for surgical concept segmentation, achieving efficient domain transfer without full fine-tuning, demonstrating strong performance on surgical data.",
+      "llm_tldr_cn": "外科数据与自然图像存在域差距，现有医学SAM方法需全参数微调，计算开销大。本文提出对SAM3进行低秩适配（LoRA），在提示编码器中注入低秩适配器，实现参数高效的外科概念分割。在多个外科分割数据集上的实验结果显示，该方法在保持分割精度的同时大幅降低计算消耗，且适配参数更少，为手术场景分割提供了轻量适配方案。",
+      "llm_tldr": "外科数据与自然图像存在域差距，现有医学SAM方法需全参数微调，计算开销大。本文提出对SAM3进行低秩适配（LoRA），在提示编码器中注入低秩适配器，实现参数高效的外科概念分割。在多个外科分割数据集上的实验结果显示，该方法在保持分割精度的同时大幅降低计算消耗，且适配参数更少，为手术场景分割提供了轻量适配方案。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.28487v1",
+      "source": "arxiv",
+      "title": "AuricularWorld: Hierarchical Action-Guided World Modeling for Fine-Grained Auricular Structure Segmentation from CT Scans",
+      "abstract": "Fine-grained segmentation of auricular structures in CT is challenging because the ear occupies a small image region, cartilage boundaries are highly irregular, and interfaces between cartilage and surrounding soft tissues are often ambiguous. Clinical annotations may also include both composite structures containing cartilage and adjacent skin and their corresponding cartilage-only regions, producing nested and overlapping labels. We propose a world-model-based segmentation framework that enables iterative anatomical reasoning beyond conventional feed-forward prediction. Built on an encoder-decoder architecture, the framework introduces a deterministic recurrent state-space model into the intermediate latent space. Multi-scale encoder features and partially decoded representations are fused to form a structural observation that initializes the latent dynamics. During inference, the model performs a three-step latent rollout without ground-truth guidance. Hierarchical anatomical actions update the recurrent state and progressively refine the latent representation. The resulting latent trajectory is projected back into the decoder and combined with high-resolution features to produce the final segmentation. To learn reliable latent transitions, we introduce a balanced hierarchical action objective that addresses foreground sparsity, missing anatomical groups, and imbalance between add and remove operations. Extensive experiments show that the proposed framework consistently improves segmentation accuracy and reduces HD95 by more than 43% for small, irregular, and overlapping auricular structures in CT. These results demonstrate the effectiveness of latent world-model reasoning for challenging medical image segmentation.",
+      "authors": [
+        "Jingwen Yang",
+        "Senmao Wang",
+        "Luoyao Kang",
+        "Runmeng Cui",
+        "Keying Zhang",
+        "Yunjia Bao",
+        "Haifan Gong",
+        "Lin Lin",
+        "Haiyue Jiang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-30T16:38:30+00:00",
+      "link": "https://arxiv.org/pdf/2607.28487v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Proposes a world-model-based framework for fine-grained auricular structure segmentation in CT, a deep learning model for medical image segmentation.",
+      "llm_evidence_cn": "提出基于世界模型的框架用于CT中精细耳部结构分割，是一种医学图像分割深度学习模型。",
+      "llm_evidence": "提出基于世界模型的框架用于CT中精细耳部结构分割，是一种医学图像分割深度学习模型。",
+      "canonical_evidence": "提出基于世界模型的框架用于CT中精细耳部结构分割，是一种医学图像分割深度学习模型。",
+      "llm_tldr_en": "This paper introduces a world-model-based iterative reasoning framework for fine-grained ear structure segmentation in CT, handling nested labels and ambiguous boundaries through action-guided state transitions.",
+      "llm_tldr_cn": "耳部结构在CT中边界模糊、区域小、标注可能嵌套重叠，传统前馈网络难以处理。本文提出基于世界模型的迭代推理分割框架，引入确定性循环状态空间模型，通过动作引导状态转移逐步细化分割。该方法有效处理了嵌套标签和模糊界面，实验表明在耳部结构分割上优于前馈基线，为复杂解剖结构分割提供了新范式。",
+      "llm_tldr": "耳部结构在CT中边界模糊、区域小、标注可能嵌套重叠，传统前馈网络难以处理。本文提出基于世界模型的迭代推理分割框架，引入确定性循环状态空间模型，通过动作引导状态转移逐步细化分割。该方法有效处理了嵌套标签和模糊界面，实验表明在耳部结构分割上优于前馈基线，为复杂解剖结构分割提供了新范式。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": []
+}
