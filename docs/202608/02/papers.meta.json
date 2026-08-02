@@ -1,0 +1,24 @@
+{
+  "label": "2026-08-02",
+  "date": "2026-08-02",
+  "generated_at": "2026-08-02T20:21:14",
+  "count": 1,
+  "papers": [
+    {
+      "paper_id": "202608/02/2607.27154v1-anatomy-contextualized-adaption-of-ct-foundation-models",
+      "section": "quick",
+      "title_en": "Anatomy Contextualized Adaption of CT Foundation Models",
+      "authors": "Roshan Kenia, Stephanie L McNamara, William Lotter",
+      "date": "2026-07-29",
+      "pdf": "https://arxiv.org/pdf/2607.27154v1",
+      "score": "7.0",
+      "evidence": "使用TotalSegmentator对CT进行多器官分解以实现解剖级适配",
+      "tldr": "CT视觉语言基础模型常使用全容积表示进行预训练，这会导致细粒度解剖信息被忽略，限制了其在疾病发现等任务上的性能。现有的细粒度视觉语言对齐方法通过提取解剖级特征改善了局部信息，但抛弃了全局扫描上下文，并且通常需要从头训练，计算成本高昂。本文提出解剖上下文适应（ACA）框架，它冻结已有的CT基础模型，利用TotalSegmentator将CT扫描分解为各解剖部位的嵌入，然后通过一个交互式Transformer建模跨解剖关系，并将这些嵌入同时与放射学报告中的扫描级和解剖级文本进行对齐。在Merlin和CT-RATE两个基准上评估，ACA在零样本发现分类任务中一致地超越了冻结的基础模型和现有的细粒度方法，且训练极其轻量——在嵌入预缓存后仅需不到一小时。此外，学习到的跨解剖注意力权重展示了合理的上下文路由。综上所述，ACA为高效适配CT基础模型以实现解剖感知的视觉语言对齐提供了一种新方案，同时保留并增强了全局解剖语境。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "CT vision-language foundation models have demonstrated promising performance across downstream tasks, but are typically trained with whole-volume representations that dilute fine-grained anatomical signals. Fine-grained vision-language pre-training addresses this by aligning anatomy-level visual features with anatomy-specific text, but in doing so discards the global context that whole-volume models provide. Furthermore, existing fine-grained approaches train from scratch, making them computationally expensive. We introduce Anatomy Contextualized Adaptation (ACA), a lightweight framework that adapts frozen CT foundation model representations for anatomy-level vision-language alignment while enhancing global contextualization. ACA uses TotalSegmentator to decompose CT volumes into anatomy-level embeddings, which are refined via a transformer that captures cross-anatomy relationships, and aligned to both per-anatomy and scan-level text extracted from radiology reports. Evaluated on Merlin and CT-RATE, ACA consistently outperforms both the frozen foundation model baselines and existing fine-grained methods in zero-shot finding classification, while requiring less than one hour of training once embeddings are cached. The attention weights learned by ACA's inter-anatomy transformer additionally indicate plausible cross-anatomy context routing. Altogether, these results support ACA as a lightweight approach for adapting CT foundation models to anatomically grounded vision-language alignment while preserving and enhancing global anatomical context.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

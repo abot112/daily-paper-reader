@@ -1,0 +1,55 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-02T20:19:05.409648+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2607.27154v1",
+      "source": "arxiv",
+      "title": "Anatomy Contextualized Adaption of CT Foundation Models",
+      "abstract": "CT vision-language foundation models have demonstrated promising performance across downstream tasks, but are typically trained with whole-volume representations that dilute fine-grained anatomical signals. Fine-grained vision-language pre-training addresses this by aligning anatomy-level visual features with anatomy-specific text, but in doing so discards the global context that whole-volume models provide. Furthermore, existing fine-grained approaches train from scratch, making them computationally expensive. We introduce Anatomy Contextualized Adaptation (ACA), a lightweight framework that adapts frozen CT foundation model representations for anatomy-level vision-language alignment while enhancing global contextualization. ACA uses TotalSegmentator to decompose CT volumes into anatomy-level embeddings, which are refined via a transformer that captures cross-anatomy relationships, and aligned to both per-anatomy and scan-level text extracted from radiology reports. Evaluated on Merlin and CT-RATE, ACA consistently outperforms both the frozen foundation model baselines and existing fine-grained methods in zero-shot finding classification, while requiring less than one hour of training once embeddings are cached. The attention weights learned by ACA's inter-anatomy transformer additionally indicate plausible cross-anatomy context routing. Altogether, these results support ACA as a lightweight approach for adapting CT foundation models to anatomically grounded vision-language alignment while preserving and enhancing global anatomical context.",
+      "authors": [
+        "Roshan Kenia",
+        "Stephanie L McNamara",
+        "William Lotter"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-07-29T17:32:57+00:00",
+      "link": "https://arxiv.org/pdf/2607.27154v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "uses TotalSegmentator for multi-organ decomposition in CT to enable anatomy-level adaptation",
+      "llm_evidence_cn": "使用TotalSegmentator对CT进行多器官分解以实现解剖级适配",
+      "llm_evidence": "使用TotalSegmentator对CT进行多器官分解以实现解剖级适配",
+      "canonical_evidence": "使用TotalSegmentator对CT进行多器官分解以实现解剖级适配",
+      "llm_tldr_en": "Proposes Anatomy Contextualized Adaptation (ACA) to adapt frozen CT foundation models for fine-grained anatomy-level vision-language alignment, enhancing global contextualization and efficiency.",
+      "llm_tldr_cn": "针对CT基础模型全局表示稀释细粒度解剖信号的问题，本文提出解剖上下文适配（ACA）框架，利用TotalSegmentator分解CT为解剖区域，将冻结的CT基础模型适配到解剖级视觉-语言对齐，同时增强全局上下文。该方法在多个下游任务中展现了性能提升和计算效率，为CT影像的细粒度分析提供了有效途径。",
+      "llm_tldr": "针对CT基础模型全局表示稀释细粒度解剖信号的问题，本文提出解剖上下文适配（ACA）框架，利用TotalSegmentator分解CT为解剖区域，将冻结的CT基础模型适配到解剖级视觉-语言对齐，同时增强全局上下文。该方法在多个下游任务中展现了性能提升和计算效率，为CT影像的细粒度分析提供了有效途径。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "multi-organ segmentation in abdominal CT scans",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
