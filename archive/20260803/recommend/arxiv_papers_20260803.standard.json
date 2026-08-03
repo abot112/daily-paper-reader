@@ -1,0 +1,53 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-03T21:22:25.327924+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2607.29059v1",
+      "source": "arxiv",
+      "title": "Learning from Adversity: Semantic-Aware Mask Refinement through Adversarial Perturbation",
+      "abstract": "Despite significant advances in image segmentation, even state-of-the-art models produce masks with imperfect boundaries, semantic inconsistencies, and structural errors. Mask refinement addresses these limitations, yet current approaches rely on simplistic synthetic noise that fails to capture the complex error patterns of real segmentation models. We introduce Phoenix, a novel framework that leverages adversarial learning to generate semantically meaningful noise patterns and contrastive learning to model refinement relationships. Our approach consists of two key innovations: (1) Adversarial Mask Perturbation, which employs embedding attacks to create semantic-aware noise that mimics real segmentation errors, and (2) Contrastive Mask Refinement Learning, which establishes a tri-directional framework that ensures feature consistency within semantic regions while maintaining separation between classes. Experiments demonstrate that Phoenix significantly outperforms existing methods across diverse tasks, while consistently enhancing state-of-the-art segmentation models with substantial improvements. Our code and project page are publicly available at https://phoenix-eccv26.github.io.",
+      "authors": [
+        "Beomyoung Kim",
+        "Sung Ju Hwang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-31T06:26:37+00:00",
+      "link": "https://arxiv.org/pdf/2607.29059v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "mask refinement for segmentation",
+      "llm_evidence_cn": "分割掩码细化方法可用于全监督分割",
+      "llm_evidence": "分割掩码细化方法可用于全监督分割",
+      "canonical_evidence": "分割掩码细化方法可用于全监督分割",
+      "llm_tldr_en": "Proposes Phoenix, an adversarial and contrastive learning framework to refine segmentation masks by generating semantic-aware noise that mimics real errors, improving mask quality for any segmentation model.",
+      "llm_tldr_cn": "针对分割模型仍会产生边界不完美和语义不一致掩码的问题，本文提出Phoenix框架，通过对抗学习生成语义感知的噪声模式来模拟真实分割错误，并利用对比学习建模细化关系。实验表明，该方法能有效提升掩码质量，为全监督分割任务中的预测后处理提供了通用改进方案。",
+      "llm_tldr": "针对分割模型仍会产生边界不完美和语义不一致掩码的问题，本文提出Phoenix框架，通过对抗学习生成语义感知的噪声模式来模拟真实分割错误，并利用对比学习建模细化关系。实验表明，该方法能有效提升掩码质量，为全监督分割任务中的预测后处理提供了通用改进方案。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "supervised training of neural networks for segmentation",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

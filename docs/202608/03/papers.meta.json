@@ -1,0 +1,24 @@
+{
+  "label": "2026-08-03",
+  "date": "2026-08-03",
+  "generated_at": "2026-08-03T21:25:40",
+  "count": 1,
+  "papers": [
+    {
+      "paper_id": "202608/03/2607.29059v1-learning-from-adversity-semantic-aware-mask-refinement-through-adversarial-perturbation",
+      "section": "quick",
+      "title_en": "Learning from Adversity: Semantic-Aware Mask Refinement through Adversarial Perturbation",
+      "authors": "Beomyoung Kim, Sung Ju Hwang",
+      "date": "2026-07-31",
+      "pdf": "https://arxiv.org/pdf/2607.29059v1",
+      "score": "6.0",
+      "evidence": "分割掩码细化方法可用于全监督分割",
+      "tldr": "尽管深度学习推动图像分割取得巨大进展，但分割掩码仍普遍存在边界模糊、语义不一致和结构错误，影响下游任务。现有掩码细化方法多采用简单合成噪声，无法模拟真实分割模型的复杂错误分布，导致实际细化效果有限。本文提出Phoenix框架，创新地将对抗扰动与对比学习结合：首先通过对抗掩码扰动，利用嵌入攻击在特征空间生成语义感知的噪声模式，高度模拟真实分割错误；然后采用对比掩码细化学习，建立三向对比损失，确保同一语义区域内特征一致、不同类别特征分离。在多个分割基准上的实验表明，Phoenix显著优于现有细化方法，并能为多种最先进分割模型（如DeepLab系列、Mask2Former）带来稳定性能提升，代码已开源。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "Despite significant advances in image segmentation, even state-of-the-art models produce masks with imperfect boundaries, semantic inconsistencies, and structural errors. Mask refinement addresses these limitations, yet current approaches rely on simplistic synthetic noise that fails to capture the complex error patterns of real segmentation models. We introduce Phoenix, a novel framework that leverages adversarial learning to generate semantically meaningful noise patterns and contrastive learning to model refinement relationships. Our approach consists of two key innovations: (1) Adversarial Mask Perturbation, which employs embedding attacks to create semantic-aware noise that mimics real segmentation errors, and (2) Contrastive Mask Refinement Learning, which establishes a tri-directional framework that ensures feature consistency within semantic regions while maintaining separation between classes. Experiments demonstrate that Phoenix significantly outperforms existing methods across diverse tasks, while consistently enhancing state-of-the-art segmentation models with substantial improvements. Our code and project page are publicly available at https://phoenix-eccv26.github.io.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
