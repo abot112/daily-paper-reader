@@ -1,0 +1,24 @@
+{
+  "label": "2026-08-04",
+  "date": "2026-08-04",
+  "generated_at": "2026-08-04T21:51:12",
+  "count": 1,
+  "papers": [
+    {
+      "paper_id": "202608/04/2607.26196v1-rad-jepa-3d-radiology-joint-embedding-predictive-model-for-3d-computed-tomography",
+      "section": "quick",
+      "title_en": "Rad-JEPA 3D: Radiology Joint-Embedding Predictive Model for 3D Computed Tomography",
+      "authors": "Quoc-Huy Trinh, Minh-Van Nguyen, Ulas Bagci",
+      "date": "2026-07-28",
+      "pdf": "https://arxiv.org/pdf/2607.26196v1",
+      "score": "7.0",
+      "evidence": "在3D CT体积上进行自监督预训练，学习对下游器官分割任务有益的表征",
+      "tldr": "针对3D CT自监督预训练中空间结构易丢失的问题，提出Rad-JEPA 3D联合嵌入预测框架，通过掩码视图预测完整扫描的潜在特征。核心混合H-Mamba编码器融合Mamba状态空间分支与注意力分支，并采用隐藏状态正交正则化减少冗余。基于120k CT预训练，仅4B参数即在封闭式VQA和空间推理基准取得最优空间推理结果。表明诱导空间结构可弥补语言模型规模，为医学图像分析提供高效预训练方案。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "Self-supervised pretraining is central to 3D medical image analysis, where unlabeled CT volumes are abundant but expert annotations are scarce. Yet existing volumetric encoders often fail to preserve the coarse spatial and geometric structure that downstream reasoning depends on, limiting their performance on organ disentanglement, abnormality detection, and spatial understanding when paired with language models. We introduce Rad-JEPA 3D, a joint-embedding predictive framework that learns volumetric CT representations by predicting the latent features of a complete scan from a masked view. At its core is a hybrid H-Mamba encoder that fuses a Mamba state-space branch, which models inter-slice continuity through sequential scanning, with a grouped-query attention branch, which captures cross-plane spatial context, combined through a lightweight per-token router. To improve the quality of intermediate representations, we further propose Hidden States Orthogonal Regularization (HSOR), which aligns student-teacher hidden states and reduces feature redundancy throughout the encoder. This layer-wise regularization produces more consistent and discriminative volumetric representations, leading to improved performance on organ recognition and spatial reasoning tasks. Pretrained on approximately 120,000 CT scans, Rad-JEPA 3D attains state-of-the-art results despite its compact size: with only 4.0B total parameters, it achieves competitive results with state-of-the-art on closed-ended VQA and the best average spatial-reasoning score on the Spatial-Med benchmark. Ablation studies confirm that the hybrid block and HSOR contribute complementary gains, and that the induced spatial structure can substitute for raw language-model scale on volumetric reasoning tasks.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

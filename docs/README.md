@@ -6,26 +6,26 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-08-03
-- 运行时间：2026-08-03 21:25:22 UTC
+- 最新运行日期：2026-08-04
+- 运行时间：2026-08-04 21:51:02 UTC
 - 运行状态：成功
 - 本次总论文数：1
 - 精读区：0
 - 速读区：1
 
 ### 今日简报（AI）
-今天速读了一篇论文，探讨如何通过对抗扰动让模型从逆境中学习，以细化语义感知的分割掩码。  
-该工作的核心亮点在于：用精心设计的干扰反向优化掩码，显著提升了分割结果在语义上的一致性与精准度。  
-建议关注对抗训练在像素级任务中的潜力，可尝试将其融入自己的分割流程来改善边缘细节。
-- 详情：[/202608/03/README](/202608/03/README)
+今快速浏览了《Rad-JEPA 3D》——一篇用放射学联合嵌入预测做三维CT自监督学习的论文。  
+论文亮点是让模型像放射科医生一样，通过预测CT体积中被遮蔽的组织表征来学习通用视觉特征，在多个下游任务上表现不错。  
+想跟进医学影像AI的读者，不妨关注这类“在3D数据上做上下文预测”的自监督预训练新范式。
+- 详情：[/202608/04/README](/202608/04/README)
 
 ### 精读区论文标签
 - 本次无精读推荐。
 
 ### 速读区论文标签
-1. [Learning from Adversity: Semantic-Aware Mask Refinement through Adversarial Perturbation](/202608/03/2607.29059v1-learning-from-adversity-semantic-aware-mask-refinement-through-adversarial-perturbation)  
-   标签：评分：6.0/10、query:abdk-seg
-   evidence：分割掩码细化方法可用于全监督分割
+1. [Rad-JEPA 3D: Radiology Joint-Embedding Predictive Model for 3D Computed Tomography](/202608/04/2607.26196v1-rad-jepa-3d-radiology-joint-embedding-predictive-model-for-3d-computed-tomography)  
+   标签：评分：7.0/10、query:abdk-seg
+   evidence：在3D CT体积上进行自监督预训练，学习对下游器官分割任务有益的表征
 
 
 <div class="dpr-home-promo-card">
