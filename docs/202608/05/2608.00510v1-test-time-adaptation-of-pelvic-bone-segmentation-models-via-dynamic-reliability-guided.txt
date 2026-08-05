@@ -1,0 +1,385 @@
+Title: Test-time Adaptation of Pelvic Bone Segmentation Models via Dynamic Reliability-Guided
+
+URL Source: https://arxiv.org/pdf/2608.00510v1
+
+Published Time: Tue, 04 Aug 2026 00:31:02 GMT
+
+Number of Pages: 10
+
+Markdown Content:
+# Test-time Adaptation of Pelvic Bone Segmentation Models via Dynamic Reliability-Guided 
+
+Ling Ren 1, Chao Deng 1⋆, Ziming Wang 1, Yuecong Xu 2, and Kai Zheng 3 
+
+> 1
+
+College of Automation, Nanjing University of Posts and Telecommunications, Nanjing 210003, China  
+
+> 2
+
+Department of Electrical and Computer Engineering, National University of Singapore, Singapore 117583  
+
+> 3
+
+State Key Laboratory Cultivation Base of Research, Prevention and Treatment for Oral Diseases, the Affiliated Stomatological Hospital of Nanjing Medical University, Nanjing 210029, China 
+
+Abstract. Reliable pelvic bone segmentation (PBS) from CT is essen-tial for robot-assisted pelvic trauma surgery, yet deploying a source-trained model to a new hospital suffers from severe performance degrada-tion due to cross-center domain shifts. While test-time adaptation (TTA) enables online model adaptation without accessing source data, existing methods show limited effectiveness for PBS, facing challenges including boundary degradation, anatomical inconsistency under domain shifts, and voxel-level class imbalance. To address these challenges, we propose a novel closed-loop dynamic Reliability-Guided TTA framework (ReGA) for PBS. Specifically, we introduce a pseudo-label reliability criterion termed Segmentation Inference Consistency Evaluation (SICE), which jointly measures region overlap and boundary deviation via dropout-based ensemble predictions. Based on SICE, a trust-weighted refine-ment module adaptively updates features to mitigate boundary errors in pseudo-labels. Furthermore, a confidence-weighted region-level con-trastive learning strategy is proposed to enforce anatomical consistency. Finally, ReGA follows the teacher-student (TS) scheme to alleviate voxel-level class imbalance. Experiments on three heterogeneous 3D pelvic CT datasets demonstrate that ReGA consistently outperforms state-of-the-art TTA methods, enabling effective adaptation of the source-trained PBS model to unseen clinical domains. The code is available at https://github.com/Ren-ling/ReGA. 
+
+Keywords: Test-time adaptation · Segmentation · Pelvic bone CT. 
+
+## 1 Introduction 
+
+Reliable Pelvic Bone Segmentation (PBS) from CT is crucial for the pre-operative planning and intra-operative navigation of robot-assisted pelvic trauma surgery  
+
+> ⋆
+
+Corresponding author. dengchao_neu@126.com arXiv:2608.00510v1 [cs.CV] 1 Aug 2026 2 L. Ren et al. 
+
+[10, 12]. To avoid costly data annotation and repeated model training, deploy-ing a well-trained PBS model to a new hospital is highly desirable. However, discrepancies in imaging devices and patient population heterogeneity introduce severe domain shifts, which lead to performance degradation of the deployed model in the new hospital. Unsupervised domain adaptation methods mitigate domain shift by knowledge transfer to an unlabeled target domain [1, 22] (i.e., a new hospital), improving deployment performances. However, these methods require full access to source domain data, which may raise privacy concerns [9]. To cope with the data privacy issue, source-free domain adaptation (SFDA) methods were introduced to avoid accessing any source data during adapta-tion [8]. Yet SFDA methods typically require sufficient target-domain samples collected offline [18]. In reality, it is usually difficult to obtain such pelvic CT data in a new hospital that aligns with current imaging protocols, as these data arrive in a case-by-case manner. Motivated by test-time adaptation (TTA) that performs continuous online adaptation during the test stage [14], we introduce it in the adaptation of the deployed PBS model. Recently, several studies have explored TTA for medical image data [2, 3, 16, 21, 25]. Most of them achieve adaptation by modifying normalization layers of source-trained models [2, 3] or teacher-student (TS) schemes based on pseudo la-bels [16, 21, 25]. However, these methods exhibit performance degradation when applied in cross-domain PBS due to three major challenges. First, when deployed in a new hospital, a well-trained PBS model struggles to delineate boundaries between adjacent pelvic bones, which exhibit appearance variations across do-mains. Consequently, the prevailing TS schemes are confined by false prediction and error accumulation at these boundaries. Second, as observed from the ground truth (GT), enforcing anatomical consistency is crucial for the reliable adapta-tion of the PBS model. However, existing methods neglect the self-supervised abilities within the target domain to achieve this. Third, PBS faces voxel-level class imbalance, in which the pelvic bones occupy only a small fraction of the vol-ume. The class imbalance causes minor parameter updates during adaptation to be easily dominated by background voxels, impairing segmentation performance. To cope with these challenges for effective TTA in PBS, we propose a novel closed-loop dynamic Re liability-Guided TT A framework ( ReGA ). Prior meth-ods exhibit coarse boundary awareness in the target domain, so we propose a novel pseudo-label reliability criterion termed Segmentation Inference Consis-tency Evaluation (SICE). The SICE measures dropout-based ensemble segmen-tation consistency by considering region overlap and boundary deviation through Dice and Hausdorff distance metrics, further calibrated by confidence scores to improve assessing prediction quality. Based on SICE, a Trust-Weighted Adaptive Feature Refinement (TAFR) module selects high-SICE features from a memory bank, fusing them with the current testing sample to refine pseudo-labels. Fur-thermore, to enforce anatomical consistency under domain shifts, we propose a Region-Level Contrastive Learning (RCL) module that contrasts trust-aware re-gional centroids. To this end, ReGA follows the TS scheme, which is commonly used in class imbalance segmentation and provides target-specific supervision. TTA of PBS models via Dynamic Reliability-Guided 3𝐿 𝑟𝑒        
+
+> 𝑝 𝑖
+> ′
+> 𝑝 𝑖
+> 𝐿 𝑚
+> 𝑝 𝑖
+> ′′
+> EMA
+> 𝜑 𝑡
+> 𝜃 መ𝑡
+> Feature refinement flow Model updating flow
+> Dynamic adaptation flow
+> Training Institute
+> Testing Institute
+> Testing sample 𝑥 𝑖
+> 𝑡
+> initialize
+> Contrastive learning flow
+> TAFR TAFR
+> 𝑧 𝑖
+> ′
+> 𝜃 𝑡
+> 𝑧 𝑖
+> RCL 𝐿 𝑟c
+> Region -Level Contrastive Learning （RCL ）
+> 𝐿 𝑟c
+> feature map of 𝑧 𝑖
+> Region centroid computing
+> SICE
+> Centroid contrastive
+
+Fig. 1. Overall process of the proposed ReGA. During adaptation, the features of a testing sample xti extracted by the encoder of the PBS model θt (initialized at the training institute) are refined by TAFR (see Fig. 2). The refined features then replace those of the model θˆt copied from θt to generate refined predictions. With the SICE score from CSCS (see Fig. 2) and the feature map of zi, region centroids are computed for region-level contrastive learning. Finally, θt is optimized by minimizing the refined pseudo-label loss Lre , mean teacher loss Lm and contrastive loss Lrc .
+
+In summary, our contributions are threefold. First, to the best of our knowl-edge, we propose the first TTA framework for PBS, named ReGA, which enables effective adaptation to unseen clinical domains. Second, we propose a closed-loop reliability-guided refinement scheme to address boundary degradation during on-line adaptation. In addition, a confidence-weighted region-level contrastive loss is introduced to enforce anatomical feature consistency across pelvic regions. Fi-nally, extensive experiments on three 3D pelvic CT datasets demonstrate that ReGA outperforms state-of-the-art TTA methods. edge    
+
+> detection
+> edge
+> detection
+> poor good
+> 𝜃 𝑡
+> Ktimes dropout
+> Calibrated Segmentation Consistency Scoring (CSCS)
+> ...
+> scores
+> ෠𝜃 𝑡
+> Feature bank M
+
+... 
+
+...          
+
+> 𝑤 0𝑤 n−1𝑤 1𝑤 n−2
+> 𝑧 𝑖
+> 𝑠𝑖𝑐𝑒 𝑖 −𝑏𝑎𝑠𝑒𝑑
+> 𝑢𝑝𝑑𝑎𝑡𝑒
+> (1－)
+> 𝑧 𝑖
+> ′
+> 𝑧 1𝑧 𝑛 −2𝑧 𝑛 −1𝑧 0
+> Trust -Weighted Adaptive Feature Refinement
+> (TAFR)
+> SICE
+> SICE
+> Central
+> patch 𝑥 𝑖 𝑝
+> 𝑡
+> 𝑃 𝑖
+> ෠𝑃 𝑖 𝑘 ෠𝐵 𝑖 𝑘
+> crop
+> 𝐵 𝑖
+
+Fig. 2. Overview of the CSCS and TAFR module. In CSCS, the test sample xti is centrally cropped to obtain xtip , which is passed through θt with K-times dropout for multiple inferences. These inferences, along with the edges extracted using the Canny operator, are combined to compute SICE. In TAFR, latent features of high SICE are dynamically accumulated into a feature bank M . The current feature is then adaptively refined through weighted fusion with those from the bank, guided by SICE and cosine similarity, to achieve adaptation. 4 L. Ren et al. 
+
+## 2 Methodology 
+
+Given a PBS model θt trained on a source domain dataset Ds = {(xsi , y si )}N s
+
+> i=1
+
+,where xsi is a 3D tensor and ysi is a densely labeled 3D segmentation mask, with 
+
+N s representing the number of samples in the source domain. Let the unlabeled target domain dataset for testing be denoted as Dt = {xti}N t 
+
+> i=1
+
+and N t represents the number of samples in the target domain, which has a distribution shift from 
+
+Ds. The goal of this paper is to adapt θt in an online manner within each batch 
+
+Bj = {xti}Bi=1 from Dt, where j ∈ 1, . . . , N t/B and B denotes the batch size. To achieve this, we propose ReGA for the adaptation of the PBS model on Dt, as illustrated in Fig. 1. 
+
+2.1 Calibrated Segmentation Consistency Scoring 
+
+The performance of PBS models is commonly evaluated using the Dice coefficient and the Hausdorff distance. In real-world inference, where GT for test samples are unavailable, automated performance evaluation becomes crucial. Although Monte Carlo (MC) dropout [4] offers uncertainty estimates through multiple forward passes, these uncertainty maps do not directly reflect the segmentation accuracy, particularly of boundary delineation. Motivated by prior studies [7, 25] that demonstrate a correlation between prediction variance under dropout and testing errors, we propose Calibrated Segmentation Consistency Scoring (CSCS) to calculate SICE to evaluate the re-liability of pseudo-labels generated by the target model during adaptation. SICE introduces a boundary-oriented indicator to provide a more precise assessment of segmentation quality. Specifically, let ˆθtk denote the target model θt parameters with the k-th MC dropout. As shown in Fig. 2, given a test sample xti, the central patch xtip is fed into θt and its k-th dropout version ˆθtk, yielding predictions Pi = f (θt, x tip )
+
+and ˆPik = f (ˆθtk, x tip ), respectively. To explicitly characterize boundary discrep-ancies, edge maps are extracted from Pi and ˆP i k using the Canny operator [19], producing Bi = Canny( Pi) and ˆBik = Canny( ˆP i k). The proposed SICE score is formulated as a weighted combination of the volumetric segmentation con-sistency ( Sv ) and the boundary discrepancy ( Sb). The volumetric consistency metric is defined as 
+
+S(x, ˆx) = 1
+
+K · L
+
+> K
+
+X
+
+> k=1
+> L−1
+
+X
+
+> l=0
+
+2 P 
+
+> v∈Ω
+
+xlv · ˆxlk,v 
+
+P 
+
+> v∈Ω
+
+xlv + P 
+
+> v∈Ω
+
+ˆxlk,v 
+
+, (1) where Ω represents the set of voxel indices, with v = ( h, w, d ) ∈ Ω denoting the index of each voxel, K is the number of dropout forward passes and L is the num-ber of classes. xlv and ˆxlk,v denote the predicted probability and those obtained by the k-th dropout version for the l-th class of the v-th voxel, respectively. By instantiating S(·, ·) with the segmentation outputs, the volumetric seg-mentation consistency is obtained as 
+
+Sv = S(Pi, ˆPik ). (2) TTA of PBS models via Dynamic Reliability-Guided 5
+
+Subsequently, the boundary consistency measure Sb is computed as 
+
+Sb = max 
+
+
+
+Pγ (Bi, ˆBik ), P γ ( ˆBik , B i)
+
+
+
+, (3) where Pγ (Bi, ˆBik ) denotes the γ percentile of the minimum distances from all voxels in the boundary voxel sets Bi to set ˆBik , and Pγ ( ˆBik , B i) denotes the calculation in the revise direction. Finally, the reliability score Ri for the current testing sample xti is defined as 
+
+Ri = λ1Sv + λ2 exp ( −Sb/α ) , (4) where λ1 and λ2 weight region- and boundary-level consistency, respectively, and 
+
+α modulates the sensitivity to boundary deviations. The dropout-based inference often exhibits high consensus in the interior regions of the target domain predictions, whereas discrepancies are primarily concentrated at the boundaries [17]. Consequently, Sv tends to overestimate the true segmentation performance. Thus, we introduce a calibrating coefficient 
+
+λ ∈ (0 , 1) to calibrate the estimation based on the overall confidence as follows 
+
+λ = 1 − 1
+
+|Ω| log C
+
+X
+
+> v∈Ω
+
+−
+
+> L
+
+X
+
+> l=0
+
+¯Pv,l log ¯Pv,l 
+
+!
+
+, (5) where ¯P = 1
+
+> K
+
+PKk=1 ˆPik denotes the ensemble prediction map and log C is the maximum entropy value used for normalization. The proposed SICE of the cur-rent testing sample xti is formulated as SICE i = λ · Ri, which is used to select high-confidence samples and guide the subsequent adaptation process. 
+
+2.2 Trust-Weighted Adaptive Feature Refinement 
+
+As shown by the previous method [24], explicit feature alignment from well-predicted samples helps minimize the domain gap for other testing samples. Thus, we propose a trust-weighted refinement module with a dynamic feature bank that stores high-quality target domain representations and applies trust-weighted fusion for feature correction. As described in Fig. 2, the dynamic feature bank M comprises {Zi}n−1 
+
+> i=0
+
+,where Zi = f (θte, x ti) and M are updated using a first-in-first-out principle to ensure adaptability to the distribution of the incoming test sample. Specifically, when SICE i exceeds the τ percentile of SICE values of all previous samples before time step t, Zi is incorporated into the feature bank M .For a new testing sample xti, the cosine similarity between Zi and the jth 
+
+feature Zj in M is computed as sim (Zi, Z j ). Then Zi is updated as a trust-weighted combination of Zi and the feature Zf , where Zf = Pn−1 
+
+> j=0
+
+Wj · Zj
+
+represents the reference feature from the dynamic bank based on the cosine similarity and Wj = sim (Zi, Z j )/ P 
+
+> j
+
+sim (Zi, Z j ). To encourage the retention of original features for well-predicted samples, while replacing those with poor predictions, the refined feature Z′ 
+
+> i
+
+is defined as 
+
+Z′ 
+
+> i
+
+= w(SICE i) · Zi + (1 − w(SICE i)) · Zf , (6) where w(·) represents the normalization operation. The refined feature Z′ 
+
+> i
+
+is then sent to the student model θˆt to obtain a refined prediction p′
+
+> i
+
+.6 L. Ren et al. 
+
+2.3 Region-Level Contrastive Learning 
+
+In the context of domain adaptation for segmentation models, prior works [20, 23] have utilized pseudo labels to perform contrastive learning for a more com-pact target feature distribution. With this intuition, we propose the RCL module to enforce anatomical consistency. Rather than relying on voxel-level represen-tations, the region centroid is utilized to represent the entire region for reduc-ing computational cost. Additionally, we dynamically assign weights to voxels based on prediction confidence and refined with the SICE score. Formally, the confidence-weighted centroid of class l is computed as 
+
+cl =
+
+P 
+
+> j∈Ω
+
+fj (Zi) · I(ˆ yj = l) · (1 − Ei) · SICE i(l)
+
+P 
+
+> j∈Ω
+
+I(ˆ yj = l) , (7) where fj is the feature map of Zi at voxel j, I (·) is the indicator function, ˆyj is the prediction label from the target model θt at voxel j, Ei is the entropy-based uncertainty score, and SICE i(l) denotes the SICE sore for class l.Then, the learning objective for anatomical consistency is formulated as 
+
+Lrc = − 1
+
+L
+
+> L−1
+
+X
+
+> l=0
+
+log exp( sim (cl, cl)) 
+
+PL−1 
+
+> m=0 ,m ̸=l
+
+exp( sim (cl, cm)) , (8) where sim (u, v) = ( u⊤v)/(∥u∥∥ v∥ · T ) denotes the cosine similarity scaled by a temperature parameter T .
+
+2.4 Self-Adaptive Model Updating 
+
+Although TAFR contributes to producing generally reliable pseudo labels, the gradients can vary significantly across different testing batches, which causes instability during adaptation. In line with established protocol in TTA [14, 15], we adopt a mean teacher model to improve stability. At the time step t = 0 , the mean teacher model ϕt is initialized to be the same as the source pre-trained model θt, i.e., ϕ0 = θ0. Since the traditional mean teacher updated with a constant Exponential Moving Average (EMA) rate fails to effectively handle the dynamic changes in data quality during TTA, we propose a SICE-aware updating rule with an adaptive EMA rate as follows 
+
+ϕt+1 = (1 − SICE i) · ϕt + SICE i · θt+1 , (9) where θt+1 are the updated student model at the current adaptation step t.To handle potential noise in the refined prediction p′
+
+> i
+
+, the loss is weighted by 
+
+SICE i to suppress the contribution of poorly adapted samples. The total training loss for our proposed ReGA is defined as 
+
+LReGA = 1
+
+B
+
+> B
+
+X
+
+> i=1
+
+(Lm(p′′  
+
+> i
+
+, p i) + SICE i · Lre (p′
+
+> i
+
+, p i) + βL rc ) , (10) where p′′  
+
+> i
+
+denotes teacher predictions, Lm and Lre correspond to the mean teacher and refined pseudo-label losses implemented with Dice and cross-entropy, and β is a tradeoff hyperparameter. For each batch, a back-propagation step is performed using LReGA , followed by a forward pass with the updated student model θt+1 to generate the final segmentation results. TTA of PBS models via Dynamic Reliability-Guided 7                                                         
+
+> Table 1. Comparison of different TTA methods for cross-domain PBS. Methods CLINIC →KITS19 CLINIC →MSD T10
+> Dice ↑HD95 ↓ASD ↓Dice ↑HD95 ↓ASD ↓
+> Source Only 19 .7±9.5112 .7±20 .867 .2±24 .613 .8±6.9149 .3±25 .756 .3±22 .2
+> Target Only 97 .8±4.632 .2±16 .518 .7±12 .191 .5±5.133 .7±13 .519 .4±9.2
+> TENT [14] 24 .9±7.9190 .6±66 .162 .9±27 .425 .8±12 .7171 .0±53 .367 .4±25 .9
+> InTEnt [3] 23 .4±6.2210 .6±87 .165 .4±30 .225 .1±10 .0171 .9±61 .369 .4±25 .6
+> VPTTA [2] 24 .3±6.1200 .7±72 .663 .6±31 .125 .8±12 .6172 .0±53 .668 .0±29 .8
+> CoTTA [15] 24 .6±7.6192 .4±63 .064 .1±29 .025 .1±11 .6159 .8±62 .063 .2±30 .4
+> TEGDA [25] 24 .3±10 .0187 .7±67 .363 .4±27 .725 .8±10 .3168 .0±63 .262 .1±29 .3
+> Ours 32.1 ±7.3 160.4 ±42.8 57.9 ±29.5 26.4 ±12.0 143.9 ±70.1 54.2 ±35.4
+
+## 3 Experiments and Results 
+
+Datasets and Implementation Details. We extensively evaluate the pro-posed ReGA on cross-domain PBS with three sub-datasets of the public dataset CTPelvic1K [11], including 1) MSD_T10: 155 cases collected from the 10th sub-dataset of Medical Segmentation Decathlon [13], 2) KITS19: 44 pelvic CT scans comes from the Kits19 challenge [5], and 3) CLINIC: 103 pelvic CT scans col-lected from an orthopedic hospital without metal artifacts. The three datasets comprise four segmentation classes: sacrum, left hip, right hip, and lumbar spine. The source model was trained for 400 epochs using the cascaded 3D UNet from nnUNet [6], and the best validation checkpoint was adopted for adaptation. In ReGA, we set a dropout rate of 0.5, the batch size B = 1 , the dropout number 
+
+K = 5 , the feature bank length M = 10 , γ = 95 for calculating Sb, τ = 70 
+
+for sample filtering in TAFR, and the tradeoff hyperparameter β = 0 .01 . The evaluation metrics are volume-level Dice coefficient, 95th percentile of Hausdorff Distance (HD95), and Average Symmetric Surface Distance (ASD). All models are trained on a single NVIDIA GeForce RTX 4090 24 GB GPU. 
+
+Comparison with State-of-the-art TTA Methods. We selected five state-of-the-art methods for detailed comparison, including normalization-based meth-ods TENT [14], InTEnt [3], and VPTTA [2]; as well as TS schemes CoTTA [15] and TEGDA [25]. We also report results for the source-only model, obtained by applying the source pre-trained model directly to the target data. Table 1 presents the quantitative results for all comparative methods across different source and target domains. In the CLINIC →KITS19 setting, the source model achieves a Dice coefficient of only 19.7%. In contrast, state-of-the-art TTA meth-ods range from 23.4% to 24.9%, while our ReGA method achieves the highest mean Dice coefficient of 32.1%, a significant improvement of 12.4% over the source model, and outperforms other methods. Moreover, our proposed ReGA achieves the lowest HD95 (160.4) and ASD (57.9) values, indicating improved boundary precision and structural consistency. 
+
+Ablation Study. We conduct an ablation study in Table 2 to evaluate the effectiveness of ReGA. Specifically, w/o Lm, w/o Lre , and w/o Lrc correspond to cases in which the mean-teacher loss, the TAFR module, and the RCL module are disabled during adaptation, respectively. Besides, the variant w/o B indicates 8 L. Ren et al. 
+
+Table 2. Ablation studies of ReGA for cross-domain PBS. Variants CLINIC →KITS19 CLINIC →MSD T10 
+
+DSC ↑ HD95 ↓ ASD ↓ DSC ↑ HD95 ↓ ASD ↓
+
+w/o Lm 31 .4±5.4 221 .5±99 .3 62 .2±37 .4 25 .9±12 .9 163 .9±51 .7 63 .5±25 .4
+
+w/o Lre 32 .0±6.1 229 .6±105 .8 61 .9±41 .2 25 .4±5.7 168 .9±51 .7 66 .3±23 .2
+
+w/o Lrc 31 .5±6.1 224 .1±102 .5 64 .8±38 .8 25 .6±5.4 170 .7±47 .9 68 .4±27 .3
+
+w/o B 31 .1±5.8 225 .1±103 .1 65 .1±37 .1 25 .3±12 .8 166 .6±54 .9 66 .4±26 .8
+
+w/o E 31 .4±6.0 224 .4±102 .7 65 .0±38 .7 25 .1±12 .7 167 .6±54 .8 67 .9±27 .0
+
+Ours 32.1 ±7.3 160.4 ±42.8 57.9 ±29.5 26.4 ±12.0 143.9 ±70.1 54.2 ±35.4 Case A Case C  Case B        
+
+> GT Source only TENT TEGDA VPTTA ReGA
+> Sacrum Left hip Right hip Lumbar spine
+
+Fig. 3. Visualization of segmentation results for different TTA methods. 
+
+that Sb of the SICE score is removed, while w/o E denotes that entropy is used in place of SICE. Ablation results across the three datasets consistently show that each module incrementally enhances segmentation performance. From the obvious improvement in HD95 and ASD compared to the variant w/o B and w/o E, the proposed SICE can successfully evaluate pseudo-label quality, which contributes to the adaptation process. 
+
+Visualization. Fig. 3 presents qualitative comparisons across cases A and C on CLINIC →KITS19, and case B on CLINIC →MSD T10 . Existing TTA methods (e.g., TENT, VPTTA, and TEGDA) struggle to maintain structural consistency and boundary accuracy under domain shifts. In contrast, ReGA better preserves anatomical integrity while achieving sharper boundary delineation. Notably, in Cases A and C, competing methods suffer from left–right inversion errors, while ReGA maintains anatomically consistent predictions. In Case B, ReGA demon-strates improved delineation of the right hip bone, better preserving the struc-tural completeness of the pelvis. 
+
+## 4 Conclusion 
+
+In this paper, we propose ReGA, a dynamic reliability-guided test-time adap-tation framework that addresses three key challenges in cross-domain PBS, i.e., boundary degradation, anatomical inconsistency, and voxel-level class imbalance. By combining pseudo-label reliability estimation with adaptive feature refine-TTA of PBS models via Dynamic Reliability-Guided 9
+
+ment and anatomical consistency enforcement, ReGA achieves online adaptation for the PBS model deployment in new clinical settings. Experimental results on three heterogeneous 3D pelvic CT datasets demonstrate that ReGA outperforms current state-of-the-art methods, highlighting its potential for clinical applica-tions. Future work will focus on refining the boundary extraction strategy to enhance its reliability on more complex anatomical structures. 
+
+## References 
+
+1. Cai, Z., Xin, J., You, C., Shi, P., Dong, S., Dvornek, N., Zheng, N., Duncan, J.: Style mixup enhanced disentanglement learning for unsupervised domain adaptation in medical image segmentation. Medical Image Analysis 101 (103440) (2025) 2. Chen, Z., Pan, Y., Ye, Y., Lu, M., Xia, Y.: Each test image deserves a specific prompt: continual test-time adaptation for 2d medical image segmentation. In: CVPR. pp. 11184–11193 (2024) 3. Dong, H., Konz, N., Gu, H., Mazurowski, M.: Medical image segmentation with in-tent: Integrated entropy weighting for single image test-time adaptation. In: CVPR. pp. 5046–5055 (2024) 4. Gal, Y., Ghahramani, Z.: Dropout as a bayesian approximation: representing model uncertainty in deep learning. In: ICML. pp. 1050–1059. PMLR (2016) 5. Heller, N., et al.: The kits19 challenge data: 300 kidney tumor cases with clin-ical context, ct semantic segmentations, and surgical outcomes. arXiv preprint arXiv:1904.00445 (2019) 6. Isensee, F., Jaeger, P.F., Kohl, S.A., Petersen, J., Maier-Hein, K.H.: nnu-net: a self-configuring method for deep learning-based biomedical image segmentation. Nature methods 18 (2), 203–211 (2021) 7. Lee, T., Chottananurak, S., Gong, T., Lee, S.: Aetta: label-free accuracy estimation for test-time adaptation. In: CVPR. pp. 28643–28652 (2024) 8. Liang, J., Hu, D., Feng, J.: Do we really need to access the source data? source hy-pothesis transfer for unsupervised domain adaptation. In: International conference on machine learning. pp. 6028–6039. PMLR (2020) 9. Litrico, M., Del Bue, A., Morerio, P.: Guiding pseudo-labels with uncertainty esti-mation for source-free unsupervised domain adaptation. In: CVPR. pp. 7640–7650 (2023) 10. Liu, J., Li, H., Zeng, B., Wang, H., Kikinis, R., Joskowicz, L., Chen, X.: An end-to-end geometry-based pipeline for automatic preoperative surgical planning of pelvic fracture reduction and fixation. IEEE Transactions on Medical Imaging 44 (1), 79– 91 (2025) 11. Liu, P., et al.: Deep learning to segment pelvic bones: large-scale ct datasets and baseline models. IJCARS 16 (5), 749–756 (2021) 12. Liu, Y., et al.: Preoperative fracture reduction planning for image-guided pelvic trauma surgery: a comprehensive pipeline with learning. Medical Image Analysis 
+
+102 (103506) (2025) 13. Simpson, A., et al.: A large annotated medical image dataset for the development and evaluation of segmentation algorithms. arXiv preprint arXiv:1902.09063 (2019) 14. Wang, D., Shelhamer, E., Liu, S., Olshausen, B., Darrell, T.: Tent: fully test-time adaptation by entropy minimization. arXiv preprint arXiv:2006.10726 (2020) 15. Wang, Q., Fink, O., Van Gool, L., Dai, D.: Continual test-time domain adaptation. In: CVPR. pp. 7201–7211 (2022) 10 L. Ren et al. 16. Wu, J., Gu, R., Lu, T., Zhang, S., Wang, G.: Upl-tta: Uncertainty-aware pseudo label guided fully test time adaptation for fetal brain segmentation. In: IPMI 2023. LNCS, vol. 13939, pp. 240–252. Springer (2023). https://doi.org/10.1007/978-3-031-34048-2_19 17. Wu, J., et al.: Fpl+: Filtered pseudo label-based unsupervised cross-modality adap-tation for 3d medical image segmentation. IEEE Transactions on Medical Imaging 
+
+43 (9), 3098–3109 (2024) 18. Yang, H., Chen, C., Jiang, M., Liu, Q., Cao, J., Heng, P., Dou, Q.: Dltta: dy-namic learning rate for test-time adaptation on cross-domain medical images. IEEE Transactions on Medical Imaging 41 (12), 3575–3586 (2022) 19. Yang, Y., Zhuang, J., Sun, G., Wang, R., Su, J.: Boundary-guided contrastive learning for semi-supervised medical image segmentation. IEEE Transactions on Medical Imaging 44 (7), 2973–2988 (2025) 20. Yu, Q., Xi, N., Yuan, J., Zhou, Z., Dang, K., Ding, X.: Source-free domain adap-tation for medical image segmentation via prototype-anchored feature alignment and contrastive learning. In: MICCAI 2023. LNCS, vol. 14226, pp. 1–12. Springer (2023). https://doi.org/10.1007/978-3-031-43990-2_1 21. Zhang, G., Qi, X., Wu, J., Yan, B., Wang, G.: Iplc+: Sam-guided iterative pseudo label correction for source-free domain adaptation in medical image segmentation. IEEE Journal of Biomedical and Health Informatics 29 (12), 9060–9072 (2025) 22. Zhang, X., et al.: Mapseg: Unified unsupervised domain adaptation for heteroge-neous medical image segmentation based on 3d masked autoencoding and pseudo-labeling. In: CVPR. pp. 5851–5862 (2024) 23. Zhang, Y., Huang, K., Chen, C., Chen, Q., Heng, P.: Satta: semantic-aware test-time adaptation for cross-domain medical image segmentation. In: MICCAI 2023. LNCS, vol. 14221, pp. 160–171. Springer (2023). https://doi.org/10.1007/978-3-031-43895-0_14 24. Zheng, B., et al.: Dual domain distribution disruption with semantics preservation: Unsupervised domain adaptation for medical image segmentation. Medical Image Analysis 97 (103275) (2024) 25. Zhou, Y., Wu, J., Liao, W., Zhang, S., Zhang, S., Wang, G.: Tegda: test-time evaluation-guided dynamic adaptation for medical image segmenta-tion. In: MICCAI 2025. LNCS, vol. 15965, pp. 628–637. Springer (2026). https://doi.org/10.1007/978-3-032-04978-0_60

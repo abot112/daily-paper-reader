@@ -6,26 +6,32 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-08-04
-- 运行时间：2026-08-04 21:51:02 UTC
+- 最新运行日期：2026-08-05
+- 运行时间：2026-08-05 21:47:22 UTC
 - 运行状态：成功
-- 本次总论文数：1
+- 本次总论文数：3
 - 精读区：0
-- 速读区：1
+- 速读区：3
 
 ### 今日简报（AI）
-今快速浏览了《Rad-JEPA 3D》——一篇用放射学联合嵌入预测做三维CT自监督学习的论文。  
-论文亮点是让模型像放射科医生一样，通过预测CT体积中被遮蔽的组织表征来学习通用视觉特征，在多个下游任务上表现不错。  
-想跟进医学影像AI的读者，不妨关注这类“在3D数据上做上下文预测”的自监督预训练新范式。
-- 详情：[/202608/04/README](/202608/04/README)
+今日速读三篇医学影像论文，聚焦CT/MRI的高效检测分割与模型自适应。  
+值得关注RadYOLO的轻量级3D目标检测和测试时自适应分割方法，两者均获7.0分。  
+普通读者可优先了解YOLO在医学影像的实时化应用，以及动态可靠性引导如何省去重训练。
+- 详情：[/202608/05/README](/202608/05/README)
 
 ### 精读区论文标签
 - 本次无精读推荐。
 
 ### 速读区论文标签
-1. [Rad-JEPA 3D: Radiology Joint-Embedding Predictive Model for 3D Computed Tomography](/202608/04/2607.26196v1-rad-jepa-3d-radiology-joint-embedding-predictive-model-for-3d-computed-tomography)  
+1. [RadYOLO: Computationally Efficient 3D Object Detection and Segmentation in CT and MRI](/202608/05/2608.00508v1-radyolo-computationally-efficient-3d-object-detection-and-segmentation-in-ct-and-mri)  
    标签：评分：7.0/10、query:abdk-seg
-   evidence：在3D CT体积上进行自监督预训练，学习对下游器官分割任务有益的表征
+   evidence：提出RadYOLO，一种用于医学图像分割和检测的3D YOLO扩展，属于分割的深度学习架构
+2. [Test-time Adaptation of Pelvic Bone Segmentation Models via Dynamic Reliability-Guided](/202608/05/2608.00510v1-test-time-adaptation-of-pelvic-bone-segmentation-models-via-dynamic-reliability-guided)  
+   标签：评分：7.0/10、query:abdk-seg
+   evidence：提出骨盆骨CT分割的测试时自适应框架，属于全监督的医学图像分割深度学习方法
+3. [OrganLens: Organ-Specific Representation Learning for CT Foundation Models](/202608/05/2607.25164v1-organlens-organ-specific-representation-learning-for-ct-foundation-models)  
+   标签：评分：6.0/10、query:abdk-seg
+   evidence：面向CT容积的器官特异性自监督表征学习，可应用于腹部分割
 
 
 <div class="dpr-home-promo-card">

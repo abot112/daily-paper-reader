@@ -1,0 +1,54 @@
+{
+  "label": "2026-08-05",
+  "date": "2026-08-05",
+  "generated_at": "2026-08-05T21:47:45",
+  "count": 3,
+  "papers": [
+    {
+      "paper_id": "202608/05/2608.00508v1-radyolo-computationally-efficient-3d-object-detection-and-segmentation-in-ct-and-mri",
+      "section": "quick",
+      "title_en": "RadYOLO: Computationally Efficient 3D Object Detection and Segmentation in CT and MRI",
+      "authors": "Kai Geissler, Laurens Müller-Groh, Hans Meine",
+      "date": "2026-08-01",
+      "pdf": "https://arxiv.org/pdf/2608.00508v1",
+      "score": "7.0",
+      "evidence": "提出RadYOLO，一种用于医学图像分割和检测的3D YOLO扩展，属于分割的深度学习架构",
+      "tldr": "三维医学图像检测分割方法计算成本高且通用性差。RadYOLO将YOLO11扩展至3D，在CT和MRI上实现快速检测分割。在五个数据集上，检测性能超越或匹敌现有方法，推理速度比nnU-Net快8-46倍，CPU上秒级完成。为临床和边缘设备部署提供了高效解决方案。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "Object detection and segmentation in three-dimensional medical images is a very active area of research. However, most proposed deep learning models carry a high computational cost, and only few aim to be broadly applicable, achieve high detection performance, and remain fast to execute on resource-constrained hardware. To address this gap, we present RadYOLO, a 3D extension of YOLO11 tailored to medical images. We compare it with nnU-Net and nnDetection on five datasets comprising CT and MRI data with varying object sizes and prevalence. RadYOLO's detection performance surpasses that of nnDetection on four of five datasets and is comparable on one. Compared to nnU-Net, RadYOLO performs better on lesion detection tasks, while nnU-Net excels at detecting large organs when precise localization is required. When rough object localization is sufficient, RadYOLO matches or outperforms nnU-Net on all five datasets. Regarding inference time, RadYOLO is 8-46x faster than nnU-Net on a GPU. Compared to nnDetection the speedup is even higher. When executed on a CPU, RadYOLO's inference runs within seconds (still faster than nnU-Net on a GPU) offering a significant advantage for clinical and edge-device deployment.   RadYOLO repository: https://github.com/FraunhoferMEVIS/RadYOLO",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202608/05/2608.00510v1-test-time-adaptation-of-pelvic-bone-segmentation-models-via-dynamic-reliability-guided",
+      "section": "quick",
+      "title_en": "Test-time Adaptation of Pelvic Bone Segmentation Models via Dynamic Reliability-Guided",
+      "authors": "Ling Ren, Chao Deng, Ziming Wang, Yuecong Xu, Kai Zheng",
+      "date": "2026-08-01",
+      "pdf": "https://arxiv.org/pdf/2608.00510v1",
+      "score": "7.0",
+      "evidence": "提出骨盆骨CT分割的测试时自适应框架，属于全监督的医学图像分割深度学习方法",
+      "tldr": "骨盆骨分割模型在跨中心部署时因域偏移导致性能下降，现有测试时自适应方法在边界精度、解剖一致性和类别平衡方面存在不足。本研究提出动态可靠性引导框架ReGA，引入分割推理一致性评估（SICE）准则，结合信任加权细化、区域对比学习和教师-学生方案，实现伪标签可靠度的动态评估与自适应优化。在三个异构骨盆CT数据集上实验，ReGA显著超越当前最优方法，证明了该方法在未见临床域中的有效性及鲁棒性。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "Reliable pelvic bone segmentation (PBS) from CT is essential for robot-assisted pelvic trauma surgery, yet deploying a source-trained model to a new hospital suffers from severe performance degradation due to cross-center domain shifts. While test-time adaptation (TTA) enables online model adaptation without accessing source data, existing methods show limited effectiveness for PBS, facing challenges including boundary degradation, anatomical inconsistency under domain shifts, and voxel-level class imbalance. To address these challenges, we propose a novel closed-loop dynamic Reliability-Guided TTA framework (ReGA) for PBS. Specifically, we introduce a pseudo-label reliability criterion termed Segmentation Inference Consistency Evaluation (SICE), which jointly measures region overlap and boundary deviation via dropout-based ensemble predictions. Based on SICE, a trust-weighted refinement module adaptively updates features to mitigate boundary errors in pseudo-labels. Furthermore, a confidence-weighted region-level contrastive learning strategy is proposed to enforce anatomical consistency. Finally, ReGA follows the teacher-student (TS) scheme to alleviate voxel-level class imbalance. Experiments on three heterogeneous 3D pelvic CT datasets demonstrate that ReGA consistently outperforms state-of-the-art TTA methods, enabling effective adaptation of the source-trained PBS model to unseen clinical domains. The code is available at https://github.com/Ren-ling/ReGA.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202608/05/2607.25164v1-organlens-organ-specific-representation-learning-for-ct-foundation-models",
+      "section": "quick",
+      "title_en": "OrganLens: Organ-Specific Representation Learning for CT Foundation Models",
+      "authors": "Zhixuan Ge, Anqi Li, Sadeer Al-Kindi, Hanwen Xu, Wei Qiu",
+      "date": "2026-07-28",
+      "pdf": "https://arxiv.org/pdf/2607.25164v1",
+      "score": "6.0",
+      "evidence": "面向CT容积的器官特异性自监督表征学习，可应用于腹部分割",
+      "tldr": "现有CT基础模型仅生成图像级表示，难以满足器官特异性疾病评估需求；OrganLens以器官身份条件化共享编码器，通过自监督蒸馏与解剖掩码监督，在不同器官上形成独立表示，无需推理分割；心脏表示使CT-RATE心脏肥大AUROC从0.910提至0.953，肺表示提升NLST肺癌死亡率C-index 14.2%，全局表示在INSPECT检索任务达33% Recall@10；该方法为器官特异性CT表示学习提供可扩展框架。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "A CT examination captures multiple organs, but many biomedical questions concern abnormalities, prognosis, or longitudinal change in a specific organ. These questions require a separate representation for each organ within the same CT volume. Existing CT foundation models commonly produce a single volume-level representation, while recent anatomy-aware methods either encode pre-separated organ volumes or explicitly disentangle images into organ token groups. The former may remove clinically relevant surrounding context, while the latter does not condition a shared encoder on a selected organ before its features are formed. We introduce OrganLens for organ-specific representation learning through self-supervision. An organ identity conditions a shared CT encoder, while organ-specific distillation and anatomy-mask supervision shape features for anatomy-weighted pooling into organ-specific representations. At inference, the shared model produces 11 organ-specific representations without external segmentation masks. We evaluate OrganLens on CT-RATE, RAD-ChestCT, INSPECT, and NLST across diverse acquisitions and downstream evaluations. Relative to CT-pretrained DINOv2, heart representations raise CT-RATE cardiomegaly AUROC from 0.910 to 0.953, while lung representations improve the Harrell C-index for NLST lung-cancer mortality by 14.2\\%. The global representation reaches INSPECT Recall@10 of 33.09\\% and 32.04\\% for text-to-image and image-to-text retrieval, respectively. Across organ-related tasks, anatomically matched representations provide stronger task-relevant signal, while the global representation retains broad utility. OrganLens offers a scalable approach to organ-specific CT representation learning with a shared encoder. More broadly, it provides the medical research community with a reusable framework for studying organ-specific disease across cohorts and clinical endpoints.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
