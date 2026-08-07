@@ -6,32 +6,28 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-08-05
-- 运行时间：2026-08-05 21:47:22 UTC
+- 最新运行日期：2026-08-07
+- 运行时间：2026-08-07 01:20:29 UTC
 - 运行状态：成功
-- 本次总论文数：3
-- 精读区：0
-- 速读区：3
+- 本次总论文数：2
+- 精读区：1
+- 速读区：1
 
 ### 今日简报（AI）
-今日速读三篇医学影像论文，聚焦CT/MRI的高效检测分割与模型自适应。  
-值得关注RadYOLO的轻量级3D目标检测和测试时自适应分割方法，两者均获7.0分。  
-普通读者可优先了解YOLO在医学影像的实时化应用，以及动态可靠性引导如何省去重训练。
-- 详情：[/202608/05/README](/202608/05/README)
+今日深入解析医学图像分割前沿：精读腹腔镜场景下迁移学习结合类特定解码器的创新方法，速览SAM模型向三维高效升维的参数轻量方案。  
+最值得关注：类特定解码器可显著提升迁移分割精度，而深度路由LoRA让2D大模型以极低成本拥有3D感知力。  
+建议读者尝试将类特定解码思想移植到其他内窥镜任务，或体验SAM+D的低资源三维重建潜力。
+- 详情：[/202608/07/README](/202608/07/README)
 
 ### 精读区论文标签
-- 本次无精读推荐。
+1. [Leveraging Transfer Learning with Class-Specific Decoders for Laparoscopic Segmentation](/202608/07/2607.29509v1-leveraging-transfer-learning-with-class-specific-decoders-for-laparoscopic-segmentation)  
+   标签：评分：8.0/10、query:abdk-seg
+   evidence：使用类特定解码器和迁移学习的腹腔镜手术多器官分割
 
 ### 速读区论文标签
-1. [RadYOLO: Computationally Efficient 3D Object Detection and Segmentation in CT and MRI](/202608/05/2608.00508v1-radyolo-computationally-efficient-3d-object-detection-and-segmentation-in-ct-and-mri)  
+1. [SAM+D: Parameter-Efficient Dimensional Lifting of SAM-Family Models via Depth-Routed LoRA and Depth Shifting](/202608/07/2607.29033v1-samd-parameter-efficient-dimensional-lifting-of-sam-family-models-via-depth-routed-lora-and-depth-shifting)  
    标签：评分：7.0/10、query:abdk-seg
-   evidence：提出RadYOLO，一种用于医学图像分割和检测的3D YOLO扩展，属于分割的深度学习架构
-2. [Test-time Adaptation of Pelvic Bone Segmentation Models via Dynamic Reliability-Guided](/202608/05/2608.00510v1-test-time-adaptation-of-pelvic-bone-segmentation-models-via-dynamic-reliability-guided)  
-   标签：评分：7.0/10、query:abdk-seg
-   evidence：提出骨盆骨CT分割的测试时自适应框架，属于全监督的医学图像分割深度学习方法
-3. [OrganLens: Organ-Specific Representation Learning for CT Foundation Models](/202608/05/2607.25164v1-organlens-organ-specific-representation-learning-for-ct-foundation-models)  
-   标签：评分：6.0/10、query:abdk-seg
-   evidence：面向CT容积的器官特异性自监督表征学习，可应用于腹部分割
+   evidence：通过参数高效微调将二维SAM适配到三维体积分割
 
 
 <div class="dpr-home-promo-card">
