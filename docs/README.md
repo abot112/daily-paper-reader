@@ -7,27 +7,30 @@
 
 ## 每次日报
 - 最新运行日期：2026-08-07
-- 运行时间：2026-08-07 01:20:29 UTC
+- 运行时间：2026-08-07 20:53:26 UTC
 - 运行状态：成功
-- 本次总论文数：2
+- 本次总论文数：3
 - 精读区：1
-- 速读区：1
+- 速读区：2
 
 ### 今日简报（AI）
-今日深入解析医学图像分割前沿：精读腹腔镜场景下迁移学习结合类特定解码器的创新方法，速览SAM模型向三维高效升维的参数轻量方案。  
-最值得关注：类特定解码器可显著提升迁移分割精度，而深度路由LoRA让2D大模型以极低成本拥有3D感知力。  
-建议读者尝试将类特定解码思想移植到其他内窥镜任务，或体验SAM+D的低资源三维重建潜力。
+今日速览三篇医学影像分割前沿研究，聚焦预训练、不确定性与合成数据。  
+最值得关注方向是：多模态多解剖结构的自监督预训练（Curia-MAE）能显著提升3D分割效果，以及通过分布对齐量化分割不确定性（DistMedVL）。  
+想动手实践，可以先探索在CT或MRI上使用通用预训练骨干网络，或在你自己的标注数据中注入可控变异。
 - 详情：[/202608/07/README](/202608/07/README)
 
 ### 精读区论文标签
-1. [Leveraging Transfer Learning with Class-Specific Decoders for Laparoscopic Segmentation](/202608/07/2607.29509v1-leveraging-transfer-learning-with-class-specific-decoders-for-laparoscopic-segmentation)  
+1. [Curia-MAE: Multi-Modal Multi-Anatomy MAE Pre-Training for 3D Medical Image Segmentation](/202608/07/2608.05844v1-curia-mae-multi-modal-multi-anatomy-mae-pre-training-for-3d-medical-image-segmentation)  
    标签：评分：8.0/10、query:abdk-seg
-   evidence：使用类特定解码器和迁移学习的腹腔镜手术多器官分割
+   evidence：多模态多解剖部位MAE预训练用于三维医学图像分割
 
 ### 速读区论文标签
-1. [SAM+D: Parameter-Efficient Dimensional Lifting of SAM-Family Models via Depth-Routed LoRA and Depth Shifting](/202608/07/2607.29033v1-samd-parameter-efficient-dimensional-lifting-of-sam-family-models-via-depth-routed-lora-and-depth-shifting)  
-   标签：评分：7.0/10、query:abdk-seg
-   evidence：通过参数高效微调将二维SAM适配到三维体积分割
+1. [DistMedVL: Distributional Vision-Language Alignment for Uncertainty-Aware Medical Image Segmentation](/202608/07/2608.05683v1-distmedvl-distributional-vision-language-alignment-for-uncertainty-aware-medical-image-segmentation)  
+   标签：评分：6.0/10、query:abdk-seg
+   evidence：提出用于不确定性感知医学图像分割的概率视觉-语言框架
+2. [OTLesMix: Wasserstein Barycenter and Optimal Transport Map for Synthetic Lesion Generation with Diverse Shapes and Locations](/202608/07/2608.06264v1-otlesmix-wasserstein-barycenter-and-optimal-transport-map-for-synthetic-lesion-generation-with-diverse-shapes-and-locations)  
+   标签：评分：6.0/10、query:abdk-seg
+   evidence：提出合成病灶生成方法改进医学图像分割，支持全监督训练。
 
 
 <div class="dpr-home-promo-card">

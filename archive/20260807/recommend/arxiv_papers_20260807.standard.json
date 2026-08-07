@@ -1,95 +1,135 @@
 {
   "mode": "standard",
-  "generated_at": "2026-08-07T01:16:38.265324+00:00",
+  "generated_at": "2026-08-07T20:48:56.891594+00:00",
   "stats": {
     "mode": "standard",
     "tag_count": 1,
     "deep_divecandidates": 1,
     "deep_cap": 6,
     "deep_selected": 1,
-    "quick_candidates": 1,
+    "quick_candidates": 2,
     "quick_skim_target": 11,
-    "quick_selected": 1
+    "quick_selected": 2
   },
   "deep_dive": [
     {
-      "id": "2607.29509v1",
+      "id": "2608.05844v1",
       "source": "arxiv",
-      "title": "Leveraging Transfer Learning with Class-Specific Decoders for Laparoscopic Segmentation",
-      "abstract": "Effective multi-organ segmentation in surgical data requires learning the intricate anatomical features and alleviating the challenge of class imbalance, which results from relatively lower proportions of small and limitedly exposed structures. Recent works on laparoscopic multi-organ segmentation focus on learning structure-specific features through class-specific decoder architectures and report favorable results. This work extends the decoder-focused architectures to investigate knowledge sharing in the cross-surgical domain. We utilize two datasets representing different surgical domains, rectal and cholecystectomy surgeries, to explore how surgical conceptual knowledge transfers under partially common anatomical representations. Additionally, we compare the feature adaptation for the encoder and decoder at different training stages to analyse the knowledge adaptation and retention in the network. Our results corroborate previous findings on decoder-specific architectures and demonstrate that the organ-specific decoder model (CEMD), fully fine-tuned after cross-domain pre-training, achieves the highest segmentation performance (62.4\\% dice) while converging substantially faster than training from scratch. However, we also find that class imbalance in surgical data remains a persistent challenge that transfer learning does not fully resolve for underrepresented anatomical structures.",
+      "title": "Curia-MAE: Multi-Modal Multi-Anatomy MAE Pre-Training for 3D Medical Image Segmentation",
+      "abstract": "Radiology foundation models learn transferable representations that can be adapted to new tasks by training only small layers on top of a frozen encoder. Dense prediction tasks such as 3D segmentation are, however, underrepresented in their evaluation, and, with the encoder kept frozen, pre-trained models still fall short of nnU-Net, the state-of-the-art reference trained from scratch. To close this gap we extend convolutional MAE pre-training with a robust reconstruction objective, a feature regularizer, and a local-global similarity objective. Using this method, we propose Curia-MAE, a multi-modal, multi-anatomy MAE model pre-trained on 300,000 CT and MRI images covering a large number of anatomical sites. On eight anatomy- and lesion-focused segmentation benchmarks, Curia-MAE improves frozen-encoder performance over a strong MAE baseline, while remaining competitive under full finetuning and superior on lesion tasks, where labeled data is scarce. These results indicate that a single frozen encoder can be reused across diverse segmentation tasks, reducing the cost of adapting and deploying such models in clinical workflows. We will make our pre-trained model weights publicly available.",
       "authors": [
-        "Priya Tomar",
-        "Aditya Parikh",
-        "Christian Bauckhage",
-        "Rafet Sifa"
-      ],
-      "primary_category": "cs.CV",
-      "categories": [
-        "cs.CV",
-        "cs.LG"
-      ],
-      "published": "2026-07-31T15:13:02+00:00",
-      "link": "https://arxiv.org/pdf/2607.29509v1",
-      "tags": [
-        "keyword:ABDK-SEG",
-        "query:ABDK-SEG"
-      ],
-      "llm_score": 8.0,
-      "llm_evidence_en": "multi-organ segmentation in laparoscopic surgery using class-specific decoders and transfer learning",
-      "llm_evidence_cn": "使用类特定解码器和迁移学习的腹腔镜手术多器官分割",
-      "llm_evidence": "使用类特定解码器和迁移学习的腹腔镜手术多器官分割",
-      "canonical_evidence": "使用类特定解码器和迁移学习的腹腔镜手术多器官分割",
-      "llm_tldr_en": "Extends class-specific decoder architectures for multi-organ segmentation in laparoscopic surgery, leveraging transfer learning across surgical domains to address class imbalance.",
-      "llm_tldr_cn": "针对腹腔镜手术中多器官分割的类不平衡问题，本文扩展了类特定解码器架构，并利用跨手术领域的迁移学习共享解剖知识。通过直肠和胆囊切除术两个数据集，验证了方法在少量标注情况下仍能有效分割小器官。该方法为腹部手术场景的全监督分割提供了可迁移的技术路线。",
-      "llm_tldr": "针对腹腔镜手术中多器官分割的类不平衡问题，本文扩展了类特定解码器架构，并利用跨手术领域的迁移学习共享解剖知识。通过直肠和胆囊切除术两个数据集，验证了方法在少量标注情况下仍能有效分割小器官。该方法为腹部手术场景的全监督分割提供了可迁移的技术路线。",
-      "llm_tags": [
-        "query:abdk-seg"
-      ],
-      "matched_query_tag": "query:abdk-seg",
-      "matched_query_text": "segmenting abdominal organs with fully supervised methods",
-      "matched_requirement_id": "req-2",
-      "selection_source": "fresh_fetch"
-    }
-  ],
-  "quick_skim": [
-    {
-      "id": "2607.29033v1",
-      "source": "arxiv",
-      "title": "SAM+D: Parameter-Efficient Dimensional Lifting of SAM-Family Models via Depth-Routed LoRA and Depth Shifting",
-      "abstract": "Existing methods for adapting 2D foundation models such as SAM to 3D volumes either process slices independently---ignoring inter-slice context---or require substantial architectural changes and retraining. In this paper, we present \\textbf{SAM+D}, a parameter-efficient framework that lifts SAM-family models by one spatial dimension---enabling 3D volumetric segmentation from 2D SAM and, for the first time via parameter-efficient fine-tuning, end-to-end 4D (3D+T) spatiotemporal segmentation from video-based SAM2---while keeping the vast majority of pre-trained parameters frozen. SAM+D introduces two lightweight, model-agnostic modules into frozen transformer blocks: (1)~\\textbf{Depth-Routed LoRA (DRLoRA)} experts with learned routing for spatially adaptive low-rank updates, and (2)~\\textbf{Depth Shift Modules (DSM)} for cross-slice feature exchange at zero additional parameter cost. Together, they provide volume-level context while tuning only ${\\sim}$2.8\\% of parameters for SAM and ${\\sim}$3.7\\% for SAM2. We evaluate SAM+D in two distinct settings, each lifting the base model by one spatial dimension: 3D segmentation, where SAM(2D$\\,\\to\\,$3D) is evaluated on four CT benchmarks (KiTS, Pancreas, LiTS, Colon), and 4D segmentation, where SAM2 (2D+T$\\,\\to\\,$3D+T) is evaluated on a cell tracking challenge (CTC) dataset (Fluo-N3DH-SIM+). In both settings SAM+D achieves competitive or superior results under the single-point prompt setting while using fewer trainable parameters than existing methods, demonstrating that SAM+D generalizes across SAM-family architectures, target dimensionalities (3D, 4D), and domains spanning medical imaging and bio-scene understanding. Code is publicly available at https://github.com/JerrySongCST/SAM-Plus-D.",
-      "authors": [
-        "Yu Song",
-        "Hao Sun",
-        "Shiyu Teng",
-        "Ikuko Nishikawa",
-        "Yen-wei Chen"
+        "Théo Danielou",
+        "Antoine Saporta",
+        "Léo Alberge",
+        "Corentin Dancette"
       ],
       "primary_category": "cs.CV",
       "categories": [
         "cs.CV"
       ],
-      "published": "2026-07-31T05:11:25+00:00",
-      "link": "https://arxiv.org/pdf/2607.29033v1",
+      "published": "2026-08-06T10:17:23+00:00",
+      "link": "https://arxiv.org/pdf/2608.05844v1",
       "tags": [
         "keyword:ABDK-SEG",
         "query:ABDK-SEG"
       ],
-      "llm_score": 7.0,
-      "llm_evidence_en": "adapts 2D SAM to 3D volumetric segmentation via parameter-efficient fine-tuning",
-      "llm_evidence_cn": "通过参数高效微调将二维SAM适配到三维体积分割",
-      "llm_evidence": "通过参数高效微调将二维SAM适配到三维体积分割",
-      "canonical_evidence": "通过参数高效微调将二维SAM适配到三维体积分割",
-      "llm_tldr_en": "SAM+D lifts SAM-family models to 3D/4D segmentation with depth-routed LoRA and depth shifting, enabling volumetric segmentation while freezing most pre-trained parameters.",
-      "llm_tldr_cn": "现有2D基础模型难以直接处理三维医学体积，切片独立处理丢失上下文。SAM+D引入深度路由LoRA和深度偏移模块，以参数高效方式将SAM系列模型升维至3D/4D分割。在多种体积医学数据上验证，在保持预训练权重冻结下显著提升分割性能，为医学体积分割提供了轻量适配方案。",
-      "llm_tldr": "现有2D基础模型难以直接处理三维医学体积，切片独立处理丢失上下文。SAM+D引入深度路由LoRA和深度偏移模块，以参数高效方式将SAM系列模型升维至3D/4D分割。在多种体积医学数据上验证，在保持预训练权重冻结下显著提升分割性能，为医学体积分割提供了轻量适配方案。",
+      "llm_score": 8.0,
+      "llm_evidence_en": "multi-modal multi-anatomy MAE pre-training for 3D medical image segmentation",
+      "llm_evidence_cn": "多模态多解剖部位MAE预训练用于三维医学图像分割",
+      "llm_evidence": "多模态多解剖部位MAE预训练用于三维医学图像分割",
+      "canonical_evidence": "多模态多解剖部位MAE预训练用于三维医学图像分割",
+      "llm_tldr_en": "Curia-MAE extends convolutional MAE pre-training with a robust reconstruction objective, feature regularizer, and local-global similarity objective for 3D medical segmentation, closing the gap with nnU-Net on CT and MRI anatomy and lesion tasks.",
+      "llm_tldr_cn": "Curia-MAE针对三维医学图像分割提出扩展的卷积MAE预训练方法，结合鲁棒重建目标、特征正则化和局部-全局相似性约束。在300,000张CT和MRI图像上预训练后，在八个解剖和病灶分割任务上缩小了与nnU-Net的性能差距，表明该预训练策略能为全监督分割提供更优初始化。",
+      "llm_tldr": "Curia-MAE针对三维医学图像分割提出扩展的卷积MAE预训练方法，结合鲁棒重建目标、特征正则化和局部-全局相似性约束。在300,000张CT和MRI图像上预训练后，在八个解剖和病灶分割任务上缩小了与nnU-Net的性能差距，表明该预训练策略能为全监督分割提供更优初始化。",
       "llm_tags": [
         "query:abdk-seg"
       ],
       "matched_query_tag": "query:abdk-seg",
-      "matched_query_text": "deep learning architectures for abdominal organ segmentation with full supervision",
-      "matched_requirement_id": "req-8",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2608.05683v1",
+      "source": "arxiv",
+      "title": "DistMedVL: Distributional Vision-Language Alignment for Uncertainty-Aware Medical Image Segmentation",
+      "abstract": "Cross-modal alignment of visual and textual representations is fundamental to multimodal medical image understanding, yet remains hindered by uncertainty in both modalities under real-world clinical conditions. Existing vision-language segmentation methods rely on deterministic cross-modal matching, which overlooks aleatoric uncertainty from ambiguous boundaries and epistemic uncertainty from limited training data, leading to fragile performance under domain shift. To address this issue, we propose DistMedVL, a probabilistic vision-language framework that introduces a lightweight Probabilistic Cross-Modal Adapter (PCM-Adapter) upon frozen encoders to explicitly model representational uncertainty. Specifically, the PCM-Adapter comprises two sequential modules for progressive probabilistic alignment. We first devise a Mahalanobis Alignment Module (MAM) that models textual tokens as Gaussian distributions and computes patch-text compatibility via Mahalanobis distance, yielding variance-conditioned matching that downweights unreliable feature dimensions. Moreover, we devise a Distribution Flow Module (DFM) that estimates modality-wise confidence parameters and performs vision-guided refinement of textual distributions, accommodating distributional variation across imaging modalities. Extensive experiments across eight medical segmentation benchmarks demonstrate that DistMedVL outperforms state-of-the-art methods with only 6.3M trainable parameters, exhibiting superior data efficiency, perturbation robustness and cross-dataset generalization.",
+      "authors": [
+        "Jiaxuan Li",
+        "Qing Xu",
+        "Xiangjian He",
+        "Yue Li",
+        "Daokun Zhang",
+        "Fiseha B. Tesema",
+        "Rong Qu"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.MM"
+      ],
+      "published": "2026-08-06T07:17:14+00:00",
+      "link": "https://arxiv.org/pdf/2608.05683v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "proposes a probabilistic vision-language framework for uncertainty-aware medical image segmentation",
+      "llm_evidence_cn": "提出用于不确定性感知医学图像分割的概率视觉-语言框架",
+      "llm_evidence": "提出用于不确定性感知医学图像分割的概率视觉-语言框架",
+      "canonical_evidence": "提出用于不确定性感知医学图像分割的概率视觉-语言框架",
+      "llm_tldr_en": "DistMedVL addresses uncertainty in medical image segmentation by modeling probabilistic cross-modal alignment, using a lightweight adapter to capture aleatoric and epistemic uncertainty, leading to more robust segmentation under domain shift.",
+      "llm_tldr_cn": "现有视觉-语言分割方法忽略现实场景中的不确定性，导致域漂移下性能脆弱。本文提出DistMedVL，通过轻量级概率跨模态适配器在冻结编码器上显式建模表示不确定性，在多个医学分割基准上展现出比确定性方法更强的鲁棒性，尤其利于域外数据的分割。",
+      "llm_tldr": "现有视觉-语言分割方法忽略现实场景中的不确定性，导致域漂移下性能脆弱。本文提出DistMedVL，通过轻量级概率跨模态适配器在冻结编码器上显式建模表示不确定性，在多个医学分割基准上展现出比确定性方法更强的鲁棒性，尤其利于域外数据的分割。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
       "selection_source": "fresh_fetch",
-      "quick_tier": "7"
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.06264v1",
+      "source": "arxiv",
+      "title": "OTLesMix: Wasserstein Barycenter and Optimal Transport Map for Synthetic Lesion Generation with Diverse Shapes and Locations",
+      "abstract": "The development of deep learning over the past decade has revolutionized medical imaging segmentation, allowing the extraction of precise descriptors from large volumes to characterize pathologies. Data augmentation is a technique widely regarded as a way to improve model training. It includes simple transformations like spatial operations or intensity modifications, but also more advanced synthesis techniques. Their goal is to generate new realistic samples from an existing dataset to diversify the images used during training. Among them, several propose different mixing strategies to combine real samples. However, one of their major shortcomings is to yield limited variability in terms of generated lesion shapes and locations. In this work, we introduce a novel image synthesis method, called OTLesMix, that leverages Wasserstein barycenter and optimal transport plan to generate realistic and diverse samples. We evaluated our method on three brain lesion segmentation tasks, on which it improves the Dice score compared to a model trained without synthetic data by 2.9 to 6.6 points, and outperforms state-of-the-art mix-based methods.",
+      "authors": [
+        "Robin Trombetta",
+        "Carole Lartizien"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.LG",
+        "eess.IV"
+      ],
+      "published": "2026-08-06T16:54:15+00:00",
+      "link": "https://arxiv.org/pdf/2608.06264v1",
+      "tags": [
+        "keyword:ABDK-SEG"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Presents mixing strategy for synthetic lesion generation to improve medical image segmentation, supporting fully supervised training.",
+      "llm_evidence_cn": "提出合成病灶生成方法改进医学图像分割，支持全监督训练。",
+      "llm_evidence": "提出合成病灶生成方法改进医学图像分割，支持全监督训练。",
+      "canonical_evidence": "提出合成病灶生成方法改进医学图像分割，支持全监督训练。",
+      "llm_tldr_en": "Proposes OTLesMix, a data augmentation technique using optimal transport to generate diverse synthetic lesions, enhancing robustness of fully supervised medical image segmentation models.",
+      "llm_tldr_cn": "OTLesMix针对现有数据混合增强方法生成病灶形状和位置多样性不足的问题，利用Wasserstein重心和最优传输映射生成逼真合成病灶，显著丰富了训练数据。实验证明，该方法能有效提升医学图像分割模型的性能，尤其在病灶分割任务上超越现有增强技术。",
+      "llm_tldr": "OTLesMix针对现有数据混合增强方法生成病灶形状和位置多样性不足的问题，利用Wasserstein重心和最优传输映射生成逼真合成病灶，显著丰富了训练数据。实验证明，该方法能有效提升医学图像分割模型的性能，尤其在病灶分割任务上超越现有增强技术。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
     }
   ]
 }
