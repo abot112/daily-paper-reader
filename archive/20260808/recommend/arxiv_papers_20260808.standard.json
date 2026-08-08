@@ -1,0 +1,95 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-08T19:46:03.963753+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2607.29033v1",
+      "source": "arxiv",
+      "title": "SAM+D: Parameter-Efficient Dimensional Lifting of SAM-Family Models via Depth-Routed LoRA and Depth Shifting",
+      "abstract": "Existing methods for adapting 2D foundation models such as SAM to 3D volumes either process slices independently---ignoring inter-slice context---or require substantial architectural changes and retraining. In this paper, we present \\textbf{SAM+D}, a parameter-efficient framework that lifts SAM-family models by one spatial dimension---enabling 3D volumetric segmentation from 2D SAM and, for the first time via parameter-efficient fine-tuning, end-to-end 4D (3D+T) spatiotemporal segmentation from video-based SAM2---while keeping the vast majority of pre-trained parameters frozen. SAM+D introduces two lightweight, model-agnostic modules into frozen transformer blocks: (1)~\\textbf{Depth-Routed LoRA (DRLoRA)} experts with learned routing for spatially adaptive low-rank updates, and (2)~\\textbf{Depth Shift Modules (DSM)} for cross-slice feature exchange at zero additional parameter cost. Together, they provide volume-level context while tuning only ${\\sim}$2.8\\% of parameters for SAM and ${\\sim}$3.7\\% for SAM2. We evaluate SAM+D in two distinct settings, each lifting the base model by one spatial dimension: 3D segmentation, where SAM(2D$\\,\\to\\,$3D) is evaluated on four CT benchmarks (KiTS, Pancreas, LiTS, Colon), and 4D segmentation, where SAM2 (2D+T$\\,\\to\\,$3D+T) is evaluated on a cell tracking challenge (CTC) dataset (Fluo-N3DH-SIM+). In both settings SAM+D achieves competitive or superior results under the single-point prompt setting while using fewer trainable parameters than existing methods, demonstrating that SAM+D generalizes across SAM-family architectures, target dimensionalities (3D, 4D), and domains spanning medical imaging and bio-scene understanding. Code is publicly available at https://github.com/JerrySongCST/SAM-Plus-D.",
+      "authors": [
+        "Yu Song",
+        "Hao Sun",
+        "Shiyu Teng",
+        "Ikuko Nishikawa",
+        "Yen-wei Chen"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-31T05:11:25+00:00",
+      "link": "https://arxiv.org/pdf/2607.29033v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "parameter-efficient framework for 3D volumetric segmentation from 2D SAM",
+      "llm_evidence_cn": "从2D SAM进行参数高效的3D体积分割框架",
+      "llm_evidence": "从2D SAM进行参数高效的3D体积分割框架",
+      "canonical_evidence": "从2D SAM进行参数高效的3D体积分割框架",
+      "llm_tldr_en": "Proposes SAM+D, a parameter-efficient framework to adapt 2D SAM to 3D volumetric segmentation, enabling end-to-end 4D spatiotemporal segmentation via Depth-Routed LoRA and Depth Shifting.",
+      "llm_tldr_cn": "该论文针对2D基础模型SAM难以直接处理三维体积数据的问题，提出SAM+D框架，通过深度路由LoRA和深度偏移模块，以参数高效方式将SAM系列模型提升一个空间维度，实现从2D模型到3D体积分割以及首个端到端4D时空分割的适配。实验表明该方法在多种医学分割任务中保持高效且性能优异，为将大型2D视觉模型应用于三维医学影像提供了一条轻量化路径。",
+      "llm_tldr": "该论文针对2D基础模型SAM难以直接处理三维体积数据的问题，提出SAM+D框架，通过深度路由LoRA和深度偏移模块，以参数高效方式将SAM系列模型提升一个空间维度，实现从2D模型到3D体积分割以及首个端到端4D时空分割的适配。实验表明该方法在多种医学分割任务中保持高效且性能优异，为将大型2D视觉模型应用于三维医学影像提供了一条轻量化路径。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.29509v1",
+      "source": "arxiv",
+      "title": "Leveraging Transfer Learning with Class-Specific Decoders for Laparoscopic Segmentation",
+      "abstract": "Effective multi-organ segmentation in surgical data requires learning the intricate anatomical features and alleviating the challenge of class imbalance, which results from relatively lower proportions of small and limitedly exposed structures. Recent works on laparoscopic multi-organ segmentation focus on learning structure-specific features through class-specific decoder architectures and report favorable results. This work extends the decoder-focused architectures to investigate knowledge sharing in the cross-surgical domain. We utilize two datasets representing different surgical domains, rectal and cholecystectomy surgeries, to explore how surgical conceptual knowledge transfers under partially common anatomical representations. Additionally, we compare the feature adaptation for the encoder and decoder at different training stages to analyse the knowledge adaptation and retention in the network. Our results corroborate previous findings on decoder-specific architectures and demonstrate that the organ-specific decoder model (CEMD), fully fine-tuned after cross-domain pre-training, achieves the highest segmentation performance (62.4\\% dice) while converging substantially faster than training from scratch. However, we also find that class imbalance in surgical data remains a persistent challenge that transfer learning does not fully resolve for underrepresented anatomical structures.",
+      "authors": [
+        "Priya Tomar",
+        "Aditya Parikh",
+        "Christian Bauckhage",
+        "Rafet Sifa"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "published": "2026-07-31T15:13:02+00:00",
+      "link": "https://arxiv.org/pdf/2607.29509v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "multi-organ segmentation in surgical data with class-specific decoders",
+      "llm_evidence_cn": "使用类特定解码器的手术数据多器官分割",
+      "llm_evidence": "使用类特定解码器的手术数据多器官分割",
+      "canonical_evidence": "使用类特定解码器的手术数据多器官分割",
+      "llm_tldr_en": "Proposes a transfer learning framework with class-specific decoders for multi-organ segmentation in laparoscopic surgery, showing improved performance by sharing anatomical knowledge across different surgical domains.",
+      "llm_tldr_cn": "该论文针对腹腔镜手术中多器官分割面临的类别不平衡和跨手术领域知识迁移问题，提出了一种基于类特定解码器的迁移学习框架。通过在直肠切除术和胆囊切除术两个数据集上的实验，证明类特定解码器能有效学习结构特定特征，并实现跨手术领域的知识共享，显著提升小器官的分割性能。该方法为全监督腹盆部器官分割提供了可迁移的技术路径。",
+      "llm_tldr": "该论文针对腹腔镜手术中多器官分割面临的类别不平衡和跨手术领域知识迁移问题，提出了一种基于类特定解码器的迁移学习框架。通过在直肠切除术和胆囊切除术两个数据集上的实验，证明类特定解码器能有效学习结构特定特征，并实现跨手术领域的知识共享，显著提升小器官的分割性能。该方法为全监督腹盆部器官分割提供了可迁移的技术路径。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "segmenting abdominal organs with fully supervised methods",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "label": "2026-08-08",
+  "date": "2026-08-08",
+  "generated_at": "2026-08-08T19:47:15",
+  "count": 2,
+  "papers": [
+    {
+      "paper_id": "202608/08/2607.29033v1-samd-parameter-efficient-dimensional-lifting-of-sam-family-models-via-depth-routed-lora-and-depth-shifting",
+      "section": "quick",
+      "title_en": "SAM+D: Parameter-Efficient Dimensional Lifting of SAM-Family Models via Depth-Routed LoRA and Depth Shifting",
+      "authors": "Yu Song, Hao Sun, Shiyu Teng, Ikuko Nishikawa, Yen-wei Chen",
+      "date": "2026-07-31",
+      "pdf": "https://arxiv.org/pdf/2607.29033v1",
+      "score": "6.0",
+      "evidence": "从2D SAM进行参数高效的3D体积分割框架",
+      "tldr": "现有方法将SAM等2D基础模型适配3D体积时，通常独立处理切片忽略层间上下文，或需要大幅修改架构并重新训练。SAM+D提出深度路由LoRA专家和深度移位模块，以参数高效方式将SAM模型提升一维，实现3D和4D体积分割，仅微调约3%参数。在肾脏、胰腺等CT分割及细胞跟踪数据集上，单点提示下性能媲美或超越全微调方法，且可训练参数极少。该框架首次实现SAM2的端到端4D分割，并验证了在跨架构、维度和医学/生物领域的泛化能力。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "Existing methods for adapting 2D foundation models such as SAM to 3D volumes either process slices independently---ignoring inter-slice context---or require substantial architectural changes and retraining. In this paper, we present \\textbf{SAM+D}, a parameter-efficient framework that lifts SAM-family models by one spatial dimension---enabling 3D volumetric segmentation from 2D SAM and, for the first time via parameter-efficient fine-tuning, end-to-end 4D (3D+T) spatiotemporal segmentation from video-based SAM2---while keeping the vast majority of pre-trained parameters frozen. SAM+D introduces two lightweight, model-agnostic modules into frozen transformer blocks: (1)~\\textbf{Depth-Routed LoRA (DRLoRA)} experts with learned routing for spatially adaptive low-rank updates, and (2)~\\textbf{Depth Shift Modules (DSM)} for cross-slice feature exchange at zero additional parameter cost. Together, they provide volume-level context while tuning only ${\\sim}$2.8\\% of parameters for SAM and ${\\sim}$3.7\\% for SAM2. We evaluate SAM+D in two distinct settings, each lifting the base model by one spatial dimension: 3D segmentation, where SAM(2D$\\,\\to\\,$3D) is evaluated on four CT benchmarks (KiTS, Pancreas, LiTS, Colon), and 4D segmentation, where SAM2 (2D+T$\\,\\to\\,$3D+T) is evaluated on a cell tracking challenge (CTC) dataset (Fluo-N3DH-SIM+). In both settings SAM+D achieves competitive or superior results under the single-point prompt setting while using fewer trainable parameters than existing methods, demonstrating that SAM+D generalizes across SAM-family architectures, target dimensionalities (3D, 4D), and domains spanning medical imaging and bio-scene understanding. Code is publicly available at https://github.com/JerrySongCST/SAM-Plus-D.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202608/08/2607.29509v1-leveraging-transfer-learning-with-class-specific-decoders-for-laparoscopic-segmentation",
+      "section": "quick",
+      "title_en": "Leveraging Transfer Learning with Class-Specific Decoders for Laparoscopic Segmentation",
+      "authors": "Priya Tomar, Aditya Parikh, Christian Bauckhage, Rafet Sifa",
+      "date": "2026-07-31",
+      "pdf": "https://arxiv.org/pdf/2607.29509v1",
+      "score": "6.0",
+      "evidence": "使用类特定解码器的手术数据多器官分割",
+      "tldr": "腹腔镜多器官分割面临解剖特征精细学习与类别不平衡的双重挑战，尤其在小体积、暴露受限的结构上。本文扩展类别特定解码器架构，在直肠切除术与胆囊切除术两个手术域间利用迁移学习共享概念知识，探索跨域表征适应。通过分析不同训练阶段编解码器的特征适应，发现跨域预训练后完全微调的器官特定解码器模型（CEMD）取得62.4%的最高Dice系数，且收敛速度显著优于从头训练。研究表明迁移学习能有效提升手术分割性能，但类别不平衡对稀有结构的分割仍是未完全解决的瓶颈，为该领域模型设计与域适应提供了重要参考。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "Effective multi-organ segmentation in surgical data requires learning the intricate anatomical features and alleviating the challenge of class imbalance, which results from relatively lower proportions of small and limitedly exposed structures. Recent works on laparoscopic multi-organ segmentation focus on learning structure-specific features through class-specific decoder architectures and report favorable results. This work extends the decoder-focused architectures to investigate knowledge sharing in the cross-surgical domain. We utilize two datasets representing different surgical domains, rectal and cholecystectomy surgeries, to explore how surgical conceptual knowledge transfers under partially common anatomical representations. Additionally, we compare the feature adaptation for the encoder and decoder at different training stages to analyse the knowledge adaptation and retention in the network. Our results corroborate previous findings on decoder-specific architectures and demonstrate that the organ-specific decoder model (CEMD), fully fine-tuned after cross-domain pre-training, achieves the highest segmentation performance (62.4\\% dice) while converging substantially faster than training from scratch. However, we also find that class imbalance in surgical data remains a persistent challenge that transfer learning does not fully resolve for underrepresented anatomical structures.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
