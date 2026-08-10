@@ -1,0 +1,24 @@
+{
+  "label": "2026-08-10",
+  "date": "2026-08-10",
+  "generated_at": "2026-08-10T20:05:52",
+  "count": 1,
+  "papers": [
+    {
+      "paper_id": "202608/10/2608.03216v1-ifan-inference-aware-learning-for-plain-mask-transformers",
+      "section": "quick",
+      "title_en": "iFAN: Inference-Aware Learning for Plain Mask Transformers",
+      "authors": "Fang Li, Yu He, Haoyang Tong, Lichen Ma, Jingling Fu, Wenxiao Fan, Tongxuan Liu, Luohang Liu, Ke Zhang, Junshi Huang",
+      "date": "2026-08-04",
+      "pdf": "https://arxiv.org/pdf/2608.03216v1",
+      "score": "7.0",
+      "evidence": "提供对齐查询竞争与掩码质量的训练框架，用于有监督分割",
+      "tldr": "基于查询的掩码Transformer存在训练与推理不匹配：最高得分查询未必最优，且中间层佳预测被丢弃。为此提出iFAN框架，通过调整概率掩码排名与跨层自蒸馏，对齐查询竞争与掩码质量，且仅训练时使用。在多个分割任务上平均提升1.20 PQ、1.30 AP、0.63 mIoU，几乎无额外开销，为掩码Transformer提供通用改进方案。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "Query-based mask transformers assemble segmentation outputs through pixel-wise competition among query predictions of the final layer, yet this inference process is not explicitly optimized during training. We identify two key mismatches: the query with the highest probability-mask score does not necessarily produce the most accurate mask, and final-layer decoding may discard superior predictions from intermediate layers. To address these issues, we propose Inference-Aware Learning (iFAN), a general training framework for plain mask transformers. iFAN introduces Adjusted Probability-Mask Ranking (APMR), which aligns query competition with predicted mask quality and suppresses high-confidence but inaccurate competitors. We further employ Cross-Layer Self-Distillation (CLSD) to transfer stronger intermediate predictions to the final layer. The ranking and distillation objectives are training-only, while inference retains efficient final-layer decoding. Experiments on COCO, ADE20K, and Cityscapes demonstrate consistent improvements across panoptic, instance, and semantic segmentation, as well as across different architectures, backbone scales, and input resolutions. Overall, iFAN improves performance by an average of 1.20 PQ, 1.30 AP, and 0.63 mIoU, with negligible additional parameters, FLOPs and inference latency.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

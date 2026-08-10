@@ -1,0 +1,61 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-10T20:04:28.201751+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2608.03216v1",
+      "source": "arxiv",
+      "title": "iFAN: Inference-Aware Learning for Plain Mask Transformers",
+      "abstract": "Query-based mask transformers assemble segmentation outputs through pixel-wise competition among query predictions of the final layer, yet this inference process is not explicitly optimized during training. We identify two key mismatches: the query with the highest probability-mask score does not necessarily produce the most accurate mask, and final-layer decoding may discard superior predictions from intermediate layers. To address these issues, we propose Inference-Aware Learning (iFAN), a general training framework for plain mask transformers. iFAN introduces Adjusted Probability-Mask Ranking (APMR), which aligns query competition with predicted mask quality and suppresses high-confidence but inaccurate competitors. We further employ Cross-Layer Self-Distillation (CLSD) to transfer stronger intermediate predictions to the final layer. The ranking and distillation objectives are training-only, while inference retains efficient final-layer decoding. Experiments on COCO, ADE20K, and Cityscapes demonstrate consistent improvements across panoptic, instance, and semantic segmentation, as well as across different architectures, backbone scales, and input resolutions. Overall, iFAN improves performance by an average of 1.20 PQ, 1.30 AP, and 0.63 mIoU, with negligible additional parameters, FLOPs and inference latency.",
+      "authors": [
+        "Fang Li",
+        "Yu He",
+        "Haoyang Tong",
+        "Lichen Ma",
+        "Jingling Fu",
+        "Wenxiao Fan",
+        "Tongxuan Liu",
+        "Luohang Liu",
+        "Ke Zhang",
+        "Junshi Huang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-08-04T06:51:06+00:00",
+      "link": "https://arxiv.org/pdf/2608.03216v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "provides a training framework that aligns query competition with mask quality for supervised segmentation",
+      "llm_evidence_cn": "提供对齐查询竞争与掩码质量的训练框架，用于有监督分割",
+      "llm_evidence": "提供对齐查询竞争与掩码质量的训练框架，用于有监督分割",
+      "canonical_evidence": "提供对齐查询竞争与掩码质量的训练框架，用于有监督分割",
+      "llm_tldr_en": "iFAN addresses mismatches in supervised mask transformer training by aligning query ranking with mask quality and distilling intermediate predictions, improving segmentation accuracy.",
+      "llm_tldr_cn": "针对现有掩码Transformer在训练与推理间存在查询竞争与掩码质量不匹配的问题，提出推理感知学习框架iFAN。该方法通过调整概率-掩码排序(APMR)使查询竞争与预测掩码质量对齐，并利用跨层自蒸馏保留中间层优质预测，从而提升分割性能。在COCO实例分割等任务上验证了其有效性，为有监督分割训练提供了通用改进方案。",
+      "llm_tldr": "针对现有掩码Transformer在训练与推理间存在查询竞争与掩码质量不匹配的问题，提出推理感知学习框架iFAN。该方法通过调整概率-掩码排序(APMR)使查询竞争与预测掩码质量对齐，并利用跨层自蒸馏保留中间层优质预测，从而提升分割性能。在COCO实例分割等任务上验证了其有效性，为有监督分割训练提供了通用改进方案。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "supervised training of neural networks for segmentation",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
