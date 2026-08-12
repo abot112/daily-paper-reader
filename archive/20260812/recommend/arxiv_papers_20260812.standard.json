@@ -1,0 +1,210 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-12T21:06:06.999231+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 3,
+    "deep_cap": 6,
+    "deep_selected": 3,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [
+    {
+      "id": "2608.08575v1",
+      "source": "arxiv",
+      "title": "CDGC-Net: 3D Medical Image Segmentation with Cooperative Dual-Scale Self-Attention and Grouped Channel Modeling",
+      "abstract": "Accurate 3D medical image segmentation requires the integration of long-range anatomical context with fine boundary detail. Existing methods often model global and local features in separate modules or feature levels and perform channel recalibration independently. This may cause semantic mismatch between global context and local boundaries, insufficient channel relationship modeling, weak spatial-channel interaction, and redundant representations. We propose CDGC-Net, a 3D medical image segmentation network that combines cooperative dual-scale spatial attention with grouped hierarchical channel modeling. With-in each CDGC block, Cooperative Dual-Scale Self-Attention (CDSA) assigns attention heads to parallel local-window and global-sparse branches. The two branches capture fine spatial details and long-range anatomical context at the same feature level. Their outputs are concatenated into an $N\\times C$ spatial representation and directly passed to Grouped Hierarchical Channel Attention (GHCA). GHCA organizes the channels into $r$ groups and models both within-group and cross-group dependencies. CDSA and GHCA reuse a shared key projection to maintain a consistent feature reference. Residual feature alignment subsequently integrates the refined features with the original representation. On the Synapse, ACDC, BraTS, and LA datasets, CDGC-Net achieved mean DSC values of 86.96\\%, 92.91\\%, 82.56\\%, and 93.52\\%, respectively, exceeding the next-highest reported values by 0.39, 0.47, 0.17, and 0.32 percentage points. CDGC-Net contains 25.83M parameters and 28.62G FLOPs for an input size of $64\\times128\\times128$, reducing these quantities by 39.87\\% and 40.30\\%, respectively, relative to UNETR++. These results indicate a favorable trade-off between segmentation accuracy and computational complexity.",
+      "authors": [
+        "Zheyang Jing",
+        "Qin Lu",
+        "Jianwang Li",
+        "Yujie Yang",
+        "Chen Yi",
+        "Shaofeng Jiang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-08-09T08:29:46+00:00",
+      "link": "https://arxiv.org/pdf/2608.08575v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "proposes a 3D medical image segmentation network",
+      "llm_evidence_cn": "提出一种3D医学图像分割网络",
+      "llm_evidence": "提出一种3D医学图像分割网络",
+      "canonical_evidence": "提出一种3D医学图像分割网络",
+      "llm_tldr_en": "The paper proposes CDGC-Net, a 3D medical image segmentation network that combines cooperative dual-scale self-attention with grouped hierarchical channel modeling to address semantic mismatch and insufficient channel interactions. Experiments show improved segmentation accuracy.",
+      "llm_tldr_cn": "针对现有3D医学图像分割中全局与局部特征分离、通道关系建模不足的问题，本文提出CDGC-Net，结合协作双尺度自注意力与分组层次通道建模。该方法在每个模块中让注意力头并行处理不同尺度特征，并强化空间与通道的交互。实验表明该网络能有效提升分割精度，为医学图像分割任务提供了新的网络架构。",
+      "llm_tldr": "针对现有3D医学图像分割中全局与局部特征分离、通道关系建模不足的问题，本文提出CDGC-Net，结合协作双尺度自注意力与分组层次通道建模。该方法在每个模块中让注意力头并行处理不同尺度特征，并强化空间与通道的交互。实验表明该网络能有效提升分割精度，为医学图像分割任务提供了新的网络架构。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.07616v1",
+      "source": "arxiv",
+      "title": "HSMLA: Hierarchical Softmax Multi-scale Linear Attention for Efficient Vision Transformers",
+      "abstract": "Vision transformers face significant computational overheads in high-resolution dense prediction due to the quadratic complexity of self-attention. Linear attention offers efficiency but sacrifices local context modeling. We propose \\textbf{HSMLA (Hierarchical Softmax Multi-scale Linear Attention)}, which combines ReLU-based linear attention for global context, selective softmax refinement for critical local features, and multi-scale token representations via depthwise convolutions. HSMLA achieves superior accuracy-efficiency trade-offs: up to $4.2\\times$ inference-time speedup across dense prediction tasks, $87.3%$ Dice with $3.2\\times$ speedup on CT organ segmentation, and $94.2%$ AUC with $4.1\\times$ speedup on pathology WSI.",
+      "authors": [
+        "Dong Liu",
+        "Yanxuan Yu",
+        "Renata Borovica-Gajic",
+        "Ying Nian Wu"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-08-07T03:47:04+00:00",
+      "link": "https://arxiv.org/pdf/2608.07616v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "proposes efficient attention for dense prediction; reports 87.3% Dice on CT organ segmentation with speedup",
+      "llm_evidence_cn": "提出用于密集预测的高效注意力机制；报告CT器官分割上87.3% Dice及加速",
+      "llm_evidence": "提出用于密集预测的高效注意力机制；报告CT器官分割上87.3% Dice及加速",
+      "canonical_evidence": "提出用于密集预测的高效注意力机制；报告CT器官分割上87.3% Dice及加速",
+      "llm_tldr_en": "The paper introduces HSMLA, an efficient multi-scale linear attention for vision transformers, achieving high Dice on CT organ segmentation.",
+      "llm_tldr_cn": "该论文针对视觉Transformer在密集预测中的计算开销问题，提出HSMLA（分层Softmax多尺度线性注意力），结合ReLU线性注意力的全局上下文、选择性softmax细化和深度卷积的多尺度表示。在CT器官分割任务上达到87.3% Dice，同时获得3.2倍加速，展示了在医学图像分割中的高效性。",
+      "llm_tldr": "该论文针对视觉Transformer在密集预测中的计算开销问题，提出HSMLA（分层Softmax多尺度线性注意力），结合ReLU线性注意力的全局上下文、选择性softmax细化和深度卷积的多尺度表示。在CT器官分割任务上达到87.3% Dice，同时获得3.2倍加速，展示了在医学图像分割中的高效性。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning architectures for abdominal organ segmentation with full supervision",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.07616v2",
+      "source": "arxiv",
+      "title": "HSMLA: Hierarchical Softmax Multi-scale Linear Attention for Efficient Vision Transformers",
+      "abstract": "Vision transformers face significant computational overheads in high-resolution dense prediction due to the quadratic complexity of self-attention. Linear attention offers efficiency but sacrifices local context modeling. We propose \\textbf{HSMLA (Hierarchical Softmax Multi-scale Linear Attention)}, which combines ReLU-based linear attention for global context, selective softmax refinement for critical local features, and multi-scale token representations via depthwise convolutions. HSMLA achieves superior accuracy-efficiency trade-offs: up to $4.2\\times$ inference-time speedup across dense prediction tasks, $87.3%$ Dice with $3.2\\times$ speedup on CT organ segmentation, and $94.2%$ AUC with $4.1\\times$ speedup on pathology WSI.",
+      "authors": [
+        "Dong Liu",
+        "Yanxuan Yu",
+        "Renata Borovica-Gajic",
+        "Tong Geng",
+        "Ying Nian Wu"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-08-07T03:47:04+00:00",
+      "link": "https://arxiv.org/pdf/2608.07616v2",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Proposes efficient vision transformer and reports Dice on CT organ segmentation, directly applicable to abdominal multi-organ segmentation.",
+      "llm_evidence_cn": "提出高效视觉Transformer并在CT器官分割上报告Dice，可直接用于腹部多器官分割",
+      "llm_evidence": "提出高效视觉Transformer并在CT器官分割上报告Dice，可直接用于腹部多器官分割",
+      "canonical_evidence": "提出高效视觉Transformer并在CT器官分割上报告Dice，可直接用于腹部多器官分割",
+      "llm_tldr_en": "HSMLA proposes an efficient vision transformer with hierarchical softmax multi-scale linear attention, achieving high accuracy and speedup on CT organ segmentation.",
+      "llm_tldr_cn": "该文针对视觉Transformer在高分辨率密集预测中计算开销大的问题，提出HSMLA，结合ReLU线性注意力、选择性softmax细化和多尺度令牌表示。在CT器官分割上，HSMLA以3.2倍加速实现87.3%的Dice，在病理WSI上以4.1倍加速实现94.2%的AUC。该方法为全监督腹部器官分割提供了高效的注意力机制，兼顾精度与速度。",
+      "llm_tldr": "该文针对视觉Transformer在高分辨率密集预测中计算开销大的问题，提出HSMLA，结合ReLU线性注意力、选择性softmax细化和多尺度令牌表示。在CT器官分割上，HSMLA以3.2倍加速实现87.3%的Dice，在病理WSI上以4.1倍加速实现94.2%的AUC。该方法为全监督腹部器官分割提供了高效的注意力机制，兼顾精度与速度。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning architectures for abdominal organ segmentation with full supervision",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2608.05844v2",
+      "source": "arxiv",
+      "title": "Curia-MAE: Multi-Modal Multi-Anatomy MAE Pre-Training for 3D Medical Image Segmentation",
+      "abstract": "Radiology foundation models learn transferable representations that can be adapted to new tasks by training only small layers on top of a frozen encoder. Dense prediction tasks such as 3D segmentation are, however, underrepresented in their evaluation, and, with the encoder kept frozen, pre-trained models still fall short of nnU-Net, the state-of-the-art reference trained from scratch. To close this gap we extend convolutional MAE pre-training with a robust reconstruction objective, a feature regularizer, and a local-global similarity objective. Using this method, we propose Curia-MAE, a multi-modal, multi-anatomy MAE model pre-trained on 300,000 CT and MRI images covering a large number of anatomical sites. On eight anatomy- and lesion-focused segmentation benchmarks, Curia-MAE improves frozen-encoder performance over a strong MAE baseline, while remaining competitive under full finetuning and superior on lesion tasks, where labeled data is scarce. These results indicate that a single frozen encoder can be reused across diverse segmentation tasks, reducing the cost of adapting and deploying such models in clinical workflows. Curia-MAE pre-trained model weights are made publicly available at https://huggingface.co/raidium/Curia-MAE.",
+      "authors": [
+        "Théo Danielou",
+        "Antoine Saporta",
+        "Léo Alberge",
+        "Corentin Dancette"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-08-06T10:17:23+00:00",
+      "link": "https://arxiv.org/pdf/2608.05844v2",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Pre-training method for 3D medical image segmentation, targeting to surpass nnU-Net",
+      "llm_evidence_cn": "针对3D医学图像分割的预训练方法，旨在超越nnU-Net",
+      "llm_evidence": "针对3D医学图像分割的预训练方法，旨在超越nnU-Net",
+      "canonical_evidence": "针对3D医学图像分割的预训练方法，旨在超越nnU-Net",
+      "llm_tldr_en": "Curia-MAE extends convolutional MAE pre-training with robust reconstruction, feature regularization, and local-global similarity, pre-trained on 300k CT/MRI images, to improve 3D medical image segmentation and close the gap with nnU-Net.",
+      "llm_tldr_cn": "该工作针对预训练模型在3D医学图像分割中仍落后于从头训练的nnU-Net的问题，提出了Curia-MAE，一种多模态、多解剖结构的卷积MAE预训练方法，增强了鲁棒重建、特征正则化和局部-全局相似性目标。在300,000张CT和MRI图像上预训练，并在八个解剖和病灶分割任务上评估，结果表明该方法能有效缩小与nnU-Net的性能差距，为医学图像分割提供了强迁移表示。",
+      "llm_tldr": "该工作针对预训练模型在3D医学图像分割中仍落后于从头训练的nnU-Net的问题，提出了Curia-MAE，一种多模态、多解剖结构的卷积MAE预训练方法，增强了鲁棒重建、特征正则化和局部-全局相似性目标。在300,000张CT和MRI图像上预训练，并在八个解剖和病灶分割任务上评估，结果表明该方法能有效缩小与nnU-Net的性能差距，为医学图像分割提供了强迁移表示。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2608.08191v1",
+      "source": "arxiv",
+      "title": "BAP-MOS: Bandit-Based Adaptive Prompting for Boundary-Sensitive Multi-Organ Segmentation",
+      "abstract": "Multi-organ ultrasound segmentation remains challenging when anatomically adjacent structures must be delineated jointly, as localized boundary errors can persist even when Dice scores are high. To address these challenges, we propose Boundary-Adaptive Prompting for Multi-Organ Segmentation (BAP-MOS), a closed-loop adaptive prompting framework. BAP-MOS formulates prompt selection as an organ-specific multi-armed bandit problem over box, point, and combined prompts. An outer Tree-structured Parzen Estimator (TPE) loop selects the prompt-selection parameter vector, while an inner UCB-Tuned loop adapts per-organ prompt preferences during fine-tuning using a bounded Dice--MSD--HD95 validation-probe reward. The framework further introduces an organ-scaled negative prompt ring to adapt sparse prompt geometry across anatomical scales, while keeping the image and prompt encoders frozen and updating only the mask decoder. We evaluate BAP-MOS on pooled prostate-region TRUS cohorts against U-Net, nnU-Net, MedSAM, fixed-prompt SAM/MedSAM, and adaptive policy variants. On this benchmark, BAP-MOS achieves Dice 0.982, HD95 0.482, and MSD 0.204, reducing HD95 by approximately 48% and MSD by 45% relative to the strongest conventional baseline. To verify the generalization ability of the framework, we tested it on the external PFUS1 pelvic-floor ultrasound corpus using MedSAM and its adaptive strategy variants, and the results were good. These results support adaptive prompt allocation as an effective mechanism for improving boundary-sensitive multi-organ ultrasound segmentation without modifying the foundation-model backbone. Source Code is available at: https://github.com/SatvikPraveen/BAP-MOS",
+      "authors": [
+        "Satvik Praveen",
+        "Shengji Jin",
+        "Ahmed Lamidi",
+        "Xin Qian",
+        "Yi Sheng"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-08-08T15:33:09+00:00",
+      "link": "https://arxiv.org/pdf/2608.08191v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "multi-organ ultrasound segmentation with adaptive prompting",
+      "llm_evidence_cn": "多器官超声分割的自适应提示",
+      "llm_evidence": "多器官超声分割的自适应提示",
+      "canonical_evidence": "多器官超声分割的自适应提示",
+      "llm_tldr_en": "BAP-MOS addresses boundary errors in multi-organ ultrasound segmentation by formulating prompt selection as a multi-armed bandit problem, using TPE and UCB-Tuned loops to adapt prompts per organ.",
+      "llm_tldr_cn": "针对多器官超声分割中相邻结构边界误差问题，提出BAP-MOS闭环自适应提示框架。该框架将提示选择建模为器官特定的多臂赌博机问题，外层TPE选择参数向量，内层UCB-Tuned在微调中自适应器官提示偏好。实验表明该框架能有效减少边界误差，提升多器官分割精度。",
+      "llm_tldr": "针对多器官超声分割中相邻结构边界误差问题，提出BAP-MOS闭环自适应提示框架。该框架将提示选择建模为器官特定的多臂赌博机问题，外层TPE选择参数向量，内层UCB-Tuned在微调中自适应器官提示偏好。实验表明该框架能有效减少边界误差，提升多器官分割精度。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "segmenting abdominal organs with fully supervised methods",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}

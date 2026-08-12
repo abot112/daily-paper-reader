@@ -6,26 +6,38 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-08-10
-- 运行时间：2026-08-10 20:05:43 UTC
+- 最新运行日期：2026-08-12
+- 运行时间：2026-08-12 21:10:55 UTC
 - 运行状态：成功
-- 本次总论文数：1
-- 精读区：0
-- 速读区：1
+- 本次总论文数：5
+- 精读区：3
+- 速读区：2
 
 ### 今日简报（AI）
-今天速读了一篇关于图像掩码Transformer推理优化的论文，提出了一种新的感知学习框架。  
-最值得关注的是，该方法通过推理感知训练大幅提升普通掩码Transformer的生成效率，无需额外架构修改。  
-若对高效图像生成模型感兴趣，可浏览这篇研究的速读摘要，关注其将训练与推理性能结合的思路。
-- 详情：[/202608/10/README](/202608/10/README)
+- 今日共生成 5 篇推荐（精读 3 篇，速读 2 篇）
+- 精读：《CDGC-Net: 3D Medical Image Segmentation with Cooperative Dual-Scale Self-Attention and Grouped Channel Modeling》（9.0/10）, 《HSMLA: Hierarchical Softmax Multi-scale Linear Attention for Efficient Vision Transformers》（8.0/10）
+- 速读：《Curia-MAE: Multi-Modal Multi-Anatomy MAE Pre-Training for 3D Medical Image Segmentation》（7.0/10）, 《BAP-MOS: Bandit-Based Adaptive Prompting for Boundary-Sensitive Multi-Organ Segmentation》（7.0/10）
+- 这些结果覆盖了当下较热的方向，建议先看精读区论文的关键问题与方法。
+- 详情：[/202608/12/README](/202608/12/README)
 
 ### 精读区论文标签
-- 本次无精读推荐。
+1. [CDGC-Net: 3D Medical Image Segmentation with Cooperative Dual-Scale Self-Attention and Grouped Channel Modeling](/202608/12/2608.08575v1-cdgc-net-3d-medical-image-segmentation-with-cooperative-dual-scale-self-attention-and-grouped-channel-modeling)  
+   标签：评分：9.0/10、query:abdk-seg
+   evidence：提出一种3D医学图像分割网络
+2. [HSMLA: Hierarchical Softmax Multi-scale Linear Attention for Efficient Vision Transformers](/202608/12/2608.07616v1-hsmla-hierarchical-softmax-multi-scale-linear-attention-for-efficient-vision-transformers)  
+   标签：评分：8.0/10、query:abdk-seg
+   evidence：提出用于密集预测的高效注意力机制；报告CT器官分割上87.3% Dice及加速
+3. [HSMLA: Hierarchical Softmax Multi-scale Linear Attention for Efficient Vision Transformers](/202608/12/2608.07616v2-hsmla-hierarchical-softmax-multi-scale-linear-attention-for-efficient-vision-transformers)  
+   标签：评分：8.0/10、query:abdk-seg
+   evidence：提出高效视觉Transformer并在CT器官分割上报告Dice，可直接用于腹部多器官分割
 
 ### 速读区论文标签
-1. [iFAN: Inference-Aware Learning for Plain Mask Transformers](/202608/10/2608.03216v1-ifan-inference-aware-learning-for-plain-mask-transformers)  
+1. [Curia-MAE: Multi-Modal Multi-Anatomy MAE Pre-Training for 3D Medical Image Segmentation](/202608/12/2608.05844v2-curia-mae-multi-modal-multi-anatomy-mae-pre-training-for-3d-medical-image-segmentation)  
    标签：评分：7.0/10、query:abdk-seg
-   evidence：提供对齐查询竞争与掩码质量的训练框架，用于有监督分割
+   evidence：针对3D医学图像分割的预训练方法，旨在超越nnU-Net
+2. [BAP-MOS: Bandit-Based Adaptive Prompting for Boundary-Sensitive Multi-Organ Segmentation](/202608/12/2608.08191v1-bap-mos-bandit-based-adaptive-prompting-for-boundary-sensitive-multi-organ-segmentation)  
+   标签：评分：7.0/10、query:abdk-seg
+   evidence：多器官超声分割的自适应提示
 
 
 <div class="dpr-home-promo-card">
