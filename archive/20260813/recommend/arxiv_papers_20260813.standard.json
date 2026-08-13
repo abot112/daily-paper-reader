@@ -1,0 +1,174 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-13T20:51:32.927278+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 4,
+    "quick_skim_target": 11,
+    "quick_selected": 4
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2608.10649v1",
+      "source": "arxiv",
+      "title": "PolypVision: A Three-Stage Hierarchical Deep Learning Framework for Classification and Segmentation of Colorectal Polyps",
+      "abstract": "Colorectal cancer (CRC) remains one of the leading causes of cancer-related mortality worldwide, predominantly arising from precancerous polyps. Accurate detection, segmentation, and endoscopic and histological classification of colorectal polyps are crucial for timely clinical intervention. In this study, we present PolypVision, a three-stage hierarchical deep learning framework that sequentially performs: (Stage 1) binary classification of polyps as adenomatous or hyperplastic, with simultaneous Paris and JNet classification, using EfficientNetV2-M with Focal Loss; (Stage 2) polyp segmentation with recommended resection method using a UNet++ decoder with the Stage 1 backbone as encoder, optimized with Dice and BCE losses; and (Stage 3) adenoma subtype classification (tubular, tubulovillous, villous) using EfficientNetV2-M with transfer learning from Stage 2. Evaluated on three public datasets -- PolypGen, Kvasir-SEG, and CVC-ClinicDB -- PolypVision achieves an AUC of approximately 0.99 for frame classification and a detection mAP@50 of 94.4% on Kvasir-SEG, outperforming or matching state-of-the-art methods. Gradient-weighted Class Activation Maps (Grad-CAM) confirm that the model attends to clinically relevant lesion features. The framework is device-independent, operating across diverse endoscopic imaging systems without hardware-specific adaptation. These results demonstrate that a hierarchical, transfer-learning-driven pipeline with task-specific loss functions offers a robust, device-independent, and clinically meaningful approach to automated colorectal polyp analysis. PolypVision is freely available as a web application at https://polypvision.com, a DataBioX initiative, with a free usage tier open to all users.",
+      "authors": [
+        "Hamidreza Bolhasani",
+        "Hamidreza Rastad",
+        "Amir Mohammad Akbari",
+        "Mohammad Tashakoripour",
+        "Parnian Asadollahi",
+        "Ata Khodami",
+        "Mojgan Forootan"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-08-11T08:33:17+00:00",
+      "link": "https://arxiv.org/pdf/2608.10649v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "deep learning framework for polyp segmentation",
+      "llm_evidence_cn": "息肉分割的深度学习框架",
+      "llm_evidence": "息肉分割的深度学习框架",
+      "canonical_evidence": "息肉分割的深度学习框架",
+      "llm_tldr_en": "Presents a three-stage hierarchical framework for colorectal polyp classification and segmentation using EfficientNetV2-M with focal loss and UNet++ decoder, achieving improved detection and classification.",
+      "llm_tldr_cn": "针对结直肠癌前病变息肉检测与分类需求，提出三阶段分层深度学习框架。首先用EfficientNetV2-M和焦点损失对息肉进行二分类及Paris/JNet分类，然后利用UNet++解码器结合前一阶段骨干进行分割，并推荐切除方法。实验表明该框架提升了息肉分类和分割性能。为结直肠息肉的内镜辅助诊断提供了有效工具。",
+      "llm_tldr": "针对结直肠癌前病变息肉检测与分类需求，提出三阶段分层深度学习框架。首先用EfficientNetV2-M和焦点损失对息肉进行二分类及Paris/JNet分类，然后利用UNet++解码器结合前一阶段骨干进行分割，并推荐切除方法。实验表明该框架提升了息肉分类和分割性能。为结直肠息肉的内镜辅助诊断提供了有效工具。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2608.07767v1",
+      "source": "arxiv",
+      "title": "DINO-3DRA: Leveraging 2D Foundation Model Semantics for 3D Cerebral Aneurysm Segmentation",
+      "abstract": "Accurate aneurysm segmentation in 3D rotational angiography (3DRA) is hindered by extreme class imbalance, morphological similarity to vessels, and absent large-scale 3D pretraining. 2D vision foundation models encode dense structural priors from 1.7 billion images, yet naïve slice-wise transfer fragments anatomical continuity and destabilises optimisation. We propose DINO-3DRA, a dual-path framework achieving effective cross-dimensional semantic transfer by injecting frozen DINOv3 features into a 3D U-Net backbone via Room-Lite spatial mixing and calibrated residual fusion. On multi-centre 3DRA data, DINO-3DRA achieves state-of-the-art aneurysm segmentation (Dice: 0.758; HD95: 2.75 mm; +13% over nnU-Net) with only 5.72M trainable parameters. Ablation studies confirm that gains arise from structured cross-dimensional transfer rather than loss design alone, with bridged foundation features improving anatomical continuity between aneurysms and parent vessels. Without fine-tuning on CADA and SHINY-ICARUS, DINO-3DRA eliminates all catastrophic failure cases observed in baseline architectures, demonstrating robust generalisation across heterogeneous imaging protocols.",
+      "authors": [
+        "Jiayang Lu",
+        "Fengming Lin",
+        "Alejandro F. Frangi",
+        "Ali Sarrami-Foroushani"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-08-07T21:17:11+00:00",
+      "link": "https://arxiv.org/pdf/2608.07767v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "3D cerebral aneurysm segmentation with 2D foundation model",
+      "llm_evidence_cn": "利用2D基础模型的3D脑动脉瘤分割",
+      "llm_evidence": "利用2D基础模型的3D脑动脉瘤分割",
+      "canonical_evidence": "利用2D基础模型的3D脑动脉瘤分割",
+      "llm_tldr_en": "Leverages 2D foundation model DINOv3 features in a 3D U-Net for cerebral aneurysm segmentation, achieving state-of-the-art Dice 0.758 with low trainable parameters.",
+      "llm_tldr_cn": "针对3D脑血管瘤分割中类别不平衡、形态相似和缺乏3D预训练的问题，提出DINO-3DRA双路径框架。通过Room-Lite空间混合和校准残差融合，将冻结的DINOv3二维语义注入3D U-Net骨干。在多中心3DRA数据上取得Dice 0.758，优于nnU-Net。为3D医学图像分割利用2D基础模型提供了有效方案。",
+      "llm_tldr": "针对3D脑血管瘤分割中类别不平衡、形态相似和缺乏3D预训练的问题，提出DINO-3DRA双路径框架。通过Room-Lite空间混合和校准残差融合，将冻结的DINOv3二维语义注入3D U-Net骨干。在多中心3DRA数据上取得Dice 0.758，优于nnU-Net。为3D医学图像分割利用2D基础模型提供了有效方案。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.12050v1",
+      "source": "arxiv",
+      "title": "Predicting Functions, Not Features: KANs with Function-Space Joint-Embedding Predictive Learning for Medical Image Segmentation",
+      "abstract": "Kolmogorov--Arnold Networks (KANs) introduce explicit functional representations by parameterizing each network edge as a learnable univariate function. However, existing KAN-based segmentation models optimize edge functions only through objectives defined after edge aggregation, leaving individual functions without an explicit pre-aggregation learning target. To address this limitation, we propose Function-Space Joint-Embedding Predictive Learning (FS-JEPA) for medical image segmentation. Our FS-JEPA framework moves predictive learning into the pre-aggregation function space of KANs. A masked online branch predicts structured signatures of sampled KAN edge functions generated by a full-context exponential moving average target branch, while shared edge indices preserve correspondence between predictions and targets. Rather than predicting an isolated edge response, we represent each sampled edge function using a multi-radius signature composed of function evaluations around its input anchor. This structured representation captures local functional variations that cannot be characterized by a single response and provides a more informative predictive target. The function-space objective is jointly optimized with the segmentation loss during training, while the predictive branch is removed at inference. Experiments on five medical image segmentation benchmarks show that our FS-JEPA achieves the best average Dice and outperforms the strongest competing KAN-based method by +2.25 percentage points.",
+      "authors": [
+        "Yungeng Liu",
+        "Xuanzi Fang",
+        "Yuge Zhang",
+        "Shuqi Ren",
+        "Haijin Zeng",
+        "Yongyong Chen"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-08-12T13:32:20+00:00",
+      "link": "https://arxiv.org/pdf/2608.12050v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "KAN-based medical image segmentation",
+      "llm_evidence_cn": "基于KAN的医学图像分割",
+      "llm_evidence": "基于KAN的医学图像分割",
+      "canonical_evidence": "基于KAN的医学图像分割",
+      "llm_tldr_en": "Proposes Function-Space Joint-Embedding Predictive Learning (FS-JEPA) for medical image segmentation, moving predictive learning into pre-aggregation function space of KANs via masked prediction of edge function signatures.",
+      "llm_tldr_cn": "针对KAN分割模型边缘函数缺乏预聚合学习目标的问题，提出函数空间联合嵌入预测学习FS-JEPA。该框架将预测学习引入KAN的边缘函数空间，通过掩码在线分支预测全上下文分支生成的函数签名。实验表明该方法改善了医学图像分割性能。为KAN在医学分割中的应用提供了新思路。",
+      "llm_tldr": "针对KAN分割模型边缘函数缺乏预聚合学习目标的问题，提出函数空间联合嵌入预测学习FS-JEPA。该框架将预测学习引入KAN的边缘函数空间，通过掩码在线分支预测全上下文分支生成的函数签名。实验表明该方法改善了医学图像分割性能。为KAN在医学分割中的应用提供了新思路。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2608.12196v1",
+      "source": "arxiv",
+      "title": "M-Net: Integrating Spectral Features and Physical Field Operators into Deep Learning for Medical Image Segmentation",
+      "abstract": "Purpose: Deep learning-based medical image segmentation has achieved remarkable success, yet purely data-driven approaches often fail to exploit the rich mathematical structure inherent in medical images. We investigate whether explicit mathematical inductive biases, specifically matrix spectral analysis and vector calculus operators, can enhance segmentation beyond data-driven learning alone. Methods: We propose M-Net (Math-Augmented Network), which integrates three complementary mathematical priors into U-Net: (1) continuous spectral features derived from the condition number of centered local pixel matrices, providing a differentiable measure of texture ill-conditioning; (2) physical field operators (divergence and a discrete curl-like boundary irregularity operator) computed from image gradient fields, capturing focal intensity extrema and edge non-smoothness; and (3) a Math-Attention Gate (MAG) that adaptively fuses mathematical features with CNN-extracted deep features at skip connections. Results: Experiments on three benchmarks (LiTS, KiTS, and BraTS) show that M-Net achieves Dice scores of 78.42%, 76.15%, and 83.67%, outperforming baseline U-Net by 12.37%, 3.52%, and 5.55% on liver, kidney, and brain tumor segmentation, respectively. Ablations reveal that the condition-number feature contributes a 2.14% gain over binary invertibility features, while MAG adds 1.45% over simple concatenation. Conclusion: M-Net establishes that mathematical inductive biases provide effective complementary information for medical image segmentation. The continuous condition-number feature offers superior gradient information over discrete alternatives, and MAG preserves these priors throughout the network. This work opens avenues for integrating linear algebra and vector calculus into deep architectures for medical imaging.",
+      "authors": [
+        "Jing Zhu",
+        "Ye Wang",
+        "Fumin Wang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-08-12T15:51:07+00:00",
+      "link": "https://arxiv.org/pdf/2608.12196v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "mathematical inductive biases for medical image segmentation",
+      "llm_evidence_cn": "医学图像分割的数学归纳偏置",
+      "llm_evidence": "医学图像分割的数学归纳偏置",
+      "canonical_evidence": "医学图像分割的数学归纳偏置",
+      "llm_tldr_en": "Addressing the limitation of purely data-driven segmentation, this paper proposes M-Net, which augments U-Net with spectral features and physical field operators as mathematical inductive biases, showing improved segmentation results on medical images.",
+      "llm_tldr_cn": "针对纯数据驱动医学图像分割未能利用图像数学结构的局限，本文提出M-Net，在U-Net中集成连续谱特征、物理场算子等三种数学先验。实验表明，显式数学归纳偏置使分割性能超过仅依赖数据驱动学习的方法。该工作为医学图像分割提供了融合数学先验的新思路。",
+      "llm_tldr": "针对纯数据驱动医学图像分割未能利用图像数学结构的局限，本文提出M-Net，在U-Net中集成连续谱特征、物理场算子等三种数学先验。实验表明，显式数学归纳偏置使分割性能超过仅依赖数据驱动学习的方法。该工作为医学图像分割提供了融合数学先验的新思路。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
