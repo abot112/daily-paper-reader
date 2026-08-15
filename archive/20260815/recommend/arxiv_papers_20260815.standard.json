@@ -1,0 +1,186 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-15T20:28:27.317105+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 4,
+    "quick_skim_target": 11,
+    "quick_selected": 4
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2608.09818v1",
+      "source": "arxiv",
+      "title": "MedPixel: A Unified Pixel-Language Model for Medical Reasoning and Segmentation",
+      "abstract": "Reliable medical image understanding requires models to connect clinical language and visual reasoning with pixel-level grounding. Yet medical vision-language models often lack precise localization, whereas medical segmenters typically rely on explicit target categories or precise spatial prompts. This divide is reinforced by a supervision mismatch: segmentation datasets provide precise masks but little language supervision, whereas medical vision-language data rarely pair language with dense spatial annotations. To address this gap, we present MedPixel, a unified medical pixel-language model built around a shared language--mask interface. To provide scalable supervision, we introduce MedPLG-440K, comprising approximately 440K pixel-language task samples constructed through a clinically motivated synthesis process without external LLM annotation. MedPixel is trained with joint multi-task supervised fine-tuning followed by Pixel-Level Preference Optimization, which uses ground-truth masks as offline verifiers to derive response preferences from mask quality. MedPixel supports a broad spectrum of tasks spanning explicit grounding, implicit reasoning, spatial interaction, grounded explanation, and medical VQA. Across this task spectrum, MedPixel achieves strong performance in both pixel-level prediction and response generation, together with effective zero-shot transfer to external grounding benchmarks and robustness to imperfect spatial prompts. Code and model checkpoints will be released at https://github.com/yhy-whu/Medpixel.",
+      "authors": [
+        "Haoyu Yang",
+        "Meixing Shi",
+        "Zengjie Chen",
+        "Haoran Sun",
+        "Haitao Leng",
+        "Xiaoming Shi",
+        "Yuxiang Cai",
+        "Yankai Jiang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-08-10T16:37:24+00:00",
+      "link": "https://arxiv.org/pdf/2608.09818v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Unified pixel-language model for medical image segmentation and reasoning",
+      "llm_evidence_cn": "用于医学图像分割与推理的统一像素-语言模型",
+      "llm_evidence": "用于医学图像分割与推理的统一像素-语言模型",
+      "canonical_evidence": "用于医学图像分割与推理的统一像素-语言模型",
+      "llm_tldr_en": "This paper addresses the gap between medical vision-language models and segmentation by proposing MedPixel, a unified pixel-language model with a shared language-mask interface. It introduces MedPLG-440K, a large pixel-language dataset, enabling scalable supervision for medical reasoning and segmentation.",
+      "llm_tldr_cn": "针对医学视觉语言模型定位能力弱、医学分割器难以利用语言监督的问题，提出MedPixel统一像素-语言模型，建立共享语言-掩码接口。为提供大规模监督，构建包含约44万像素-语言对的MedPLG-440K数据集。该模型将语言推理与密集分割结合，有望提升医学图像理解的精确性与通用性，为多任务医学AI提供新范式。",
+      "llm_tldr": "针对医学视觉语言模型定位能力弱、医学分割器难以利用语言监督的问题，提出MedPixel统一像素-语言模型，建立共享语言-掩码接口。为提供大规模监督，构建包含约44万像素-语言对的MedPLG-440K数据集。该模型将语言推理与密集分割结合，有望提升医学图像理解的精确性与通用性，为多任务医学AI提供新范式。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2608.07749v1",
+      "source": "arxiv",
+      "title": "LoRSA: Toward Generalizable Parameter-Efficient Fine-Tuning for Biomedical Downstream Tasks",
+      "abstract": "Parameter-efficient fine-tuning enables the adaptation of vision foundation models to biomedical tasks under limited computational resources, but a single low-rank update can constrain all task-specific changes to one narrow parameter subspace. This restriction may prevent the model from simultaneously representing globally shared task structure and localized residual directions required for generalization to unseen imaging domains. We introduce LoRSA, a global--residual adaptation framework that jointly learns a dense low-rank component and a dynamically structured-sparse low-rank component. The dense component captures globally coordinated task adaptation, while the structured component provides complementary residual corrections whose support evolves during training. We characterize the representational capacity, approximation properties, rank structure, and singular-subspace complementarity of this decomposition. We evaluate LoRSA for four-class breast-density classification using DINOv3-Base, with VinDr-Mammo as the source domain and MammosighTR and RSNA as unseen external domains. LoRSA remains competitive on the internal validation set and achieves the best external macro-F1 on both target datasets, improving upon the strongest competing method by 2.15 percentage points on MammosighTR and 3.09 percentage points on RSNA. Weight-matrix analysis further shows that approximately $92\\%$ of the energy of each adaptation component lies outside the bilateral singular subspace of the other, indicating that the two components learn largely complementary update directions. These results suggest that organizing adaptation capacity into distinct global and residual paths can improve the external-domain generalization of parameter-efficiently adapted biomedical vision models.",
+      "authors": [
+        "Saed Moradi",
+        "Benyamin Ghojogh",
+        "M. Hadi Sepanj",
+        "Yimin Yang",
+        "Ashirbani Saha"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-08-07T20:30:35+00:00",
+      "link": "https://arxiv.org/pdf/2608.07749v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Parameter-efficient fine-tuning for biomedical downstream tasks, applicable to supervised segmentation",
+      "llm_evidence_cn": "面向生物医学下游任务的参数高效微调，可用于有监督分割",
+      "llm_evidence": "面向生物医学下游任务的参数高效微调，可用于有监督分割",
+      "canonical_evidence": "面向生物医学下游任务的参数高效微调，可用于有监督分割",
+      "llm_tldr_en": "This paper addresses limited parameter-efficient fine-tuning for biomedical tasks by proposing LoRSA, a global-residual framework that learns dense and structured-sparse low-rank components. Experiments show improved generalization across biomedical downstream tasks, enabling efficient adaptation for segmentation.",
+      "llm_tldr_cn": "针对生物医学下游任务中参数高效微调受限于单一低秩子空间、难以兼顾全局与局部适应的问题，提出LoRSA全局-残差自适应框架。该方法联合学习稠密低秩分量与动态结构化稀疏低秩分量，前者捕捉全局协同任务自适应，后者提供互补残差修正。实验表明LoRSA能提升跨成像域泛化能力，为有限计算资源下的生物医学分割等下游任务提供有效微调方案。",
+      "llm_tldr": "针对生物医学下游任务中参数高效微调受限于单一低秩子空间、难以兼顾全局与局部适应的问题，提出LoRSA全局-残差自适应框架。该方法联合学习稠密低秩分量与动态结构化稀疏低秩分量，前者捕捉全局协同任务自适应，后者提供互补残差修正。实验表明LoRSA能提升跨成像域泛化能力，为有限计算资源下的生物医学分割等下游任务提供有效微调方案。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "supervised training of neural networks for segmentation",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.09391v1",
+      "source": "arxiv",
+      "title": "CoInS-Net: A Continuous Position-Aware Network for Joint Medical Image Interpolation and Segmentation",
+      "abstract": "Accurate medical image interpolation and anatomical structure segmentation are fundamental for computer-aided diagnosis and treatment planning. Anisotropic medical volumes with sparse through-plane sampling often suffer from structural discontinuity and boundary blur, hindering reliable clinical image analysis. Most existing methods implement interpolation and segmentation independently, which introduces redundant computation and fails to fully exploit complementary cross-slice structural information between sequential slices. To address these issues, we propose a continuous position-aware interaction network, termed CoInS-Net, for joint frame interpolation and lesion segmentation. Unlike conventional cascaded interpolation-then-segmentation paradigms, the framework enables bidirectional interaction under a shared Swin encoder with continuous spatial coordinate queries. A spatially continuous position interpolation module generates target-position features at every scale from the relative coordinate and physical spacing, and a prototype-based task mutual interaction module lets the segmentation and interpolation branches exchange global structure through a small set of shared prototypes rather than dense feature mixing. A multi-scale task-cooperative decoder further separates each scale into shared and task-specific components, so the two tasks reinforce common anatomy while preserving their distinct requirements down to the boundary level, without extra annotations. Experiments on four public medical imaging datasets with diverse modalities and anatomical regions demonstrate that the proposed method outperforms conventional single-task schemes. The joint optimization framework effectively realizes mutual promotion between interpolation and segmentation tasks, providing a reliable and universal technical scheme for intelligent clinical medical image analysis.",
+      "authors": [
+        "Yujia Sun",
+        "Ningfeng Que",
+        "Peiting Shi",
+        "Rongrong Fu",
+        "Yingying Yang",
+        "Xinhang Li",
+        "Yin Dai"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-08-10T10:19:16+00:00",
+      "link": "https://arxiv.org/pdf/2608.09391v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Medical image segmentation method using continuous position-aware network for joint interpolation and lesion segmentation",
+      "llm_evidence_cn": "医学图像分割方法，联合插值与病灶分割",
+      "llm_evidence": "医学图像分割方法，联合插值与病灶分割",
+      "canonical_evidence": "医学图像分割方法，联合插值与病灶分割",
+      "llm_tldr_en": "This paper addresses anisotropic medical volumes with sparse sampling, where independent interpolation and segmentation lose cross-slice info. It proposes CoInS-Net, a continuous position-aware interaction network for joint frame interpolation and lesion segmentation, leveraging complementary cross-slice structural information. Experiments show improved performance on medical image analysis tasks.",
+      "llm_tldr_cn": "本文解决各向异性医学体数据中稀疏采样造成的结构不连续与边界模糊问题，现有方法独立进行插值和分割，冗余且无法充分利用跨切片结构信息。为此提出连续位置感知交互网络CoInS-Net，联合执行帧插值与病灶分割，通过交互机制提取互补的跨切片信息。实验结果表明该方法在医学图像插值和分割精度上均有显著改进，为计算机辅助诊断提供更可靠的基础。",
+      "llm_tldr": "本文解决各向异性医学体数据中稀疏采样造成的结构不连续与边界模糊问题，现有方法独立进行插值和分割，冗余且无法充分利用跨切片结构信息。为此提出连续位置感知交互网络CoInS-Net，联合执行帧插值与病灶分割，通过交互机制提取互补的跨切片信息。实验结果表明该方法在医学图像插值和分割精度上均有显著改进，为计算机辅助诊断提供更可靠的基础。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.12274v1",
+      "source": "arxiv",
+      "title": "A Neighborhood Attention Transformer Network for Enhanced 3D Segmentation of the Left Anterior Descending Artery",
+      "abstract": "Background: Accurate segmentation of the Left Anterior Descending (LAD) artery in 3D free-breathing, non-contrast CT is critical for cardiac dose sparing in thoracic radiotherapy. The LAD is extremely small, has poor soft-tissue contrast, and varies substantially across patients; even manual contours show limited inter-observer agreement, underscoring the ambiguity of the vessel boundaries. Purpose: To develop a transformer-based framework that improves LAD delineation in low-contrast, imbalanced CT through local-global context modeling and uncertainty-guided optimization. Methods: We propose NA-UNETR, a 3D transformer-based segmentation model whose Neighborhood Attention (NA) and Dilated NA (DiNA) blocks jointly capture fine structural detail and long-range context. Given the scarcity of annotated LAD data, the model is pretrained on 1,000 CTA volumes of general coronary anatomy and fine-tuned with LoRA-based parameter-efficient adaptation on 20 free-breathing institutional CT scans. A composite Dice-Focal and Hausdorff loss, dynamically balanced via homoscedastic uncertainty, improves overlap and boundary accuracy. Results: NA-UNETR reached 45.64% Dice, 38.16 mm HD95, and 10.01 mm ASD, improving Dice by 3.10 percentage points over nnU-Net and reducing HD95 by 2.96 mm relative to Swin UNETR, with the strongest boundary accuracy among all models and improved centerline stability. On ImageCAS it achieved 79.49% Dice, 8.89 mm HD95, and 1.02 mm ASD. Ablations confirmed that residual blocks, variable kernels, and uncertainty-weighted loss each contributed. Conclusions: NA-UNETR balances local precision and global context for thin, low-contrast LAD structures, offering a computationally efficient framework for substructure-level cardiac segmentation in radiotherapy planning.",
+      "authors": [
+        "Rafi Ibn Sultan",
+        "Chengyin Li",
+        "Yiannos Demetriou",
+        "Ahmed I. Ghanem",
+        "Joshua P. Kim",
+        "Justine Cunningham",
+        "Hassan Bagher-Ebadian",
+        "Dongxiao Zhu",
+        "Kundan S. Thind"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-08-12T17:13:59+00:00",
+      "link": "https://arxiv.org/pdf/2608.12274v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "3D transformer-based medical image segmentation for low-contrast CT",
+      "llm_evidence_cn": "基于3D Transformer的医学图像分割，用于低对比度CT",
+      "llm_evidence": "基于3D Transformer的医学图像分割，用于低对比度CT",
+      "canonical_evidence": "基于3D Transformer的医学图像分割，用于低对比度CT",
+      "llm_tldr_en": "This paper addresses LAD artery segmentation in low-contrast CT by proposing NA-UNETR, a 3D transformer with Neighborhood Attention and Dilated NA blocks. It improves delineation in imbalanced CT, providing accurate vessel contours for cardiac dose sparing in radiotherapy.",
+      "llm_tldr_cn": "针对胸部放疗中LAD动脉在3D自由呼吸非对比CT上分割极难、对比度低且形态多变的问题，提出NA-UNETR，一种基于邻域注意力与扩张邻域注意力的3D Transformer分割模型。该方法结合局部-全局上下文建模与不确定性引导优化，提高低对比小血管的分割稳定性。实验表明模型能改善LAD分割精度，为心脏剂量保护提供可靠解剖结构，展示Transformer在困难CT分割中的潜力。",
+      "llm_tldr": "针对胸部放疗中LAD动脉在3D自由呼吸非对比CT上分割极难、对比度低且形态多变的问题，提出NA-UNETR，一种基于邻域注意力与扩张邻域注意力的3D Transformer分割模型。该方法结合局部-全局上下文建模与不确定性引导优化，提高低对比小血管的分割稳定性。实验表明模型能改善LAD分割精度，为心脏剂量保护提供可靠解剖结构，展示Transformer在困难CT分割中的潜力。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
