@@ -1,0 +1,39 @@
+{
+  "label": "2026-08-16",
+  "date": "2026-08-16",
+  "generated_at": "2026-08-16T20:21:24",
+  "count": 2,
+  "papers": [
+    {
+      "paper_id": "202608/16/2608.09302v1-bootstrapping-vision-language-model-for-hysteroscopic-surgical-scene-segmentation",
+      "section": "quick",
+      "title_en": "Bootstrapping Vision-Language Model for Hysteroscopic Surgical Scene Segmentation",
+      "authors": "Jun Huang, Meiyi Chen, Zijie Yue, Yuhang Xiao, Fang Li, Hanli Wang, Xiaowen Tong, Yi Guo, Miaojing Shi",
+      "date": "2026-08-10",
+      "pdf": "https://arxiv.org/pdf/2608.09302v1",
+      "score": "7.0",
+      "evidence": "提出基于视觉语言模型的宫腔镜手术场景分割方法，属于全监督医学图像分割",
+      "tldr": "宫腔镜手术场景分割因不同病变形态高度相似，且存在镜面反射、运动模糊和液体遮挡等伪影而极具挑战。本文提出首个基于视觉语言模型的分割方法VLM-hyster，采用预训练图像编码器与transformer解码器实现密集预测，并设计类别特定文本提示及掩码蒸馏分支以过滤低相关视觉特征。在收集的4020张多中心高分辨率图像数据集上，VLM-hyster显著超越现有先进AI模型，并经多中心和前瞻性验证，展现鲁棒性与泛化能力，有望辅助手术器械与病变定位。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "Hysteroscopic surgical scene segmentation plays a pivotal role in understanding the hysteroscopic intraoperative environment as well as computer-assisted intervention. However, this task presents unique challenges due to the high morphological similarity among different lesions and the presence of artifacts such as specular reflections, motion blur, and fluid occlusions in surgical videos. In this work, we propose the first vision-language model (VLM)-based hysteroscopic surgical scene segmentation method, which performs pixel-wise localization for fifteen representative categories in hysteroscopic surgical scenes. Our VLM-hyster has a segmentation backbone that utilizes the pretrained image encoder for robust visual feature extraction, coupled with a transformer-based decoder for dense prediction. Moreover, we design category-specific text prompts and incorporate a masked distillation branch to filter out visual features with low correlation to the text prompts, enabling the model to focus more effectively on category-specific image regions and thereby enhancing segmentation performance. We collect a large multicentric hysteroscopic surgical scene dataset, containing 4,020 high-resolution images with detailed mask annotations, for model training and evaluation. Experimental results demonstrate that VLM-hyster substantially outperforms state-of-the-art AI models. Furthermore, extensive assessments by gynecologists, as well as multicentre and prospective validations, demonstrate VLM-hyster's robustness and generalizability. The results suggest that VLM-hyster earns considerable potential in enabling AI-assisted localization of surgical instruments and lesions in hysteroscopic surgeries. Code is available at https://github.com/viscom-tongji/VLM-hyster.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202608/16/2608.11335v1-dual-domain-cross-modal-decoding-for-clinical-text-guided-medical-image-segmentation",
+      "section": "quick",
+      "title_en": "Dual-Domain Cross-Modal Decoding for Clinical Text-Guided Medical Image Segmentation",
+      "authors": "Md Maklachur Rahman, Tracy Hammond",
+      "date": "2026-08-11",
+      "pdf": "https://arxiv.org/pdf/2608.11335v1",
+      "score": "7.0",
+      "evidence": "提出用于临床文本引导肺部感染分割的双域跨模态解码方法，属于全监督医学图像分割",
+      "tldr": "临床文本虽能缩小分割范围，但现有文本引导设计偏重空间对齐，忽视频率内容对纹理和边界的建模。为此，本文提出双域跨模态解码 DD-CMD，空间域用 TGSA 对齐多尺度视觉与文本语义，频率域用 STAM 基于 2D DCT 生成 FiLM 参数重标定通道。在 QaTa-COV19 和 MosMedData+ 上分别达 91.46% Dice/84.26% mIoU 和 81.95% Dice/69.42% mIoU，平均提升 +1.96 Dice 和 +2.67 mIoU。该方法有效融合空间与频率语言引导，提升临床文本引导分割精度，代码已开源。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "Clinical text can narrow down what to segment, but recent text-guided designs emphasize spatial alignment while overlooking frequency content that governs texture and boundaries. We propose Dual-Domain Cross-Modal Decoding (DD-CMD) for clinical text-guided pulmonary infection segmentation, integrating two complementary forms of language guidance during decoding. In the spatial domain, Text-Guided Spatial Cross-Attention (TGSA) aligns multi-scale visual tokens with text semantics and updates features through gated residual fusion. In the frequency domain, Spectral-Text Adaptive Modulation (STAM) applies a 2D DCT to compute learnable band-energy statistics and predicts text-conditioned FiLM parameters to recalibrate decoder channels for frequency-aware decoding. DD-CMD embeds TGSA and STAM into a coarse-to-fine decoder (7x7 to 56x56) and restores full-resolution masks using a lightweight two-stage refinement module. Experiments on QaTa-COV19 and MosMedData+ show that DD-CMD achieves 91.46% Dice / 84.26% mIoU and 81.95% Dice / 69.42% mIoU, respectively, with average gains of +1.96 Dice and +2.67 mIoU over the strongest prior baselines. Code: https://github.com/maklachur/DD-CMD.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

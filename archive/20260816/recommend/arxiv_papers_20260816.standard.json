@@ -1,0 +1,98 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-16T20:18:33.653190+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2608.09302v1",
+      "source": "arxiv",
+      "title": "Bootstrapping Vision-Language Model for Hysteroscopic Surgical Scene Segmentation",
+      "abstract": "Hysteroscopic surgical scene segmentation plays a pivotal role in understanding the hysteroscopic intraoperative environment as well as computer-assisted intervention. However, this task presents unique challenges due to the high morphological similarity among different lesions and the presence of artifacts such as specular reflections, motion blur, and fluid occlusions in surgical videos. In this work, we propose the first vision-language model (VLM)-based hysteroscopic surgical scene segmentation method, which performs pixel-wise localization for fifteen representative categories in hysteroscopic surgical scenes. Our VLM-hyster has a segmentation backbone that utilizes the pretrained image encoder for robust visual feature extraction, coupled with a transformer-based decoder for dense prediction. Moreover, we design category-specific text prompts and incorporate a masked distillation branch to filter out visual features with low correlation to the text prompts, enabling the model to focus more effectively on category-specific image regions and thereby enhancing segmentation performance. We collect a large multicentric hysteroscopic surgical scene dataset, containing 4,020 high-resolution images with detailed mask annotations, for model training and evaluation. Experimental results demonstrate that VLM-hyster substantially outperforms state-of-the-art AI models. Furthermore, extensive assessments by gynecologists, as well as multicentre and prospective validations, demonstrate VLM-hyster's robustness and generalizability. The results suggest that VLM-hyster earns considerable potential in enabling AI-assisted localization of surgical instruments and lesions in hysteroscopic surgeries. Code is available at https://github.com/viscom-tongji/VLM-hyster.",
+      "authors": [
+        "Jun Huang",
+        "Meiyi Chen",
+        "Zijie Yue",
+        "Yuhang Xiao",
+        "Fang Li",
+        "Hanli Wang",
+        "Xiaowen Tong",
+        "Yi Guo",
+        "Miaojing Shi"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-08-10T08:51:36+00:00",
+      "link": "https://arxiv.org/pdf/2608.09302v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Proposes VLM-based segmentation for hysteroscopic surgical scenes, a fully supervised medical image segmentation approach",
+      "llm_evidence_cn": "提出基于视觉语言模型的宫腔镜手术场景分割方法，属于全监督医学图像分割",
+      "llm_evidence": "提出基于视觉语言模型的宫腔镜手术场景分割方法，属于全监督医学图像分割",
+      "canonical_evidence": "提出基于视觉语言模型的宫腔镜手术场景分割方法，属于全监督医学图像分割",
+      "llm_tldr_en": "Proposes the first VLM-based hysteroscopic surgical scene segmentation method that performs pixel-wise localization for 15 categories, leveraging pretrained image encoder for robust visual features.",
+      "llm_tldr_cn": "针对宫腔镜手术场景分割中病灶形态相似和伪影干扰等问题，提出首个基于视觉语言模型（VLM）的宫腔镜手术场景分割方法，对十五类手术场景进行像素级定位。该方法利用预训练图像编码器提取鲁棒视觉特征，结合语言模型引导分割。该方法为手术场景理解提供新途径，有望在计算机辅助干预中发挥作用。",
+      "llm_tldr": "针对宫腔镜手术场景分割中病灶形态相似和伪影干扰等问题，提出首个基于视觉语言模型（VLM）的宫腔镜手术场景分割方法，对十五类手术场景进行像素级定位。该方法利用预训练图像编码器提取鲁棒视觉特征，结合语言模型引导分割。该方法为手术场景理解提供新途径，有望在计算机辅助干预中发挥作用。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2608.11335v1",
+      "source": "arxiv",
+      "title": "Dual-Domain Cross-Modal Decoding for Clinical Text-Guided Medical Image Segmentation",
+      "abstract": "Clinical text can narrow down what to segment, but recent text-guided designs emphasize spatial alignment while overlooking frequency content that governs texture and boundaries. We propose Dual-Domain Cross-Modal Decoding (DD-CMD) for clinical text-guided pulmonary infection segmentation, integrating two complementary forms of language guidance during decoding. In the spatial domain, Text-Guided Spatial Cross-Attention (TGSA) aligns multi-scale visual tokens with text semantics and updates features through gated residual fusion. In the frequency domain, Spectral-Text Adaptive Modulation (STAM) applies a 2D DCT to compute learnable band-energy statistics and predicts text-conditioned FiLM parameters to recalibrate decoder channels for frequency-aware decoding. DD-CMD embeds TGSA and STAM into a coarse-to-fine decoder (7x7 to 56x56) and restores full-resolution masks using a lightweight two-stage refinement module. Experiments on QaTa-COV19 and MosMedData+ show that DD-CMD achieves 91.46% Dice / 84.26% mIoU and 81.95% Dice / 69.42% mIoU, respectively, with average gains of +1.96 Dice and +2.67 mIoU over the strongest prior baselines. Code: https://github.com/maklachur/DD-CMD.",
+      "authors": [
+        "Md Maklachur Rahman",
+        "Tracy Hammond"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "eess.IV"
+      ],
+      "published": "2026-08-11T18:40:52+00:00",
+      "link": "https://arxiv.org/pdf/2608.11335v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Proposes dual-domain cross-modal decoding for clinical text-guided pulmonary infection segmentation, a fully supervised medical image segmentation method",
+      "llm_evidence_cn": "提出用于临床文本引导肺部感染分割的双域跨模态解码方法，属于全监督医学图像分割",
+      "llm_evidence": "提出用于临床文本引导肺部感染分割的双域跨模态解码方法，属于全监督医学图像分割",
+      "canonical_evidence": "提出用于临床文本引导肺部感染分割的双域跨模态解码方法，属于全监督医学图像分割",
+      "llm_tldr_en": "Addresses limitation of text-guided segmentation ignoring frequency content by introducing Dual-Domain Cross-Modal Decoding (DD-CMD) that integrates spatial cross-attention and spectral-text adaptive modulation for pulmonary infection segmentation.",
+      "llm_tldr_cn": "针对现有文本引导分割方法侧重空间对齐而忽略频率内容的问题，提出双域跨模态解码（DD-CMD）用于临床文本引导的肺部感染分割。空间域通过文本引导空间交叉注意力对齐多尺度视觉token，频率域通过谱-文本自适应调制预测FiLM参数重校准解码器通道。该方法在空间和频率双域利用语言引导，提升分割精度，为医疗图像分割提供新思路。",
+      "llm_tldr": "针对现有文本引导分割方法侧重空间对齐而忽略频率内容的问题，提出双域跨模态解码（DD-CMD）用于临床文本引导的肺部感染分割。空间域通过文本引导空间交叉注意力对齐多尺度视觉token，频率域通过谱-文本自适应调制预测FiLM参数重校准解码器通道。该方法在空间和频率双域利用语言引导，提升分割精度，为医疗图像分割提供新思路。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
