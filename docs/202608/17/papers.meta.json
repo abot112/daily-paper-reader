@@ -1,0 +1,54 @@
+{
+  "label": "2026-08-17",
+  "date": "2026-08-17",
+  "generated_at": "2026-08-17T20:45:13",
+  "count": 3,
+  "papers": [
+    {
+      "paper_id": "202608/17/2608.11076v1-foundation-model-enabled-efficient-data-sampling-feeds-a-label-efficient-training-strategy-for-pan-cancer-multi-tracer-petct-datasets",
+      "section": "quick",
+      "title_en": "Foundation Model-Enabled Efficient Data Sampling (FEEDS): A label-efficient training strategy for pan-cancer, multi-tracer PET/CT datasets",
+      "authors": "Biratal Raj Wagle, Bashirul Azam Biswas, Grant Chau, Matthew E. Maeder, Muhammad Azeem Arshad, Michael S. Leapman, James B. Yu, Indrani Bhattacharya",
+      "date": "2026-08-11",
+      "pdf": "https://arxiv.org/pdf/2608.11076v1",
+      "score": "7.0",
+      "evidence": "PET/CT病变分割的标签高效训练",
+      "tldr": "全身PET/CT病灶分割模型需要大量专家标注，标签稀缺且成本高。FEEDS利用视觉基础模型嵌入选取最具代表性和多样性的未标注病例进行标注，实现标签高效训练。在多个PET/CT测试集上，FEEDS以70%更少标注负担达到100%全标注性能，优于随机采样和半监督方法。该方法为大规模未标注临床数据提供了实用的标注队列构建策略，解决了标签稀缺问题。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "Automated lesion segmentation in whole-body PET/CT imaging can assist clinicians with cancer detection, staging, and treatment planning across radiotracers and cancer types. However, training lesion segmentation models that capture variations in lesion size, distribution, and appearance requires large annotated datasets, whose creation is both time- and expertise-intensive. As a result, models trained on limited labeled PET/CT data often lack the accuracy and generalizability needed for clinical use. We present FEEDS (Foundation model-Enabled Efficient Data Sampling), a label- and compute-efficient learning strategy that uses vision foundation model embeddings to select the most informative and diverse unlabeled cases for expert annotation. Unlike unsupervised, semi-supervised, and active learning approaches, FEEDS is a one-step training paradigm requiring only a limited, representative training set, making it label- and compute-efficient. We train and validate FEEDS using the AutoPET-III dataset. We test its accuracy and generalizability on three held-out sets: AutoPET-III, DeepPSMA, and an internal Dartmouth-Hitchcock Medical Center dataset. We evaluate clinical utility at the voxel, lesion, and anatomic region level to assess performance in high-risk areas and treatment planning utility. FEEDS outperforms random-sampling-based labeling, pseudolabel-based semi-supervised learning, and training with limited labeled data alone. It generalizes across all three test sets, FDG and PSMA tracers, and multiple diseases, matching fully-labeled (100\\%) training performance with 70\\% less annotation burden. FEEDS addresses the challenge of label scarcity in an automatic lesion segmentation framework by providing a practical approach for constructing representative and diverse annotation queues from large, unannotated clinical repositories.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202608/17/2608.13690v1-medplex-deep-vision-language-co-adaptation-for-clinically-grounded-medical-segmentation",
+      "section": "quick",
+      "title_en": "MedPlex: Deep Vision-Language Co-Adaptation for Clinically Grounded Medical Segmentation",
+      "authors": "Rafi Ibn Sultan, Hui Zhu, Chengyin Li, Dongxiao Zhu",
+      "date": "2026-08-13",
+      "pdf": "https://arxiv.org/pdf/2608.13690v1",
+      "score": "7.0",
+      "evidence": "视觉语言协同适应用于临床导向的医学分割，采用双向融合",
+      "tldr": "医学图像分割长期被当作纯视觉任务，临床文本知识如解剖、位置、外观等未被充分利用。MedPlex 端到端融合视觉和语言，通过双向融合与类级、区域级概念对齐，让文本指导贯穿编码全程而非仅作后期提示。在 CT 和 MR 多器官、心脏亚结构及肿瘤分割上达到最先进水平。该工作表明语言可作为结构化监督提升分割精度，尤其适用于真实临床文本监督场景。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "Medical image segmentation is still largely treated as a vision-only problem, although clinical interpretation often relies on textual knowledge of anatomy, location, appearance, and surrounding context. Existing text-guided segmentation methods within the Vision-Language Model (VLM) paradigm often use language only as a late conditioning signal, limiting its influence on visual representation learning. We introduce MedPlex (Medical Plexus of Vision and Language), an end-to-end VLM framework that makes text guidance a continuous, clinically grounded component of segmentation learning. Through Bi-Fusion (Bidirectional Fusion), visual and textual representations evolve jointly across the encoding hierarchy. MedPlex further introduces class-level and region-level concept alignment to organize the shared representation at complementary granularities. Class-level alignment anchors each anatomical target to an aggregated clinical concept profile, while region-level alignment preserves individual concepts, such as shape, location, appearance, and texture, through class-specific visual evidence. In this way, language provides structured supervision throughout the encoder rather than serving only as a late-stage cue. MedPlex achieves state-of-the-art performance across CT and MR benchmarks for multi-organ, cardiac substructure, and tumor segmentation, including settings with real free-text clinical supervision. Code: https://github.com/rafiibnsultan/MedPlex.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202608/17/2608.10635v1-medup-awakening-unified-understanding-and-perception-in-medical-vision-language-models",
+      "section": "quick",
+      "title_en": "MedUP: Awakening Unified Understanding and Perception in Medical Vision-Language Models",
+      "authors": "Yuan Wang, Hualiang Wang, Yixin Chen, Songtao Jiang, Shujian Gao, Jiaming Lin, Siming Fu, Jian Wu, Zuozhu Liu",
+      "date": "2026-08-11",
+      "pdf": "https://arxiv.org/pdf/2608.10635v1",
+      "score": "6.0",
+      "evidence": "医学视觉-语言模型统一感知与理解，区域分词器支持分割，可用于医学图像分割",
+      "tldr": "医学视觉语言模型在精确视觉感知与分割上仍有挑战，现有方法依赖坐标字符串或外部模块，导致感知与理解割裂。MedUP 通过共享 token 空间原生统一两者，其核心 UniMedTok 将掩码编码为离散 token，实现掩码与文本无缝交织。在 184 万实例训练后，MedUP 全面超越现有 Med-VLM，并与专业分割器性能相当。工作还推出 UniMed-Bench 统一基准，展示统一建模的潜力。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "Medical Vision-Language Models (Med-VLMs) excel at verbalizing visual content, yet precise visual perception, segmentation, and grounding remain challenging. Existing approaches either verbalize regions as coordinate strings or rely on external modules that decouple perception from understanding, creating representation gaps for region-language alignment. We present MedUP, a Med-VLM that natively unifies perception and understanding within a shared token space. At its core lies UniMedTok, a region tokenizer that encodes masks as discrete tokens in the LLM vocabulary, enabling the model to seamlessly interleave mask tokens with text. We curate UniMed-Train, a 1.84M-instance corpus spanning text-guided segmentation, region-grounded understanding, medical VQA and CoT-based segmentation, and introduce UniMed-Bench for unified evaluation. Extensive experiments show that MedUP outperforms native, agentic, and dual-decoder Med-VLMs across all tasks while remaining competitive with specialist segmentors, demonstrating the strong potential of unified understanding and perception modeling.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
