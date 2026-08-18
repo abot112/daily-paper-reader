@@ -1,0 +1,39 @@
+{
+  "label": "2026-08-18",
+  "date": "2026-08-18",
+  "generated_at": "2026-08-18T20:41:38",
+  "count": 2,
+  "papers": [
+    {
+      "paper_id": "202608/18/2608.14146v1-csg-mamba-a-convolutional-scoring-gating-vision-state-space-network-for-endoscopic-polyp-segmentation",
+      "section": "quick",
+      "title_en": "CSG-Mamba: A Convolutional Scoring Gating Vision State Space Network for Endoscopic Polyp Segmentation",
+      "authors": "Yuliang Wang, Jiaqi Wu, Jiaye Song, Shuxia Ren",
+      "date": "2026-08-14",
+      "pdf": "https://arxiv.org/pdf/2608.14146v1",
+      "score": "6.0",
+      "evidence": "内窥镜息肉分割的深度学习模型",
+      "tldr": "内镜息肉分割面临低对比度边界、黏膜纹理干扰和设备相关外观变化等挑战，现有 Vision Mamba 模型将2D特征转为1D序列会弱化局部几何连续性。CSG-Mamba 在语义丰富的瓶颈处引入卷积评分门控模块，通过逐点和大核深度卷积生成局部空间分数图，并以乘法门控重校准状态空间特征。在 Kvasir-SEG 上 Dice 达 0.9220、HD95 为 15.87，在 CVC-ColonDB 上 Dice 达 0.7418，多数重叠与召回指标优于基线，边界精度保持竞争力。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "Accurate polyp segmentation is critical for computer-aided colonoscopy, yet endoscopic images often contain low-contrast boundaries, mucosal texture interference, specular highlights, and device-dependent appearance shifts. Vision State Space Models (SSMs) provide efficient long-range modeling with linear complexity, but existing Vision Mamba segmentation models typically convert 2D features into 1D scanning sequences, which may weaken local geometric continuity and over-smooth irregular contours. We propose CSG-Mamba, a convolutional scoring gating Vision State Space network for endoscopic polyp segmentation. Built on a VM-UNet-style asymmetric U-shaped encoder-decoder, CSG-Mamba inserts a Convolutional Scoring Gating (CSG) module at the semantically rich bottleneck. CSG generates a local spatial score map through pointwise and large-kernel depthwise convolutions and recalibrates state-space features by multiplicative gating. Experiments with three random seeds show that CSG-Mamba achieves 0.9220 Dice and 15.87 HD95 on Kvasir-SEG, and 0.7418 Dice and 0.6570 mIoU on CVC-ColonDB, outperforming the baselines on most overlap and recall metrics while maintaining competitive boundary accuracy.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202608/18/2608.16268v1-com3et-a-foundation-model-for-medical-image-analysis-through-federated-multidimensional-context-integration",
+      "section": "quick",
+      "title_en": "CoM$^3$eT: A foundation model for medical image analysis through federated, multidimensional context integration",
+      "authors": "J. Raphael Schäfer, Kai Geissler, Till Nicke, Chiara Tappermann, Karoline Heber, Eike Petersen, Habib Mergan, Lars Ole Schwen, Nick Weiss, Annika Gerken, Jan Hendrik Moltz, Tom Bisson, Isil Dogan O, Tim-Rasmus Kiehl, Norman Zerbe, Sefer Elezkurtaj, Robin S. Mayer, Nadine Flinner, Peter Wild, Isabel Dahm, Felix Peisen, Heinrich von Busch, Robert Grimm, Sebastian Arndt, Lisa Siegler, Matthias Stefan May, Antje Prasse, Natalia Artysh, Fabian Kiessling, Johannes Lotz",
+      "date": "2026-08-17",
+      "pdf": "https://arxiv.org/pdf/2608.16268v1",
+      "score": "6.0",
+      "evidence": "CoM$^3$eT是统一放射学和病理学的医学视觉基础模型，支持分割等密集预测，可作为腹部CT分割的预训练骨干",
+      "tldr": "现有医学基础模型虽能改善标注数据有限时的泛化，但通常局限于单一专科、单一输出类型或固定维度。CoM^3eT通过注意力联合建模多维上下文，统一病理与放射、稀疏与密集预测以及二维与高维输入。在覆盖5个断层、4个全标本和3个二维数据的开放竞赛中，CoM^3eT超过其他基础模型并支持报告生成；微调少于2.5%参数即可媲美全微调，联邦学习也达到集中训练水平。这一工作为医学图像分析提供了跨模态、跨任务、资源高效的基础模型框架。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "Medical foundation models improve generalization when training AI models with limited labeled data, but remain confined to a single specialty, such as pathology or radiology, and to either sparse or dense outputs, such as classification or segmentation. Here, we present CoM$^3$eT (Co-representation Multidimensional Multitask Medical Transformer), a medical vision foundation model that unifies pathology and radiology, sparse and dense predictions, and two- and higher-dimensional inputs by modeling multidimensional context with attention. CoM$^3$eT outperformed other medical foundation models in an open competition spanning five tomographic, four whole-specimen, and three two-dimensional datasets, covering sparse and dense prediction tasks as well as report generation. When adapted across diverse clinical applications, training fewer than 2.5% of parameters achieved performance comparable to full fine-tuning, enabling research without access to high-performance GPU clusters. Applied to federated learning across hospitals, this approach achieved performance comparable to pooled-data training over internet connections and with consumer-grade hardware.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

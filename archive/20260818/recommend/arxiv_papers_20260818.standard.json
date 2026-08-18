@@ -1,0 +1,120 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-18T20:39:18.885456+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2608.14146v1",
+      "source": "arxiv",
+      "title": "CSG-Mamba: A Convolutional Scoring Gating Vision State Space Network for Endoscopic Polyp Segmentation",
+      "abstract": "Accurate polyp segmentation is critical for computer-aided colonoscopy, yet endoscopic images often contain low-contrast boundaries, mucosal texture interference, specular highlights, and device-dependent appearance shifts. Vision State Space Models (SSMs) provide efficient long-range modeling with linear complexity, but existing Vision Mamba segmentation models typically convert 2D features into 1D scanning sequences, which may weaken local geometric continuity and over-smooth irregular contours. We propose CSG-Mamba, a convolutional scoring gating Vision State Space network for endoscopic polyp segmentation. Built on a VM-UNet-style asymmetric U-shaped encoder-decoder, CSG-Mamba inserts a Convolutional Scoring Gating (CSG) module at the semantically rich bottleneck. CSG generates a local spatial score map through pointwise and large-kernel depthwise convolutions and recalibrates state-space features by multiplicative gating. Experiments with three random seeds show that CSG-Mamba achieves 0.9220 Dice and 15.87 HD95 on Kvasir-SEG, and 0.7418 Dice and 0.6570 mIoU on CVC-ColonDB, outperforming the baselines on most overlap and recall metrics while maintaining competitive boundary accuracy.",
+      "authors": [
+        "Yuliang Wang",
+        "Jiaqi Wu",
+        "Jiaye Song",
+        "Shuxia Ren"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-08-14T09:54:52+00:00",
+      "link": "https://arxiv.org/pdf/2608.14146v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "deep learning segmentation model for endoscopic polyp images",
+      "llm_evidence_cn": "内窥镜息肉分割的深度学习模型",
+      "llm_evidence": "内窥镜息肉分割的深度学习模型",
+      "canonical_evidence": "内窥镜息肉分割的深度学习模型",
+      "llm_tldr_en": "Proposes CSG-Mamba, a convolutional scoring gating vision state space network for accurate polyp segmentation in endoscopic images, addressing boundary and texture challenges.",
+      "llm_tldr_cn": "内窥镜图像中息肉分割常受低对比度边界、黏膜纹理干扰等影响，现有视觉Mamba模型因扫描序列转换削弱局部几何连续性。该文提出CSG-Mamba，在VM-UNet基础上插入卷积评分门控模块，以增强局部建模并缓解轮廓过度平滑。实验结果显示其在息肉分割任务上取得优越性能，为医学图像分割提供了高效的SSM架构改进方案。",
+      "llm_tldr": "内窥镜图像中息肉分割常受低对比度边界、黏膜纹理干扰等影响，现有视觉Mamba模型因扫描序列转换削弱局部几何连续性。该文提出CSG-Mamba，在VM-UNet基础上插入卷积评分门控模块，以增强局部建模并缓解轮廓过度平滑。实验结果显示其在息肉分割任务上取得优越性能，为医学图像分割提供了高效的SSM架构改进方案。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.16268v1",
+      "source": "arxiv",
+      "title": "CoM$^3$eT: A foundation model for medical image analysis through federated, multidimensional context integration",
+      "abstract": "Medical foundation models improve generalization when training AI models with limited labeled data, but remain confined to a single specialty, such as pathology or radiology, and to either sparse or dense outputs, such as classification or segmentation. Here, we present CoM$^3$eT (Co-representation Multidimensional Multitask Medical Transformer), a medical vision foundation model that unifies pathology and radiology, sparse and dense predictions, and two- and higher-dimensional inputs by modeling multidimensional context with attention. CoM$^3$eT outperformed other medical foundation models in an open competition spanning five tomographic, four whole-specimen, and three two-dimensional datasets, covering sparse and dense prediction tasks as well as report generation. When adapted across diverse clinical applications, training fewer than 2.5% of parameters achieved performance comparable to full fine-tuning, enabling research without access to high-performance GPU clusters. Applied to federated learning across hospitals, this approach achieved performance comparable to pooled-data training over internet connections and with consumer-grade hardware.",
+      "authors": [
+        "J. Raphael Schäfer",
+        "Kai Geissler",
+        "Till Nicke",
+        "Chiara Tappermann",
+        "Karoline Heber",
+        "Eike Petersen",
+        "Habib Mergan",
+        "Lars Ole Schwen",
+        "Nick Weiss",
+        "Annika Gerken",
+        "Jan Hendrik Moltz",
+        "Tom Bisson",
+        "Isil Dogan O",
+        "Tim-Rasmus Kiehl",
+        "Norman Zerbe",
+        "Sefer Elezkurtaj",
+        "Robin S. Mayer",
+        "Nadine Flinner",
+        "Peter Wild",
+        "Isabel Dahm",
+        "Felix Peisen",
+        "Heinrich von Busch",
+        "Robert Grimm",
+        "Sebastian Arndt",
+        "Lisa Siegler",
+        "Matthias Stefan May",
+        "Antje Prasse",
+        "Natalia Artysh",
+        "Fabian Kiessling",
+        "Johannes Lotz"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "published": "2026-08-17T08:42:41+00:00",
+      "link": "https://arxiv.org/pdf/2608.16268v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "CoM$^3$eT is a medical vision foundation model unifying radiology and pathology with dense predictions including segmentation, applicable to abdominal CT segmentation as a pretrained backbone",
+      "llm_evidence_cn": "CoM$^3$eT是统一放射学和病理学的医学视觉基础模型，支持分割等密集预测，可作为腹部CT分割的预训练骨干",
+      "llm_evidence": "CoM$^3$eT是统一放射学和病理学的医学视觉基础模型，支持分割等密集预测，可作为腹部CT分割的预训练骨干",
+      "canonical_evidence": "CoM$^3$eT是统一放射学和病理学的医学视觉基础模型，支持分割等密集预测，可作为腹部CT分割的预训练骨干",
+      "llm_tldr_en": "CoM$^3$eT introduces a federated, multidimensional medical foundation model that unifies pathology and radiology, sparse and dense predictions, and various dimensionalities, showing strong performance across multiple datasets; it offers a transferable backbone for fully supervised abdominal segmentation.",
+      "llm_tldr_cn": "该论文针对医学基础模型局限于单一专业或输出类型的问题，提出CoM$^3$eT，通过联邦学习和多维上下文注意力统一病理与放射学、稀疏与密集预测，以及二维和三维输入。在涵盖多种数据集的开放竞赛中超越其他医学基础模型。该模型可作为腹部CT多器官分割的通用预训练网络，有利于全监督分割的性能提升，但未在Abdomen-1K上单独评估。",
+      "llm_tldr": "该论文针对医学基础模型局限于单一专业或输出类型的问题，提出CoM$^3$eT，通过联邦学习和多维上下文注意力统一病理与放射学、稀疏与密集预测，以及二维和三维输入。在涵盖多种数据集的开放竞赛中超越其他医学基础模型。该模型可作为腹部CT多器官分割的通用预训练网络，有利于全监督分割的性能提升，但未在Abdomen-1K上单独评估。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

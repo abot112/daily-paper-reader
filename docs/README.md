@@ -6,32 +6,29 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-08-17
-- 运行时间：2026-08-17 20:44:49 UTC
+- 最新运行日期：2026-08-18
+- 运行时间：2026-08-18 20:41:17 UTC
 - 运行状态：成功
-- 本次总论文数：3
+- 本次总论文数：2
 - 精读区：0
-- 速读区：3
+- 速读区：2
 
 ### 今日简报（AI）
-- 今日共生成 3 篇推荐（精读 0 篇，速读 3 篇）
-- 速读：《Foundation Model-Enabled Efficient Data Sampling (FEEDS): A label-efficient training strategy for pan-cancer, multi-tracer PET/CT datasets》（7.0/10）, 《MedPlex: Deep Vision-Language Co-Adaptation for Clinically Grounded Medical Segmentation》（7.0/10）, 《MedUP: Awakening Unified Understanding and Perception in Medical Vision-Language Models》（6.0/10）
-- 这些结果覆盖了当下较热的方向，建议先看精读区论文的关键问题与方法。
-- 详情：[/202608/17/README](/202608/17/README)
+今日速读两篇医学影像AI论文：内镜息肉分割网络CSG-Mamba与联邦医学图像基础模型CoM³eT。  
+值得关注的是CSG-Mamba用卷积评分门控强化息肉分割，CoM³eT则尝试联邦多维上下文整合来构建通用医学图像模型。  
+建议读者后续跟踪它们在真实临床数据与多中心协作中的验证效果。
+- 详情：[/202608/18/README](/202608/18/README)
 
 ### 精读区论文标签
 - 本次无精读推荐。
 
 ### 速读区论文标签
-1. [Foundation Model-Enabled Efficient Data Sampling (FEEDS): A label-efficient training strategy for pan-cancer, multi-tracer PET/CT datasets](/202608/17/2608.11076v1-foundation-model-enabled-efficient-data-sampling-feeds-a-label-efficient-training-strategy-for-pan-cancer-multi-tracer-petct-datasets)  
-   标签：评分：7.0/10、query:abdk-seg
-   evidence：PET/CT病变分割的标签高效训练
-2. [MedPlex: Deep Vision-Language Co-Adaptation for Clinically Grounded Medical Segmentation](/202608/17/2608.13690v1-medplex-deep-vision-language-co-adaptation-for-clinically-grounded-medical-segmentation)  
-   标签：评分：7.0/10、query:abdk-seg
-   evidence：视觉语言协同适应用于临床导向的医学分割，采用双向融合
-3. [MedUP: Awakening Unified Understanding and Perception in Medical Vision-Language Models](/202608/17/2608.10635v1-medup-awakening-unified-understanding-and-perception-in-medical-vision-language-models)  
+1. [CSG-Mamba: A Convolutional Scoring Gating Vision State Space Network for Endoscopic Polyp Segmentation](/202608/18/2608.14146v1-csg-mamba-a-convolutional-scoring-gating-vision-state-space-network-for-endoscopic-polyp-segmentation)  
    标签：评分：6.0/10、query:abdk-seg
-   evidence：医学视觉-语言模型统一感知与理解，区域分词器支持分割，可用于医学图像分割
+   evidence：内窥镜息肉分割的深度学习模型
+2. [CoM$^3$eT: A foundation model for medical image analysis through federated, multidimensional context integration](/202608/18/2608.16268v1-com3et-a-foundation-model-for-medical-image-analysis-through-federated-multidimensional-context-integration)  
+   标签：评分：6.0/10、query:abdk-seg
+   evidence：CoM$^3$eT是统一放射学和病理学的医学视觉基础模型，支持分割等密集预测，可作为腹部CT分割的预训练骨干
 
 
 <div class="dpr-home-promo-card">
