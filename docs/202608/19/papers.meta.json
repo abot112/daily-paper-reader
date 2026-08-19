@@ -1,0 +1,24 @@
+{
+  "label": "2026-08-19",
+  "date": "2026-08-19",
+  "generated_at": "2026-08-19T20:52:27",
+  "count": 1,
+  "papers": [
+    {
+      "paper_id": "202608/19/2608.17635v1-malvil-multi-axis-low-rank-vision-lstm-for-medical-image-segmentation",
+      "section": "quick",
+      "title_en": "MaLViL: Multi-axis Low-rank Vision-LSTM for Medical Image Segmentation",
+      "authors": "Afshin Bozorgpour, Sina Ghorbani Kolahi, Moein Heidari, Ilker Hacihaliloglu, Dorit Merhof",
+      "date": "2026-08-18",
+      "pdf": "https://arxiv.org/pdf/2608.17635v1",
+      "score": "6.0",
+      "evidence": "通用医学图像分割架构，基于Vision-LSTM",
+      "tldr": "医学图像分割中，Vision-LSTM虽能高效全局建模，但计算成本随空间token增加，现有方法限制于低分辨率瓶颈并丢失细节，且2D特征展平破坏跨轴邻接。MaLViL提出多轴低秩ViL，在解码器各分辨率应用双向低秩推理与正交残差保留细节，尺度感知恢复邻接，交叉方向混合融合路径，统计引导调制保留边界。在皮肤病变、超声、多器官CT上达竞争或最优精度，ViL内存最高降83倍。为高效精细医学分割提供新范式。",
+      "tags": "query:abdk-seg",
+      "abstract_en": "Vision-LSTM (ViL) enables efficient global modeling, but its cost still scales with the number of spatial tokens, so existing segmenters confine ViL to a coarse bottleneck and lose fine anatomical detail. Rasterizing 2D features into a 1D sequence further breaks adjacency across the orthogonal scan axis. We propose MaLViL, a Multi-axis Low-rank Vision-LSTM network that extends ViL across decoder resolutions. Bidirectional low-rank ViL (Bi-LRViL) reasons on a compact orthonormal subspace and preserves detail through an orthogonal residual; scale-aware SaLViL restores cross-axis neighbors before serialization; and a Cross-Directional Mixer (CDM) fuses orthogonal horizontal and vertical traversal paths. Statistics-Guided Skip Modulation (SGSM) further retains boundary cues in encoder skips. On skin-lesion, ultrasound, and multi-organ CT benchmarks, MaLViL achieves competitive or state-of-the-art segmentation accuracy, while reducing ViL operator memory by up to $83\\times$ at fine decoder resolutions. Code is available at: https://github.com/xmindflow/malvil.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
