@@ -1,0 +1,263 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-21T20:43:48.813466+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 5,
+    "quick_skim_target": 11,
+    "quick_selected": 5
+  },
+  "deep_dive": [
+    {
+      "id": "2608.18193v1",
+      "source": "arxiv",
+      "title": "Bound-Aware Per-Organ Recall Risk Control for Multi-Organ CT Segmentation under Clinical Domain Shift",
+      "abstract": "Distribution-free risk control adds organ-specific recall guarantees to frozen segmentation. We calibrate per-organ thresholds for an AMOS-trained nnU-Net, audit transfer to RAOS, and estimate local re-certification cost using case-level voxel false-negative rate (FNR). The AMOS control passes, but $7/12$ organs exceed $α{=}0.10$ after transfer; smaller calibration sets can mask exceedances with conservative or vacuous thresholds. Risk-Controlling Prediction Sets (RCPS) give high-probability control of population-mean risk, whereas Conformal Risk Control (CRC) gives weaker expectation control. Both require exchangeability; fixed and global thresholds give no per-organ guarantee. The Waudby--Smith--Ramdas (WSR) betting bound re-certifies six Tier-1 organs with 25 local cases, versus 30--40 for Hoeffding--Bentkus (HB). CRC needs 10--15 but has a heavier individual-case tail. No Tier-2 organ meets our illustrative precision criterion with 25 cases.",
+      "authors": [
+        "Souraj Adhikary",
+        "Negar Chabi",
+        "Andre Mastmeyer"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-08-18T15:01:53+00:00",
+      "link": "https://arxiv.org/pdf/2608.18193v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "evaluates per-organ recall risk control for multi-organ CT segmentation (AMOS/RAOS), directly relevant to abdominal multi-organ segmentation",
+      "llm_evidence_cn": "评估多器官CT分割的逐器官召回风险控制（AMOS/RAOS），直接相关腹部多器官分割",
+      "llm_evidence": "评估多器官CT分割的逐器官召回风险控制（AMOS/RAOS），直接相关腹部多器官分割",
+      "canonical_evidence": "评估多器官CT分割的逐器官召回风险控制（AMOS/RAOS），直接相关腹部多器官分割",
+      "llm_tldr_en": "This paper adds distribution-free per-organ recall guarantees to frozen multi-organ CT segmentation, calibrating thresholds on an AMOS-trained nnU-Net and auditing transfer to RAOS. It shows that domain shift can cause organ-level recall exceedances and that smaller calibration sets may mask issues, providing rigorous evaluation for abdominal segmentation models.",
+      "llm_tldr_cn": "本文针对腹部多器官CT分割在临床域迁移下的可靠性问题，为冻结的分割模型添加逐器官召回风险控制，在AMOS训练的nnU-Net上校准阈值并在RAOS上审计迁移。结果显示部分器官召回超过0.10，较小校准集可能掩盖问题。该方法为全监督腹部分割模型提供了严格的逐器官评估框架。",
+      "llm_tldr": "本文针对腹部多器官CT分割在临床域迁移下的可靠性问题，为冻结的分割模型添加逐器官召回风险控制，在AMOS训练的nnU-Net上校准阈值并在RAOS上审计迁移。结果显示部分器官召回超过0.10，较小校准集可能掩盖问题。该方法为全监督腹部分割模型提供了严格的逐器官评估框架。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "multi-organ segmentation in abdominal CT scans",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2608.15537v1",
+      "source": "arxiv",
+      "title": "EA-LiteUNet: An Edge-Adaptive and Resource-Efficient U-Net for Boundary-Sensitive Dermoscopic Image Segmentation",
+      "abstract": "Accurate boundary delineation remains a persistent challenge in dermoscopic image segmentation because of blurred lesion margins, heterogeneous textures, and complex background artifacts. From a signal-processing perspective, lesion boundaries represent high-frequency components that are highly susceptible to aliasing, noise amplification, and information loss. Consequently, repeated downsampling and feature transformations in conventional convolutional architectures often lead to severely degraded boundary representations. To address these limitations, we propose EA-LiteUNet, an edge-adaptive and computationally efficient U-Net variant specifically designed for boundary-sensitive medical image segmentation. The architecture integrates three core mechanisms: (1) boundary-aware representation learning to suppress aliasing and preserve high-frequency structural details; (2) attention-guided feature modulation to selectively enhance boundary-relevant responses across multi-scale features; and (3) a resource-adaptive inference strategy to dynamically balance segmentation accuracy and computational efficiency. Extensive evaluations across three public dermoscopic datasets demonstrate that EA-LiteUNet consistently achieves superior boundary precision. Specifically, on the ISIC 2018 dataset, the method significantly reduces the 95% Hausdorff Distance (HD95) to 12.89 pixels while maintaining a robust Dice score of 92.08%. Notably, this strong performance is achieved with an ultralightweight configuration of merely 0.29M parameters and 1.17 GFLOPs. Ablation studies further validate the complementary effects of these components, confirming their contribution to enhanced boundary fidelity and stable optimization.",
+      "authors": [
+        "Wang Jiangtao",
+        "Nur Intan Raihana Ruhaiyem",
+        "Fu Panpan",
+        "Yang Yu",
+        "Huang Yan"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-08-16T05:20:39+00:00",
+      "link": "https://arxiv.org/pdf/2608.15537v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Proposes a U-Net variant for boundary-sensitive medical image segmentation",
+      "llm_evidence_cn": "提出用于边界敏感医学图像分割的U-Net变体",
+      "llm_evidence": "提出用于边界敏感医学图像分割的U-Net变体",
+      "canonical_evidence": "提出用于边界敏感医学图像分割的U-Net变体",
+      "llm_tldr_en": "This paper introduces EA-LiteUNet, an edge-adaptive and resource-efficient U-Net for dermoscopic image segmentation, offering a transferable architecture for medical segmentation tasks.",
+      "llm_tldr_cn": "针对皮肤镜图像分割中边界模糊、纹理异质等问题，本研究提出EA-LiteUNet，一种边缘自适应且计算高效的U-Net变体，通过增强高频边界特征的表示来提高分割精度。该架构虽在皮肤病变数据上验证，但其边缘保持和资源效率设计可迁移至其他医学分割任务，包括腹部器官分割。实验表明其边界敏感性和计算效率优于常规卷积架构。",
+      "llm_tldr": "针对皮肤镜图像分割中边界模糊、纹理异质等问题，本研究提出EA-LiteUNet，一种边缘自适应且计算高效的U-Net变体，通过增强高频边界特征的表示来提高分割精度。该架构虽在皮肤病变数据上验证，但其边缘保持和资源效率设计可迁移至其他医学分割任务，包括腹部器官分割。实验表明其边界敏感性和计算效率优于常规卷积架构。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2608.15915v1",
+      "source": "arxiv",
+      "title": "Comprehensive Benchmarking of Deep Learning Architectures for Lung Cancer Histopathology",
+      "abstract": "Lung cancer remains the leading cause of cancer-related mortality worldwide, while histopathological diagnosis is often affected by inter-observer variability and the substantial workload associated with manual slide examination. Although deep learning has shown considerable potential in computational pathology, comprehensive benchmarks that integrate tissue classification and region segmentation within a unified analytical framework remain limited. This study presents a two-stage deep learning framework for multi-class tissue classification and pixel-level histopathological region segmentation, accompanied by a systematic comparison of state-of-the-art architectures at each stage. For tissue classification, six models, a custom convolutional neural network, VGG16, DenseNet, MobileNetV3, a custom Vision Transformer, and YOLO11, are evaluated on a combined dataset of 39,000 images derived from LC25000 and LungHist700. The models distinguish between adenocarcinoma, squamous cell carcinoma, and normal lung tissue. YOLO11 achieves the best classification performance, with an accuracy of 98.38%, a five-fold cross-validation accuracy of 98.21 +/- 0.35%, and a macro F1-score of 0.98. For region segmentation, U-Net, ResNet-encoder U-Net, DeepLabV3+, and YOLO11-seg are evaluated using the GlaS gland segmentation benchmark. DeepLabV3+ obtains the highest Intersection over Union of 0.80 and a Dice score of 0.89, while YOLO11-seg achieves a comparable Intersection over Union of 0.79 using approximately 14x fewer parameters. The best-performing classification and segmentation models are subsequently integrated into an end-to-end framework, providing an accurate, computationally efficient, and reproducible baseline for automated histopathological image analysis.",
+      "authors": [
+        "Hadi Hasan",
+        "Safaa Salman",
+        "Lama Sleem",
+        "Ralph Mouawad",
+        "Ali Chehab"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-08-16T20:12:13+00:00",
+      "link": "https://arxiv.org/pdf/2608.15915v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Presents deep learning architectures for pixel-level histopathological region segmentation",
+      "llm_evidence_cn": "提出用于组织病理学区域分割的深度学习架构",
+      "llm_evidence": "提出用于组织病理学区域分割的深度学习架构",
+      "canonical_evidence": "提出用于组织病理学区域分割的深度学习架构",
+      "llm_tldr_en": "This paper benchmarks deep learning architectures for tissue classification and segmentation in lung cancer histopathology, providing insights for medical image segmentation methods.",
+      "llm_tldr_cn": "针对肺癌组织病理诊断中的人工差异和工作量问题，本研究提出一个两阶段深度学习框架，同时进行多类组织分类和像素级区域分割，并系统比较各阶段最先进的架构。该研究虽聚焦于组织病理学而非腹部CT，但为医学图像分割提供了架构选择参考。实验表明不同架构在分类和分割任务上性能各异，为后续分割任务的方法选择提供依据。",
+      "llm_tldr": "针对肺癌组织病理诊断中的人工差异和工作量问题，本研究提出一个两阶段深度学习框架，同时进行多类组织分类和像素级区域分割，并系统比较各阶段最先进的架构。该研究虽聚焦于组织病理学而非腹部CT，但为医学图像分割提供了架构选择参考。实验表明不同架构在分类和分割任务上性能各异，为后续分割任务的方法选择提供依据。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.16110v1",
+      "source": "arxiv",
+      "title": "SUGFW+: An Uncertainty-guided Feature Weighting Framework for Cold Start Active Adaptation of SAM in Medical Image Segmentation",
+      "abstract": "Cold Start Active Learning (CSAL) is important in improving the performance of a medical image segmentation model with low annotation budget by querying a small subset for annotation from an unlabeled training set. Existing CSAL methods typically rely on inefficient dataset-specific Self-Supervised Learning (SSL) to map the unlabeled images into a feature space for sample selection. Recently, the advent of foundation models such as the Segment Anything Model (SAM) offer a promising alternative as the pre-trained model can provide strong generalizable feature embeddings, and allow high performance in downstream tasks after fine-tuning (adaptation). However, how to systematically exploit SAM's inherent embeddings for cold-start sample selection during adaptation with low annotation budget remains underexplored. To address this, we propose an extended SAM-based Uncertainty-guided Feature Weighting (SUGFW+) framework for CSAL and adaptation of SAM. Specifically, it leverages the SAM for Patch-level Feature and Uncertainty Calculation (PFUC), and introduces a Patch-based Global Distinct Representation (PGDR) module that aggregates patch-level embeddings into highly discriminative, uncertainty-aware image-level features. These features are then utilized by a Greedy Selection with Cluster and Uncertainty (GSCU) strategy to combine diversity and uncertainty during sample selection. Unlike prior CSAL methods that decouple sample selection from model training, SUGFW+ tightly integrates these two stages via an Uncertainty-Prompted Fine-Tuning (UPFT) process of SAM in model training. Extensive experiments on four public datasets demonstrate that SUGFW+ achieves state-of-the-art performance against existing CSAL methods. Code is available at https://github.com/HiLab-git/SUGFW-plus.",
+      "authors": [
+        "Xiaochuan Ma",
+        "Ning Zhu",
+        "Jia Fu",
+        "Lanfeng Zhong",
+        "Hanyu Jiang",
+        "Bin Song",
+        "Kang Li",
+        "Guotai Wang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-08-17T05:03:00+00:00",
+      "link": "https://arxiv.org/pdf/2608.16110v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "SAM-based active learning for medical image segmentation",
+      "llm_evidence_cn": "基于SAM的主动学习用于医学图像分割",
+      "llm_evidence": "基于SAM的主动学习用于医学图像分割",
+      "canonical_evidence": "基于SAM的主动学习用于医学图像分割",
+      "llm_tldr_en": "Proposes SUGFW+, an uncertainty-guided feature weighting framework for cold start active adaptation of SAM in medical image segmentation.",
+      "llm_tldr_cn": "冷启动主动学习在低标注预算下提升医学图像分割性能，但现有方法依赖低效的自监督学习。该论文提出SUGFW+框架，利用SAM的预训练特征并引入不确定性引导的特征加权，在冷启动阶段主动选择最有价值的样本进行标注。实验表明该方法在多个医学图像分割数据集上优于现有主动学习基线，证明了基础模型在低资源场景下的有效性。",
+      "llm_tldr": "冷启动主动学习在低标注预算下提升医学图像分割性能，但现有方法依赖低效的自监督学习。该论文提出SUGFW+框架，利用SAM的预训练特征并引入不确定性引导的特征加权，在冷启动阶段主动选择最有价值的样本进行标注。实验表明该方法在多个医学图像分割数据集上优于现有主动学习基线，证明了基础模型在低资源场景下的有效性。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.16855v1",
+      "source": "arxiv",
+      "title": "Can Unsupervised Methods Outperform Supervised Deep Learning When Ground Truth Is Sparse? A Case Study of Bronchovascular Bundle Segmentation in Low-Dose CT",
+      "abstract": "Background   Lung cancer remains the deadliest cancer worldwide because it is often diagnosed too late. Effective treatment depends on detection at an early screening stage. However, the growing number of patients and the limited number of radiologists lead to prolonged diagnostic waiting times. In very early stage lung cancer, nodule visibility is further reduced by adjacent blood vessels and airway walls, because nodules are often connected to or supplied by these structures. Task-specific analysis of the bronchovascular bundle is therefore important for efficient nodule detection, and its removal can increase the diagnostic potential of lung cancer screening.   Materials and Methods   To assess the efficacy of the proposed method, we used series from widely utilized LDCT datasets, including the Duke Lung Cancer Screening (DLCS) dataset and the Pilot Pomeranian Lung Cancer Screening Program. The proposed bronchovascular bundle segmentation pipeline, RONALD, operates on computed tomography images and returns binary masks of vessels and bronchi located in the lung parenchyma. The method includes a preprocessing stage with lung, lobe, and mediastinum segmentation, followed by separate vessel and bronchial tree segmentation.   Results   The proposed pipeline segmented the bronchovascular bundle in low-dose computed tomography scans while improving nodule retention compared with other segmentation methods: from 93.98% and 90.36% to 100% in DLCS, and from 83.16% and 62.36% to 99.92% in the Pomeranian dataset.   Conclusion   The resulting segmentations can improve lung nodule detection in the very early stages of lung cancer.",
+      "authors": [
+        "Anna Mrukwa",
+        "Marek Socha",
+        "Aleksandra Suwalska",
+        "Agata Durawa",
+        "Malgorzata Jelitto",
+        "Katarzyna Dziadziuszko",
+        "Edyta Szurowska",
+        "Pawel Bozek",
+        "Michal Marczyk",
+        "Witold Rzyman",
+        "Rafal Dziadziuszko",
+        "Joanna Polanska"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-08-17T17:38:22+00:00",
+      "link": "https://arxiv.org/pdf/2608.16855v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Case study of bronchovascular bundle segmentation in low-dose CT comparing unsupervised and supervised deep learning, relevant to supervised segmentation in CT.",
+      "llm_evidence_cn": "低剂量CT支气管血管束分割中比较无监督与监督深度学习的案例研究，与CT监督分割相关。",
+      "llm_evidence": "低剂量CT支气管血管束分割中比较无监督与监督深度学习的案例研究，与CT监督分割相关。",
+      "canonical_evidence": "低剂量CT支气管血管束分割中比较无监督与监督深度学习的案例研究，与CT监督分割相关。",
+      "llm_tldr_en": "This paper investigates whether unsupervised methods can outperform supervised deep learning for bronchovascular bundle segmentation in low-dose CT when ground truth is sparse. It addresses the need for task-specific analysis of bronchovascular bundles for early lung cancer detection, and compares approaches with implications for CT segmentation when annotations are limited.",
+      "llm_tldr_cn": "本文针对低剂量CT中支气管血管束分割任务，探讨在真实标签稀缺时无监督方法能否优于监督深度学习。肺癌早期筛查中结节常与血管气道结构相连，分割支气管血管束有助于提高诊断潜力。研究比较了无监督与监督方法在该任务上的表现，为稀疏标注下的CT结构分割提供实证依据，对腹部等类似CT分割任务具有参考价值。",
+      "llm_tldr": "本文针对低剂量CT中支气管血管束分割任务，探讨在真实标签稀缺时无监督方法能否优于监督深度学习。肺癌早期筛查中结节常与血管气道结构相连，分割支气管血管束有助于提高诊断潜力。研究比较了无监督与监督方法在该任务上的表现，为稀疏标注下的CT结构分割提供实证依据，对腹部等类似CT分割任务具有参考价值。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "supervised training of neural networks for segmentation",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.18731v1",
+      "source": "arxiv",
+      "title": "A Few Cases Are All You Need: An Empirical Study of Annotation-Efficient LoRA Fine-Tuning of MedSAM3",
+      "abstract": "Medical image segmentation is essential for clinical workflows such as treatment planning and disease assessment. While specialist tools like TotalSegmentator and MRSegmentator achieve strong performance, they require large annotated datasets for training. Medical foundation models offer a promising alternative through large-scale pretraining that reduces the annotation burden for new tasks, but zero-shot performance remains limited. Parameter-efficient adaptation via Low-Rank Adaptation (LoRA) enables efficient specialization with few trainable parameters, but a key question remains: how many expert-annotated cases are needed to achieve clinically useful segmentation performance? We address this by adapting MedSAM3 with LoRA for five abdominal organs (liver, kidneys, spleen, gallbladder, and pancreas) in CT and MRI using only 1, 2, 5, and 10 annotated cases, evaluating on AMOS22 dataset. With just 10 cases, models achieve performance competitive with specialist systems trained on orders of magnitude more data. Notably, this includes reliable gallbladder segmentation (Dice 0.68 CT, 0.59 MRI) where existing tools fail almost completely (Dice 0.0004), while remaining within 5--10% of MRSegmentator for liver, kidneys, and spleen using over 100 times fewer annotations. Furthermore, external validation on the Whole Heart Segmentation dataset shows that the approach extends to cardiac segmentation, a use case beyond the scope of TotalSegmentator (MRI) and MRSegmentator, achieving competitive left ventricle (LV) performance with only 10 annotated cases. Training requires only3--5,hours per organ on a single GPU, approximately 2--3 times faster than nnU-Net. These findings suggest that ten annotated cases are sufficient for clinically useful segmentation, effectively reducing bottlenecks for both image annotation and training time.",
+      "authors": [
+        "Sachin Dudda Nagaraju",
+        "Bendik Skarre Abrahamsen",
+        "Ashkan Moradi",
+        "Mattijs Elschot"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-08-19T09:34:34+00:00",
+      "link": "https://arxiv.org/pdf/2608.18731v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Studies annotation-efficient LoRA fine-tuning of MedSAM3 for medical image segmentation",
+      "llm_evidence_cn": "研究MedSAM3的LoRA微调在医学图像分割中的标注效率",
+      "llm_evidence": "研究MedSAM3的LoRA微调在医学图像分割中的标注效率",
+      "canonical_evidence": "研究MedSAM3的LoRA微调在医学图像分割中的标注效率",
+      "llm_tldr_en": "This empirical study investigates how many expert-annotated cases are needed for LoRA fine-tuning of MedSAM3 to achieve clinically useful segmentation, contributing to efficient supervised training methods.",
+      "llm_tldr_cn": "针对医学图像分割中标注负担重的问题，本研究对MedSAM3进行LoRA微调，探索实现临床可用分割性能所需的最少专家标注样本数。实验说明少量标注案例即可有效适配分割任务，为监督训练神经网络用于分割提供了参数高效方案。该工作虽非在Abdomen-1K上全监督训练，但为医学图像分割的监督学习方法提供了实证依据。",
+      "llm_tldr": "针对医学图像分割中标注负担重的问题，本研究对MedSAM3进行LoRA微调，探索实现临床可用分割性能所需的最少专家标注样本数。实验说明少量标注案例即可有效适配分割任务，为监督训练神经网络用于分割提供了参数高效方案。该工作虽非在Abdomen-1K上全监督训练，但为医学图像分割的监督学习方法提供了实证依据。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "supervised training of neural networks for segmentation",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
