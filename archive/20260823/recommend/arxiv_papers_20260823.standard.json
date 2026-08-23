@@ -1,0 +1,53 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-23T20:01:54.344120+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2608.17425v1",
+      "source": "arxiv",
+      "title": "GSToken: Geometry-Structured Gaussian Tokens for Compact 3D Medical Image Representation",
+      "abstract": "Effective segmentation of multi-modal MRI is central to improving neural network accuracy in brain tumor recognition. Existing methods typically compress 3D volumes into token sequences via fixed patch encoding or learned attention pooling (e.g., TokenLearner). However, these compression schemes discard explicit spatial shape information; the resulting tokens convey no notion of lesion morphology or spatial extent. Meanwhile, end-to-end evaluation entangles a tokenizer's information retention with the reconstruction capacity of the downstream decoder, and the lack of a unified capacity contract across methods makes performance differences difficult to attribute. In this paper, we introduce Gaussian tokens to multi-modal brain tumor segmentation for the first time: each token carries not only a semantic feature but also a learned 3D center, anisotropic scale, and orientation, endowing the representation with explicit geometric support at negligible parameter cost. We further propose a frozen-token utility evaluation protocol: the trained tokenizer is frozen, its output is cast into a fixed-capacity serialized contract, and a shared lightweight Transformer probe independently measures each tokenizer's retained information under strictly matched conditions. Multi-seed paired statistical testing shows that GSToken consistently and substantially outperforms capacity-matched adaptive baselines under frozen probing, with uniform advantages across all tumor sub-regions, surface, and distance metrics. These results demonstrate that explicitly encoding spatial geometry within tokens significantly improves the information density of volumetric representations, offering a new design principle for compact 3D medical image representation and downstream reading.",
+      "authors": [
+        "Xiaoduo Li",
+        "Quan Gu"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-08-18T06:44:53+00:00",
+      "link": "https://arxiv.org/pdf/2608.17425v1",
+      "tags": [
+        "keyword:ABDK-SEG",
+        "query:ABDK-SEG"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "proposes Gaussian tokens for compact 3D medical image segmentation, method could transfer to abdominal CT",
+      "llm_evidence_cn": "提出用于3D医学图像分割的高斯标记，方法可迁移至腹部CT",
+      "llm_evidence": "提出用于3D医学图像分割的高斯标记，方法可迁移至腹部CT",
+      "canonical_evidence": "提出用于3D医学图像分割的高斯标记，方法可迁移至腹部CT",
+      "llm_tldr_en": "The paper introduces geometry-structured Gaussian tokens to compactly represent 3D medical images for segmentation, addressing loss of spatial shape information in tokenization. Evaluated on multi-modal brain tumor MRI, the method shows improved token information retention and could be transferred to abdominal CT organ segmentation.",
+      "llm_tldr_cn": "针对3D医学图像标记化过程丢失空间形状信息的问题，本文提出几何结构高斯标记（GSToken），用于紧凑表示3D多模态MRI并支持脑肿瘤分割。该方法通过显式编码几何和空间范围，提升了标记对病变形态的保留能力。实验验证了其信息保留优势，为将此类3D表示迁移到腹部CT多器官分割提供了可行思路。",
+      "llm_tldr": "针对3D医学图像标记化过程丢失空间形状信息的问题，本文提出几何结构高斯标记（GSToken），用于紧凑表示3D多模态MRI并支持脑肿瘤分割。该方法通过显式编码几何和空间范围，提升了标记对病变形态的保留能力。实验验证了其信息保留优势，为将此类3D表示迁移到腹部CT多器官分割提供了可行思路。",
+      "llm_tags": [
+        "query:abdk-seg"
+      ],
+      "matched_query_tag": "query:abdk-seg",
+      "matched_query_text": "deep learning models for medical image segmentation",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
